@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --maple-bg: #0d1a14;
+  --maple-gold: #d4a84b;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  @apply min-h-screen bg-maple-bg font-maple text-gray-100 antialiased;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(62, 207, 110, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(212, 168, 75, 0.06) 0%, transparent 45%);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+  .maple-card {
+    @apply rounded-lg border border-maple-border bg-maple-panel/80 p-3 shadow-maple;
+  }
+
+  .maple-card-muted {
+    @apply rounded-lg border border-maple-border/60 bg-maple-panel/50 p-3;
+  }
+
+  .maple-tab {
+    @apply shrink-0 whitespace-nowrap rounded-lg border px-3 py-2 text-xs font-medium transition;
+  }
+
+  .maple-tab-active {
+    @apply border-maple-gold bg-maple-gold/15 text-maple-gold shadow-maple;
+  }
+
+  .maple-tab-inactive {
+    @apply border-maple-border bg-maple-panel/40 text-maple-muted hover:border-maple-gold/50 hover:text-maple-gold;
+  }
+}
+
+/* Electron frameless overlay: drag window except interactive controls */
+.electron-drag {
+  -webkit-app-region: drag;
+}
+
+.electron-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
