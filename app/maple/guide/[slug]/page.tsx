@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { GuideArticle } from "@/components/GuideArticle";
+import { GuideSlugRedirect } from "./GuideSlugRedirect";
 import { getAllGuideSlugs, getGuideBySlug } from "@/lib/seoPosts";
 
 type Props = {
@@ -24,12 +23,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function GuidePage({ params }: Props) {
   const { slug } = await params;
-  const post = getGuideBySlug(slug);
-  if (!post) notFound();
-
-  return (
-    <main className="min-h-screen pb-8">
-      <GuideArticle post={post} />
-    </main>
-  );
+  return <GuideSlugRedirect slug={slug} />;
 }

@@ -1,9 +1,9 @@
 type AdVariant = "mini" | "strip" | "wide";
 
 const LABEL: Record<AdVariant, string> = {
-  mini: "[AdSense Mini Banner Placeholder]",
-  strip: "[AdSense Strip Banner Placeholder]",
-  wide: "[AdSense Wide Banner Placeholder]",
+  mini: "광고 영역",
+  strip: "광고 영역",
+  wide: "광고 영역",
 };
 
 const SIZE: Record<AdVariant, string> = {
@@ -17,7 +17,7 @@ type Props = {
   className?: string;
 };
 
-/** Dark neon AdSense placeholder — use `electron-no-drag` on overlay/interactive rows */
+/** 광고 배너 자리 — use `electron-no-drag` on overlay/interactive rows */
 export function AdBanner({ variant, className = "" }: Props) {
   return (
     <div

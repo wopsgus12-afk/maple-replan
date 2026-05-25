@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { submitFeedback } from "@/lib/feedback";
+import { DEVELOPER_GUIDE_INTRO } from "@/lib/infoContent";
 import { DonationAccountBox } from "./DonationAccountBox";
+import { InfoProseBlock } from "./InfoProseBlock";
 import { useToast } from "./Toast";
 
 const MAX_MESSAGE = 500;
@@ -73,6 +75,11 @@ export function FeedbackForm() {
 
   return (
     <section className="mt-4 space-y-4">
+      <InfoProseBlock
+        title={DEVELOPER_GUIDE_INTRO.title}
+        paragraphs={DEVELOPER_GUIDE_INTRO.paragraphs}
+      />
+
       <div className="relative overflow-hidden rounded-lg border border-violet-500/35 bg-gradient-to-b from-[#0a0814] via-maple-panel/95 to-[#0d1218] p-4 shadow-[inset_0_0_32px_rgba(139,92,246,0.08),0_0_28px_rgba(62,207,110,0.06)]">
         <div
           className="pointer-events-none absolute right-3 top-3 text-lg opacity-40"

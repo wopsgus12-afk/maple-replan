@@ -13,9 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "메이플 재획 정산 | 2시간 시급 계산",
-  description:
-    "메이플스토리 2시간 재획(사냥) 시급 및 1·2·3차 재획 누적 정산 도구",
+  title: "GG Pass",
+  description: "GG Pass — 글로벌 로블록스·게임 유틸리티 허브",
 };
 
 export default function RootLayout({
@@ -25,6 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="dark">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4932168650472242"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-maple-bg font-maple text-gray-100 antialiased`}
       >

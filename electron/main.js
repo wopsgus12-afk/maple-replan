@@ -29,7 +29,7 @@ function createMainWindow() {
     },
   });
 
-  mainWindow.loadURL(BASE_URL);
+  mainWindow.loadURL(`${BASE_URL}/maple`);
 
   mainWindow.on("closed", () => {
     mainWindow = null;
@@ -59,7 +59,7 @@ function createOverlayWindow() {
     },
   });
 
-  overlayWindow.loadURL(`${BASE_URL}/overlay`);
+  overlayWindow.loadURL(`${BASE_URL}/maple/overlay`);
 
   overlayWindow.on("closed", () => {
     overlayWindow = null;

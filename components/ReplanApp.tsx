@@ -1,6 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import {
+  AppQueryProvider,
+  useAppQuery,
+  useStaticHostingPathFix,
+} from "@/hooks/useClientAppQuery";
+import { GuideDetailPanel } from "./GuideDetailPanel";
 import { TimerBar } from "./TimerBar";
 import { HuntingForm } from "./HuntingForm";
 import { SessionLists } from "./SessionLists";
@@ -27,15 +33,16 @@ type Props = {
   compact?: boolean;
 };
 
-type MainTab = "calculator" | "guides" | "brag" | "tips" | "feedback";
-
 const TAB_BUTTON_CLASS = (active: boolean) =>
   `maple-tab ${active ? "maple-tab-active" : "maple-tab-inactive"}`;
 
 function ReplanAppInner({ compact }: Props) {
-  const [hydrated, setHydrated] = useState(false);
-  const [mainTab, setMainTab] = useState<MainTab>("calculator");
-  const [state, setState] = useState<AppPersistedState>(() => loadState());
+  useStaticHostingPathFix();
+
+  const { mainTab, articleSlug, setMainTab, closeArticle } = useAppQuery();
+
+  const [storageReady, setStorageReady] = useState(false);
+  const [state, setState] = useState<AppPersistedState>(defaultPersistedState);
   const [recordSlot, setRecordSlot] = useState<ReplanSlot>(1);
   const timer = useTimer({
     mode: state.timerMode,
@@ -63,19 +70,19 @@ function ReplanAppInner({ compact }: Props) {
       anchorMs: loaded.timerAnchorMs,
       accumulatedMs: loaded.timerAccumulatedMs,
     });
-    setHydrated(true);
+    setStorageReady(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    if (!hydrated) return;
+    if (!storageReady) return;
     persistTimer(timer.snapshot);
-  }, [timer.snapshot, hydrated, persistTimer]);
+  }, [timer.snapshot, storageReady, persistTimer]);
 
   useEffect(() => {
-    if (!hydrated) return;
+    if (!storageReady) return;
     saveState(state);
-  }, [state, hydrated]);
+  }, [state, storageReady]);
 
   useEffect(() => {
     const onStorage = (e: StorageEvent) => {
@@ -219,14 +226,6 @@ function ReplanAppInner({ compact }: Props) {
     saveState(cleared);
   };
 
-  if (!hydrated) {
-    return (
-      <div className="flex min-h-[120px] items-center justify-center text-sm text-maple-muted">
-        불러오는 중…
-      </div>
-    );
-  }
-
   const shellClass = compact
     ? "overflow-hidden p-2"
     : "min-h-screen bg-maple-bg pb-8";
@@ -309,7 +308,11 @@ function ReplanAppInner({ compact }: Props) {
 
         {!compact && (
           <main className="mt-4 min-w-0">
-            {mainTab === "guides" && <GuideCards />}
+            {mainTab === "guides" && !articleSlug && <GuideCards />}
+
+            {mainTab === "guides" && articleSlug && (
+              <GuideDetailPanel slug={articleSlug} onBack={closeArticle} />
+            )}
 
             {mainTab === "brag" && <BoardView kind="brag" />}
 
@@ -392,7 +395,9 @@ function ReplanAppInner({ compact }: Props) {
 export function ReplanApp(props: Props) {
   return (
     <ToastProvider>
-      <ReplanAppInner {...props} />
+      <AppQueryProvider>
+        <ReplanAppInner {...props} />
+      </AppQueryProvider>
     </ToastProvider>
   );
 }

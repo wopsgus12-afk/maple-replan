@@ -12,6 +12,19 @@ npm run dev
 
 브라우저에서 [http://localhost:3000](http://localhost:3000) 을 엽니다.
 
+### 프로덕션 배포 (GitHub Pages + gg-pass.com)
+
+- `public/CNAME` → `gg-pass.com`
+- `npm run deploy` → `gh-pages` 브랜치
+- GitHub **Settings → Pages → Custom domain**: `gg-pass.com` 입력 후 HTTPS 활성화
+
+### Supabase 커뮤니티 게시판
+
+1. 프로젝트 루트에 `.env.local` (`.env.example` 참고)
+2. Supabase Dashboard → **SQL Editor** → `supabase/schema.sql` 전체 실행
+3. (선택) **Database → Replication**에서 `community_posts` Realtime 활성화
+4. `npm run dev` 재시작 후 **자랑 게시판** / **사냥터 팁** 탭에서 글쓰기·검색·실시간 목록 확인
+
 ```bash
 npm run build
 npm start
