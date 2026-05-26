@@ -8,50 +8,35 @@ const MIME = {
   ".css": "text/css; charset=utf-8",
   ".json": "application/json",
   ".png": "image/png",
-  ".jpg": "image/jpeg",
-  ".jpeg": "image/jpeg",
-  ".gif": "image/gif",
-  ".svg": "image/svg+xml",
-  ".ico": "image/x-icon",
   ".woff": "font/woff",
   ".woff2": "font/woff2",
-  ".txt": "text/plain; charset=utf-8",
 };
 
 function contentType(filePath) {
   return MIME[path.extname(filePath).toLowerCase()] || "application/octet-stream";
 }
 
-/** basePath `/maple` 정적 export → 파일 경로 */
 function mapUrlToFile(outDir, urlPath) {
   const pathname = urlPath.split("?")[0];
 
-  if (pathname === "/maple" || pathname === "/maple/") {
+  if (pathname === "/" || pathname === "") {
     return path.join(outDir, "index.html");
   }
-  if (pathname === "/maple/overlay" || pathname === "/maple/overlay/") {
+  if (pathname === "/overlay" || pathname === "/overlay/") {
     return path.join(outDir, "overlay", "index.html");
   }
-  if (pathname.startsWith("/maple/")) {
-    const rel = pathname.slice("/maple".length);
-    const candidate = path.join(outDir, rel);
-    if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
-      return candidate;
-    }
-    const indexHtml = path.join(candidate, "index.html");
-    if (fs.existsSync(indexHtml)) {
-      return indexHtml;
-    }
-  }
 
-  const fallback = path.join(outDir, pathname.replace(/^\//, ""));
-  return fallback;
+  const candidate = path.join(outDir, pathname.replace(/^\//, ""));
+  if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
+    return candidate;
+  }
+  const indexHtml = path.join(candidate, "index.html");
+  if (fs.existsSync(indexHtml)) {
+    return indexHtml;
+  }
+  return candidate;
 }
 
-/**
- * @param {string} outDir absolute path to Next `out/`
- * @returns {Promise<{ server: import('http').Server, port: number, origin: string }>}
- */
 function startStaticServer(outDir) {
   return new Promise((resolve, reject) => {
     const server = http.createServer((req, res) => {
@@ -64,9 +49,10 @@ function startStaticServer(outDir) {
           return;
         }
         res.setHeader("Content-Type", contentType(filePath));
-        res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
         if (filePath.endsWith(".html")) {
           res.setHeader("Cache-Control", "no-cache");
+        } else {
+          res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
         }
         res.end(data);
       });
@@ -78,8 +64,7 @@ function startStaticServer(outDir) {
         reject(new Error("Failed to bind static server"));
         return;
       }
-      const origin = `http://127.0.0.1:${addr.port}`;
-      resolve({ server, port: addr.port, origin });
+      resolve({ server, port: addr.port, origin: `http://127.0.0.1:${addr.port}` });
     });
 
     server.on("error", reject);

@@ -42,15 +42,15 @@ const AppQueryContext = createContext<AppQueryContextValue | null>(null);
 
 function applyUrl(opts: AppUrlParams, mode: "push" | "replace") {
   const href = buildAppHref(opts);
-  const publicPath = buildAppPath(opts);
+  const fullPath = buildAppPath(opts);
 
   if (typeof window !== "undefined") {
     const current = `${window.location.pathname}${window.location.search}`;
-    if (current !== publicPath) {
+    if (current !== fullPath) {
       if (mode === "push") {
-        window.history.pushState({ app: "gg-pass" }, "", publicPath);
+        window.history.pushState({ app: "gg-pass" }, "", fullPath);
       } else {
-        window.history.replaceState({ app: "gg-pass" }, "", publicPath);
+        window.history.replaceState({ app: "gg-pass" }, "", fullPath);
       }
     }
     window.dispatchEvent(new Event("app-query-change"));

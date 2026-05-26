@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { buildAppAbsoluteUrl } from "@/lib/appTab";
+import { buildAppPath } from "@/lib/appTab";
 
 type Props = {
   slug: string;
@@ -10,7 +10,7 @@ type Props = {
 /** 북마크·외부 링크 `/maple/guide/[slug]` → 메인 앱 가이드 탭으로 통합 */
 export function GuideSlugRedirect({ slug }: Props) {
   useEffect(() => {
-    window.location.replace(buildAppAbsoluteUrl({ tab: "guides", article: slug }));
+    window.location.replace(buildAppPath({ tab: "guides", article: slug }));
   }, [slug]);
 
   return (

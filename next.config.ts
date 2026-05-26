@@ -1,17 +1,14 @@
 import type { NextConfig } from "next";
 
-const basePath = "/maple";
-
+/** gg-pass.com 루트(/) = 메이플 재획 정산기 */
 const nextConfig: NextConfig = {
-  basePath,
-  assetPrefix: `${basePath}/`,
   output: "export",
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
+    NEXT_PUBLIC_BASE_PATH: "",
   },
 };
 

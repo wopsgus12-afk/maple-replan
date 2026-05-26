@@ -4,7 +4,7 @@ const { startStaticServer } = require("./static-server");
 
 const isDev = !app.isPackaged;
 const PORT = process.env.PORT || "3000";
-const BASE_PATH = (process.env.MAPLE_BASE_PATH || process.env.NEXT_PUBLIC_BASE_PATH || "/maple").replace(
+const BASE_PATH = (process.env.MAPLE_BASE_PATH || process.env.NEXT_PUBLIC_BASE_PATH || "").replace(
   /\/$/,
   ""
 );
@@ -14,7 +14,6 @@ let activeOrigin = (process.env.ELECTRON_URL || `http://localhost:${PORT}`).repl
 /** @type {import('http').Server | null} */
 let staticServer = null;
 
-/** Next basePath + trailingSlash 와 동일한 공개 URL */
 function resolveAppUrl(route = "/") {
   const normalized = route.startsWith("/") ? route : `/${route}`;
   if (normalized === "/") {
@@ -60,19 +59,11 @@ function createMainWindow() {
     },
   });
 
-  const url = resolveAppUrl("/");
-  mainWindow.loadURL(url);
+  mainWindow.loadURL(resolveAppUrl("/"));
 
   mainWindow.once("ready-to-show", () => {
     mainWindow?.show();
   });
-
-  if (isDev) {
-    mainWindow.webContents.on("did-fail-load", (_event, code, desc) => {
-      if (code === -3) return;
-      console.error("[electron] main did-fail-load", code, desc, url);
-    });
-  }
 
   mainWindow.on("closed", () => {
     mainWindow = null;
@@ -104,8 +95,7 @@ function createOverlayWindow() {
     },
   });
 
-  const url = resolveAppUrl("/overlay");
-  overlayWindow.loadURL(url);
+  overlayWindow.loadURL(resolveAppUrl("/overlay"));
 
   overlayWindow.once("ready-to-show", () => {
     overlayWindow?.show();

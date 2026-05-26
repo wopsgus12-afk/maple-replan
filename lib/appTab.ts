@@ -8,9 +8,9 @@ export const MAIN_TABS: MainTab[] = [
   "feedback",
 ];
 
-/** 메이플 앱 URL 접두사 (gg-pass.com/maple/, 로컬 /maple/) */
+/** gg-pass.com 루트 배포 — basePath 없음 */
 export const APP_BASE_PATH =
-  (typeof process !== "undefined" && process.env.NEXT_PUBLIC_BASE_PATH) || "/maple";
+  (typeof process !== "undefined" && process.env.NEXT_PUBLIC_BASE_PATH) || "";
 
 export function parseMainTab(value: string | null | undefined): MainTab {
   if (value && (MAIN_TABS as string[]).includes(value)) {
@@ -25,7 +25,6 @@ export type AppUrlParams = {
   post?: string | number | null;
 };
 
-/** Next Link·router용 (basePath `/maple` 기준 상대 경로) */
 export function buildAppHref({ tab = "calculator", article, post }: AppUrlParams = {}): string {
   const params = new URLSearchParams();
   if (tab !== "calculator") {
@@ -41,7 +40,6 @@ export function buildAppHref({ tab = "calculator", article, post }: AppUrlParams
   return qs ? `/?${qs}` : "/";
 }
 
-/** 브라우저 주소창·history용 절대 경로 (`/maple/?tab=guides`) */
 export function toPublicAppPath(href: string): string {
   const base = APP_BASE_PATH.replace(/\/$/, "") || "";
   if (!base) return href.startsWith("/") ? href : `/${href}`;
@@ -49,16 +47,14 @@ export function toPublicAppPath(href: string): string {
   return `${base}${href.startsWith("/") ? href : `/${href}`}`;
 }
 
-/** pathname + search (`/maple/?tab=guides`) — history API용 */
 export function buildAppPath(opts: AppUrlParams = {}): string {
-  return toPublicAppPath(buildAppHref(opts));
-}
-
-/** 절대 URL (`http://localhost:3000/maple/...`) */
-export function buildAppAbsoluteUrl(opts: AppUrlParams = {}): string {
-  const path = buildAppPath(opts);
+  const path = toPublicAppPath(buildAppHref(opts));
   if (typeof window === "undefined") {
     return path;
   }
   return `${window.location.origin}${path}`;
+}
+
+export function buildAppAbsoluteUrl(opts: AppUrlParams = {}): string {
+  return buildAppPath(opts);
 }
