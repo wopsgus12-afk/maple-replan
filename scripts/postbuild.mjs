@@ -13,3 +13,11 @@ if (fs.existsSync(nextSrc)) {
   fs.cpSync(nextSrc, nextDest, { recursive: true });
 }
 
+/** basePath `/maple` — public/download → gg-pass.com/maple/download/ */
+const downloadSrc = path.join(outDir, "download");
+const downloadDest = path.join(outDir, "maple", "download");
+if (fs.existsSync(downloadSrc)) {
+  fs.mkdirSync(downloadDest, { recursive: true });
+  fs.cpSync(downloadSrc, downloadDest, { recursive: true });
+}
+
