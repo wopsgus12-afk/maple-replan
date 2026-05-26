@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
+import { isElectron } from "@/lib/electron";
 
 /** Electron transparent overlay: clear page chrome background */
 export function OverlayBody({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    if (!isElectron()) return;
+    document.documentElement.classList.add("electron-app");
     const html = document.documentElement;
     const body = document.body;
     const prevHtmlBg = html.style.background;
@@ -16,11 +19,12 @@ export function OverlayBody({ children }: { children: React.ReactNode }) {
     body.style.minHeight = "0";
 
     return () => {
+      document.documentElement.classList.remove("electron-app");
       html.style.background = prevHtmlBg;
       body.style.background = prevBodyBg;
       body.style.minHeight = prevBodyMinH;
     };
   }, []);
 
-  return <div className="electron-drag min-h-0">{children}</div>;
+  return <div className="electron-no-drag min-h-0">{children}</div>;
 }

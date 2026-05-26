@@ -12,3 +12,4 @@ if (fs.existsSync(nextSrc)) {
   fs.mkdirSync(path.dirname(nextDest), { recursive: true });
   fs.cpSync(nextSrc, nextDest, { recursive: true });
 }
+

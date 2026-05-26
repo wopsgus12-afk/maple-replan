@@ -50,12 +50,29 @@ input[type="number"] {
   }
 }
 
-/* Electron frameless overlay: drag window except interactive controls */
-.electron-drag {
+/* Electron: 드래그는 전용 핸들만, 나머지(버튼·입력)는 항상 클릭 가능 */
+.electron-drag-handle {
   -webkit-app-region: drag;
+  cursor: move;
 }
 
-.electron-no-drag {
+.electron-no-drag,
+button,
+input,
+select,
+textarea,
+a[href],
+label,
+[role="button"] {
+  -webkit-app-region: no-drag;
+}
+
+html.electron-app button,
+html.electron-app input,
+html.electron-app select,
+html.electron-app textarea,
+html.electron-app a,
+html.electron-app [role="button"] {
   -webkit-app-region: no-drag;
 }
 

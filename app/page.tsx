@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import { GgPassLanding } from "@/components/GgPassLanding";
+import { ReplanApp } from "@/components/ReplanApp";
 
 export const metadata: Metadata = {
-  title: "GG-PASS | No More High Ping. No More Lags.",
+  title: "메이플 재획 정산 | 2시간 시급 계산",
   description:
-    "Find the Best Roblox Servers with 1-Click. Maximize your gaming experience with GG-PASS Ping Scanner.",
-  openGraph: {
-    title: "GG-PASS | Roblox Ping Scanner",
-    description:
-      "Real-time ping tracking, auto-matchmaking, and 100% Roblox-compliant server discovery.",
-    type: "website",
-  },
+    "메이플스토리 2시간 재획(사냥) 시급 및 1·2·3차 재획 누적 정산 도구",
 };
 
-/** gg-pass.com 루트 — 글로벌 Roblox Chrome 확장 소개 ( /maple 은 독립 유지 ) */
-export default function SiteHomePage() {
-  return <GgPassLanding />;
+export default function MapleHomePage() {
+  return <ReplanApp />;
 }

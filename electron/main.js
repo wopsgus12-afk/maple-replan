@@ -1,10 +1,39 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
+const { startStaticServer } = require("./static-server");
 
 const isDev = !app.isPackaged;
 const PORT = process.env.PORT || "3000";
-const BASE_URL =
-  process.env.ELECTRON_URL || `http://localhost:${PORT}`;
+const BASE_PATH = (process.env.MAPLE_BASE_PATH || process.env.NEXT_PUBLIC_BASE_PATH || "/maple").replace(
+  /\/$/,
+  ""
+);
+
+/** @type {string} */
+let activeOrigin = (process.env.ELECTRON_URL || `http://localhost:${PORT}`).replace(/\/$/, "");
+/** @type {import('http').Server | null} */
+let staticServer = null;
+
+/** Next basePath + trailingSlash 와 동일한 공개 URL */
+function resolveAppUrl(route = "/") {
+  const normalized = route.startsWith("/") ? route : `/${route}`;
+  if (normalized === "/") {
+    return `${activeOrigin}${BASE_PATH}/`;
+  }
+  const withSlash = normalized.endsWith("/") ? normalized : `${normalized}/`;
+  return `${activeOrigin}${BASE_PATH}${withSlash}`;
+}
+
+function getOutDir() {
+  return path.join(__dirname, "..", "out");
+}
+
+async function ensureProductionServer() {
+  if (isDev) return;
+  const { server, origin } = await startStaticServer(getOutDir());
+  staticServer = server;
+  activeOrigin = origin;
+}
 
 /** @type {BrowserWindow | null} */
 let mainWindow = null;
@@ -22,14 +51,28 @@ function createMainWindow() {
     minWidth: 360,
     minHeight: 600,
     title: "메이플 재획 정산",
+    show: false,
     webPreferences: {
       preload: getPreloadPath(),
       contextIsolation: true,
       nodeIntegration: false,
+      sandbox: false,
     },
   });
 
-  mainWindow.loadURL(`${BASE_URL}/maple`);
+  const url = resolveAppUrl("/");
+  mainWindow.loadURL(url);
+
+  mainWindow.once("ready-to-show", () => {
+    mainWindow?.show();
+  });
+
+  if (isDev) {
+    mainWindow.webContents.on("did-fail-load", (_event, code, desc) => {
+      if (code === -3) return;
+      console.error("[electron] main did-fail-load", code, desc, url);
+    });
+  }
 
   mainWindow.on("closed", () => {
     mainWindow = null;
@@ -44,7 +87,7 @@ function createOverlayWindow() {
 
   overlayWindow = new BrowserWindow({
     width: 360,
-    height: 230,
+    height: 280,
     alwaysOnTop: true,
     frame: false,
     transparent: true,
@@ -52,14 +95,21 @@ function createOverlayWindow() {
     skipTaskbar: true,
     hasShadow: false,
     backgroundColor: "#00000000",
+    show: false,
     webPreferences: {
       preload: getPreloadPath(),
       contextIsolation: true,
       nodeIntegration: false,
+      sandbox: false,
     },
   });
 
-  overlayWindow.loadURL(`${BASE_URL}/maple/overlay`);
+  const url = resolveAppUrl("/overlay");
+  overlayWindow.loadURL(url);
+
+  overlayWindow.once("ready-to-show", () => {
+    overlayWindow?.show();
+  });
 
   overlayWindow.on("closed", () => {
     overlayWindow = null;
@@ -80,7 +130,8 @@ ipcMain.handle("overlay:close", () => {
   closeOverlayWindow();
 });
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+  await ensureProductionServer();
   createMainWindow();
 
   app.on("activate", () => {
@@ -93,5 +144,12 @@ app.whenReady().then(() => {
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
+  }
+});
+
+app.on("will-quit", () => {
+  if (staticServer) {
+    staticServer.close();
+    staticServer = null;
   }
 });

@@ -8,12 +8,14 @@
     "build": "next build",
     "postbuild": "node scripts/postbuild.mjs",
     "deploy": "npm run build && gh-pages -d out -t",
+    "release:win": "npm run electron:build && node scripts/publish-release.mjs",
     "start": "next start",
     "lint": "next lint",
     "electron": "electron .",
-    "electron:dev": "concurrently -k \"npm run dev\" \"wait-on http://localhost:3000 && electron .\"",
-    "electron:prod": "concurrently -k \"npm run start\" \"wait-on http://localhost:3000 && cross-env NODE_ENV=production electron .\"",
-    "dist": "npm run build && electron-builder"
+    "electron:dev": "concurrently -k \"npm run dev\" \"wait-on http://localhost:3000/maple && cross-env MAPLE_BASE_PATH=/maple electron .\"",
+    "electron:prod": "npm run build && cross-env NODE_ENV=production electron .",
+    "electron:build": "npm run build && electron-builder --win",
+    "dist": "npm run electron:build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.106.1",
@@ -43,17 +45,31 @@
     "appId": "com.maple.replan",
     "productName": "메이플 재획 정산",
     "directories": {
-      "output": "dist-electron"
+      "output": "dist-electron",
+      "buildResources": "build"
     },
     "files": [
       "electron/**/*",
+      "out/**/*",
       "package.json"
     ],
+    "asar": true,
     "win": {
       "target": [
-        "nsis",
-        "portable"
-      ]
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "${productName}-Setup-${version}.${ext}",
+      "signAndEditExecutable": false,
+      "signDlls": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerLanguages": ["ko_KR", "en_US"],
+      "language": "2066"
     }
   }
 }

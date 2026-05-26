@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   AppQueryProvider,
   useAppQuery,
@@ -16,8 +16,15 @@ import { GuideCards } from "./GuideCards";
 import { FeedbackForm } from "./FeedbackForm";
 import { BoardView } from "./BoardView";
 import { AdBanner } from "./AdPlaceholder";
+import { WindowsDownloadCTA } from "./WindowsDownloadCTA";
 import { ToastProvider } from "./Toast";
 import { isElectron, openElectronOverlay, closeElectronOverlay } from "@/lib/electron";
+import { toPublicAppPath } from "@/lib/appTab";
+import {
+  publishTimerSnapshot,
+  snapshotKey,
+  subscribeTimerSync,
+} from "@/lib/timerSync";
 import { getGroundById } from "@/lib/huntingGrounds";
 import { parseMesosInput, safeNumber } from "@/lib/format";
 import { loadState, saveState } from "@/lib/storage";
@@ -41,6 +48,9 @@ function ReplanAppInner({ compact }: Props) {
 
   const { mainTab, articleSlug, setMainTab, closeArticle } = useAppQuery();
 
+  const applyingRemoteSync = useRef(false);
+  const lastPublishedTimerKey = useRef("");
+
   const [storageReady, setStorageReady] = useState(false);
   const [state, setState] = useState<AppPersistedState>(defaultPersistedState);
   const [recordSlot, setRecordSlot] = useState<ReplanSlot>(1);
@@ -50,6 +60,8 @@ function ReplanAppInner({ compact }: Props) {
     anchorMs: state.timerAnchorMs,
     accumulatedMs: state.timerAccumulatedMs,
   });
+  const timerRef = useRef(timer);
+  timerRef.current = timer;
 
   const persistTimer = useCallback((snap: TimerSnapshot) => {
     setState((prev) => ({
@@ -75,8 +87,41 @@ function ReplanAppInner({ compact }: Props) {
   }, []);
 
   useEffect(() => {
+    if (!isElectron()) return;
+    document.documentElement.classList.add("electron-app");
+    return () => document.documentElement.classList.remove("electron-app");
+  }, []);
+
+  useEffect(() => {
     if (!storageReady) return;
+    return subscribeTimerSync((msg) => {
+      const snap = msg.snapshot;
+      const key = snapshotKey(snap);
+      if (key === snapshotKey(timerRef.current.snapshot)) return;
+
+      applyingRemoteSync.current = true;
+      lastPublishedTimerKey.current = key;
+      setState((prev) => ({
+        ...prev,
+        timerMode: snap.mode,
+        timerRunning: snap.running,
+        timerAnchorMs: snap.anchorMs,
+        timerAccumulatedMs: snap.accumulatedMs,
+      }));
+      timerRef.current.hydrate(snap);
+      queueMicrotask(() => {
+        applyingRemoteSync.current = false;
+      });
+    });
+  }, [storageReady]);
+
+  useEffect(() => {
+    if (!storageReady || applyingRemoteSync.current) return;
+    const key = snapshotKey(timer.snapshot);
+    if (key === lastPublishedTimerKey.current) return;
+    lastPublishedTimerKey.current = key;
     persistTimer(timer.snapshot);
+    publishTimerSnapshot(timer.snapshot);
   }, [timer.snapshot, storageReady, persistTimer]);
 
   useEffect(() => {
@@ -120,9 +165,12 @@ function ReplanAppInner({ compact }: Props) {
       await openElectronOverlay();
       return;
     }
-    window.alert(
-      "오버레이 모드는 Electron 앱에서 사용하세요.\n\nnpm run electron:dev 로 실행해 주세요."
-    );
+    const path = toPublicAppPath("/overlay/");
+    const url = `${window.location.origin}${path}`;
+    const features =
+      "popup=yes,toolbar=no,location=no,menubar=no,status=no,scrollbars=no,resizable=no,width=360,height=650";
+    const win = window.open(url, "mapleOverlay", features);
+    win?.focus();
   };
 
   const closeOverlay = async () => {
@@ -236,15 +284,18 @@ function ReplanAppInner({ compact }: Props) {
       : "mx-auto w-full max-w-2xl px-4 py-3 sm:max-w-3xl sm:py-4";
 
   return (
-    <div className={shellClass}>
-      <div className={containerClass}>
+    <div className={`electron-no-drag ${shellClass}`}>
+      <div className={`electron-no-drag ${containerClass}`}>
         {!compact && (
-          <header className="mb-3 text-center">
-            <h1 className="text-lg font-bold text-maple-gold drop-shadow-sm">
-              메이플 재획 정산
-            </h1>
-            <p className="text-[11px] text-maple-muted">2시간 사냥 시급 · 누적 정산</p>
-          </header>
+          <>
+            <header className="mb-3 text-center">
+              <h1 className="text-lg font-bold text-maple-gold drop-shadow-sm">
+                메이플 재획 정산
+              </h1>
+              <p className="text-[11px] text-maple-muted">2시간 사냥 시급 · 누적 정산</p>
+            </header>
+            <WindowsDownloadCTA />
+          </>
         )}
 
         <section aria-label="2시간 재획 타이머" className="shrink-0">

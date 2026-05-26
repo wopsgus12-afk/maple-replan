@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GG Pass",
-  description: "GG Pass — 글로벌 로블록스·게임 유틸리티 허브",
+  title: "메이플 재획 정산",
+  description: "메이플스토리 2시간 재획(사냥) 시급 및 누적 정산 도구",
 };
 
 export default function RootLayout({
