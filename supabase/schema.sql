@@ -41,3 +41,47 @@ drop policy if exists "community_posts_insert" on public.community_posts;
 create policy "community_posts_insert"
   on public.community_posts for insert
   with check (true);
+
+-- 4) 개발자에게 한마디 · 방명록 (닉네임 + 비밀번호 해시 + 내용)
+create table if not exists public.developer_guestbook (
+  id bigint generated always as identity primary key,
+  nickname text not null check (
+    char_length(trim(nickname)) >= 2 and char_length(nickname) <= 16
+  ),
+  password_hash text not null check (char_length(password_hash) = 64),
+  content text not null check (
+    char_length(trim(content)) >= 5 and char_length(content) <= 500
+  ),
+  created_at timestamptz not null default now()
+);
+
+create index if not exists idx_developer_guestbook_created
+  on public.developer_guestbook (created_at desc);
+
+alter table public.developer_guestbook replica identity full;
+
+do $$
+begin
+  if not exists (
+    select 1 from pg_publication_tables
+    where pubname = 'supabase_realtime'
+      and schemaname = 'public'
+      and tablename = 'developer_guestbook'
+  ) then
+    alter publication supabase_realtime add table public.developer_guestbook;
+  end if;
+exception
+  when duplicate_object then null;
+end $$;
+
+alter table public.developer_guestbook enable row level security;
+
+drop policy if exists "developer_guestbook_select" on public.developer_guestbook;
+create policy "developer_guestbook_select"
+  on public.developer_guestbook for select
+  using (true);
+
+drop policy if exists "developer_guestbook_insert" on public.developer_guestbook;
+create policy "developer_guestbook_insert"
+  on public.developer_guestbook for insert
+  with check (true);
