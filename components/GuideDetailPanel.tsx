@@ -76,6 +76,13 @@ export function GuideDetailPanel({ slug, onBack }: Props) {
                   {paragraph}
                 </p>
               ))}
+              {section.bullets && section.bullets.length > 0 && (
+                <ul className="mb-3 list-disc space-y-2.5 pl-5 text-base leading-loose text-gray-200 marker:text-maple-gold">
+                  {section.bullets.map((item) => (
+                    <li key={item.slice(0, 48)}>{item}</li>
+                  ))}
+                </ul>
+              )}
             </section>
           ))}
         </div>
