@@ -7,6 +7,7 @@ import {
   fetchPosts,
   formatPostDate,
   subscribeToBoard,
+  validateBoardPassword,
   type BoardKind,
   type CommunityPost,
 } from "@/lib/board";
@@ -56,11 +57,14 @@ export function BoardView({ kind }: Props) {
   const [draftTitle, setDraftTitle] = useState("");
   const [draftContent, setDraftContent] = useState("");
   const [draftAuthor, setDraftAuthor] = useState("");
+  const [draftPassword, setDraftPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [detailAction, setDetailAction] = useState<"edit" | "delete" | null>(null);
 
   const handleOpenPost = useCallback(
-    (post: CommunityPost) => {
+    (post: CommunityPost, action?: "edit" | "delete") => {
       openPost(kind, post.id);
+      setDetailAction(action ?? null);
     },
     [openPost, kind]
   );
@@ -149,13 +153,25 @@ export function BoardView({ kind }: Props) {
       showToast("내용을 입력해 주세요.");
       return;
     }
+    const pwdError = validateBoardPassword(draftPassword);
+    if (pwdError) {
+      showToast(pwdError);
+      return;
+    }
 
     setSubmitting(true);
     try {
-      await createPost({ boardType: kind, title, content, author });
+      await createPost({
+        boardType: kind,
+        title,
+        content,
+        author,
+        password: draftPassword,
+      });
       showToast("글이 등록되었습니다.");
       setDraftTitle("");
       setDraftContent("");
+      setDraftPassword("");
       setWriteOpen(false);
       await loadPosts();
     } catch (e) {
@@ -247,6 +263,15 @@ export function BoardView({ kind }: Props) {
             placeholder="내용을 입력하세요"
             className="w-full resize-y rounded border border-maple-border bg-maple-bg px-3 py-2 text-sm text-white placeholder:text-maple-muted/60 focus:border-maple-gold focus:outline-none"
           />
+          <input
+            type="password"
+            maxLength={32}
+            value={draftPassword}
+            onChange={(e) => setDraftPassword(e.target.value)}
+            placeholder="비밀번호 (4~32자, 수정·삭제 시 사용)"
+            autoComplete="new-password"
+            className="w-full rounded border border-maple-border bg-maple-bg px-3 py-2 text-sm text-white placeholder:text-maple-muted/60 focus:border-maple-gold focus:outline-none"
+          />
           <div className="flex justify-end gap-2">
             <button
               type="button"
@@ -284,11 +309,12 @@ export function BoardView({ kind }: Props) {
       )}
 
       <div className="overflow-hidden rounded-lg border border-maple-border bg-maple-panel/60">
-        <div className="grid grid-cols-[2.5rem_1fr_4.5rem_5rem] gap-1 border-b border-maple-border bg-maple-bg/60 px-2 py-2 text-[10px] font-semibold text-maple-muted">
+        <div className="grid grid-cols-[2.5rem_1fr_4.5rem_5rem_3.5rem] gap-1 border-b border-maple-border bg-maple-bg/60 px-2 py-2 text-[10px] font-semibold text-maple-muted">
           <span className="text-center">번호</span>
           <span>제목</span>
           <span className="text-center">작성자</span>
           <span className="text-right">작성일</span>
+          <span className="text-center">관리</span>
         </div>
         {loading ? (
           <p className="px-3 py-6 text-center text-xs text-maple-muted">불러오는 중…</p>
@@ -300,20 +326,41 @@ export function BoardView({ kind }: Props) {
           <ul className="divide-y divide-maple-border/60">
             {posts.map((post) => (
               <li key={post.id}>
-                <button
-                  type="button"
-                  onClick={() => handleOpenPost(post)}
-                  className="grid w-full grid-cols-[2.5rem_1fr_4.5rem_5rem] gap-1 px-2 py-2.5 text-left text-[11px] transition hover:bg-maple-gold/5"
-                >
-                  <span className="text-center tabular-nums text-maple-muted">{post.id}</span>
-                  <span className="truncate pr-1 text-gray-100 hover:text-maple-gold">
-                    {post.title}
-                  </span>
-                  <span className="truncate text-center text-maple-muted">{post.author}</span>
-                  <span className="text-right tabular-nums text-maple-muted/80">
-                    {formatPostDate(post.created_at)}
-                  </span>
-                </button>
+                <div className="grid grid-cols-[2.5rem_1fr_4.5rem_5rem_3.5rem] gap-1 px-2 py-2.5 text-[11px] transition hover:bg-maple-gold/5">
+                  <button
+                    type="button"
+                    onClick={() => handleOpenPost(post)}
+                    className="col-span-4 grid grid-cols-[2.5rem_1fr_4.5rem_5rem] gap-1 text-left"
+                  >
+                    <span className="text-center tabular-nums text-maple-muted">{post.id}</span>
+                    <span className="truncate pr-1 text-gray-100 hover:text-maple-gold">
+                      {post.title}
+                    </span>
+                    <span className="truncate text-center text-maple-muted">{post.author}</span>
+                    <span className="text-right tabular-nums text-maple-muted/80">
+                      {formatPostDate(post.created_at)}
+                    </span>
+                  </button>
+                  <div
+                    className="flex flex-col items-center justify-center gap-0.5"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => handleOpenPost(post, "edit")}
+                      className="text-[9px] text-maple-gold hover:underline"
+                    >
+                      수정
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleOpenPost(post, "delete")}
+                      className="text-[9px] text-red-400/90 hover:underline"
+                    >
+                      삭제
+                    </button>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
@@ -326,7 +373,15 @@ export function BoardView({ kind }: Props) {
         </div>
       )}
 
-      {selectedPost && <BoardPostDetail post={selectedPost} onBack={handleClosePost} />}
+      {selectedPost && (
+        <BoardPostDetail
+          post={selectedPost}
+          onBack={handleClosePost}
+          onChanged={() => void loadPosts()}
+          initialAction={detailAction}
+          onInitialActionConsumed={() => setDetailAction(null)}
+        />
+      )}
     </section>
   );
 }

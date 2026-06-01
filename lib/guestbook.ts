@@ -1,3 +1,4 @@
+import { hashPasswordSha256 } from "@/lib/passwordHash";
 import { getSupabase } from "@/lib/supabase/client";
 
 const TABLE = "developer_guestbook";
@@ -15,14 +16,6 @@ export type CreateGuestbookInput = {
   content: string;
 };
 
-export async function hashGuestbookPassword(password: string): Promise<string> {
-  const data = new TextEncoder().encode(password);
-  const digest = await crypto.subtle.digest("SHA-256", data);
-  return Array.from(new Uint8Array(digest))
-    .map((b) => b.toString(16).padStart(2, "0"))
-    .join("");
-}
-
 export async function fetchGuestbookEntries(): Promise<GuestbookEntry[]> {
   const supabase = getSupabase();
   const { data, error } = await supabase
@@ -39,7 +32,7 @@ export async function createGuestbookEntry(
   input: CreateGuestbookInput
 ): Promise<GuestbookEntry> {
   const supabase = getSupabase();
-  const password_hash = await hashGuestbookPassword(input.password);
+  const password_hash = await hashPasswordSha256(input.password);
 
   const { data, error } = await supabase
     .from(TABLE)

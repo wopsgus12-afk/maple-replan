@@ -8,8 +8,13 @@ create table if not exists public.community_posts (
   title text not null check (char_length(trim(title)) >= 1 and char_length(title) <= 200),
   content text not null check (char_length(trim(content)) >= 1 and char_length(content) <= 10000),
   author text not null check (char_length(trim(author)) >= 1 and char_length(author) <= 32),
+  password_hash text check (password_hash is null or char_length(password_hash) = 64),
   created_at timestamptz not null default now()
 );
+
+-- 기존 테이블에 비밀번호 컬럼만 없을 때
+alter table public.community_posts
+  add column if not exists password_hash text;
 
 create index if not exists idx_community_posts_board_created
   on public.community_posts (board_type, created_at desc);
@@ -41,6 +46,92 @@ drop policy if exists "community_posts_insert" on public.community_posts;
 create policy "community_posts_insert"
   on public.community_posts for insert
   with check (true);
+
+-- 3-1) 게시글 수정·삭제 (비밀번호 검증 RPC — anon 키로 직접 UPDATE/DELETE 불가)
+create extension if not exists pgcrypto;
+
+create or replace function public.community_post_password_ok(p_id bigint, p_password text)
+returns boolean
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  stored text;
+begin
+  select password_hash into stored from community_posts where id = p_id;
+  if stored is null or stored = '' then
+    return false;
+  end if;
+  return stored = encode(digest(p_password, 'sha256'), 'hex');
+end;
+$$;
+
+create or replace function public.verify_community_post_password(p_id bigint, p_password text)
+returns boolean
+language sql
+security definer
+set search_path = public
+as $$
+  select public.community_post_password_ok(p_id, p_password);
+$$;
+
+create or replace function public.delete_community_post(p_id bigint, p_password text)
+returns boolean
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  if not public.community_post_password_ok(p_id, p_password) then
+    return false;
+  end if;
+  delete from community_posts where id = p_id;
+  return found;
+end;
+$$;
+
+create or replace function public.update_community_post(
+  p_id bigint,
+  p_password text,
+  p_title text,
+  p_content text,
+  p_author text
+)
+returns jsonb
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  row community_posts%rowtype;
+begin
+  if not public.community_post_password_ok(p_id, p_password) then
+    return null;
+  end if;
+
+  update community_posts
+  set
+    title = trim(p_title),
+    content = trim(p_content),
+    author = trim(p_author)
+  where id = p_id
+  returning * into row;
+
+  return jsonb_build_object(
+    'id', row.id,
+    'board_type', row.board_type,
+    'title', row.title,
+    'content', row.content,
+    'author', row.author,
+    'created_at', row.created_at
+  );
+end;
+$$;
+
+grant execute on function public.verify_community_post_password(bigint, text) to anon, authenticated;
+grant execute on function public.delete_community_post(bigint, text) to anon, authenticated;
+grant execute on function public.update_community_post(bigint, text, text, text, text) to anon, authenticated;
 
 -- 4) 개발자에게 한마디 · 방명록 (닉네임 + 비밀번호 해시 + 내용)
 create table if not exists public.developer_guestbook (
@@ -85,3 +176,6 @@ drop policy if exists "developer_guestbook_insert" on public.developer_guestbook
 create policy "developer_guestbook_insert"
   on public.developer_guestbook for insert
   with check (true);
+
+-- (선택) 예전에 password 컬럼으로 만든 경우 → 앱과 맞추기
+-- alter table public.developer_guestbook rename column password to password_hash;
