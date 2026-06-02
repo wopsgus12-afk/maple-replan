@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { getGuideBySlug } from "@/lib/seoPosts";
+import { GuideSectionContent } from "./GuideSectionContent";
 
 type Props = {
   slug: string;
@@ -68,21 +69,7 @@ export function GuideDetailPanel({ slug, onBack }: Props) {
               <h2 className="mb-3 text-xl font-bold text-maple-accent sm:text-2xl">
                 {section.heading}
               </h2>
-              {section.paragraphs.map((paragraph) => (
-                <p
-                  key={paragraph.slice(0, 40)}
-                  className="mb-3 text-base leading-loose text-gray-200"
-                >
-                  {paragraph}
-                </p>
-              ))}
-              {section.bullets && section.bullets.length > 0 && (
-                <ul className="mb-3 list-disc space-y-2.5 pl-5 text-base leading-loose text-gray-200 marker:text-maple-gold">
-                  {section.bullets.map((item) => (
-                    <li key={item.slice(0, 48)}>{item}</li>
-                  ))}
-                </ul>
-              )}
+              <GuideSectionContent section={section} />
             </section>
           ))}
         </div>
