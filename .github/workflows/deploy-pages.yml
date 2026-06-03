@@ -29,18 +29,10 @@ jobs:
         run: npm ci
 
       - name: Build static export
-        run: npm run build
-
-      - name: Build Windows installer
-        run: npm run electron:build
-
-      - name: Publish Windows asset to GitHub Release
         env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh release view v0.1.0 2>/dev/null || gh release create v0.1.0 --title "v0.1.0" --notes "메이플 재획 정산 Windows 설치 프로그램"
-          cp dist-electron/*Setup*.exe maple-replan-setup-0.1.0.exe
-          gh release upload v0.1.0 maple-replan-setup-0.1.0.exe --clobber
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        run: npm run build
 
       - name: Deploy to gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4
