@@ -18,8 +18,8 @@ export function WindowsDownloadCTA() {
         메이플 재획 정산기 Windows 프로그램 다운로드
       </a>
       <p className="mt-3 text-center text-[11px] leading-relaxed text-maple-muted sm:text-xs">
-        ※ 일반 브라우저(크롬/웨일)에서는 보안 상 오버레이 기능이 제한되므로, 반드시 위
-        프로그램 버전으로 다운로드하여 실행해 주세요.
+        오버레이 기능은 Windows 앱 버전에서 정식 지원됩니다. 설치 파일은 GitHub
+        Releases에서 제공됩니다.
       </p>
     </section>
   );
