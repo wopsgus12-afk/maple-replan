@@ -25,6 +25,21 @@ export function GuideSectionContent({ section }: Props) {
               {paragraph}
             </p>
           ))}
+          {sub.bullets && sub.bullets.length > 0 && (
+            <ul className="mb-3 list-disc space-y-2.5 pl-5 text-base leading-loose text-gray-200 marker:text-maple-gold">
+              {sub.bullets.map((item) => (
+                <li key={item.slice(0, 48)}>{item}</li>
+              ))}
+            </ul>
+          )}
+          {sub.paragraphsAfterBullets?.map((paragraph) => (
+            <p
+              key={paragraph.slice(0, 40)}
+              className="mb-2 text-base leading-loose text-gray-200"
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
       ))}
       {section.bullets && section.bullets.length > 0 && (
