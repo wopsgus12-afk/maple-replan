@@ -179,3 +179,95 @@ create policy "developer_guestbook_insert"
 
 -- (선택) 예전에 password 컬럼으로 만든 경우 → 앱과 맞추기
 -- alter table public.developer_guestbook rename column password to password_hash;
+
+-- ============================================================
+-- 가이드 페이지 조회수 (목록 BEST / 조회수 표시)
+-- ============================================================
+create table if not exists public.guide_page_views (
+  slug text primary key,
+  view_count bigint not null default 0 check (view_count >= 0),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.guide_page_views enable row level security;
+
+drop policy if exists "guide_page_views_select" on public.guide_page_views;
+create policy "guide_page_views_select"
+  on public.guide_page_views for select
+  using (true);
+
+create or replace function public.increment_guide_view(p_slug text)
+returns bigint
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  new_count bigint;
+  clean text;
+begin
+  clean := trim(coalesce(p_slug, ''));
+  if clean = '' then
+    return 0;
+  end if;
+
+  insert into public.guide_page_views (slug, view_count, updated_at)
+  values (clean, 1, now())
+  on conflict (slug) do update
+    set view_count = public.guide_page_views.view_count + 1,
+        updated_at = now()
+  returning view_count into new_count;
+
+  return new_count;
+end;
+$$;
+
+grant execute on function public.increment_guide_view(text) to anon, authenticated;
+
+-- ============================================================
+-- 가이드 추천수 (본문 추천 버튼 / 목록 표기)
+-- ============================================================
+alter table public.guide_page_views
+  add column if not exists recommend_count bigint not null default 0;
+
+do $$
+begin
+  if not exists (
+    select 1 from pg_constraint
+    where conname = 'guide_page_views_recommend_count_check'
+  ) then
+    alter table public.guide_page_views
+      add constraint guide_page_views_recommend_count_check
+      check (recommend_count >= 0);
+  end if;
+exception
+  when duplicate_object then null;
+end $$;
+
+create or replace function public.increment_guide_recommend(p_slug text)
+returns bigint
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  new_count bigint;
+  clean text;
+begin
+  clean := trim(coalesce(p_slug, ''));
+  if clean = '' then
+    return 0;
+  end if;
+
+  insert into public.guide_page_views (slug, view_count, recommend_count, updated_at)
+  values (clean, 0, 1, now())
+  on conflict (slug) do update
+    set recommend_count = public.guide_page_views.recommend_count + 1,
+        updated_at = now()
+  returning recommend_count into new_count;
+
+  return new_count;
+end;
+$$;
+
+grant execute on function public.increment_guide_recommend(text) to anon, authenticated;

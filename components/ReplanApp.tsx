@@ -1,23 +1,19 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
 import {
   AppQueryProvider,
-  useAppQuery,
   useStaticHostingPathFix,
 } from "@/hooks/useClientAppQuery";
-import { GuideDetailPanel } from "./GuideDetailPanel";
 import { TimerBar } from "./TimerBar";
 import { HuntingForm } from "./HuntingForm";
 import { SessionLists } from "./SessionLists";
 import { Dashboard } from "./Dashboard";
 import { GlobalFooter, SettlementFooter } from "./Footer";
-import { GuideCards } from "./GuideCards";
-import { FeedbackForm } from "./FeedbackForm";
-import { BoardView } from "./BoardView";
-import { AdBanner } from "./AdPlaceholder";
 import { WindowsDownloadCTA } from "./WindowsDownloadCTA";
 import { ToastProvider } from "./Toast";
+import { LegacyTabRedirect } from "./LegacyTabRedirect";
 import { isElectron, openElectronOverlay, closeElectronOverlay } from "@/lib/electron";
 import { getGroundById } from "@/lib/huntingGrounds";
 import { parseMesosInput, safeNumber } from "@/lib/format";
@@ -34,13 +30,8 @@ type Props = {
   compact?: boolean;
 };
 
-const TAB_BUTTON_CLASS = (active: boolean) =>
-  `maple-tab ${active ? "maple-tab-active" : "maple-tab-inactive"}`;
-
 function ReplanAppInner({ compact }: Props) {
   useStaticHostingPathFix();
-
-  const { mainTab, articleSlug, setMainTab, closeArticle } = useAppQuery();
 
   const [storageReady, setStorageReady] = useState(false);
   const [state, setState] = useState<AppPersistedState>(defaultPersistedState);
@@ -233,12 +224,11 @@ function ReplanAppInner({ compact }: Props) {
     : "min-h-screen bg-maple-bg pb-8";
   const containerClass = compact
     ? "w-full"
-    : mainTab === "calculator"
-      ? "mx-auto w-full max-w-6xl px-4 py-3 sm:py-4"
-      : "mx-auto w-full max-w-2xl px-4 py-3 sm:max-w-3xl sm:py-4";
+    : "mx-auto w-full max-w-6xl px-4 py-3 sm:py-4";
 
   return (
     <div className={shellClass}>
+      {!compact && <LegacyTabRedirect />}
       <div className={containerClass}>
         {!compact && (
           <>
@@ -266,128 +256,76 @@ function ReplanAppInner({ compact }: Props) {
           />
         </section>
 
-        {!compact && <AdBanner variant="strip" className="mt-3 w-full shrink-0" />}
-
-        {!compact && (
-          <nav
-            aria-label="메인 탭"
-            className="mt-3 flex gap-1.5 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          >
-            <button
-              type="button"
-              onClick={() => setMainTab("calculator")}
-              className={TAB_BUTTON_CLASS(mainTab === "calculator")}
-            >
-              재획 정산
-            </button>
-            <button
-              type="button"
-              onClick={() => setMainTab("guides")}
-              className={TAB_BUTTON_CLASS(mainTab === "guides")}
-            >
-              재획 가이드 정보
-            </button>
-            <button
-              type="button"
-              onClick={() => setMainTab("brag")}
-              className={TAB_BUTTON_CLASS(mainTab === "brag")}
-            >
-              자랑 게시판
-            </button>
-            <button
-              type="button"
-              onClick={() => setMainTab("tips")}
-              className={TAB_BUTTON_CLASS(mainTab === "tips")}
-            >
-              사냥터 팁
-            </button>
-            <button
-              type="button"
-              onClick={() => setMainTab("feedback")}
-              className={TAB_BUTTON_CLASS(mainTab === "feedback")}
-            >
-              개발자에게 한마디
-            </button>
-          </nav>
-        )}
-
         {!compact && (
           <main className="mt-4 min-w-0">
-            {mainTab === "guides" && !articleSlug && <GuideCards />}
-
-            {mainTab === "guides" && articleSlug && (
-              <GuideDetailPanel slug={articleSlug} onBack={closeArticle} />
-            )}
-
-            {mainTab === "brag" && <BoardView kind="brag" />}
-
-            {mainTab === "tips" && <BoardView kind="tips" />}
-
-            {mainTab === "feedback" && <FeedbackForm />}
-
-            {mainTab === "calculator" && (
-              <div className="flex w-full max-w-6xl flex-col gap-4">
-                <section aria-label="사냥 기록 입력" className="min-w-0">
-                  <HuntingForm
-                    groundId={state.groundId}
-                    mesosBeforeInput={state.mesosBeforeInput}
-                    mesosAfterInput={state.mesosAfterInput}
-                    expBeforeInput={state.expBeforeInput}
-                    expAfterInput={state.expAfterInput}
-                    fragmentCount={state.fragmentCount}
-                    gemstoneCount={state.gemstoneCount}
-                    recordSlot={recordSlot}
-                    onGroundChange={(id) => setState((s) => ({ ...s, groundId: id }))}
-                    onMesosBeforeChange={(mesosBeforeInput) =>
-                      setState((s) => ({ ...s, mesosBeforeInput }))
-                    }
-                    onMesosAfterChange={(mesosAfterInput) =>
-                      setState((s) => ({ ...s, mesosAfterInput }))
-                    }
-                    onExpBeforeChange={(expBeforeInput) =>
-                      setState((s) => ({ ...s, expBeforeInput }))
-                    }
-                    onExpAfterChange={(expAfterInput) =>
-                      setState((s) => ({ ...s, expAfterInput }))
-                    }
-                    onFragmentCountChange={(fragmentCount) =>
-                      setState((s) => ({ ...s, fragmentCount: Math.max(0, fragmentCount) }))
-                    }
-                    onGemstoneCountChange={(gemstoneCount) =>
-                      setState((s) => ({ ...s, gemstoneCount: Math.max(0, gemstoneCount) }))
-                    }
-                    onRecordSlotChange={setRecordSlot}
-                    onRecord={recordSession}
-                  />
-                </section>
-
-                <section aria-label="사냥 히스토리" className="min-w-0">
-                  <SessionLists sessions={state.sessions} />
-                </section>
-
-                <Dashboard
-                  sessions={state.sessions}
-                  gemPrice={state.gemPrice}
-                  fragmentPrice={state.fragmentPrice}
-                  onGemPriceChange={(gemPrice) => setState((s) => ({ ...s, gemPrice }))}
-                  onFragmentPriceChange={(fragmentPrice) =>
-                    setState((s) => ({ ...s, fragmentPrice }))
+            <div className="flex w-full max-w-6xl flex-col gap-4">
+              <section aria-label="사냥 기록 입력" className="min-w-0">
+                <HuntingForm
+                  groundId={state.groundId}
+                  mesosBeforeInput={state.mesosBeforeInput}
+                  mesosAfterInput={state.mesosAfterInput}
+                  expBeforeInput={state.expBeforeInput}
+                  expAfterInput={state.expAfterInput}
+                  fragmentCount={state.fragmentCount}
+                  gemstoneCount={state.gemstoneCount}
+                  recordSlot={recordSlot}
+                  onGroundChange={(id) => setState((s) => ({ ...s, groundId: id }))}
+                  onMesosBeforeChange={(mesosBeforeInput) =>
+                    setState((s) => ({ ...s, mesosBeforeInput }))
                   }
+                  onMesosAfterChange={(mesosAfterInput) =>
+                    setState((s) => ({ ...s, mesosAfterInput }))
+                  }
+                  onExpBeforeChange={(expBeforeInput) =>
+                    setState((s) => ({ ...s, expBeforeInput }))
+                  }
+                  onExpAfterChange={(expAfterInput) =>
+                    setState((s) => ({ ...s, expAfterInput }))
+                  }
+                  onFragmentCountChange={(fragmentCount) =>
+                    setState((s) => ({ ...s, fragmentCount: Math.max(0, fragmentCount) }))
+                  }
+                  onGemstoneCountChange={(gemstoneCount) =>
+                    setState((s) => ({ ...s, gemstoneCount: Math.max(0, gemstoneCount) }))
+                  }
+                  onRecordSlotChange={setRecordSlot}
+                  onRecord={recordSession}
                 />
+              </section>
 
-                <button
-                  type="button"
-                  onClick={resetAll}
-                  className="mt-3 w-full rounded border border-red-800/60 py-2 text-xs text-red-300/90 hover:bg-red-950/30"
+              <section aria-label="사냥 히스토리" className="min-w-0">
+                <SessionLists sessions={state.sessions} />
+              </section>
+
+              <Dashboard
+                sessions={state.sessions}
+                gemPrice={state.gemPrice}
+                fragmentPrice={state.fragmentPrice}
+                onGemPriceChange={(gemPrice) => setState((s) => ({ ...s, gemPrice }))}
+                onFragmentPriceChange={(fragmentPrice) =>
+                  setState((s) => ({ ...s, fragmentPrice }))
+                }
+              />
+
+              <button
+                type="button"
+                onClick={resetAll}
+                className="mt-3 w-full rounded border border-red-800/60 py-2 text-xs text-red-300/90 hover:bg-red-950/30"
+              >
+                전체 초기화
+              </button>
+
+              <p className="text-center text-sm">
+                <Link
+                  href="/guide/"
+                  className="inline-flex items-center gap-1 rounded-lg border border-maple-gold/50 bg-maple-gold/10 px-4 py-2.5 font-medium text-maple-gold hover:bg-maple-gold/20"
                 >
-                  전체 초기화
-                </button>
+                  최신 가이드 더보기 →
+                </Link>
+              </p>
 
-                <AdBanner variant="wide" className="mt-4 w-full" />
-
-                <SettlementFooter />
-              </div>
-            )}
+              <SettlementFooter />
+            </div>
           </main>
         )}
 

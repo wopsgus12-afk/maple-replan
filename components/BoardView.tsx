@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useAppQuery } from "@/hooks/useClientAppQuery";
 import {
   createPost,
@@ -39,11 +40,22 @@ const MAX_AUTHOR = 32;
 
 type Props = {
   kind: BoardKind;
+  /** Standalone route e.g. "/community/" — uses ?post= on this path */
+  basePath?: string;
 };
 
-export function BoardView({ kind }: Props) {
-  const { mainTab, postId, openPost, closePost, replace } = useAppQuery();
-  const postIdParam = mainTab === kind ? postId : null;
+export function BoardView({ kind, basePath }: Props) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const appQuery = useAppQuery();
+  const standalone = Boolean(basePath);
+
+  const postIdParam = standalone
+    ? searchParams.get("post")
+    : appQuery.mainTab === kind
+      ? appQuery.postId
+      : null;
+
   const { showToast } = useToast();
   const meta = BOARD_META[kind];
 
@@ -61,17 +73,36 @@ export function BoardView({ kind }: Props) {
   const [submitting, setSubmitting] = useState(false);
   const [detailAction, setDetailAction] = useState<"edit" | "delete" | null>(null);
 
+  const goList = useCallback(() => {
+    if (standalone && basePath) {
+      router.push(basePath, { scroll: false });
+      return;
+    }
+    appQuery.closePost(kind);
+  }, [standalone, basePath, router, appQuery, kind]);
+
+  const goPost = useCallback(
+    (id: number) => {
+      if (standalone && basePath) {
+        router.push(`${basePath}?post=${id}`, { scroll: false });
+        return;
+      }
+      appQuery.openPost(kind, id);
+    },
+    [standalone, basePath, router, appQuery, kind]
+  );
+
   const handleOpenPost = useCallback(
     (post: CommunityPost, action?: "edit" | "delete") => {
-      openPost(kind, post.id);
+      goPost(post.id);
       setDetailAction(action ?? null);
     },
-    [openPost, kind]
+    [goPost]
   );
 
   const handleClosePost = useCallback(() => {
-    closePost(kind);
-  }, [closePost, kind]);
+    goList();
+  }, [goList]);
 
   const selectedPost = useMemo(() => {
     if (!postIdParam) return null;
@@ -122,14 +153,14 @@ export function BoardView({ kind }: Props) {
     if (!postIdParam || loading) return;
     const id = Number(postIdParam);
     if (!Number.isFinite(id)) {
-      replace({ tab: kind });
+      goList();
       return;
     }
     if (posts.length > 0 && !posts.some((p) => p.id === id)) {
       showToast("삭제되었거나 찾을 수 없는 글입니다.");
-      replace({ tab: kind });
+      goList();
     }
-  }, [postIdParam, posts, loading, kind, replace, showToast]);
+  }, [postIdParam, posts, loading, goList, showToast]);
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { GuidePost } from "@/lib/seoPosts";
-import { buildAppHref } from "@/lib/appTab";
 import { GuideSectionContent } from "./GuideSectionContent";
+import { GuideRecommendButton } from "./GuideRecommendButton";
 
 type Props = {
   post: GuidePost;
@@ -11,7 +11,7 @@ type Props = {
 
 export function GuideArticle({
   post,
-  backHref = buildAppHref({ tab: "guides" }),
+  backHref = "/guide/",
   backLabel = "← 목록으로",
 }: Props) {
   return (
@@ -37,13 +37,16 @@ export function GuideArticle({
           </section>
         ))}
       </div>
-      <div className="mt-10 border-t border-maple-border/50 pt-6">
-        <Link
-          href={backHref}
-          className="inline-block rounded-lg border border-maple-gold/50 bg-maple-gold/10 px-4 py-2.5 text-sm font-medium text-maple-gold hover:bg-maple-gold/20"
-        >
-          목록으로 가기
-        </Link>
+      <div className="mt-10 space-y-4 border-t border-maple-border/50 pt-6">
+        <GuideRecommendButton slug={post.slug} />
+        <div className="text-center">
+          <Link
+            href={backHref}
+            className="inline-block rounded-lg border border-maple-gold/50 bg-maple-gold/10 px-4 py-2.5 text-sm font-medium text-maple-gold hover:bg-maple-gold/20"
+          >
+            목록으로 가기
+          </Link>
+        </div>
       </div>
     </article>
   );

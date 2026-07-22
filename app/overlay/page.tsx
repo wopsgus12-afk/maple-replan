@@ -1,11 +1,11 @@
 import { ReplanApp } from "@/components/ReplanApp";
 import { OverlayBody } from "@/components/OverlayBody";
-import { AdBanner } from "@/components/AdPlaceholder";
+import { OverlayGuideLinks } from "@/components/OverlayGuideLinks";
 
 export default function OverlayPage() {
   return (
     <OverlayBody>
-      <div className="flex h-[230px] max-h-[230px] min-h-0 flex-col overflow-hidden">
+      <div className="flex h-[268px] max-h-[268px] min-h-0 flex-col overflow-hidden">
         <div
           className="electron-drag-handle h-3 shrink-0 rounded-t bg-maple-panel/30"
           aria-hidden
@@ -15,7 +15,7 @@ export default function OverlayPage() {
           <div className="min-h-0 flex-1 overflow-hidden">
             <ReplanApp compact />
           </div>
-          <AdBanner variant="mini" className="electron-no-drag mt-1 w-full shrink-0" />
+          <OverlayGuideLinks />
         </main>
       </div>
     </OverlayBody>
