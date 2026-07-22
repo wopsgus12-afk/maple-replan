@@ -1,26 +1,30 @@
 import Link from "next/link";
 import { getRelatedGuides } from "@/lib/relatedGuides";
-import { guidePath } from "@/lib/site";
+import type { Locale } from "@/lib/locale";
+import { guideIndexPath, guidePath } from "@/lib/locale";
+import { ui } from "@/lib/uiCopy";
 
 type Props = {
   currentSlug: string;
+  locale?: Locale;
 };
 
-export function RelatedGuides({ currentSlug }: Props) {
-  const related = getRelatedGuides(currentSlug, 3);
+export function RelatedGuides({ currentSlug, locale = "ko" }: Props) {
+  const t = ui(locale);
+  const related = getRelatedGuides(currentSlug, 3, locale);
   if (related.length === 0) return null;
 
   return (
     <section
-      aria-label="연관 가이드"
+      aria-label={t.relatedTitle}
       className="mx-auto mt-10 max-w-2xl border-t border-maple-border/50 px-4 pt-6"
     >
-      <h2 className="mb-3 text-sm font-semibold text-maple-gold">연관 가이드</h2>
+      <h2 className="mb-3 text-sm font-semibold text-maple-gold">{t.relatedTitle}</h2>
       <ul className="divide-y divide-maple-border/40 rounded-lg border border-maple-border/70">
         {related.map((post) => (
           <li key={post.slug}>
             <Link
-              href={guidePath(post.slug)}
+              href={guidePath(locale, post.slug)}
               className="block truncate px-3 py-2.5 text-sm text-gray-100 hover:bg-maple-panel/60 hover:text-maple-gold"
             >
               {post.title}
@@ -29,8 +33,11 @@ export function RelatedGuides({ currentSlug }: Props) {
         ))}
       </ul>
       <p className="mt-3 text-center text-xs">
-        <Link href="/guide/" className="text-maple-muted hover:text-maple-gold hover:underline">
-          가이드 목록으로 →
+        <Link
+          href={guideIndexPath(locale)}
+          className="text-maple-muted hover:text-maple-gold hover:underline"
+        >
+          {t.relatedAll}
         </Link>
       </p>
     </section>

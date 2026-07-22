@@ -1,24 +1,36 @@
 import Link from "next/link";
 import type { GuidePost } from "@/lib/seoPosts";
+import type { Locale } from "@/lib/locale";
+import { guideIndexPath } from "@/lib/locale";
+import { ui } from "@/lib/uiCopy";
 import { GuideSectionContent } from "./GuideSectionContent";
 import { GuideRecommendButton } from "./GuideRecommendButton";
 
 type Props = {
   post: GuidePost;
+  locale?: Locale;
   backHref?: string;
   backLabel?: string;
+  listCtaLabel?: string;
 };
 
 export function GuideArticle({
   post,
-  backHref = "/guide/",
-  backLabel = "← 목록으로",
+  locale = "ko",
+  backHref,
+  backLabel,
+  listCtaLabel,
 }: Props) {
+  const t = ui(locale);
+  const href = backHref ?? guideIndexPath(locale);
+  const back = backLabel ?? t.guideBackList;
+  const cta = listCtaLabel ?? t.guideListCta;
+
   return (
     <article className="mx-auto max-w-2xl px-4 py-8">
       <nav className="mb-6">
-        <Link href={backHref} className="text-xs text-maple-muted hover:text-maple-gold">
-          {backLabel}
+        <Link href={href} className="text-xs text-maple-muted hover:text-maple-gold">
+          {back}
         </Link>
       </nav>
       <header className="mb-8 border-b border-maple-border/50 pb-6">
@@ -38,13 +50,13 @@ export function GuideArticle({
         ))}
       </div>
       <div className="mt-10 space-y-4 border-t border-maple-border/50 pt-6">
-        <GuideRecommendButton slug={post.slug} />
+        <GuideRecommendButton slug={post.slug} locale={locale} />
         <div className="text-center">
           <Link
-            href={backHref}
+            href={href}
             className="inline-block rounded-lg border border-maple-gold/50 bg-maple-gold/10 px-4 py-2.5 text-sm font-medium text-maple-gold hover:bg-maple-gold/20"
           >
-            목록으로 가기
+            {cta}
           </Link>
         </div>
       </div>

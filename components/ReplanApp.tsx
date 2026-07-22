@@ -25,13 +25,18 @@ import {
   type SessionRecord,
 } from "@/lib/types";
 import { useTimer, type TimerSnapshot } from "@/hooks/useTimer";
+import type { Locale } from "@/lib/locale";
+import { guideIndexPath } from "@/lib/locale";
+import { ui } from "@/lib/uiCopy";
 
 type Props = {
   compact?: boolean;
+  locale?: Locale;
 };
 
-function ReplanAppInner({ compact }: Props) {
+function ReplanAppInner({ compact, locale = "ko" }: Props) {
   useStaticHostingPathFix();
+  const t = ui(locale);
 
   const [storageReady, setStorageReady] = useState(false);
   const [state, setState] = useState<AppPersistedState>(defaultPersistedState);
@@ -200,7 +205,7 @@ function ReplanAppInner({ compact }: Props) {
   };
 
   const resetAll = () => {
-    if (!window.confirm("오늘의 모든 기록과 타이머를 초기화할까요?")) return;
+    if (!window.confirm(t.calcResetConfirm)) return;
     const defaults = defaultPersistedState();
     const cleared: AppPersistedState = {
       ...defaults,
@@ -234,15 +239,18 @@ function ReplanAppInner({ compact }: Props) {
           <>
             <header className="mb-3 text-center">
               <h1 className="text-lg font-bold text-maple-gold drop-shadow-sm">
-                메이플 재획 정산
+                {t.calcTitle}
               </h1>
-              <p className="text-[11px] text-maple-muted">2시간 사냥 시급 · 누적 정산</p>
+              <p className="text-[11px] text-maple-muted">{t.calcSubtitle}</p>
             </header>
-            <WindowsDownloadCTA />
+            {locale === "ko" && <WindowsDownloadCTA />}
           </>
         )}
 
-        <section aria-label="2시간 재획 타이머" className="shrink-0">
+        <section
+          aria-label={locale === "en" ? "2-hour hunt timer" : "2시간 재획 타이머"}
+          className="shrink-0"
+        >
           <TimerBar
             displaySec={timer.displaySec}
             mode={state.timerMode}
@@ -259,7 +267,10 @@ function ReplanAppInner({ compact }: Props) {
         {!compact && (
           <main className="mt-4 min-w-0">
             <div className="flex w-full max-w-6xl flex-col gap-4">
-              <section aria-label="사냥 기록 입력" className="min-w-0">
+              <section
+                aria-label={locale === "en" ? "Hunt log input" : "사냥 기록 입력"}
+                className="min-w-0"
+              >
                 <HuntingForm
                   groundId={state.groundId}
                   mesosBeforeInput={state.mesosBeforeInput}
@@ -293,7 +304,10 @@ function ReplanAppInner({ compact }: Props) {
                 />
               </section>
 
-              <section aria-label="사냥 히스토리" className="min-w-0">
+              <section
+                aria-label={locale === "en" ? "Hunt history" : "사냥 히스토리"}
+                className="min-w-0"
+              >
                 <SessionLists sessions={state.sessions} />
               </section>
 
@@ -312,24 +326,24 @@ function ReplanAppInner({ compact }: Props) {
                 onClick={resetAll}
                 className="mt-3 w-full rounded border border-red-800/60 py-2 text-xs text-red-300/90 hover:bg-red-950/30"
               >
-                전체 초기화
+                {t.calcResetAll}
               </button>
 
               <p className="text-center text-sm">
                 <Link
-                  href="/guide/"
+                  href={guideIndexPath(locale)}
                   className="inline-flex items-center gap-1 rounded-lg border border-maple-gold/50 bg-maple-gold/10 px-4 py-2.5 font-medium text-maple-gold hover:bg-maple-gold/20"
                 >
-                  최신 가이드 더보기 →
+                  {t.calcMoreGuides}
                 </Link>
               </p>
 
-              <SettlementFooter />
+              {locale === "ko" && <SettlementFooter />}
             </div>
           </main>
         )}
 
-        {!compact && <GlobalFooter />}
+        {!compact && <GlobalFooter locale={locale} />}
       </div>
     </div>
   );

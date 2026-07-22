@@ -1,39 +1,30 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { geistMono, geistSans } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/site";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "메이플 재획 정산",
-    template: "%s | 메이플 재획 정산",
+    default: "Maple Meso Calculator",
+    template: "%s | Maple Meso Calculator",
   },
-  description: "메이플스토리 2시간 재획(사냥) 시급 및 누적 정산 도구",
+  description:
+    "Unofficial MapleStory meso calculator and hunting guides for English players (GMS and beyond).",
   openGraph: {
-    siteName: "메이플 재획 정산",
-    locale: "ko_KR",
+    siteName: "Maple Meso Calculator",
+    locale: "en_US",
     type: "website",
   },
 };
 
-export default function RootLayout({
+export default function EnRootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className="dark">
+    <html lang="en" className="dark">
       <head>
         <meta
           name="google-site-verification"

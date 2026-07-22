@@ -2,13 +2,15 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { GUIDE_POSTS } from "@/lib/seoPosts";
-import { guidePath } from "@/lib/site";
+import { GUIDE_POSTS, type GuidePost } from "@/lib/seoPosts";
+import type { Locale } from "@/lib/locale";
+import { guidePath } from "@/lib/locale";
 import {
   fetchGuideStats,
   formatCount,
   type GuideCountMap,
 } from "@/lib/guideViews";
+import { ui } from "@/lib/uiCopy";
 
 const PAGE_SIZE = 10;
 
@@ -19,15 +21,33 @@ type ListItem = {
   recommends: number;
 };
 
-function StatsCell({ recommends, views }: { recommends: number; views: number }) {
+type Props = {
+  locale?: Locale;
+  posts?: GuidePost[];
+};
+
+function StatsCell({
+  recommends,
+  views,
+  locale,
+}: {
+  recommends: number;
+  views: number;
+  locale: Locale;
+}) {
+  const t = ui(locale);
   return (
     <span className="shrink-0 text-[11px] tabular-nums text-maple-muted">
-      추천 {formatCount(recommends)} · 조회 {formatCount(views)}
+      {t.statsCell(formatCount(recommends, locale), formatCount(views, locale))}
     </span>
   );
 }
 
-export function GuideListPaginated() {
+export function GuideListPaginated({
+  locale = "ko",
+  posts = GUIDE_POSTS,
+}: Props) {
+  const t = ui(locale);
   const [views, setViews] = useState<GuideCountMap>({});
   const [recommends, setRecommends] = useState<GuideCountMap>({});
   const [page, setPage] = useState(1);
@@ -50,13 +70,13 @@ export function GuideListPaginated() {
 
   const items: ListItem[] = useMemo(
     () =>
-      GUIDE_POSTS.map((post) => ({
+      posts.map((post) => ({
         slug: post.slug,
         title: post.title,
         views: views[post.slug] ?? 0,
         recommends: recommends[post.slug] ?? 0,
       })),
-    [views, recommends]
+    [posts, views, recommends]
   );
 
   const viewBest = useMemo(() => {
@@ -90,16 +110,22 @@ export function GuideListPaginated() {
   const safePage = Math.min(page, totalPages);
   const pageItems = rest.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
 
+  if (posts.length === 0) {
+    return (
+      <p className="mt-6 text-center text-sm text-maple-muted">{t.emptyGuides}</p>
+    );
+  }
+
   return (
     <div className="mt-4 space-y-8">
       {viewBest.length > 0 && (
-        <section aria-label="조회수 BEST 가이드">
-          <h2 className="mb-3 text-sm font-semibold text-maple-accent">조회수 BEST</h2>
+        <section aria-label={t.viewsBest}>
+          <h2 className="mb-3 text-sm font-semibold text-maple-accent">{t.viewsBest}</h2>
           <ol className="divide-y divide-maple-border/40 rounded-lg border border-maple-border/70 bg-maple-panel/40">
             {viewBest.map((item, idx) => (
               <li key={`v-${item.slug}`}>
                 <Link
-                  href={guidePath(item.slug)}
+                  href={guidePath(locale, item.slug)}
                   className="flex items-center gap-2 px-3 py-3 transition hover:bg-maple-panel/80"
                 >
                   <span className="w-14 shrink-0 text-xs font-semibold text-maple-gold">
@@ -108,7 +134,11 @@ export function GuideListPaginated() {
                   <span className="min-w-0 flex-1 truncate text-sm font-medium text-gray-100">
                     {item.title}
                   </span>
-                  <StatsCell recommends={item.recommends} views={item.views} />
+                  <StatsCell
+                    recommends={item.recommends}
+                    views={item.views}
+                    locale={locale}
+                  />
                 </Link>
               </li>
             ))}
@@ -117,13 +147,15 @@ export function GuideListPaginated() {
       )}
 
       {recommendBest.length > 0 && (
-        <section aria-label="추천 BEST 가이드">
-          <h2 className="mb-3 text-sm font-semibold text-maple-accent">추천 BEST</h2>
+        <section aria-label={t.recommendsBest}>
+          <h2 className="mb-3 text-sm font-semibold text-maple-accent">
+            {t.recommendsBest}
+          </h2>
           <ol className="divide-y divide-maple-border/40 rounded-lg border border-maple-border/70 bg-maple-panel/40">
             {recommendBest.map((item, idx) => (
               <li key={`r-${item.slug}`}>
                 <Link
-                  href={guidePath(item.slug)}
+                  href={guidePath(locale, item.slug)}
                   className="flex items-center gap-2 px-3 py-3 transition hover:bg-maple-panel/80"
                 >
                   <span className="w-14 shrink-0 text-xs font-semibold text-maple-gold">
@@ -132,7 +164,11 @@ export function GuideListPaginated() {
                   <span className="min-w-0 flex-1 truncate text-sm font-medium text-gray-100">
                     {item.title}
                   </span>
-                  <StatsCell recommends={item.recommends} views={item.views} />
+                  <StatsCell
+                    recommends={item.recommends}
+                    views={item.views}
+                    locale={locale}
+                  />
                 </Link>
               </li>
             ))}
@@ -140,10 +176,10 @@ export function GuideListPaginated() {
         </section>
       )}
 
-      <section aria-label="가이드 목록">
-        <h2 className="mb-3 text-sm font-semibold text-maple-accent">전체 가이드</h2>
+      <section aria-label={t.allGuides}>
+        <h2 className="mb-3 text-sm font-semibold text-maple-accent">{t.allGuides}</h2>
         {!ready && (
-          <p className="mb-2 text-xs text-maple-muted">추천·조회수 불러오는 중…</p>
+          <p className="mb-2 text-xs text-maple-muted">{t.statsLoading}</p>
         )}
         <ol
           start={(safePage - 1) * PAGE_SIZE + 1}
@@ -154,7 +190,7 @@ export function GuideListPaginated() {
             return (
               <li key={item.slug}>
                 <Link
-                  href={guidePath(item.slug)}
+                  href={guidePath(locale, item.slug)}
                   className="flex items-center gap-2 px-3 py-3 transition hover:bg-maple-panel/80"
                 >
                   <span className="w-8 shrink-0 text-xs tabular-nums text-maple-muted">
@@ -163,7 +199,11 @@ export function GuideListPaginated() {
                   <span className="min-w-0 flex-1 truncate text-sm font-medium text-gray-100">
                     {item.title}
                   </span>
-                  <StatsCell recommends={item.recommends} views={item.views} />
+                  <StatsCell
+                    recommends={item.recommends}
+                    views={item.views}
+                    locale={locale}
+                  />
                 </Link>
               </li>
             );
@@ -172,7 +212,7 @@ export function GuideListPaginated() {
 
         {totalPages > 1 && (
           <nav
-            aria-label="가이드 목록 페이지"
+            aria-label={t.allGuides}
             className="mt-4 flex items-center justify-center gap-2"
           >
             <button
@@ -181,7 +221,7 @@ export function GuideListPaginated() {
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               className="rounded border border-maple-border px-3 py-1.5 text-xs text-maple-muted disabled:opacity-40 hover:border-maple-gold/50 hover:text-maple-gold"
             >
-              이전
+              {t.prev}
             </button>
             <span className="text-xs tabular-nums text-maple-muted">
               {safePage} / {totalPages}
@@ -192,7 +232,7 @@ export function GuideListPaginated() {
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
               className="rounded border border-maple-border px-3 py-1.5 text-xs text-maple-muted disabled:opacity-40 hover:border-maple-gold/50 hover:text-maple-gold"
             >
-              다음
+              {t.next}
             </button>
           </nav>
         )}

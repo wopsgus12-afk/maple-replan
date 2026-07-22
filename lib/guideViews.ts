@@ -163,7 +163,12 @@ export async function incrementGuideRecommend(
   }
 }
 
-export function formatCount(n: number): string {
+export function formatCount(n: number, locale: "ko" | "en" = "ko"): string {
+  if (locale === "en") {
+    if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+    if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
+    return String(n);
+  }
   if (n >= 10000) return `${(n / 10000).toFixed(1)}만`;
   if (n >= 1000) return `${(n / 1000).toFixed(1)}천`;
   return String(n);

@@ -1,18 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { Locale } from "@/lib/locale";
 import {
   formatCount,
   hasRecommendedLocally,
   incrementGuideRecommend,
 } from "@/lib/guideViews";
+import { ui } from "@/lib/uiCopy";
 
 type Props = {
   slug: string;
   initialCount?: number;
+  locale?: Locale;
 };
 
-export function GuideRecommendButton({ slug, initialCount = 0 }: Props) {
+export function GuideRecommendButton({
+  slug,
+  initialCount = 0,
+  locale = "ko",
+}: Props) {
+  const t = ui(locale);
   const [count, setCount] = useState(initialCount);
   const [done, setDone] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -30,9 +38,9 @@ export function GuideRecommendButton({ slug, initialCount = 0 }: Props) {
       const result = await incrementGuideRecommend(slug);
       setCount(result.count);
       setDone(true);
-      setMessage(result.already ? "이미 추천한 글입니다." : "추천해 주셔서 감사합니다!");
+      setMessage(result.already ? t.recommendAlready : t.recommendThanks);
     } catch {
-      setMessage("추천 처리에 실패했습니다. 잠시 후 다시 시도해 주세요.");
+      setMessage(t.recommendFail);
     } finally {
       setBusy(false);
     }
@@ -50,7 +58,9 @@ export function GuideRecommendButton({ slug, initialCount = 0 }: Props) {
             : "rounded-lg border border-maple-gold/60 bg-maple-gold/15 px-5 py-2.5 text-sm font-medium text-maple-gold hover:bg-maple-gold/25 disabled:opacity-50"
         }
       >
-        {done ? `추천 완료 · ${formatCount(count)}` : `추천하기 · ${formatCount(count)}`}
+        {done
+          ? t.recommendDone(formatCount(count, locale))
+          : t.recommendCta(formatCount(count, locale))}
       </button>
       {message && <p className="text-xs text-maple-muted">{message}</p>}
     </div>
