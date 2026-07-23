@@ -100,6 +100,61 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "gms-heroic-odium-castle-gate-3-vs-occupied-alley-2-wap-meso-erda-guide",
+    title:
+      "GMS Heroic Odium Best WAP Maps: Castle Gate 3 vs Occupied Alley 2 Meso Rates & Erda Fragment Yields",
+    description:
+      "GMS Heroic Odium WAP map comparison: Castle Gate 3 vs Occupied Alley 2—2-hour raw Meso rates, Erda Fragment yields, Drop Rate caps, and which map fits your class.",
+    koSlug:
+      "odium-castle-walls-3-vs-closed-area-2-1replan-meso-fragment-margin-guide",
+    sections: [
+      {
+        heading: "1. Choosing the Right Odium Map in GMS Heroic (Reboot)",
+        paragraphs: [
+          "Reaching Lv. 270 and entering Odium is a major milestone for Global MapleStory (GMS) Heroic Server players. Because trade is disabled and progression relies entirely on self-funded Meso accumulation via the 5x Meso Multiplier, map selection directly impacts your account power. In this guide, we break down the two most popular Odium grinding spots—Castle Gate 3 and Occupied Alley 2—to determine which map delivers the highest Mesos per hour and Erda Fragments for your 2-hour Wealth Acquisition Potion (WAP) sessions.",
+        ],
+      },
+      {
+        heading: "2. WAP Yield Comparison: Castle Gate 3 vs Occupied Alley 2",
+        paragraphs: [
+          "Data measured over full 2-hour WAP sessions with a standard Heroic setup (+100% Meso gear cap, +67%~100% Item Drop Rate, full 1-shot mob clear).",
+        ],
+        subsections: [
+          {
+            heading: "① Castle Gate 3 (Max Meso & Mob Density)",
+            paragraphs: [],
+            bullets: [
+              "Estimated 2-Hour Raw Mesos: ~480,000,000 to 540,000,000 Mesos.",
+              "Erda Fragment Yield: ~12 to 18 Fragments per WAP.",
+              "Pros & Cons: Highest raw yield in Odium, but requires active clearing loops and summon placements due to vertical map height.",
+            ],
+          },
+          {
+            heading: "② Occupied Alley 2 (Low Fatigue & Lazy Rotation)",
+            paragraphs: [],
+            bullets: [
+              "Estimated 2-Hour Raw Mesos: ~430,000,000 to 480,000,000 Mesos.",
+              "Erda Fragment Yield: ~10 to 15 Fragments per WAP.",
+              "Pros & Cons: Ultra-simple horizontal mobility loop. Ideal for low-input \"lazy\" farming sessions with minimal focus required.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Maximizing Your WAP Efficiency with Drop Caps",
+        paragraphs: [
+          "To ensure no Meso nodule is wasted, maintain at least +67% Item Drop Rate to guarantee a 100% Meso drop chance per mob. Pushing Drop Rate beyond 100% directly boosts your Erda Fragment drop frequency, accelerating your 6th Job skill progression alongside massive Meso gains.",
+        ],
+      },
+      {
+        heading: "Conclusion: Optimize Your Daily WAP Sessions",
+        paragraphs: [
+          "If your class has wide-area summons and tracking projectiles, Castle Gate 3 offers the highest Meso-per-hour return. If you prefer low fatigue, Occupied Alley 2 is the top tier option. Always run a 10-minute Battle Analysis before popping a 2-hour WAP, and use our live Meso Calculator tool to track your progression.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
