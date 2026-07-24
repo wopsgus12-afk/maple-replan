@@ -13,7 +13,14 @@ export type MapleOcrResult = {
   previewDataUrl: string;
 };
 
-const TESSERACT_CDN = "https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist";
+const TESSERACT_BASE = "/tesseract";
+
+/** Same-origin absolute URL so Worker importScripts is not blocked. */
+function tesseractUrl(relPath: string): string {
+  const path = relPath.startsWith("/") ? relPath : `${TESSERACT_BASE}/${relPath}`;
+  if (typeof window === "undefined") return path;
+  return new URL(path, window.location.origin).href;
+}
 
 /** Fix common OCR digit confusions in numeric / unit strings. */
 export function correctOcrDigits(input: string): string {
@@ -275,9 +282,9 @@ export async function parseMapleScreenshot(
 
   const { createWorker } = await import("tesseract.js");
   const worker = await createWorker("kor+eng", 1, {
-    workerPath: `${TESSERACT_CDN}/worker.min.js`,
-    corePath: `${TESSERACT_CDN}/tesseract-core-simd.wasm.js`,
-    langPath: "https://tessdata.projectnaptha.com/4.0.0",
+    workerPath: tesseractUrl("/tesseract/worker.min.js"),
+    corePath: tesseractUrl("/tesseract/tesseract-core-simd.wasm.js"),
+    langPath: tesseractUrl("/tesseract/lang"),
     logger: (m) => {
       if (m.status && onProgress) {
         onProgress(String(m.status), Number(m.progress) || 0);
