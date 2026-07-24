@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   AppQueryProvider,
@@ -11,10 +11,10 @@ import { HuntingForm } from "./HuntingForm";
 import { SessionLists } from "./SessionLists";
 import { Dashboard } from "./Dashboard";
 import { GlobalFooter, SettlementFooter } from "./Footer";
-import { WindowsDownloadCTA } from "./WindowsDownloadCTA";
-import { ToastProvider } from "./Toast";
+import { ToastProvider, useToast } from "./Toast";
 import { LegacyTabRedirect } from "./LegacyTabRedirect";
-import { isElectron, openElectronOverlay, closeElectronOverlay } from "@/lib/electron";
+import { PresetSettingsModal } from "./PresetSettingsModal";
+import { isElectron, closeElectronOverlay } from "@/lib/electron";
 import { getGroundById } from "@/lib/huntingGrounds";
 import { parseMesosInput, safeNumber } from "@/lib/format";
 import { loadState, saveState } from "@/lib/storage";
@@ -28,6 +28,15 @@ import { useTimer, type TimerSnapshot } from "@/hooks/useTimer";
 import type { Locale } from "@/lib/locale";
 import { guideIndexPath } from "@/lib/locale";
 import { ui } from "@/lib/uiCopy";
+import {
+  type ServerMode,
+  type UserPreset,
+  clearUserPreset,
+  defaultUserPreset,
+  effectivePrices,
+  loadUserPreset,
+  saveUserPreset,
+} from "@/lib/userPreset";
 
 type Props = {
   compact?: boolean;
@@ -37,9 +46,12 @@ type Props = {
 function ReplanAppInner({ compact, locale = "ko" }: Props) {
   useStaticHostingPathFix();
   const t = ui(locale);
+  const { showToast } = useToast();
 
   const [storageReady, setStorageReady] = useState(false);
   const [state, setState] = useState<AppPersistedState>(defaultPersistedState);
+  const [serverMode, setServerMode] = useState<ServerMode>("kms");
+  const [presetOpen, setPresetOpen] = useState(false);
   const [recordSlot, setRecordSlot] = useState<ReplanSlot>(1);
   const timer = useTimer({
     mode: state.timerMode,
@@ -47,6 +59,21 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
     anchorMs: state.timerAnchorMs,
     accumulatedMs: state.timerAccumulatedMs,
   });
+
+  const prices = useMemo(
+    () => effectivePrices(serverMode, state.fragmentPrice, state.gemPrice),
+    [serverMode, state.fragmentPrice, state.gemPrice]
+  );
+
+  const currentPreset: UserPreset = useMemo(
+    () => ({
+      serverMode,
+      fragmentPrice: state.fragmentPrice,
+      gemPrice: state.gemPrice,
+      groundId: state.groundId,
+    }),
+    [serverMode, state.fragmentPrice, state.gemPrice, state.groundId]
+  );
 
   const persistTimer = useCallback((snap: TimerSnapshot) => {
     setState((prev) => ({
@@ -59,8 +86,22 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
   }, []);
 
   useEffect(() => {
+    // 1) hunt history / timer / form inputs
     const loaded = loadState();
-    setState(loaded);
+    // 2) overlay preset fields only (server, prices, default map)
+    const preset = loadUserPreset();
+    if (preset) {
+      setState({
+        ...loaded,
+        groundId: preset.groundId,
+        fragmentPrice: preset.fragmentPrice,
+        gemPrice: preset.gemPrice,
+      });
+      setServerMode(preset.serverMode);
+    } else {
+      setState(loaded);
+      setServerMode("kms");
+    }
     timer.hydrate({
       mode: loaded.timerMode,
       running: loaded.timerRunning,
@@ -83,15 +124,38 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
 
   useEffect(() => {
     const onStorage = (e: StorageEvent) => {
-      if (e.key !== "maple-replan-v1" || !e.newValue) return;
-      const next = loadState();
-      setState(next);
-      timer.hydrate({
-        mode: next.timerMode,
-        running: next.timerRunning,
-        anchorMs: next.timerAnchorMs,
-        accumulatedMs: next.timerAccumulatedMs,
-      });
+      if (e.key === "maple-replan-v1" && e.newValue) {
+        const next = loadState();
+        const preset = loadUserPreset();
+        setState(
+          preset
+            ? {
+                ...next,
+                groundId: preset.groundId,
+                fragmentPrice: preset.fragmentPrice,
+                gemPrice: preset.gemPrice,
+              }
+            : next
+        );
+        if (preset) setServerMode(preset.serverMode);
+        timer.hydrate({
+          mode: next.timerMode,
+          running: next.timerRunning,
+          anchorMs: next.timerAnchorMs,
+          accumulatedMs: next.timerAccumulatedMs,
+        });
+      }
+      if (e.key === "ggpass_user_preset") {
+        const preset = loadUserPreset();
+        if (!preset) return;
+        setServerMode(preset.serverMode);
+        setState((s) => ({
+          ...s,
+          groundId: preset.groundId,
+          fragmentPrice: preset.fragmentPrice,
+          gemPrice: preset.gemPrice,
+        }));
+      }
     };
     window.addEventListener("storage", onStorage);
     return () => window.removeEventListener("storage", onStorage);
@@ -111,17 +175,6 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [toggleTimer]);
-
-  const openOverlay = async () => {
-    if (isElectron()) {
-      await openElectronOverlay();
-      return;
-    }
-    const url = `${window.location.origin}/overlay/`;
-    const features =
-      "popup=yes,toolbar=no,location=no,menubar=no,status=no,scrollbars=no,resizable=no,width=360,height=650";
-    window.open(url, "mapleOverlay", features)?.focus();
-  };
 
   const closeOverlay = async () => {
     if (isElectron()) {
@@ -158,8 +211,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
     const netExp = expAfter - expBefore;
     const fragmentCount = safeNumber(state.fragmentCount);
     const gemstoneCount = safeNumber(state.gemstoneCount);
-    const fragmentPrice = safeNumber(state.fragmentPrice);
-    const gemPrice = safeNumber(state.gemPrice);
+    const { fragmentPrice, gemPrice } = prices;
     const sessionTotal =
       netMesos +
       fragmentCount * fragmentPrice +
@@ -170,7 +222,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
       slot: recordSlot,
       sessionLabel,
       groundId: state.groundId,
-      groundLabel: ground?.label ?? "알 수 없음",
+      groundLabel: ground?.label ?? (locale === "en" ? "Unknown" : "알 수 없음"),
       mesosBefore,
       mesosAfter,
       expBefore,
@@ -204,6 +256,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
     timer.reset();
   };
 
+  /** Clears hunt history/timer only — preset LocalStorage untouched. */
   const resetAll = () => {
     if (!window.confirm(t.calcResetConfirm)) return;
     const defaults = defaultPersistedState();
@@ -224,6 +277,38 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
     saveState(cleared);
   };
 
+  const applyPresetToState = (preset: UserPreset) => {
+    setServerMode(preset.serverMode);
+    setState((s) => ({
+      ...s,
+      groundId: preset.groundId,
+      fragmentPrice: preset.fragmentPrice,
+      gemPrice: preset.gemPrice,
+    }));
+  };
+
+  const handleSavePreset = (preset: UserPreset) => {
+    const normalized: UserPreset = {
+      ...preset,
+      groundId: getGroundById(preset.groundId)
+        ? preset.groundId
+        : defaultUserPreset().groundId,
+      fragmentPrice: Math.max(0, safeNumber(preset.fragmentPrice)),
+      gemPrice: Math.max(0, safeNumber(preset.gemPrice)),
+    };
+    saveUserPreset(normalized);
+    applyPresetToState(normalized);
+    setPresetOpen(false);
+    showToast(t.presetSavedToast, "success");
+  };
+
+  const handleResetPreset = () => {
+    const defaults = defaultUserPreset();
+    clearUserPreset();
+    applyPresetToState(defaults);
+    showToast(t.presetResetToast, "success");
+  };
+
   const shellClass = compact
     ? "overflow-hidden p-2"
     : "min-h-screen bg-maple-bg pb-8";
@@ -236,15 +321,21 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
       {!compact && <LegacyTabRedirect />}
       <div className={containerClass}>
         {!compact && (
-          <>
-            <header className="mb-3 text-center">
+          <header className="mb-3 flex items-start justify-between gap-3">
+            <div className="min-w-0 flex-1 text-center sm:text-left">
               <h1 className="text-lg font-bold text-maple-gold drop-shadow-sm">
                 {t.calcTitle}
               </h1>
               <p className="text-[11px] text-maple-muted">{t.calcSubtitle}</p>
-            </header>
-            {locale === "ko" && <WindowsDownloadCTA />}
-          </>
+            </div>
+            <button
+              type="button"
+              onClick={() => setPresetOpen(true)}
+              className="shrink-0 rounded-lg border border-maple-gold/50 bg-maple-gold/10 px-2.5 py-1.5 text-[11px] font-medium text-maple-gold hover:bg-maple-gold/20"
+            >
+              {t.presetOpen}
+            </button>
+          </header>
         )}
 
         <section
@@ -259,7 +350,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
             onToggleMode={handleToggleMode}
             onToggleRun={toggleTimer}
             onReset={handleResetTimer}
-            onOpenOverlay={compact ? undefined : openOverlay}
+            onOpenOverlay={undefined}
             onCloseOverlay={compact ? closeOverlay : undefined}
           />
         </section>
@@ -313,12 +404,13 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
 
               <Dashboard
                 sessions={state.sessions}
-                gemPrice={state.gemPrice}
-                fragmentPrice={state.fragmentPrice}
-                onGemPriceChange={(gemPrice) => setState((s) => ({ ...s, gemPrice }))}
-                onFragmentPriceChange={(fragmentPrice) =>
-                  setState((s) => ({ ...s, fragmentPrice }))
-                }
+                gemPrice={prices.gemPrice}
+                fragmentPrice={prices.fragmentPrice}
+                storedGemPrice={state.gemPrice}
+                storedFragmentPrice={state.fragmentPrice}
+                serverMode={serverMode}
+                locale={locale}
+                onOpenPreset={() => setPresetOpen(true)}
               />
 
               <button
@@ -345,6 +437,17 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
 
         {!compact && <GlobalFooter locale={locale} />}
       </div>
+
+      {!compact && (
+        <PresetSettingsModal
+          open={presetOpen}
+          locale={locale}
+          initial={currentPreset}
+          onClose={() => setPresetOpen(false)}
+          onSave={handleSavePreset}
+          onResetPreset={handleResetPreset}
+        />
+      )}
     </div>
   );
 }
