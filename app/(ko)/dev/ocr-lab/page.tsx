@@ -60,7 +60,7 @@ export default function OcrLabPage() {
           <p className="text-xs font-medium text-maple-muted">DEV ONLY · noindex</p>
           <h1 className="text-2xl font-bold text-maple-gold">OCR Lab — KMS Battle Stats</h1>
           <p className="text-sm text-maple-muted">
-            Header ROI crop + binarize + tesseract (kor+eng). Main calculator is not
+            Header ROI crop + 2.5× upscale + soft contrast + tesseract (kor+eng). Main calculator is not
             connected.
           </p>
         </header>

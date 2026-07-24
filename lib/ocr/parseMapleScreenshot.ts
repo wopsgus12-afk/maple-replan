@@ -9,7 +9,7 @@ export type MapleOcrResult = {
   duration: string;
   rawText: string;
   confidence: number;
-  /** Data-URL of the cropped/binarized image used for OCR (for lab preview). */
+  /** Data-URL of the cropped/preprocessed ROI used for OCR (for lab preview). */
   previewDataUrl: string;
 };
 
@@ -30,6 +30,19 @@ export function correctOcrDigits(input: string): string {
     .replace(/[Ss]/g, "5")
     .replace(/[Zz]/g, "2")
     .replace(/[Bb]/g, "8");
+}
+
+/**
+ * Strip all whitespace and apply Korean OCR typo fixes before regex matching.
+ * e.g. "획 득 걸 험 치 61 익" → "획득경험치61억"
+ */
+export function normalizeOcrText(rawText: string): string {
+  let s = rawText.replace(/[\s\u00A0]+/g, "");
+  s = correctOcrDigits(s);
+  s = s.replace(/익/g, "억");
+  s = s.replace(/[걸껄덤]/g, "경");
+  s = s.replace(/배초|배소|메초/g, "메소");
+  return s;
 }
 
 /**
@@ -96,23 +109,18 @@ export function parseKoreanNumber(raw: string): number {
   return total;
 }
 
+/** Amount chars after a label (spaces already stripped by normalizeOcrText). */
+const AMOUNT_CHARS = "[0-9OolIl|SsZzBb조억만,]+";
+
 function extractLabeledAmount(
   text: string,
   labelPatterns: RegExp[]
 ): string | null {
-  const normalized = correctOcrDigits(text).replace(/\r/g, "\n");
   for (const label of labelPatterns) {
-    const re = new RegExp(
-      `${label.source}\\s*[:：]?\\s*([0-9OolIl|SsZzBb조억만,\\s]+)`,
-      "i"
-    );
-    const m = normalized.match(re);
+    const re = new RegExp(`${label.source}[:：]?(${AMOUNT_CHARS})`, "i");
+    const m = text.match(re);
     if (m?.[1]) {
-      // Stop before next Korean label-ish token
-      const chunk = m[1]
-        .split(/\n/)[0]
-        .replace(/(평균|총합|몬스터|측정|스킬).*$/i, "")
-        .trim();
+      const chunk = m[1].replace(/(평균|총합|몬스터|측정|스킬|획득).*$/i, "");
       if (chunk) return chunk;
     }
   }
@@ -120,15 +128,12 @@ function extractLabeledAmount(
 }
 
 function extractDuration(text: string): string {
-  const normalized = correctOcrDigits(text);
-  const labeled = normalized.match(
-    /전투\s*시간\s*[:：]?\s*(\d{1,2}:\d{2}:\d{2})/
-  );
+  const labeled = text.match(/전투시간[:：]?(\d{1,2}:\d{2}:\d{2})/);
   if (labeled?.[1]) {
     const parts = labeled[1].split(":").map((p) => p.padStart(2, "0"));
     return `${parts[0]}:${parts[1]}:${parts[2]}`;
   }
-  const any = normalized.match(/\b(\d{2}:\d{2}:\d{2})\b/);
+  const any = text.match(/(\d{2}:\d{2}:\d{2})/);
   return any?.[1] ?? "";
 }
 
@@ -137,37 +142,24 @@ export function parseBattleStatsText(rawText: string): {
   exp: number;
   duration: string;
 } {
-  // Prefer 획득 경험치 over 평균 경험치
-  const mesoRaw = extractLabeledAmount(rawText, [
-    /획득\s*메소/,
-    /획[득등]\s*메소/,
-    /메소/,
-  ]);
-  const expRaw = extractLabeledAmount(rawText, [
-    /획득\s*경험치/,
-    /EXP\s*획득\s*경험치/,
-    /획[득등]\s*경험치/,
-  ]);
+  const text = normalizeOcrText(rawText);
 
-  // If "평균 경험치" was accidentally grabbed via loose 메소 pattern, ignore when label is 평균
-  let exp = 0;
-  if (expRaw && !/평균/.test(expRaw)) {
-    exp = parseKoreanNumber(expRaw);
-  } else {
-    // Fallback: line containing 획득 경험치
-    const line = rawText
-      .split(/\n/)
-      .find((l) => /획득\s*경험치/.test(l) && !/평균/.test(l));
-    if (line) {
-      const after = line.replace(/.*?획득\s*경험치\s*/i, "");
-      exp = parseKoreanNumber(after);
+  // 획득메소 / 메소 뒤의 억·만 숫자
+  const mesoRaw = extractLabeledAmount(text, [/획득메소/, /메소/]);
+
+  // 획득경험치 우선, 없으면 평균이 아닌 경험치
+  let expRaw = extractLabeledAmount(text, [/획득경험치/, /EXP획득경험치/]);
+  if (!expRaw) {
+    const loose = text.match(/(?<!평균)경험치[:：]?([0-9OolIl|SsZzBb조억만,]+)/i);
+    if (loose?.[1]) {
+      expRaw = loose[1].replace(/(평균|총합|몬스터|측정|스킬|획득).*$/i, "");
     }
   }
 
   return {
     meso: mesoRaw ? parseKoreanNumber(mesoRaw) : 0,
-    exp,
-    duration: extractDuration(rawText),
+    exp: expRaw ? parseKoreanNumber(expRaw) : 0,
+    duration: extractDuration(text),
   };
 }
 
@@ -201,11 +193,14 @@ export function cropHeaderRoi(
   return canvas;
 }
 
-/** Upscale + grayscale + threshold for translucent Maple UI. */
+/**
+ * Upscale ROI 2.5× with smooth interpolation, then grayscale + soft contrast.
+ * Hard thresholding is avoided — it destroys small Maple UI glyphs.
+ */
 export function binarizeCanvas(
   source: HTMLCanvasElement,
-  scale = 2,
-  threshold = 140
+  scale = 2.5,
+  contrast = 1.5
 ): HTMLCanvasElement {
   const out = document.createElement("canvas");
   out.width = Math.max(1, Math.floor(source.width * scale));
@@ -213,8 +208,10 @@ export function binarizeCanvas(
   const ctx = out.getContext("2d");
   if (!ctx) return out;
 
-  ctx.imageSmoothingEnabled = false;
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
   ctx.drawImage(source, 0, 0, out.width, out.height);
+
   const img = ctx.getImageData(0, 0, out.width, out.height);
   const d = img.data;
 
@@ -222,11 +219,10 @@ export function binarizeCanvas(
     const r = d[i];
     const g = d[i + 1];
     const b = d[i + 2];
-    // Emphasize yellow/white UI text over dark translucent bg
-    const yellowBoost = Math.max(0, g - b) * 0.35 + Math.max(0, r - b) * 0.15;
-    const lum = 0.299 * r + 0.587 * g + 0.114 * b + yellowBoost;
-    const v = lum >= threshold ? 255 : 0;
-    d[i] = d[i + 1] = d[i + 2] = v;
+    let gray = 0.299 * r + 0.587 * g + 0.114 * b;
+    gray = ((gray / 255 - 0.5) * contrast + 0.5) * 255;
+    gray = Math.max(0, Math.min(255, gray));
+    d[i] = d[i + 1] = d[i + 2] = gray;
     d[i + 3] = 255;
   }
 
@@ -277,7 +273,7 @@ export async function parseMapleScreenshot(
   const img = await loadImageElement(input);
   const full = imageToCanvas(img);
   const roi = cropHeaderRoi(full);
-  const processed = binarizeCanvas(roi, 2.5, 135);
+  const processed = binarizeCanvas(roi, 2.5, 1.5);
   const previewDataUrl = processed.toDataURL("image/png");
 
   const { createWorker } = await import("tesseract.js");
