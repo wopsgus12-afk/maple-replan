@@ -26,7 +26,6 @@ type Props = {
   /** Current map — drives which drop stat is shown. */
   groundId: string;
   locale?: Locale;
-  onOpenPreset: () => void;
 };
 
 export function Dashboard({
@@ -38,7 +37,6 @@ export function Dashboard({
   serverMode,
   groundId,
   locale = "ko",
-  onOpenPreset,
 }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
   const copy = ui(locale);
@@ -61,14 +59,9 @@ export function Dashboard({
       >
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <h2 className="text-2xl font-bold text-maple-gold">{copy.dashboardToday}</h2>
-          <button
-            type="button"
-            onClick={onOpenPreset}
-            className="rounded-full border border-maple-gold/50 bg-maple-gold/10 px-2.5 py-1 text-[11px] font-medium text-maple-gold hover:bg-maple-gold/20"
-            title={copy.presetOpen}
-          >
+          <span className="rounded-full border border-maple-gold/50 bg-maple-gold/10 px-2.5 py-1 text-[11px] font-medium text-maple-gold">
             {badgeLabel}
-          </button>
+          </span>
         </div>
         <div className="grid grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-3">
           <Stat

@@ -452,7 +452,6 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
                 serverMode={serverMode}
                 groundId={state.groundId}
                 locale={locale}
-                onOpenPreset={() => setPresetOpen(true)}
               />
 
               <button
