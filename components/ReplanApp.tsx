@@ -201,7 +201,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
   const recordSession = () => {
     const ground = getGroundById(state.groundId);
     const counter = state.nextSessionCounters[recordSlot];
-    const sessionLabel = `${recordSlot}재획 ${counter}`;
+    const sessionLabel = t.historyEntry(counter);
     const fragmentMap = usesFragmentDrop(state.groundId);
 
     const mesosBefore = parseMesosInput(state.mesosBeforeInput);
@@ -255,6 +255,18 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
       timerAccumulatedMs: 0,
     }));
     timer.reset();
+  };
+
+  const clearSlot = (slot: ReplanSlot) => {
+    if (!window.confirm(t.historyClearConfirm(slot))) return;
+    setState((s) => ({
+      ...s,
+      sessions: s.sessions.filter((session) => session.slot !== slot),
+      nextSessionCounters: {
+        ...s.nextSessionCounters,
+        [slot]: 1,
+      },
+    }));
   };
 
   /** Clears hunt history/timer only — preset LocalStorage untouched. */
@@ -406,6 +418,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
                   }
                   onRecordSlotChange={setRecordSlot}
                   onRecord={recordSession}
+                  locale={locale}
                 />
               </section>
 
@@ -413,7 +426,11 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
                 aria-label={locale === "en" ? "Hunt history" : "사냥 히스토리"}
                 className="min-w-0"
               >
-                <SessionLists sessions={state.sessions} />
+                <SessionLists
+                  sessions={state.sessions}
+                  locale={locale}
+                  onClearSlot={clearSlot}
+                />
               </section>
 
               <Dashboard

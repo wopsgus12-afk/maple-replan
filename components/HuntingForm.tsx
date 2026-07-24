@@ -13,6 +13,8 @@ import {
   formatMesosKorean,
   parseMesosInput,
 } from "@/lib/format";
+import type { Locale } from "@/lib/locale";
+import { ui } from "@/lib/uiCopy";
 
 type Props = {
   groundId: string;
@@ -32,6 +34,7 @@ type Props = {
   onGemstoneCountChange: (n: number) => void;
   onRecordSlotChange: (slot: ReplanSlot) => void;
   onRecord: () => void;
+  locale?: Locale;
 };
 
 const INPUT_CLASS =
@@ -55,9 +58,11 @@ export function HuntingForm({
   onGemstoneCountChange,
   onRecordSlotChange,
   onRecord,
+  locale = "ko",
 }: Props) {
   const ground = getGroundById(groundId) ?? HUNTING_GROUNDS[0];
   const showFragment = usesFragmentDrop(ground.id);
+  const copy = ui(locale);
 
   return (
     <section className="maple-card w-full min-w-0">
@@ -130,7 +135,7 @@ export function HuntingForm({
         )}
 
         <div className="flex min-w-[10rem] flex-col gap-1">
-          <span className="text-xs text-maple-muted">재획 차수</span>
+          <span className="text-xs text-maple-muted">{copy.slotSelectLabel}</span>
           <div className="flex gap-1">
             {([1, 2, 3] as ReplanSlot[]).map((slot) => (
               <button
@@ -143,7 +148,7 @@ export function HuntingForm({
                     : "border-maple-border text-maple-muted hover:border-maple-gold/50"
                 }`}
               >
-                {slot}차
+                {copy.slotLabel(slot)}
               </button>
             ))}
           </div>
