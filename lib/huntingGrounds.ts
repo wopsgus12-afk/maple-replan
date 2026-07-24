@@ -112,5 +112,12 @@ export function getGroundById(id: string): HuntingGround | undefined {
   return HUNTING_GROUNDS.find((g) => g.id === id);
 }
 
+/** 260+ Grandis → Erda Fragment; Arcane River (<260) → Core Gemstone */
+export function usesFragmentDrop(groundId: string): boolean {
+  const ground = getGroundById(groundId);
+  if (!ground) return true;
+  return isLevel260Plus(ground);
+}
+
 export const GEMSTONE_GROUNDS = HUNTING_GROUNDS.filter((g) => !isLevel260Plus(g));
 export const FRAGMENT_GROUNDS = HUNTING_GROUNDS.filter((g) => isLevel260Plus(g));

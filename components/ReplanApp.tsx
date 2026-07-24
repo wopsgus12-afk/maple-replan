@@ -15,7 +15,7 @@ import { ToastProvider, useToast } from "./Toast";
 import { LegacyTabRedirect } from "./LegacyTabRedirect";
 import { PresetSettingsModal } from "./PresetSettingsModal";
 import { isElectron, closeElectronOverlay } from "@/lib/electron";
-import { getGroundById } from "@/lib/huntingGrounds";
+import { getGroundById, usesFragmentDrop } from "@/lib/huntingGrounds";
 import { parseMesosInput, safeNumber } from "@/lib/format";
 import { loadState, saveState } from "@/lib/storage";
 import {
@@ -202,6 +202,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
     const ground = getGroundById(state.groundId);
     const counter = state.nextSessionCounters[recordSlot];
     const sessionLabel = `${recordSlot}재획 ${counter}`;
+    const fragmentMap = usesFragmentDrop(state.groundId);
 
     const mesosBefore = parseMesosInput(state.mesosBeforeInput);
     const mesosAfter = parseMesosInput(state.mesosAfterInput);
@@ -209,8 +210,8 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
     const expBefore = safeNumber(state.expBeforeInput);
     const expAfter = safeNumber(state.expAfterInput);
     const netExp = expAfter - expBefore;
-    const fragmentCount = safeNumber(state.fragmentCount);
-    const gemstoneCount = safeNumber(state.gemstoneCount);
+    const fragmentCount = fragmentMap ? safeNumber(state.fragmentCount) : 0;
+    const gemstoneCount = fragmentMap ? 0 : safeNumber(state.gemstoneCount);
     const { fragmentPrice, gemPrice } = prices;
     const sessionTotal =
       netMesos +
@@ -278,12 +279,15 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
   };
 
   const applyPresetToState = (preset: UserPreset) => {
+    const nextFragment = usesFragmentDrop(preset.groundId);
     setServerMode(preset.serverMode);
     setState((s) => ({
       ...s,
       groundId: preset.groundId,
       fragmentPrice: preset.fragmentPrice,
       gemPrice: preset.gemPrice,
+      fragmentCount: nextFragment ? s.fragmentCount : 0,
+      gemstoneCount: nextFragment ? 0 : s.gemstoneCount,
     }));
   };
 
@@ -371,7 +375,17 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
                   fragmentCount={state.fragmentCount}
                   gemstoneCount={state.gemstoneCount}
                   recordSlot={recordSlot}
-                  onGroundChange={(id) => setState((s) => ({ ...s, groundId: id }))}
+                  onGroundChange={(id) =>
+                    setState((s) => {
+                      const nextFragment = usesFragmentDrop(id);
+                      return {
+                        ...s,
+                        groundId: id,
+                        fragmentCount: nextFragment ? s.fragmentCount : 0,
+                        gemstoneCount: nextFragment ? 0 : s.gemstoneCount,
+                      };
+                    })
+                  }
                   onMesosBeforeChange={(mesosBeforeInput) =>
                     setState((s) => ({ ...s, mesosBeforeInput }))
                   }
@@ -409,6 +423,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
                 storedGemPrice={state.gemPrice}
                 storedFragmentPrice={state.fragmentPrice}
                 serverMode={serverMode}
+                groundId={state.groundId}
                 locale={locale}
                 onOpenPreset={() => setPresetOpen(true)}
               />

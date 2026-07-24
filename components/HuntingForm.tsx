@@ -6,6 +6,7 @@ import {
   GEMSTONE_GROUNDS,
   HUNTING_GROUNDS,
   getGroundById,
+  usesFragmentDrop,
 } from "@/lib/huntingGrounds";
 import {
   formatMesosInputLive,
@@ -56,7 +57,7 @@ export function HuntingForm({
   onRecord,
 }: Props) {
   const ground = getGroundById(groundId) ?? HUNTING_GROUNDS[0];
-  void ground;
+  const showFragment = usesFragmentDrop(ground.id);
 
   return (
     <section className="maple-card w-full min-w-0">
@@ -112,18 +113,21 @@ export function HuntingForm({
           onChange={onExpAfterChange}
         />
 
-        <ItemCounter
-          label="솔 에르다"
-          itemCount={fragmentCount}
-          onItemCountChange={onFragmentCountChange}
-          tabStart={6}
-        />
-        <ItemCounter
-          label="코어 젬"
-          itemCount={gemstoneCount}
-          onItemCountChange={onGemstoneCountChange}
-          tabStart={9}
-        />
+        {showFragment ? (
+          <ItemCounter
+            label="솔 에르다"
+            itemCount={fragmentCount}
+            onItemCountChange={onFragmentCountChange}
+            tabStart={6}
+          />
+        ) : (
+          <ItemCounter
+            label="코어 젬"
+            itemCount={gemstoneCount}
+            onItemCountChange={onGemstoneCountChange}
+            tabStart={6}
+          />
+        )}
 
         <div className="flex min-w-[10rem] flex-col gap-1">
           <span className="text-xs text-maple-muted">재획 차수</span>

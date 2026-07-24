@@ -11,6 +11,7 @@ import type { SessionRecord } from "@/lib/types";
 import type { Locale } from "@/lib/locale";
 import type { ServerMode } from "@/lib/userPreset";
 import { formatPriceShort } from "@/lib/userPreset";
+import { usesFragmentDrop } from "@/lib/huntingGrounds";
 import { ui } from "@/lib/uiCopy";
 
 type Props = {
@@ -22,6 +23,8 @@ type Props = {
   storedGemPrice: number;
   storedFragmentPrice: number;
   serverMode: ServerMode;
+  /** Current map — drives which drop stat is shown. */
+  groundId: string;
   locale?: Locale;
   onOpenPreset: () => void;
 };
@@ -33,12 +36,14 @@ export function Dashboard({
   storedGemPrice,
   storedFragmentPrice,
   serverMode,
+  groundId,
   locale = "ko",
   onOpenPreset,
 }: Props) {
   const sectionRef = useRef<HTMLElement>(null);
   const copy = ui(locale);
   const t = computeTodayTotals(sessions, gemPrice, fragmentPrice);
+  const showFragment = usesFragmentDrop(groundId);
 
   const badgeLabel =
     serverMode === "gms_heroic"
@@ -74,14 +79,17 @@ export function Dashboard({
             label={locale === "en" ? "Net EXP" : "총 순수 EXP"}
             value={formatPercent(t.netExp)}
           />
-          <Stat
-            label={locale === "en" ? "Erda Fragments" : "솔 에르다 조각"}
-            value={String(t.fragmentItems)}
-          />
-          <Stat
-            label={locale === "en" ? "Nodestones" : "코어 젬스톤"}
-            value={String(t.gemstoneItems)}
-          />
+          {showFragment ? (
+            <Stat
+              label={locale === "en" ? "Erda Fragments" : "솔 에르다 조각"}
+              value={String(t.fragmentItems)}
+            />
+          ) : (
+            <Stat
+              label={locale === "en" ? "Nodestones" : "코어 젬스톤"}
+              value={String(t.gemstoneItems)}
+            />
+          )}
           <Stat
             label={locale === "en" ? "Sessions" : "세션 수"}
             value={
