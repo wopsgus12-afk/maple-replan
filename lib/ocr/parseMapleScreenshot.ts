@@ -1,6 +1,6 @@
 /**
  * MapleStory KMS Battle Statistics (전투분석시스템) OCR helpers.
- * Stage 1: header ROI crop + preprocess + parse duration/meso/exp.
+ * Full-image preprocess + keyword scan for duration/meso/exp (no fixed % crop).
  */
 
 export type MapleOcrResult = {
@@ -9,7 +9,7 @@ export type MapleOcrResult = {
   duration: string;
   rawText: string;
   confidence: number;
-  /** Data-URL of the cropped/preprocessed ROI used for OCR (for lab preview). */
+  /** Data-URL of the preprocessed full image used for OCR (for lab preview). */
   previewDataUrl: string;
 };
 
@@ -39,12 +39,10 @@ export function correctOcrDigits(input: string): string {
 export function normalizeOcrText(rawText: string): string {
   let s = rawText.replace(/[\s\u00A0]+/g, "");
   s = correctOcrDigits(s);
-  // Phrase-level OCR absorb (before single-char fixes)
   s = s.replace(/건투|전두/g, "전투");
   s = s.replace(/매스|배초|배소|메초/g, "메소");
   s = s.replace(/걸험치|걸치/g, "경험치");
   s = s.replace(/익/g, "억");
-  // Residual glyph confusions that still form 경험치 fragments
   s = s.replace(/[걸껄덤]/g, "경");
   return s;
 }
@@ -66,15 +64,12 @@ export function parseKoreanNumber(raw: string): number {
     .replace(/익/g, "억")
     .trim();
 
-  // Strip trailing noise like "(1초당)"
   s = s.replace(/\(.*?\)/g, "").trim();
   if (!s) return 0;
 
-  // Glue broken digit runs and spaces around 조/억/만:
-  // "61 억 8 5 2 9 만" → "61억8529만"
+  // Glue broken digit runs and spaces around 조/억/만
   s = s.replace(/\s+/g, " ").trim();
   s = s.replace(/\s*([조억만])\s*/g, "$1");
-  s = s.replace(/(\d)\s+(\d)/g, "$1$2");
   while (/(\d)\s+(\d)/.test(s)) {
     s = s.replace(/(\d)\s+(\d)/g, "$1$2");
   }
@@ -82,7 +77,6 @@ export function parseKoreanNumber(raw: string): number {
 
   if (/^\d+$/.test(s)) return Number(s);
 
-  // Preferred: N억 M만 [R]
   const eokMan = s.match(/(\d+)억(\d+)만(\d+)?/);
   if (eokMan) {
     return (
@@ -113,7 +107,6 @@ export function parseKoreanNumber(raw: string): number {
     matched = true;
   }
 
-  // Remainder after 만, e.g. "6647만7498"
   const afterMan = s.match(/만(\d+)$/);
   if (afterMan) {
     total += Number(afterMan[1]);
@@ -122,7 +115,6 @@ export function parseKoreanNumber(raw: string): number {
     const digits = s.replace(/[^\d]/g, "");
     if (digits) return Number(digits);
   } else if (eok && !man) {
-    // Digits after 억 without 만 → treat as 만-scale when < 10000
     const afterEok = s.match(/억(\d+)$/);
     if (afterEok) {
       const n = Number(afterEok[1]);
@@ -133,70 +125,114 @@ export function parseKoreanNumber(raw: string): number {
   return total;
 }
 
-/** Amount chars after a label (spaces already stripped by normalizeOcrText). */
+/** Amount payload after a label (compact text has no spaces). */
 const AMOUNT_CHARS = "[0-9OolIl|SsZzBb조억만,]+";
+/** Same, allowing whitespace between tokens in raw OCR lines. */
+const AMOUNT_CHARS_SPACED = "[0-9OolIl|SsZzBb조억만,\\s]+";
+
+function trimAmountChunk(chunk: string): string {
+  return chunk
+    .replace(/(평균|총합|몬스터|측정|스킬|획득|전투|시간).*$/i, "")
+    .trim();
+}
 
 function extractLabeledAmount(
   text: string,
-  labelPatterns: RegExp[]
+  labelPatterns: RegExp[],
+  amountClass = AMOUNT_CHARS
 ): string | null {
   for (const label of labelPatterns) {
-    const re = new RegExp(`${label.source}[:：]?(${AMOUNT_CHARS})`, "i");
+    const re = new RegExp(`${label.source}[:：]?\\s*(${amountClass})`, "i");
     const m = text.match(re);
     if (m?.[1]) {
-      const chunk = m[1].replace(/(평균|총합|몬스터|측정|스킬|획득).*$/i, "");
-      if (chunk) return chunk;
+      const chunk = trimAmountChunk(m[1]);
+      if (chunk.replace(/\s/g, "")) return chunk;
     }
   }
   return null;
 }
 
-function extractDuration(text: string): string {
-  const labeled = text.match(/전투시간[:：]?(\d{1,2}:\d{2}:\d{2})/);
-  if (labeled?.[1]) {
-    const parts = labeled[1].split(":").map((p) => p.padStart(2, "0"));
-    return `${parts[0]}:${parts[1]}:${parts[2]}`;
+function extractDuration(compact: string, spaced: string): string {
+  const patterns = [
+    /전투시간[:：]?(\d{1,2}:\d{2}:\d{2})/,
+    /전투\s*시간\s*[:：]?\s*(\d{1,2}:\d{2}:\d{2})/,
+  ];
+  for (const src of [compact, spaced]) {
+    for (const re of patterns) {
+      const m = src.match(re);
+      if (m?.[1]) {
+        const parts = m[1].split(":").map((p) => p.padStart(2, "0"));
+        return `${parts[0]}:${parts[1]}:${parts[2]}`;
+      }
+    }
   }
-  const any = text.match(/(\d{2}:\d{2}:\d{2})/);
+  const any = compact.match(/(\d{2}:\d{2}:\d{2})/) ?? spaced.match(/(\d{2}:\d{2}:\d{2})/);
   return any?.[1] ?? "";
 }
 
+/**
+ * Scan full OCR rawText for battle-stats fields (position-independent).
+ * Prefers 획득메소 / 획득경험치 over bare 메소 / 경험치; skips 평균경험치.
+ */
 export function parseBattleStatsText(rawText: string): {
   meso: number;
   exp: number;
   duration: string;
 } {
-  const text = normalizeOcrText(rawText);
+  const compact = normalizeOcrText(rawText);
+  const spaced = correctOcrDigits(rawText)
+    .replace(/\r/g, "\n")
+    .replace(/건\s*투|전\s*두/g, "전투")
+    .replace(/매\s*스|배\s*초|배\s*소|메\s*초/g, "메소")
+    .replace(/걸\s*험\s*치|걸\s*치/g, "경험치")
+    .replace(/익/g, "억");
 
-  // 획득메소 / 메소 뒤의 억·만 숫자
-  const mesoRaw = extractLabeledAmount(text, [/획득메소/, /메소/]);
+  const mesoRaw =
+    extractLabeledAmount(compact, [/획득메소/, /메소/]) ??
+    extractLabeledAmount(
+      spaced,
+      [/획득\s*메소/, /메소/],
+      AMOUNT_CHARS_SPACED
+    );
 
-  // 획득경험치 우선, 없으면 평균이 아닌 경험치
-  let expRaw = extractLabeledAmount(text, [/획득경험치/, /EXP획득경험치/]);
+  let expRaw =
+    extractLabeledAmount(compact, [/획득경험치/, /EXP획득경험치/]) ??
+    extractLabeledAmount(
+      spaced,
+      [/획득\s*경험치/, /EXP\s*획득\s*경험치/],
+      AMOUNT_CHARS_SPACED
+    );
+
   if (!expRaw) {
-    const loose = text.match(/(?<!평균)경험치[:：]?([0-9OolIl|SsZzBb조억만,]+)/i);
-    if (loose?.[1]) {
-      expRaw = loose[1].replace(/(평균|총합|몬스터|측정|스킬|획득).*$/i, "");
+    const looseCompact = compact.match(
+      /(?<!평균)경험치[:：]?([0-9OolIl|SsZzBb조억만,]+)/i
+    );
+    if (looseCompact?.[1]) {
+      expRaw = trimAmountChunk(looseCompact[1]);
+    } else {
+      const looseSpaced = spaced.match(
+        /(?<!평균\s*)경험\s*치\s*[:：]?\s*([0-9OolIl|SsZzBb조억만,\s]+)/i
+      );
+      if (looseSpaced?.[1]) expRaw = trimAmountChunk(looseSpaced[1]);
     }
   }
 
   return {
     meso: mesoRaw ? parseKoreanNumber(mesoRaw) : 0,
     exp: expRaw ? parseKoreanNumber(expRaw) : 0,
-    duration: extractDuration(text),
+    duration: extractDuration(compact, spaced),
   };
 }
 
 /**
- * Crop only the top header band: battle time / meso / exp.
- * Tight ~16% height so skill-bar UI below is excluded.
+ * Optional legacy crop helper — not used by default (fixed % crop mis-cuts blog headers).
  */
 export function cropHeaderRoi(
   source: HTMLCanvasElement | HTMLImageElement,
   opts?: { topRatio?: number; heightRatio?: number }
 ): HTMLCanvasElement {
-  const topRatio = opts?.topRatio ?? 0.02;
-  const heightRatio = opts?.heightRatio ?? 0.16;
+  const topRatio = opts?.topRatio ?? 0;
+  const heightRatio = opts?.heightRatio ?? 1;
   const sw =
     "naturalWidth" in source && source.naturalWidth
       ? source.naturalWidth
@@ -207,7 +243,7 @@ export function cropHeaderRoi(
       : source.height;
 
   const sy = Math.floor(sh * topRatio);
-  const shBand = Math.max(24, Math.floor(sh * heightRatio));
+  const shBand = Math.max(1, Math.floor(sh * heightRatio));
   const canvas = document.createElement("canvas");
   canvas.width = sw;
   canvas.height = shBand;
@@ -218,12 +254,12 @@ export function cropHeaderRoi(
 }
 
 /**
- * Upscale ROI 2.5× with smooth interpolation, then grayscale + soft contrast.
- * Hard thresholding is avoided — it destroys small Maple UI glyphs.
+ * Upscale with smooth interpolation, then grayscale + soft contrast.
+ * Default 2× for full-screenshot OCR (no fixed ROI crop).
  */
 export function binarizeCanvas(
   source: HTMLCanvasElement,
-  scale = 2.5,
+  scale = 2,
   contrast = 1.5
 ): HTMLCanvasElement {
   const out = document.createElement("canvas");
@@ -284,6 +320,7 @@ function imageToCanvas(img: HTMLImageElement): HTMLCanvasElement {
 
 /**
  * Run KMS battle-stats OCR on a screenshot File/Blob/URL.
+ * Full image → 2× grayscale/contrast → tesseract → keyword parse.
  * Browser-only (uses DOM Canvas + tesseract worker).
  */
 export async function parseMapleScreenshot(
@@ -296,8 +333,8 @@ export async function parseMapleScreenshot(
 
   const img = await loadImageElement(input);
   const full = imageToCanvas(img);
-  const roi = cropHeaderRoi(full);
-  const processed = binarizeCanvas(roi, 2.5, 1.5);
+  // No fixed-% crop — screenshots vary (blog titles, margins, resolutions).
+  const processed = binarizeCanvas(full, 2, 1.5);
   const previewDataUrl = processed.toDataURL("image/png");
 
   const { createWorker } = await import("tesseract.js");
@@ -315,7 +352,7 @@ export async function parseMapleScreenshot(
   try {
     const { PSM } = await import("tesseract.js");
     await worker.setParameters({
-      tessedit_pageseg_mode: PSM.SINGLE_BLOCK,
+      tessedit_pageseg_mode: PSM.AUTO,
     });
     const {
       data: { text, confidence },

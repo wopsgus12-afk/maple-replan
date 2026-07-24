@@ -60,8 +60,8 @@ export default function OcrLabPage() {
           <p className="text-xs font-medium text-maple-muted">DEV ONLY · noindex</p>
           <h1 className="text-2xl font-bold text-maple-gold">OCR Lab — KMS Battle Stats</h1>
           <p className="text-sm text-maple-muted">
-            Header ROI crop + 2.5× upscale + soft contrast + tesseract (kor+eng). Main calculator is not
-            connected.
+            Full-image 2× upscale + soft contrast + tesseract (kor+eng), keyword scan (no fixed %
+            crop). Main calculator is not connected.
           </p>
         </header>
 
@@ -165,7 +165,7 @@ export default function OcrLabPage() {
 
             <div>
               <h2 className="mb-2 text-sm font-semibold text-maple-accent">
-                Preprocessed ROI preview
+                Preprocessed preview (full image)
               </h2>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
