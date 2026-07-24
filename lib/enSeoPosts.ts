@@ -222,6 +222,93 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "gms-heroic-sol-erda-energy-farming-vs-fragment-exchange-wap-opportunity-cost-guide",
+    title:
+      "GMS Heroic Sol Erda Energy Farming vs Fragment Exchange: 2-Hour WAP Opportunity Cost Guide",
+    description:
+      "GMS Heroic Sol Erda Energy farming vs Erda Fragment exchange—2-hour WAP yields, 9-unit hard cap rules, Grandis daily quest priority, and opportunity cost analysis.",
+    koSlug:
+      "sol-erda-cap-1replan-opportunity-cost-fragment-convert-vs-hunt-margin-guide",
+    sections: [
+      {
+        heading: "1. The Sol Erda Bottleneck in GMS Heroic (Reboot)",
+        paragraphs: [
+          "Unlocking and upgrading 6th Job skills in Global MapleStory (GMS) Heroic Server requires two fundamental progression materials: Erda Fragments and Sol Erda Energy. While Erda Fragments drop directly from Grandis monsters, Sol Erda Energy comes with a strict hard cap of 9 Sol Erda units per character.",
+          "Because trade is disabled in Heroic Server and all account progression relies on self-funded farming, managing your Sol Erda Energy flow without wasting 2-hour Wealth Acquisition Potion (WAP) potential is critical. Converting Erda Fragments into Sol Erda prematurely can severely slow down your long-term Mastery Core progression. This guide analyzes the true opportunity costs and farming yields for Sol Erda Energy.",
+        ],
+      },
+      {
+        heading: "2. Sol Erda Farming Rates per 2-Hour WAP Session",
+        paragraphs: [
+          "Data measured over full 2-hour WAP sessions with a standard Heroic end-game setup (+100% Meso gear cap, +67%~100% Item Drop Rate, full 1-shot mob clear).",
+        ],
+        subsections: [
+          {
+            heading: "① Raw Sol Erda Energy Mob Farming Yields",
+            paragraphs: [],
+            bullets: [
+              "WAP Energy Yield: ~200 to 300 Sol Erda Energy per 2-hour WAP session (1 Complete Sol Erda = 1,000 Energy).",
+              "Time to Craft 1 Full Sol Erda: Mobbing alone requires approximately 3.5 to 4 WAP sessions (7 to 8 hours) to craft 1 complete Sol Erda unit.",
+            ],
+          },
+          {
+            heading:
+              "② Exchanging 20 Erda Fragments for 1 Sol Erda (Opportunity Cost)",
+            paragraphs: [],
+            bullets: [
+              "System Exchange Rate: 20 Erda Fragments ➔ 1 Complete Sol Erda.",
+              "Opportunity Cost Analysis: In GMS Heroic, since Erda Fragments directly feed your Mastery Cores for permanent damage boost, converting 20 fragments into Sol Erda sacrifices vital damage scaling. Only use this exchange if your Sol Erda Energy is completely depleted right before hitting a major core milestone (e.g., Mastery Core Lv. 10 or Lv. 20).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Three Essential Rules to Prevent Sol Erda Cap Overflow",
+        paragraphs: [
+          "To ensure zero energy is wasted while grinding in high Authentic Force regions like Odium and Shangri-La:",
+        ],
+        subsections: [
+          {
+            heading: "① Prioritize the Grandis Daily Quest (+600 Energy)",
+            paragraphs: [
+              "Always complete your Grandis daily quest first. The +600 Sol Erda Energy reward equals nearly two full 2-hour WAP grinding sessions in raw energy value, saving you dozens of hours of mobbing over time.",
+            ],
+          },
+          {
+            heading: "② Avoid the 9 Sol Erda Hard Cap Wastes",
+            paragraphs: [
+              "Never enter a 2-hour WAP session with 8 or 9 Sol Erda stored in your inventory. Any excess energy gained over the 9 Sol Erda cap vanishes permanently. Always upgrade a skill core to free up at least 2 to 3 energy slots before popping a WAP.",
+            ],
+          },
+          {
+            heading: "③ Character-Bound Limitation",
+            paragraphs: [
+              "Sol Erda Energy is strictly character-bound and cannot be transferred across your account. Focus your energy grinding on your primary main character first before setting up bossing mules.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        bullets: [
+          "Q. Does Item Drop Rate increase Sol Erda Energy drops?",
+          "A. Yes. Maintaining at least +67% Item Drop Rate guarantees maximum mob node drop frequency, which directly stabilizes your Sol Erda Energy accumulation per WAP.",
+          "Q. Should I craft Sol Erda for Bossing Mules?",
+          "A. No. Rely strictly on daily quests for bossing mules. Save your active WAP grinding sessions and Erda Fragment investments exclusively for your main character.",
+        ],
+      },
+      {
+        heading:
+          "Conclusion: Optimize Your WAP Progress Through Smart Energy Management",
+        paragraphs: [
+          "Plan your 6th Job core upgrades systematically around your daily WAP grind schedule. Always track your total fragment drops, raw Meso gains, and energy accumulation using our live Meso Calculator tool.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
