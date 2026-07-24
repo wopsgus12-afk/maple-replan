@@ -155,6 +155,73 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "gms-heroic-6th-job-erda-fragment-priority-mastery-vs-origin-wap-guide",
+    title:
+      "GMS Heroic 6th Job Erda Fragment Priority Guide: Mastery Core vs Origin Skill WAP Efficiency",
+    description:
+      "GMS Heroic 6th Job Erda Fragment priority: Mastery Core vs Origin Skill for WAP efficiency, 1-shot thresholds in Grandis, and the optimal upgrade order for maximum Meso returns.",
+    koSlug:
+      "6th-job-erda-fragment-upgrade-order-mastery-vs-origin-1replan-efficiency-guide",
+    sections: [
+      {
+        heading:
+          "1. The 6th Job Erda Fragment Dilemma in GMS Heroic (Reboot)",
+        paragraphs: [
+          "Reaching Lv. 260 and unlocking 6th Job in Global MapleStory (GMS) Heroic Server introduces the vital resource known as Erda Fragments. Because trading is disabled and all progression relies on self-sufficient farming, allocating your hard-earned Erda Fragments efficiently is critical. Upgrading the wrong core first can delay your ability to 1-shot mobs in Grandis maps, causing hidden Meso loss during your 2-hour Wealth Acquisition Potion (WAP) sessions. This guide details the optimal Erda Fragment allocation order for maximum WAP returns.",
+        ],
+      },
+      {
+        heading: "2. Core Upgrade Priority: Mastery Core vs Origin Skill",
+        paragraphs: [
+          "Data comparing the farming efficiency gains per 100 Erda Fragments invested across different 6th Job core types.",
+        ],
+        subsections: [
+          {
+            heading: "① Mastery Cores (Highest Farming ROI)",
+            paragraphs: [],
+            bullets: [
+              "Efficiency Impact: Upgrading your primary mobbing mastery core increases skill damage lines, AOE range, and hit counts.",
+              "WAP Yield Effect: Drastically lowers the stat threshold required to 1-shot monsters in Cernium, Odium, and Shangri-La, preventing mob leaks and preserving peak Mesos per hour.",
+              "Recommended Milestone: Unlock Level 1 immediately, then push to Level 10 for the first major stat power spike.",
+            ],
+          },
+          {
+            heading: "② Origin Skills (Bossing Focus)",
+            paragraphs: [],
+            bullets: [
+              "Efficiency Impact: Provides a massive burst binder and cutscene damage for bossing.",
+              "WAP Yield Effect: While great for clearing elite bosses, the long cooldown offers lower continuous mobbing efficiency compared to Mastery Cores.",
+              "Recommended Milestone: Unlock Level 1 for the bind utility, then defer further upgrades until Mastery and Boost Cores reach milestone levels.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Long-Term Value: Selling vs Investing Erda Fragments",
+        paragraphs: [
+          "In GMS Heroic, Erda Fragments cannot be sold. Therefore, every fragment used directly accelerates your account's Meso farming capacity.",
+        ],
+        subsections: [
+          {
+            heading: "① Accelerating Map Progression",
+            paragraphs: [],
+            bullets: [
+              "Moving to Higher Map Tiers: Investing Erda Fragments into Mastery Cores allows you to move from Cernium (~400M Mesos/WAP) to Odium (~500M+ Mesos/WAP) much faster.",
+              "Net Meso Multiplier: Securing 1-shot capability in higher Authentic Force regions yields an additional 100M+ Raw Mesos per 2-hour WAP session.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "Conclusion: Prioritize Mastery Cores for Maximum WAP Profits",
+        paragraphs: [
+          "To optimize your daily Heroic progression, follow the core priority route: Mastery Core Lv. 1 ➔ Key 5th Job Skill Cores ➔ Mastery Core Lv. 10 ➔ Origin Skill. Always track your daily fragment drops and mob kill rates using our live Meso Calculator tool.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
