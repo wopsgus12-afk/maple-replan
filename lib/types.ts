@@ -21,12 +21,16 @@ export type SessionRecord = {
 
 export type TimerMode = "countdown" | "countup";
 
+/** Meso entry: single net gain, or start/end wallet amounts. */
+export type MesoInputMode = "net" | "range";
+
 export type AppPersistedState = {
   timerMode: TimerMode;
   timerRunning: boolean;
   timerAnchorMs: number | null;
   timerAccumulatedMs: number;
   groundId: string;
+  mesoInputMode: MesoInputMode;
   mesosBeforeInput: string;
   mesosAfterInput: string;
   expBeforeInput: string;
@@ -53,6 +57,7 @@ export function defaultPersistedState(): AppPersistedState {
     timerAnchorMs: null,
     timerAccumulatedMs: 0,
     groundId: "serenium-library-1",
+    mesoInputMode: "net",
     mesosBeforeInput: "",
     mesosAfterInput: "",
     expBeforeInput: "",

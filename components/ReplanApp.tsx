@@ -204,12 +204,22 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
     const sessionLabel = t.historyEntry(counter);
     const fragmentMap = usesFragmentDrop(state.groundId);
 
-    const mesosBefore = parseMesosInput(state.mesosBeforeInput);
-    const mesosAfter = parseMesosInput(state.mesosAfterInput);
-    const netMesos = mesosAfter - mesosBefore;
-    const expBefore = safeNumber(state.expBeforeInput);
+    let mesosBefore: number;
+    let mesosAfter: number;
+    let netMesos: number;
+    if (state.mesoInputMode === "net") {
+      netMesos = parseMesosInput(state.mesosAfterInput);
+      mesosBefore = 0;
+      mesosAfter = netMesos;
+    } else {
+      mesosBefore = parseMesosInput(state.mesosBeforeInput);
+      mesosAfter = parseMesosInput(state.mesosAfterInput);
+      netMesos = mesosAfter - mesosBefore;
+    }
+
+    const expBefore = 0;
     const expAfter = safeNumber(state.expAfterInput);
-    const netExp = expAfter - expBefore;
+    const netExp = expAfter;
     const fragmentCount = fragmentMap ? safeNumber(state.fragmentCount) : 0;
     const gemstoneCount = fragmentMap ? 0 : safeNumber(state.gemstoneCount);
     const { fragmentPrice, gemPrice } = prices;
@@ -380,9 +390,9 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
               >
                 <HuntingForm
                   groundId={state.groundId}
+                  mesoInputMode={state.mesoInputMode}
                   mesosBeforeInput={state.mesosBeforeInput}
                   mesosAfterInput={state.mesosAfterInput}
-                  expBeforeInput={state.expBeforeInput}
                   expAfterInput={state.expAfterInput}
                   fragmentCount={state.fragmentCount}
                   gemstoneCount={state.gemstoneCount}
@@ -398,14 +408,14 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
                       };
                     })
                   }
+                  onMesoInputModeChange={(mesoInputMode) =>
+                    setState((s) => ({ ...s, mesoInputMode }))
+                  }
                   onMesosBeforeChange={(mesosBeforeInput) =>
                     setState((s) => ({ ...s, mesosBeforeInput }))
                   }
                   onMesosAfterChange={(mesosAfterInput) =>
                     setState((s) => ({ ...s, mesosAfterInput }))
-                  }
-                  onExpBeforeChange={(expBeforeInput) =>
-                    setState((s) => ({ ...s, expBeforeInput }))
                   }
                   onExpAfterChange={(expAfterInput) =>
                     setState((s) => ({ ...s, expAfterInput }))

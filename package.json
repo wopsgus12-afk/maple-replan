@@ -5,10 +5,8 @@
   "main": "electron/main.js",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/sync-tesseract.mjs",
     "build": "next build",
     "postbuild": "node scripts/postbuild.mjs",
-    "sync:tesseract": "node scripts/sync-tesseract.mjs",
     "deploy": "npm run build && gh-pages -d out -t",
     "release:win": "npm run electron:build && node scripts/publish-release.mjs",
     "start": "next start",
@@ -24,8 +22,7 @@
     "html2canvas": "^1.4.1",
     "next": "^15.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "tesseract.js": "^5.1.1"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",

@@ -115,6 +115,7 @@ function migrateSession(
 
 function migrateFormInputs(parsed: Record<string, unknown>): Pick<
   AppPersistedState,
+  | "mesoInputMode"
   | "mesosBeforeInput"
   | "mesosAfterInput"
   | "expBeforeInput"
@@ -127,6 +128,11 @@ function migrateFormInputs(parsed: Record<string, unknown>): Pick<
     typeof parsed.mesosInput === "string" ? parsed.mesosInput : "";
   const legacyExp = typeof parsed.expInput === "string" ? parsed.expInput : "";
   const legacyItemCount = safeNumber(parsed.itemCount, 0);
+
+  const mesoInputMode: AppPersistedState["mesoInputMode"] =
+    parsed.mesoInputMode === "range" || parsed.mesoInputMode === "net"
+      ? parsed.mesoInputMode
+      : base.mesoInputMode;
 
   const mesosBeforeInput =
     typeof parsed.mesosBeforeInput === "string"
@@ -157,6 +163,7 @@ function migrateFormInputs(parsed: Record<string, unknown>): Pick<
       : base.gemstoneCount;
 
   return {
+    mesoInputMode,
     mesosBeforeInput,
     mesosAfterInput,
     expBeforeInput,
