@@ -39,9 +39,13 @@ export function correctOcrDigits(input: string): string {
 export function normalizeOcrText(rawText: string): string {
   let s = rawText.replace(/[\s\u00A0]+/g, "");
   s = correctOcrDigits(s);
+  // Phrase-level OCR absorb (before single-char fixes)
+  s = s.replace(/건투|전두/g, "전투");
+  s = s.replace(/매스|배초|배소|메초/g, "메소");
+  s = s.replace(/걸험치|걸치/g, "경험치");
   s = s.replace(/익/g, "억");
+  // Residual glyph confusions that still form 경험치 fragments
   s = s.replace(/[걸껄덤]/g, "경");
-  s = s.replace(/배초|배소|메초/g, "메소");
   return s;
 }
 
@@ -52,55 +56,75 @@ export function normalizeOcrText(rawText: string): string {
  * - "6647만 7498" → 66477498
  * - "122억 6451만" → 12264510000
  * - "17만 9845" → 179845
+ * - "61 억 8529 만" / "61억8 5 2 9만" → 6185290000
  * - "0" → 0
  */
 export function parseKoreanNumber(raw: string): number {
   if (!raw) return 0;
   let s = correctOcrDigits(raw)
     .replace(/,/g, "")
-    .replace(/\s+/g, " ")
+    .replace(/익/g, "억")
     .trim();
 
   // Strip trailing noise like "(1초당)"
   s = s.replace(/\(.*?\)/g, "").trim();
-
   if (!s) return 0;
+
+  // Glue broken digit runs and spaces around 조/억/만:
+  // "61 억 8 5 2 9 만" → "61억8529만"
+  s = s.replace(/\s+/g, " ").trim();
+  s = s.replace(/\s*([조억만])\s*/g, "$1");
+  s = s.replace(/(\d)\s+(\d)/g, "$1$2");
+  while (/(\d)\s+(\d)/.test(s)) {
+    s = s.replace(/(\d)\s+(\d)/g, "$1$2");
+  }
+  s = s.replace(/\s+/g, "");
+
   if (/^\d+$/.test(s)) return Number(s);
+
+  // Preferred: N억 M만 [R]
+  const eokMan = s.match(/(\d+)억(\d+)만(\d+)?/);
+  if (eokMan) {
+    return (
+      Number(eokMan[1]) * 100_000_000 +
+      Number(eokMan[2]) * 10_000 +
+      Number(eokMan[3] || 0)
+    );
+  }
 
   let total = 0;
   let matched = false;
 
-  const jo = s.match(/(\d+)\s*조/);
+  const jo = s.match(/(\d+)조/);
   if (jo) {
     total += Number(jo[1]) * 1_000_000_000_000;
     matched = true;
   }
 
-  const eok = s.match(/(\d+)\s*억/);
+  const eok = s.match(/(\d+)억/);
   if (eok) {
     total += Number(eok[1]) * 100_000_000;
     matched = true;
   }
 
-  const man = s.match(/(\d+)\s*만/);
+  const man = s.match(/(\d+)만/);
   if (man) {
     total += Number(man[1]) * 10_000;
     matched = true;
   }
 
-  // Remainder after last unit, e.g. "6647만 7498" or "1억 0898만" (no remainder)
-  const afterMan = s.match(/만\s*(\d+)\s*$/);
+  // Remainder after 만, e.g. "6647만7498"
+  const afterMan = s.match(/만(\d+)$/);
   if (afterMan) {
     total += Number(afterMan[1]);
     matched = true;
   } else if (!matched) {
     const digits = s.replace(/[^\d]/g, "");
     if (digits) return Number(digits);
-  } else {
-    // "1억 0898만" already handled; if leftover digits without 만 after 억
-    const afterEok = s.match(/억\s*(\d+)(?!\s*만)/);
-    if (afterEok && !man) {
-      // treat as 만-scale padded? Maple usually writes 0898만. If bare digits after 억, treat as 만.
+  } else if (eok && !man) {
+    // Digits after 억 without 만 → treat as 만-scale when < 10000
+    const afterEok = s.match(/억(\d+)$/);
+    if (afterEok) {
       const n = Number(afterEok[1]);
       total += n < 10000 ? n * 10_000 : n;
     }
@@ -164,15 +188,15 @@ export function parseBattleStatsText(rawText: string): {
 }
 
 /**
- * Crop top header band (battle time / meso / exp) by relative ratios.
- * Full window screenshots: top ~8–32%. Close-ups of the panel: top ~0–35%.
+ * Crop only the top header band: battle time / meso / exp.
+ * Tight ~16% height so skill-bar UI below is excluded.
  */
 export function cropHeaderRoi(
   source: HTMLCanvasElement | HTMLImageElement,
   opts?: { topRatio?: number; heightRatio?: number }
 ): HTMLCanvasElement {
-  const topRatio = opts?.topRatio ?? 0.06;
-  const heightRatio = opts?.heightRatio ?? 0.28;
+  const topRatio = opts?.topRatio ?? 0.02;
+  const heightRatio = opts?.heightRatio ?? 0.16;
   const sw =
     "naturalWidth" in source && source.naturalWidth
       ? source.naturalWidth
@@ -183,7 +207,7 @@ export function cropHeaderRoi(
       : source.height;
 
   const sy = Math.floor(sh * topRatio);
-  const shBand = Math.max(32, Math.floor(sh * heightRatio));
+  const shBand = Math.max(24, Math.floor(sh * heightRatio));
   const canvas = document.createElement("canvas");
   canvas.width = sw;
   canvas.height = shBand;
