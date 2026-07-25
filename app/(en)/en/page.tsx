@@ -4,6 +4,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { localeHomeAlternates } from "@/lib/hreflang";
 import { SITE_URL } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   title: "Maple Meso Calculator",
   description:

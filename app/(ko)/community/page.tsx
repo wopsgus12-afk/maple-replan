@@ -4,6 +4,9 @@ import { GlobalFooter } from "@/components/Footer";
 import { CommunityBoardPage } from "@/components/CommunityBoardPage";
 import { SITE_URL } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   title: "자랑 게시판 | 메이플 재획 정산",
   description:

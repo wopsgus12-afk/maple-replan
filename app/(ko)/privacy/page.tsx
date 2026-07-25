@@ -8,6 +8,9 @@ import {
   PRIVACY_SECTIONS,
 } from "@/lib/legalContent";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   title: "개인정보처리방침 | 메이플 재획 정산",
   description:

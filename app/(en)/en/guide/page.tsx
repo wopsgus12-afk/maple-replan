@@ -8,6 +8,9 @@ import { sectionLanguageAlternates } from "@/lib/hreflang";
 import { SITE_URL } from "@/lib/site";
 import { ui } from "@/lib/uiCopy";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 const t = ui("en");
 
 export const metadata: Metadata = {

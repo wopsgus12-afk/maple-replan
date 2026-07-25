@@ -5,6 +5,9 @@ import { FeedbackForm } from "@/components/FeedbackForm";
 import { ToastProvider } from "@/components/Toast";
 import { SITE_URL } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   title: "개발자에게 한마디 | 메이플 재획 정산",
   description: "메이플 재획 정산 도구에 대한 의견·버그·요청을 남겨 주세요.",

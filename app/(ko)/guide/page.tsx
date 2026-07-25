@@ -6,6 +6,9 @@ import { GlobalFooter } from "@/components/Footer";
 import { sectionLanguageAlternates } from "@/lib/hreflang";
 import { SITE_URL } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   title: "재획 가이드 목록 | 메이플 재획 정산",
   description:

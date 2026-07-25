@@ -9,6 +9,9 @@ import { getAllEnGuideSlugs, getEnGuideBySlug } from "@/lib/enSeoPosts";
 import { guideLanguageAlternates } from "@/lib/hreflang";
 import { guideAbsoluteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 type Props = {
   params: Promise<{ slug: string }>;
 };

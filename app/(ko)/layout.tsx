@@ -3,6 +3,9 @@ import { geistMono, geistSans } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {

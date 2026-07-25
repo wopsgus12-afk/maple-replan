@@ -8,6 +8,9 @@ import {
   TERMS_SECTIONS,
 } from "@/lib/legalContent";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   title: "이용약관 | 메이플 재획 정산",
   description:

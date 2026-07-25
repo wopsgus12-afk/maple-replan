@@ -2,6 +2,9 @@ import { ReplanApp } from "@/components/ReplanApp";
 import { OverlayBody } from "@/components/OverlayBody";
 import { OverlayGuideLinks } from "@/components/OverlayGuideLinks";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export default function OverlayPage() {
   return (
     <OverlayBody>

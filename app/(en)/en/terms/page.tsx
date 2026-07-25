@@ -4,6 +4,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { GlobalFooter } from "@/components/Footer";
 import { SITE_URL } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const revalidate = false;
+
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms of use for Maple Meso Calculator (English summary page).",
