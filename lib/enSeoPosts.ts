@@ -360,6 +360,57 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "carcion-hunting-ground-guide",
+    title:
+      "[MapleStory] Level 285 Carcion Best Training Maps & WAP Rates Guide",
+    description:
+      "Carcion training guide for Level 285 MapleStory: Sacred Force requirements, top 3 training spots, WAP meso rate, Sol Erda fragments, EXP gains, and mobbing rotation tips.",
+    koSlug: "carcion-hunting-ground-guide",
+    sections: [
+      {
+        heading: "Welcome to Carcion",
+        paragraphs: [
+          "Grats on hitting Level 285 and unlocking Carcion! As one of the endgame regions in Grandis, Carcion offers insane base EXP and meso drops per mob. However, due to its wide map layouts and multi-platform structures, finding the right mobbing rotation and meeting the Sacred Power requirements are key to maxing out your WAP (Wealth Acquisition Potion) gains.",
+          "Here's a breakdown of the top 3 training spots in Carcion, complete with Sac Force requirements, mobbing vibes, and expected rates per 2-hour WAP session.",
+        ],
+      },
+      {
+        heading: "1. Carcion Requirements & Sacred Force (Sac)",
+        paragraphs: [],
+        bullets: [
+          "Min Sacred Force Needed: 100 (100% damage output)",
+          "Recommended Force for 125% Damage & 100% Drops: 150",
+          "Pro Tip: Maps here are wide. If your class lacks high-coverage summons or full-map attacks (FMAs), prioritize smaller/compact maps for lazy grinding instead of chasing raw mob counts.",
+        ],
+      },
+      {
+        heading: "2. Top 3 Carcion Training Spots",
+        paragraphs: [],
+        bullets: [
+          "Sunken Gloomy Wetland 1 (Best for Lazy Grinding): Flat, easy platforms. Great for brainless grinding with zero fatigue. (Sac 100)",
+          "Tranquil Coast 1 (Max Mob Density & Meso Rate): High spawn density. Best rates for classes with solid mobbing setups and summons. (Sac 110)",
+          "Deep Dry Stem 2 (Solid Alternative): Perfect for vertical mobility classes with high Y-axis skill coverage. (Sac 110)",
+        ],
+      },
+      {
+        heading: "3. Expected Earnings per 2-Hour WAP (Session)",
+        paragraphs: [],
+        bullets: [
+          "Pure Mesos: ~120M - 145M+ Mesos (Varies by server & Meso Gear)",
+          "Sol Erda Fragments (Frags): ~10 - 15 Fragments",
+          "EXP Gains: ~3.5% - 5.0% at Level 285",
+        ],
+      },
+      {
+        heading: "4. Calculate Your Carcion Rates in 10 Seconds",
+        paragraphs: [
+          "Don't waste time with spreadsheets! Track your exact hourly rates and Frag profits instantly with our clean calculator.",
+          "Try the 10-Second Meso & EXP Calculator: https://gg-pass.com",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
