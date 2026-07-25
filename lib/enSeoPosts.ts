@@ -309,6 +309,57 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "arteria-hunting-ground-guide",
+    title:
+      "[MapleStory] Level 280 Arteria Best Training Maps & Meso/EXP Rates Guide",
+    description:
+      "Arteria training guide for Level 280 MapleStory: Authentic Force requirements, top 3 training maps, meso rate and EXP expectations per 2-hour WAP—Training Guide with calculator tips.",
+    koSlug: "arteria-hunting-ground-guide",
+    sections: [
+      {
+        heading: "Welcome to Arteria",
+        paragraphs: [
+          "Congratulations on reaching Level 280 and unlocking the Grandis region, Arteria! Arteria offers significantly higher base EXP and meso drops, but choosing the right map based on mob density and terrain is essential for maximum grinding efficiency.",
+          "Here is a breakdown of the top 3 training maps in Arteria, including Authentic Force requirements and expected meso earnings per 2-hour session (1 WAP).",
+        ],
+      },
+      {
+        heading: "1. Arteria Requirements & Authentic Force",
+        paragraphs: [],
+        bullets: [
+          "Minimum Authentic Force: 60 (100% damage)",
+          "Recommended Force for 125% Damage & 100% Drops: 110",
+          "Key Note: Many multi-tiered platforms make summons and wide-range skill classes highly effective here.",
+        ],
+      },
+      {
+        heading: "2. Top 3 Arteria Training Maps",
+        paragraphs: [],
+        bullets: [
+          "High-Guard Officers 1 (Best Comfort & Mob Density): Flat terrain with low fatigue, highly recommended for most classes. (AF 70)",
+          "Highest-Guard Officers 1 (Maximum Mob Spawn): High spawn rate yielding top-tier EXP and mesos. (AF 80)",
+          "Highest-Guard Officers 2 (Great Alternative): Perfect for classes with high vertical skill range. (AF 80)",
+        ],
+      },
+      {
+        heading: "3. Expected Earnings per 2-Hour Session (1 WAP)",
+        paragraphs: [],
+        bullets: [
+          "Pure Mesos: ~110M - 130M Mesos (Base rates vary by server)",
+          "Sol Erda Energy/Fragments: ~8 - 12 Fragments",
+          "EXP Rate: ~4.5% - 6.0% at Level 280",
+        ],
+      },
+      {
+        heading: "4. Calculate Your Arteria Rates in 10 Seconds",
+        paragraphs: [
+          "Track your actual hourly income and meso gains instantly with our clean calculator!",
+          "Try the 10-Second Meso & EXP Calculator: https://gg-pass.com",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
