@@ -42,6 +42,38 @@ export function GuideSectionContent({ section }: Props) {
           ))}
         </div>
       ))}
+      {section.table && (
+        <div className="mb-4 overflow-x-auto rounded-lg border border-maple-border/60">
+          <table className="min-w-full border-collapse text-left text-sm text-gray-200 sm:text-base">
+            <thead className="bg-maple-panel/80">
+              <tr>
+                {section.table.headers.map((header) => (
+                  <th
+                    key={header}
+                    className="whitespace-nowrap border-b border-maple-border/60 px-3 py-2 font-semibold text-maple-gold"
+                  >
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {section.table.rows.map((row) => (
+                <tr key={row.join("|")} className="odd:bg-maple-bg/40">
+                  {row.map((cell, i) => (
+                    <td
+                      key={`${row[0]}-${i}`}
+                      className="border-b border-maple-border/40 px-3 py-2 align-top leading-relaxed"
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
       {section.bullets && section.bullets.length > 0 && (
         <ul className="mb-3 list-disc space-y-2.5 pl-5 text-base leading-loose text-gray-200 marker:text-maple-gold">
           {section.bullets.map((item) => (
