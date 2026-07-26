@@ -556,6 +556,189 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "tallahart-deep",
+    title:
+      "MapleStory Endgame Grinding Guide: Lv. 260-290 WAP Rates & Tallahart Deep Analysis",
+    description:
+      "Ultimate GMS endgame grinding guide from Cernium (Lv. 260) to Tallahart (Lv. 290). Complete WAP rates breakdown, Grand Sac Force requirements, Sol Erda Frags yields, and Heroic vs. Interactive meso tier list. MapleStory endgame grinding tier list, Tallahart deep grinding guide, Lv 260 290 mesos per WAP, Sol Erda Frags farming GMS, Heroic vs Interactive meso rates.",
+    koSlug: "tallahart-deep",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Endgame Grinding Master Guide (Lv. 260–290+): Tallahart Deep Analysis & WAP Efficiency Tier List",
+        paragraphs: [
+          "Progressing through the Sacred Force and Grand Sac Force zones (Level 260 to 290+) represents the pinnacle of endgame progression in MapleStory Global (GMS). From Cernium (Lv. 260) through Hotel Arcus, Odium, Shangri-La, Arteria, Carcion, and ultimate Tallahart (Lv. 290), each area introduces higher mob health pools, strict Sac Force gates, and increased raw meso yields.",
+          "This master guide provides a deep-dive analysis into Tallahart's advanced rotation setups and presents a complete WAP (Wealth Acquisition Potion) Efficiency Tier List comparing meso gains, Sol Erda Frag drop expectations, and net profit margins across both Heroic (Reboot) and Interactive (Regular) servers.",
+        ],
+      },
+      {
+        heading:
+          "1. Tallahart (Lv. 290) Advanced Mobbing Rotations & Sector Analysis",
+        paragraphs: [
+          "Mastering Tallahart requires optimizing full-screen attacks (FMAs), summons, and cooldown management rather than relying solely on raw damage stats.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Ancient Colossus Gate Sector (Recommended: Lv. 293 ~ 295+)",
+            paragraphs: [],
+            bullets: [
+              "Mob Density: ~41 to 43 mobs per wave (~1,500 to 1,550 mobs per 2-hour WAP session with full clear).",
+              "Sac Force Requirement: High Grand Sac Force threshold needed for maximum damage output.",
+              'Rotation Key Points: Utilizing the central large platform as a hub while placing summons on left/right ledges allows high-clear classes to achieve over 70% stationary "Lazy Grinding" efficiency.',
+            ],
+          },
+          {
+            heading:
+              "(2) Selecting the Right Map: Lazy Grinding vs. Max Mob Density",
+            paragraphs: [],
+            bullets: [
+              "Low-Effort Priority: If fatigue management during 2-hour WAP sessions is your main goal, choose 2-tier flat layouts like Twilight Ancient Ruins: Deep Sector.",
+              "Max Rate Priority: High-mobility mobbers (e.g., Hoyoung, Cadena, Ark) should target Starfall Temple or Colossus Gate to maximize kill counts per wave.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "2. Level 260 to 290+ WAP Yield & Efficiency Tier List",
+        paragraphs: [
+          "The true value of a WAP session is measured by [Raw Mesos + Sol Erda Frags Value - (Auction House Fees + Consumable Costs)].",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) 2-Hour WAP Yield Summary Table (Based on 300% Drop/Meso Gear)",
+            paragraphs: [],
+          },
+        ],
+        table: {
+          headers: [
+            "Zone Name",
+            "Min. Level",
+            "Mobs per WAP (2 Hrs)",
+            "Heroic Raw Mesos",
+            "Interactive Net Yield",
+            "Sol Erda Frags",
+          ],
+          rows: [
+            [
+              "Cernium",
+              "Lv. 260",
+              "~1,200 mobs",
+              "~500M - 600M",
+              "~150M Net Mesos",
+              "12 - 15 Frags",
+            ],
+            [
+              "Hotel Arcus",
+              "Lv. 265",
+              "~1,250 mobs",
+              "~600M - 700M",
+              "~180M Net Mesos",
+              "14 - 18 Frags",
+            ],
+            [
+              "Odium",
+              "Lv. 270",
+              "~1,300 mobs",
+              "~700M - 800M",
+              "~220M Net Mesos",
+              "16 - 20 Frags",
+            ],
+            [
+              "Shangri-La",
+              "Lv. 275",
+              "~1,350 mobs",
+              "~750M - 850M",
+              "~250M Net Mesos",
+              "18 - 22 Frags",
+            ],
+            [
+              "Arteria",
+              "Lv. 280",
+              "~1,400 mobs",
+              "~800M - 950M",
+              "~280M Net Mesos",
+              "20 - 24 Frags",
+            ],
+            [
+              "Carcion",
+              "Lv. 285",
+              "~1,450 mobs",
+              "~850M - 1.0B",
+              "~310M Net Mesos",
+              "22 - 26 Frags",
+            ],
+            [
+              "Tallahart",
+              "Lv. 290",
+              "~1,500 mobs",
+              "~900M - 1.1B+",
+              "~350M+ Net Mesos",
+              "25 - 30 Frags",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "3. Critical Meso Deductions: Level Penalties & 1% Transaction Fees",
+        paragraphs: [
+          "Calculating accurate hourly earnings requires factoring in two frequently overlooked mechanics:",
+        ],
+        subsections: [
+          {
+            heading: "1. Level Disadvantage Penalties",
+            paragraphs: [],
+            bullets: [
+              "Grinding mobs 5 or more levels below your character level drastically reduces meso drop rates below 80%.",
+              "A Lv. 285 character grinding in Cernium loses over 40% of potential meso earnings compared to grinding in Carcion or Tallahart.",
+            ],
+          },
+          {
+            heading: "2. 1% Auction House Tax & Consumable Expenses",
+            paragraphs: [],
+            bullets: [
+              "On Interactive servers, selling Sol Erda Frags incur a mandatory 1% Auction House transaction fee.",
+              "Subtracting WAP potions, Extreme Gold potions, and nodestone costs reveals your true net hourly wage.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Calculate Your Net WAP Income in 10 Seconds on GG-PASS",
+        paragraphs: [
+          "Avoid manual spreadsheet calculations after exhausting WAP sessions. Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/tallahart-deep) to audit your exact earnings.",
+        ],
+        subsections: [
+          {
+            heading: "One-Click [+1], [+5] Adjustment Buttons",
+            paragraphs: [
+              "Effortlessly log dropped Sol Erda Frags, Nodestones, and consumables without typing.",
+            ],
+          },
+          {
+            heading: "Automatic Net Tax Deduction",
+            paragraphs: [
+              "Simply input starting and ending meso counts—GG-PASS automatically factors in 1% transaction fees and consumable costs.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Generate styled profit summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your endgame grinding gains now!",
+              "Calculate Your Endgame WAP Earnings on GG-PASS: https://gg-pass.com",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
