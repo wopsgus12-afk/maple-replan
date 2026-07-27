@@ -889,6 +889,140 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "lazy-grinding-part2",
+    title:
+      "MapleStory Best Flat Maps & Lazy Grinding Guide Part 2: Arteria to Tallahart (Lv. 280-290+)",
+    description:
+      "Complete GMS endgame lazy grinding guide for Lv. 280-290+ (Arteria, Carcion, Tallahart). Low-effort flat map rotations, Grand Sac Force requirements, Sol Erda Frags rates, and Heroic vs. Interactive meso yields. MapleStory endgame flat maps, Arteria lazy grinding, Carcion low effort rotation, Tallahart flat map, Grand Sac Force grinding, WAP rates endgame.",
+    koSlug: "lazy-grinding-part2",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Best Flat Maps & Lazy Grinding Master Guide Part 2: Arteria to Tallahart (Lv. 280–290+)",
+        paragraphs: [
+          "Entering the high-end zones of Arteria (Lv. 280), Carcion (Lv. 285), and Tallahart (Lv. 290+) in MapleStory Global (GMS) introduces steep Sacred Force and Grand Sac Force gates alongside massive mob HP pools. At this level, committing to 2-hour WAP (Wealth Acquisition Potion) sessions requires not only high character funding but also fatigue-free map layouts that preserve player focus and physically prevent wrist strain.",
+          "Because 280+ grinding sessions yield the highest density of Sol Erda Fragments and raw mesos in the game, minimizing key inputs ensures players complete their daily WAP sessions without fatigue burnout. This guide covers the premier endgame 'Flat Maps' and stationary 'Lazy Grinding' rotations from Arteria to Tallahart, breaking down mob density, Grand Sac Force mechanics, and net meso output across both Heroic (Reboot) and Interactive (Regular) servers.",
+        ],
+      },
+      {
+        heading:
+          "1. Fatigue Management & Sac Force Gates in Endgame Zones (Lv. 280+)",
+        paragraphs: [
+          "In high-level zones, complex vertical maps that force awkward double-jumps severely degrade grinding efficiency over a 2-hour duration.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Benefits of Endgame Flat Maps & Low-Input Rotations",
+            paragraphs: [],
+            bullets: [
+              "Maximized 6th Job & Summon Uptime: With upgraded 6th Job origin skills and extended summon durations, horizontal flat maps allow players to clear entire spawn waves simply by rotating wide FMAs (Full Map Attacks) from a central position.",
+              "Repetitive Strain Injury (RSI) Prevention: Minimizing vertical jumps eliminates wrist fatigue, allowing players to maintain consistent daily grinding schedules.",
+              "Higher Net Income Volume: Low fatigue enables grinders to complete 2 or 3 WAP sessions per day comfortably, adding hundreds of extra Sol Erda Frags to their monthly progression.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Top Endgame Flat Maps & Lazy Rotations Breakdown (Lv. 280–290+)",
+        paragraphs: [
+          "Here are the premier flat maps in the highest-level zones offering near-zero fatigue ratings.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Arteria (Lv. 280 ~ 284)",
+            paragraphs: [],
+            bullets: [
+              "Recommended Maps: Top Floor Passage 1 & Rightmost Tower 2",
+              "Sacred Force Requirement: 300 ~ 330",
+              "Map Layout: Clean 2-tier horizontal platform layout. Placing summons on the left and right ledges lets players stay centered while clearing spawn waves with basic key inputs.",
+              "Fatigue Rating: ★☆☆☆☆ (Extremely Low Effort)",
+              "WAP Rates: ~1,400 mobs cleared per WAP. Generates ~800M–950M Raw Mesos on Heroic servers.",
+            ],
+          },
+          {
+            heading: "(2) Carcion (Lv. 285 ~ 289)",
+            paragraphs: [],
+            bullets: [
+              "Recommended Maps: Rough Waves 1 & Hidden Cave 2",
+              "Sacred Force Requirement: 360 ~ 390",
+              "Map Layout: Ultra-wide horizontal layout with almost zero vertical variance. Ideal for teleport classes and lateral mobbers to execute \"no-look\" grinding rotations.",
+              "Fatigue Rating: ★☆☆☆☆ (Extremely Low Effort)",
+              "WAP Rates: ~1,450 mobs per WAP. Yields 22 to 26 Sol Erda Frags and ~850M–1.0B Raw Mesos on Heroic.",
+            ],
+          },
+          {
+            heading:
+              "(3) Tallahart (Lv. 290+) - [Pinnacle Endgame Zone]",
+            paragraphs: [],
+            bullets: [
+              "Recommended Maps: Twilight Ancient Ruins Sector 1 & Colossus Gate Flat Sector",
+              "Grand Sac Force Requirement: 100+",
+              "Map Layout: The cleanest horizontal sector in Tallahart. While mob HP is extremely high, matching Grand Sac Force thresholds allows players to wipe spawn waves stationary using summons and wide FMAs.",
+              "Fatigue Rating: ★☆☆☆☆ (Near Zero Fatigue)",
+              "WAP Rates: ~1,500+ mobs per WAP. Generates 25–30 Sol Erda Frags and top-tier net meso value.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Endgame WAP Deductions: 1% Tax & Potion Expenses",
+        paragraphs: [
+          "Accurately calculating your net hourly wage at Lv. 280+ requires factoring in server-specific deductions:",
+        ],
+        subsections: [
+          {
+            heading: "1. Net Earnings Calculation",
+            paragraphs: [
+              "Net Profit = [Raw Mesos + (Sol Erda Frags Count × Market Rate)] - (1% Auction House Tax + Potion Costs)",
+            ],
+          },
+          {
+            heading: "2. The Impact of 1% Auction House Fees",
+            paragraphs: [],
+            bullets: [
+              "In Carcion and Tallahart, total WAP value often exceeds 300M–400M mesos on Interactive servers.",
+              "Factoring in the 1% transaction fee (3M–4M mesos) and WAP consumable costs (~8M mesos) is essential for an exact financial audit.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Endgame WAP Income in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Curious about your true net earnings from Lv. 280+ lazy grinding? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/lazy-grinding-part2) to audit your gains in seconds.",
+        ],
+        subsections: [
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags, Nodestones, and consumables post-grind without keyboard strain.",
+            ],
+          },
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Automatically subtracts transaction taxes and potion costs from starting/ending mesos to display your true net hourly wage.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Generate styled income cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Calculate your endgame flat map grinding profits now!",
+              "Calculate Your Endgame WAP Earnings on GG-PASS: https://gg-pass.com",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
