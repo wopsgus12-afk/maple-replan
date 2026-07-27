@@ -6,6 +6,7 @@ import {
   GEMSTONE_GROUNDS,
   HUNTING_GROUNDS,
   getGroundById,
+  getGroundLabel,
   usesFragmentDrop,
 } from "@/lib/huntingGrounds";
 import {
@@ -83,14 +84,14 @@ export function HuntingForm({
             <optgroup label={copy.formGroundGemGroup}>
               {GEMSTONE_GROUNDS.map((g) => (
                 <option key={g.id} value={g.id}>
-                  {g.label}
+                  {getGroundLabel(g, locale)}
                 </option>
               ))}
             </optgroup>
             <optgroup label={copy.formGroundFragmentGroup}>
               {FRAGMENT_GROUNDS.map((g) => (
                 <option key={g.id} value={g.id}>
-                  {g.label}
+                  {getGroundLabel(g, locale)}
                 </option>
               ))}
             </optgroup>

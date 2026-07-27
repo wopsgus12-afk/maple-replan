@@ -5,6 +5,7 @@ import {
   FRAGMENT_GROUNDS,
   GEMSTONE_GROUNDS,
   getGroundById,
+  getGroundLabel,
 } from "@/lib/huntingGrounds";
 import {
   formatMesosInputLive,
@@ -136,19 +137,17 @@ export function PresetSettingsModal({
             }}
             className="w-full rounded border border-maple-border bg-maple-bg px-3 py-2.5 text-sm text-white focus:border-maple-gold focus:outline-none"
           >
-            <optgroup label={locale === "en" ? "Under 260 · Nodestone" : "260 미만 · 코어 젬스톤"}>
+            <optgroup label={t.formGroundGemGroup}>
               {GEMSTONE_GROUNDS.map((g) => (
                 <option key={g.id} value={g.id}>
-                  {g.label}
+                  {getGroundLabel(g, locale)}
                 </option>
               ))}
             </optgroup>
-            <optgroup
-              label={locale === "en" ? "260+ · Erda Fragment" : "260 이상 · 솔 에르다 조각"}
-            >
+            <optgroup label={t.formGroundFragmentGroup}>
               {FRAGMENT_GROUNDS.map((g) => (
                 <option key={g.id} value={g.id}>
-                  {g.label}
+                  {getGroundLabel(g, locale)}
                 </option>
               ))}
             </optgroup>

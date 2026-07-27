@@ -15,7 +15,7 @@ import { ToastProvider, useToast } from "./Toast";
 import { LegacyTabRedirect } from "./LegacyTabRedirect";
 import { PresetSettingsModal } from "./PresetSettingsModal";
 import { isElectron, closeElectronOverlay } from "@/lib/electron";
-import { getGroundById, usesFragmentDrop } from "@/lib/huntingGrounds";
+import { getGroundById, getGroundLabel, usesFragmentDrop } from "@/lib/huntingGrounds";
 import { parseMesosInput, safeNumber } from "@/lib/format";
 import { loadState, saveState } from "@/lib/storage";
 import {
@@ -233,7 +233,9 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
       slot: recordSlot,
       sessionLabel,
       groundId: state.groundId,
-      groundLabel: ground?.label ?? (locale === "en" ? "Unknown" : "알 수 없음"),
+      groundLabel:
+        (ground ? getGroundLabel(ground, locale) : null) ??
+        (locale === "en" ? "Unknown" : "알 수 없음"),
       mesosBefore,
       mesosAfter,
       expBefore,
@@ -373,6 +375,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
             mode={state.timerMode}
             running={timer.snapshot.running}
             compact={compact}
+            locale={locale}
             onToggleMode={handleToggleMode}
             onToggleRun={toggleTimer}
             onReset={handleResetTimer}

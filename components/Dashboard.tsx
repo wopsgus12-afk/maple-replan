@@ -114,7 +114,7 @@ export function Dashboard({
           )}
         </div>
       </section>
-      <ExportDashboardImage targetRef={sectionRef} variant="block" />
+      <ExportDashboardImage targetRef={sectionRef} variant="block" locale={locale} />
     </div>
   );
 }

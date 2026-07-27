@@ -2,14 +2,22 @@
 
 import { useState, type RefObject } from "react";
 import html2canvas from "html2canvas";
+import type { Locale } from "@/lib/locale";
+import { ui } from "@/lib/uiCopy";
 
 type Props = {
   targetRef: RefObject<HTMLElement | null>;
   variant?: "inline" | "block";
+  locale?: Locale;
 };
 
-export function ExportDashboardImage({ targetRef, variant = "block" }: Props) {
+export function ExportDashboardImage({
+  targetRef,
+  variant = "block",
+  locale = "ko",
+}: Props) {
   const [busy, setBusy] = useState(false);
+  const t = ui(locale);
 
   const handleExport = async () => {
     const el = targetRef.current;
@@ -23,7 +31,7 @@ export function ExportDashboardImage({ targetRef, variant = "block" }: Props) {
         useCORS: true,
       });
       const link = document.createElement("a");
-      link.download = "메이플_재획_총정산.png";
+      link.download = t.exportFilename;
       link.href = canvas.toDataURL("image/png");
       link.click();
     } finally {
@@ -31,7 +39,7 @@ export function ExportDashboardImage({ targetRef, variant = "block" }: Props) {
     }
   };
 
-  const label = busy ? "생성 중…" : "인증샷 저장";
+  const label = busy ? t.exportInlineBusy : t.exportInlineIdle;
 
   if (variant === "inline") {
     return (
@@ -39,7 +47,7 @@ export function ExportDashboardImage({ targetRef, variant = "block" }: Props) {
         type="button"
         onClick={handleExport}
         disabled={busy}
-        title="[정산 결과 이미지로 저장 (인증샷)]"
+        title={t.exportSaveResult}
         className="shrink-0 rounded border border-maple-gold/50 bg-maple-gold/10 px-2 py-1 text-[10px] font-medium text-maple-gold hover:bg-maple-gold/20 disabled:opacity-60"
       >
         {label}
@@ -54,7 +62,7 @@ export function ExportDashboardImage({ targetRef, variant = "block" }: Props) {
       disabled={busy}
       className="w-full rounded-lg border border-maple-gold/50 bg-maple-gold/10 py-2.5 text-sm font-medium text-maple-gold hover:bg-maple-gold/20 disabled:opacity-60"
     >
-      {busy ? "이미지 생성 중…" : "[정산 결과 이미지로 저장 (인증샷)]"}
+      {busy ? t.exportBusy : t.exportSaveResult}
     </button>
   );
 }
