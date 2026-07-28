@@ -1143,6 +1143,139 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "meso-penalty-part2",
+    title:
+      "Sacred Force Deficit vs. Level Penalty: MapleStory Map Progression Breakeven",
+    description:
+      "Complete GMS guide comparing Sacred Force damage reduction penalties against level disadvantage meso penalties. WAP yield breakeven calculations, Sol Erda Frag drop optimization, and Heroic vs. Interactive map progression timing. Sacred Force damage reduction MapleStory, GMS map progression breakeven, level penalty vs Sac Force deficit, WAP yield comparison, Heroic map progression timing.",
+    koSlug: "meso-penalty-part2",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Sacred Force Deficit vs. Level Penalty Guide: Map Progression Timing & WAP Breakeven Analysis",
+        paragraphs: [
+          "When grinding through Level 260+ Sacred Force and Grand Sac Force zones in MapleStory Global (GMS), endgame players encounter a classic dilemma: \"My character unlocked a higher-level zone, but my Sacred Force is under-capped, causing my damage output to be halved.\"",
+          "This forces players to choose between two sub-optimal grinding scenarios:",
+          "1. Move up to the higher-level zone without level penalties, but take 2 or 3 hits to kill mobs due to Sacred Force damage reduction.",
+          "2. Stay in a lower-level zone with 100% 1-hit clear efficiency, but suffer level disadvantage meso penalties.",
+          "Which choice yields higher net income per 2-hour WAP (Wealth Acquisition Potion) session? This guide mathematically compares Sacred Force damage reduction penalties against level disadvantage meso decrements, establishing an exact progression breakeven formula for both Heroic (Reboot) and Interactive (Regular) servers.",
+        ],
+      },
+      {
+        heading:
+          "1. Sacred Force Damage Reduction vs. Level Disadvantage Decrements",
+        paragraphs: [
+          "Understanding when to transition maps requires evaluating how each penalty mechanic degrades your hourly WAP yield.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Sacred / Grand Sac Force Deficit Damage Multipliers",
+            paragraphs: [],
+            bullets: [
+              "100% Sac Force Matched: 100% Base Damage (110%–120% Bonus Damage if overcapped by 10%–20%).",
+              "10–30 Force Deficit: Deals 70% to 80% base damage (Risks missing 1-hit KO thresholds).",
+              "40–60 Force Deficit: Deals 40% to 50% base damage (Impossible to maintain 1-hit clears).",
+              "100+ Force Deficit: Deals 10% to 20% damage (Grinding becomes completely unviable).",
+            ],
+          },
+          {
+            heading: "(2) Level Disadvantage Decrements Review",
+            paragraphs: [],
+            bullets: [
+              "-1 to -4 Levels Difference: 92% to 100% Meso Drop Rate.",
+              "-5 to -9 Levels Difference: 50% to 80% Meso Drop Rate.",
+              "-10 Levels or Greater: Under 40% Meso Drop Rate.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Under-Capped Sac Force Higher Map vs. Level Penalized Lower Map WAP Showdown",
+        paragraphs: [
+          "Let's evaluate a practical case study comparing a Level 275 character deciding between Shangri-La (Higher Zone) and Odium (Lower Zone).",
+        ],
+        subsections: [
+          {
+            heading: "(1) Practical WAP Comparison (Level 275 Character)",
+            paragraphs: [],
+            bullets: [
+              "Option A (Advance to Shangri-La / 30 Sac Force Deficit):",
+              "Sac Force damage reduction forces 2-hit kills -> Clear efficiency drops to 60%.",
+              "Level gap is 0 -> 100% Meso Drop Rate.",
+              "WAP Yield: ~500M Raw Mesos + 14 Sol Erda Frags (Heroic Server).",
+              "Option B (Remain in Odium / 100% Sac Force Matched):",
+              "100% 1-hit clear efficiency achieved.",
+              "Level gap is -5 -> 80% Meso Drop Rate.",
+              "WAP Yield: ~640M Raw Mesos + 16 Sol Erda Frags (Heroic Server).",
+            ],
+          },
+          {
+            heading: "(2) The Progression Breakeven Formula",
+            paragraphs: [
+              "If Sac Force deficits reduce your spawn wave clear efficiency by 20% or more, remaining in the lower-level zone with 100% 1-hit clears yields higher net mesos—even after factoring in a 20% level penalty.",
+              "However, the exact moment your character achieves 1-hit KO clears in the higher-level zone (even with a Sac Force deficit), you must immediately advance to maximize Sol Erda Frag drop rates and raw meso generation.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Sol Erda Frag Margins & 1% Auction House Tax Deductions",
+        paragraphs: [
+          "On Interactive servers, raw mesos represent only a fraction of total WAP value. Sol Erda Fragments dictate overall profitability.",
+        ],
+        subsections: [
+          {
+            heading: "1. Sol Erda Frag Drop Advantage",
+            paragraphs: [],
+            bullets: [
+              "Higher-level zones feature higher baseline Sol Erda Frag drop rates.",
+              "If advancing to a higher zone yields 5 extra Frags per WAP, selling them on the Auction House offsets over 30M mesos lost from lower clear speed.",
+            ],
+          },
+          {
+            heading: "2. Mandatory 1% Tax & Potion Deductions",
+            paragraphs: [
+              "Subtracting the 1% Auction House transaction tax and consumable costs (WAPs, Extreme Gold Potions) reveals the true net profit breakeven point.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Map Progression Breakeven in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Unsure whether staying in your current map or advancing to a higher zone yields more profit? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/meso-penalty-part2) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Log Post-Grind Earnings in 10 Seconds",
+            paragraphs: [
+              "Compare real meso and Frag yields between two maps effortlessly.",
+            ],
+          },
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Automatically subtracts transaction taxes and potion costs from starting and ending mesos to show true net hourly rate differences.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Tally dropped Sol Erda Frags, Nodestones, and consumables post-grind without keyboard strain.",
+            ],
+            paragraphsAfterBullets: [
+              "Calculate your map progression breakeven now!",
+              "Calculate Your Map Progression Breakeven on GG-PASS: https://gg-pass.com",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
