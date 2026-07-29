@@ -1399,6 +1399,135 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "wap-margin-part2",
+    title:
+      "Sol Erda Frag Prices & Interactive vs. Heroic WAP Rates Guide",
+    description:
+      "Complete GMS guide analyzing Sol Erda Fragment market price fluctuations on WAP yields. Interactive (Regular) vs. Heroic (Reboot) net profit audits, 1% Auction House tax deductions, and GMS meso calculator integration. Sol Erda Fragment market price, GMS Interactive vs Heroic WAP rates, Sol Erda Frag meso conversion, MapleStory net WAP profit, Auction House 1% tax, GMS meso calculator.",
+    koSlug: "wap-margin-part2",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS WAP Efficiency & Consumable Cost Guide Part 2: Sol Erda Fragment Market Fluctuations & Interactive vs. Heroic Net Wage Audit",
+        paragraphs: [
+          "Following the 6th Job update in MapleStory Global (GMS), determining the exact value of a 2-hour WAP (Wealth Acquisition Potion) session depends not only on raw meso drops, but heavily on Sol Erda Fragment Auction House prices. Crucially, whether you play on Interactive (Regular) or Heroic (Reboot) servers fundamentally changes your net income structure.",
+          "For Interactive server players, Sol Erda Fragments represent liquid capital that can be sold immediately on the Auction House—subject to market price volatility and a mandatory 1% Auction House transaction tax. For Heroic server players, Fragments are untradable progression assets, while native 5x meso multipliers drive raw meso gains. This guide mathematically analyzes Sol Erda Frag price brackets, compares net WAP rates between Interactive and Heroic servers, and audits true hourly wages.",
+        ],
+      },
+      {
+        heading:
+          "1. How Sol Erda Frag Market Prices Dictate WAP Yields (Interactive vs. Heroic)",
+        paragraphs: [
+          "Evaluating WAP profits requires understanding how server mechanics treat dropped assets.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Interactive (Regular) Server Mechanics",
+            paragraphs: [],
+            bullets: [
+              "Core Profit Driver: Dropped Sol Erda Fragments are sold on the Auction House for immediate meso liquidation.",
+              "Volatility Risk: When Frag prices decline from 8M mesos down to 4M mesos, gross WAP earnings drop significantly.",
+              "Mandatory Deductions: Factoring in the 1% Auction House transaction fee and fixed WAP consumable costs is necessary to determine true net profits.",
+            ],
+          },
+          {
+            heading: "(2) Heroic (Reboot) Server Mechanics",
+            paragraphs: [],
+            bullets: [
+              "Core Profit Driver: Fragments cannot be traded, but Heroic's native 5x raw meso rate yields massive baseline mesos.",
+              "Valuation Audit: Converting dropped Fragments using average Interactive market rates allows Heroic players to calculate their session's \"perceived total progression value.\"",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Sol Erda Frag Price Brackets & Real Net Wage Comparisons",
+        paragraphs: [
+          "Let's evaluate a 2-hour Lv. 280 Arteria WAP session (yielding ~160M Raw Mesos + 20 Sol Erda Frags on Interactive vs. ~750M Raw Mesos + 20 Frags on Heroic).",
+        ],
+        subsections: [
+          {
+            heading: "(1) Frag Price at 8M Mesos (High-Tier Market)",
+            paragraphs: [],
+            bullets: [
+              "Interactive Server:",
+              "Raw Mesos 160M + (20 Frags × 8M = 160M Mesos) = 320M Gross Mesos.",
+              "Less 1% Auction House Tax (-1.6M) & WAP/Potions (-8M).",
+              "Net Profit: ~310.4M Mesos.",
+              "Heroic Server:",
+              "Raw Mesos ~750M + 20 Sol Erda Frags (Direct Character Progression).",
+            ],
+          },
+          {
+            heading: "(2) Frag Price at 4M Mesos (Low-Tier Market)",
+            paragraphs: [],
+            bullets: [
+              "Interactive Server:",
+              "Raw Mesos 160M + (20 Frags × 4M = 80M Mesos) = 240M Gross Mesos.",
+              "Less 1% Auction House Tax (-800K) & WAP/Potions (-8M).",
+              "Net Profit: ~231.2M Mesos (~79.2M meso reduction due to market drop).",
+              "Heroic Server:",
+              "Unaffected by market fluctuations: ~750M Raw Mesos maintained.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. The Impact of 1% Auction House Fees & Exchange Rates",
+        paragraphs: [
+          "Interactive server players frequently overlook the 1% Auction House tax during session audits.",
+        ],
+        subsections: [
+          {
+            heading: "1. The Cost of Tax Omission",
+            paragraphs: [
+              "On a 300M meso Frag/drop liquidation, the 1% tax equals 3M mesos—covering nearly half the cost of a WAP potion. Subtracting this tax ensures accurate financial tracking.",
+            ],
+          },
+          {
+            heading: "2. Meso Market Conversion Rates",
+            paragraphs: [
+              "When converting raw mesos into Maple Points or cash equivalents, factoring in exchange rate fluctuations provides a realistic view of your hourly wage.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Server's Net WAP Profit in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Want to audit your true net WAP earnings based on your specific server and real-time Sol Erda Frag prices? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/wap-margin-part2) to audit your gains in seconds.",
+        ],
+        subsections: [
+          {
+            heading: "Interactive vs. Heroic Audit Modes",
+            paragraphs: [
+              "Input server-specific meso multipliers and current Frag market rates for tailored profit calculations.",
+            ],
+          },
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply enter starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags, Nodestones, and consumables post-grind without keyboard typing strain.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your net WAP profits now!",
+              "Calculate Your Net WAP Earnings on GG-PASS: https://gg-pass.com",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
