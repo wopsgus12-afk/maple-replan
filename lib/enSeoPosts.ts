@@ -1276,6 +1276,129 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "wap-margin-part1",
+    title:
+      "MapleStory WAP Cost Efficiency Guide: Consumables Breakeven & Net Profit",
+    description:
+      "Complete GMS guide on Wealth Acquisition Potion (WAP) cost efficiency. Breakeven calculations across Meso/Drop gear setups, 1% Auction House tax deductions, and net wage audits for Heroic vs. Interactive. MapleStory WAP efficiency, Wealth Acquisition Potion breakeven, WAP consumable costs, net meso per WAP, GMS meso calculator.",
+    koSlug: "wap-margin-part1",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS WAP Efficiency & Consumable Cost Guide Part 1: Breakeven Analysis & Net Profit Audits",
+        paragraphs: [
+          "In MapleStory Global (GMS), consuming a Wealth Acquisition Potion (WAP) is standard practice for any 2-hour grinding session, granting a +20% Item Drop Rate and +20% Meso Acquisition Rate. However, as crafting materials and market prices for WAPs fluctuate, players frequently ask: \"Is popping a WAP actually profitable when factoring in consumable expenses and transaction fees?\"",
+          "Evaluating WAP profitability purely based on raw meso increases is misleading. True net profitability requires subtracting WAP crafting or purchase costs, Extreme Gold Potions, nodestones, and the mandatory 1% Auction House tax on Interactive servers. This guide breaks down WAP consumable structures, establishes breakeven points (BEP) across various Drop/Meso gear thresholds, and audits net hourly earnings for both Heroic (Reboot) and Interactive (Regular) servers.",
+        ],
+      },
+      {
+        heading:
+          "1. Deconstructing 2-Hour WAP Consumable Expenses & Overhead Costs",
+        paragraphs: [
+          "Executing a full 2-hour WAP session incurs fixed overhead expenses that reduce your gross earnings.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Fixed WAP Expense Categories",
+            paragraphs: [],
+            bullets: [
+              "Wealth Acquisition Potion (WAP): Crafting or purchasing a 2-hour WAP costs approximately 6M to 8M mesos on Interactive server Auction Houses.",
+              "Extreme Gold Potions & Buff Consumables: Using 4 Extreme Gold Potions (30-min duration each) plus Guild Blessings adds 1M to 2M mesos in fixed consumable overhead.",
+              "1% Auction House Transaction Fee: Converting Sol Erda Fragments, Nodestones, or mesos into net capital incurs a mandatory 1% tax deduction.",
+            ],
+            paragraphsAfterBullets: [
+              "In short, starting a 2-hour WAP session immediately places your account at an initial 8M to 10M meso deficit.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. WAP Breakeven Calculations Across Drop & Meso Gear Thresholds",
+        paragraphs: [
+          "A WAP session reaches its Break-Even Point (BEP) when the +20% meso and drop rate bonuses generate additional earnings that exceed the ~7M meso cost of the potion.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Gear Threshold BEP Scenario Comparisons (Assuming 7M WAP Cost)",
+            paragraphs: [],
+            bullets: [
+              "Scenario A (0% Meso / 0% Drop Gear - Fresh Level 260):",
+              "Baseline 2-hour meso yield without WAP: ~30M Raw Mesos.",
+              "+20% Meso gain from WAP: +6M Raw Mesos.",
+              "Verdict: Net Loss (-1M meso deficit). Baseline meso generation is too low to cover the WAP potion cost. Focusing on Meso/Drop gear progression is recommended before relying heavily on WAPs.",
+              "Scenario B (100% Meso / 100% Drop Gear - Mid-Game Grinder):",
+              "Baseline 2-hour meso yield without WAP: ~80M Raw Mesos.",
+              "+20% Meso gain from WAP: +16M Raw Mesos.",
+              "Verdict: Profitable (+9M net profit). The WAP potion pays for itself and yields an additional 9M mesos in net gains.",
+              "Scenario C (100% Meso / 300% Drop Gear - Endgame Lv. 280+ Grinder):",
+              "Baseline 2-hour yield without WAP: ~150M Raw Mesos + 18 Sol Erda Frags.",
+              "+20% Meso & Frag drop gain from WAP: +30M+ meso equivalent value.",
+              "Verdict: Highly Profitable (+23M+ net profit). High-level zones amplify WAP returns exponentially.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Server Impact: Heroic (Reboot) vs. Interactive Server Margins",
+        paragraphs: [
+          "WAP margin mechanics differ fundamentally between GMS server structures.",
+        ],
+        subsections: [
+          {
+            heading: "1. Interactive (Regular) Servers",
+            paragraphs: [],
+            bullets: [
+              "Players must craft WAPs via Alchemy or purchase them on the Auction House.",
+              "Profitability relies heavily on liquidating Sol Erda Fragments and Nodestones, where deducting the 1% Auction House transaction tax is essential for calculating true net gains.",
+            ],
+          },
+          {
+            heading: "2. Heroic (Reboot) Servers",
+            paragraphs: [],
+            bullets: [
+              "WAP recipes are purchased directly via meso shops or farmed via herbs.",
+              "Heroic's native 5x meso multiplier ensures that the +20% WAP meso bonus yields massive absolute meso returns, making WAP consumption universally profitable.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Net WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Want to know your exact net hourly wage after subtracting WAP potion costs and transaction taxes? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/wap-margin-part1) to audit your post-grind earnings.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and WAP potion costs to display your true net profit.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags, Nodestones, and consumables post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Generate clean, downloadable income summary graphics with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your net WAP profits now!",
+              "Calculate Your Net WAP Earnings on GG-PASS: https://gg-pass.com",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
