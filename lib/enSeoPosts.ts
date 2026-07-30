@@ -1666,6 +1666,143 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "class-lazy-grinding-part2",
+    title:
+      "MapleStory Class Lazy Grinding Guide Part 2: Ho Young, Ark, Cadena, Angelic Buster",
+    description:
+      "Complete GMS lazy grinding build guide for top FMA and high-mobility classes (Ho Young, Ark, Cadena, Angelic Buster). Stationary 1-hit rotations, 6th Job FMA loops, Sacred Force overcaps, and WAP meso audits. Ho Young lazy grinding MapleStory, Ark stationary WAP rotation, Cadena low effort grinding, Angelic Buster remaster lazy build, GMS class grinding guide, GMS meso calculator.",
+    koSlug: "class-lazy-grinding-part2",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Class Lazy Grinding & Spawn-Kill Builds Part 2: High-FMA & Top Mobility Classes (Ho Young, Ark, Cadena, Angelic Buster)",
+        paragraphs: [
+          "Following the 6th Job update in MapleStory Global (GMS), one of the most significant meta shifts occurred among classes equipped with multiple Full Map Attacks (FMAs) and complex skill combos. Classes previously perceived as high-effort or input-heavy have transformed into top-tier 'Lazy Grinding' powerhouses due to expanded skill hitboxes and enhanced 6th Job mastery cores.",
+          "By executing structured cooldown loops, these classes can wipe entire spawn waves stationary without performing repetitive horizontal double-jumps. This guide provides an in-depth analysis of low-effort rotations and gearing thresholds for four high-FMA classes: Ho Young, Ark, Cadena, and Angelic Buster.",
+        ],
+      },
+      {
+        heading:
+          "1. Post-6th Job Meta Shift: Transforming High-Mobility Classes into Stationary Farmers",
+        paragraphs: [
+          "Skill upgrades in recent updates have fundamentally altered grinding mechanics for combo-heavy classes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Mechanics of FMA Cooldown Cycling",
+            paragraphs: [],
+            bullets: [
+              "Full Map Attack (FMA) Staggering: Alternating between 15-second to 30-second wide-area skills clears entire spawn waves sequentially from a central position.",
+              "Hybrid Summon + FMA Coverage: Deploying persistent summons to auto-clear lower platforms while casting FMAs to wipe upper ledges creates a complete hands-free clearing zone.",
+              "100% Spawn Wave Retention: Eliminating manual movement prevents mid-WAP fatigue, guaranteeing zero missed mob spawns over 2-hour grinding sessions.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Deep Dive into 4 High-FMA Class Stationary Rotations",
+        paragraphs: [
+          "Here are the optimal lazy grinding builds and gear thresholds for each class.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Ho Young",
+            paragraphs: [],
+            bullets: [
+              "Key Skills: Vortex: Real, Tigris: Real, Clone: Real, Scroll: Star Vortex",
+              "Rotation Build: Deploy Vortex and persistent scroll summons on key ledges while standing stationary in the map center, cycling Tigris and FMA skills on cooldown.",
+              "1-Hit KO Threshold: Requires 1-hit KO damage thresholds on talismans and scroll summons, easily achieved with a 110%+ Sacred Force overcap.",
+              "Fatigue Rating: ★☆☆☆☆ (Extremely Low Effort)",
+            ],
+          },
+          {
+            heading: "(2) Ark",
+            paragraphs: [],
+            bullets: [
+              "Key Skills: Memory of Root, Endless Nightmare, Flora/Spectre FMAs",
+              "Rotation Build: Leveraging the massive skill hitboxes of Spectre Form allows Ark to clear entire maps stationary by simply alternating skill casts left and right from central platforms.",
+              "1-Hit KO Threshold: Because skill damage varies between Flora and Spectre forms, players must optimize gear to ensure 1-hit KOs in Flora form.",
+              "Fatigue Rating: ★☆☆☆☆ (Extremely Low Effort)",
+            ],
+          },
+          {
+            heading: "(3) Cadena",
+            paragraphs: [],
+            bullets: [
+              "Key Skills: Chain Arts: Crush, Chain Arts: Takedown, 6th Job Mastery Cores",
+              "Rotation Build: Once requiring intense animation canceling, Cadena now utilizes expanded FMA skill hitboxes to execute a 'Lazy Rotation' by cycling non-chain skills sequentially from the center platform.",
+              "1-Hit KO Threshold: Securing 1-hit KO thresholds on non-chain weapon skills is mandatory for low-effort grinding.",
+              "Fatigue Rating: ★★☆☆☆ (Low Effort)",
+            ],
+          },
+          {
+            heading: "(4) Angelic Buster",
+            paragraphs: [],
+            bullets: [
+              "Key Skills: Supernova, Spotlight, Mascot Familiar, Trinity",
+              "Rotation Build: Supernova and Spotlight auto-clear over 60% of the map layout, allowing Angelic Buster to remain centered while firing guided projectiles and pink FMAs to mop up remaining mobs.",
+              "1-Hit KO Threshold: Post-remaster skill range upgrades provide top-tier grinding comfort as long as main attack skills maintain 1-hit KOs.",
+              "Fatigue Rating: ★☆☆☆☆ (Near Zero Effort)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. FMA Cooldown Loops & Sacred Force 110% Overcap Thresholds",
+        paragraphs: [
+          "To maintain seamless stationary grinding, players should optimize their gear and cooldown reduction timers.",
+        ],
+        subsections: [
+          {
+            heading: "1. Cooldown Reduction (Hat Potentials & Artifacts)",
+            paragraphs: [
+              "Shaving 1 to 2 seconds off FMA cooldowns aligns skill availability perfectly with mob spawn waves, keeping stationary rotations perfectly fluid.",
+            ],
+          },
+          {
+            heading: "2. Sacred / Grand Sac Force 110% Overcap",
+            paragraphs: [
+              "Reaching 110% Force grants a +10% final damage bonus, offsetting lower skill percentages on secondary FMAs and supporting full Meso/Drop gear switching.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Net WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished a lazy grinding session on your Ho Young, Ark, Cadena, or Angelic Buster? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/class-lazy-grinding-part2) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% Auction House transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags, Nodestones, and consumables post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled profit summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Calculate your class's net grinding profits now!",
+              "Calculate Your Class Net WAP Earnings on GG-PASS: https://gg-pass.com",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
