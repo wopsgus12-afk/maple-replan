@@ -16,6 +16,7 @@ import {
 } from "@/lib/format";
 import type { Locale } from "@/lib/locale";
 import { ui } from "@/lib/uiCopy";
+import { MapGuideQuickLink } from "./MapGuideQuickLink";
 
 type Props = {
   groundId: string;
@@ -70,8 +71,8 @@ export function HuntingForm({
 
   return (
     <section className="maple-card w-full min-w-0">
-      <div className="flex flex-row flex-wrap items-end gap-2 gap-y-3">
-        <label className="min-w-[7.5rem] flex-1 basis-[8rem]">
+      <div className="mb-2 min-w-0">
+        <label className="block min-w-[7.5rem] max-w-md">
           <span className="mb-0.5 block text-xs text-maple-muted">
             {copy.formGround}
           </span>
@@ -97,6 +98,9 @@ export function HuntingForm({
             </optgroup>
           </select>
         </label>
+        <MapGuideQuickLink groundId={groundId} locale={locale} />
+      </div>
+      <div className="flex flex-row flex-wrap items-end gap-2 gap-y-3">
 
         <div className="flex min-w-[8.5rem] flex-col gap-0.5">
           <span className="text-xs text-maple-muted">{copy.formMesoModeLabel}</span>
