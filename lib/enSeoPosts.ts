@@ -1528,6 +1528,144 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "class-lazy-grinding-part1",
+    title:
+      "MapleStory Class Lazy Grinding Guide Part 1: Night Lord, Mechanic, Shadower, Viper",
+    description:
+      "Complete GMS lazy grinding build guide for top summon and installation classes (Night Lord, Mechanic, Shadower, Viper). Stationary 1-hit rotations, 6th Job summon setups, Sacred Force thresholds, and WAP meso audits. Night Lord lazy grinding MapleStory, Mechanic stationary WAP rotation, Shadower meso explosion grinding, Viper serpent screw lazy build, GMS class grinding tier list, GMS meso calculator.",
+    koSlug: "class-lazy-grinding-part1",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Class Lazy Grinding & Spawn-Kill Builds Part 1: Summon & Installation Classes (Night Lord, Mechanic, Shadower, Viper)",
+        paragraphs: [
+          "In MapleStory Global (GMS), maintaining long-term WAP (Wealth Acquisition Potion) grinding efficiency relies heavily on a class's summon and installation skill kit. Classes capable of setting down persistent summons to auto-clear entire sections of a map—commonly known as 'Lazy Grinding'—allow players to complete 2-hour sessions with virtually zero physical wrist strain.",
+          "With the introduction of 6th Job skill enhancements and origin summons, installation-heavy classes now enjoy unprecedented map coverage and 1-hit wave clear capabilities. This guide provides an in-depth analysis of lazy grinding rotations and gearing thresholds for four premier summon classes: Night Lord, Mechanic, Shadower, and Viper.",
+        ],
+      },
+      {
+        heading:
+          "1. Mechanics of Summon & Installation Lazy Grinding",
+        paragraphs: [
+          "Utilizing summons for stationary grinding offers structural advantages beyond simple comfort.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Core Principles of Low-Effort Rotations",
+            paragraphs: [],
+            bullets: [
+              "Summon Duration & Cooldown Alignment: Overlapping summon uptime ensures 100% continuous coverage of isolated map ledges without manual player movement.",
+              "Map Sectoring: Positioning your character in the central lane while placing summons on upper vertical platforms or far horizontal edges.",
+              "Repetitive Strain Injury (RSI) Prevention: Reduces movement key inputs by up to 70%, preventing mid-WAP session fatigue and dropout.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Deep Dive into 4 Core Summon/Installation Class Rotations",
+        paragraphs: [
+          "Here are the optimal stationary rotation builds and gear requirements for each class.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Night Lord",
+            paragraphs: [],
+            bullets: [
+              "Key Skills: Dark Lord's Omen, Mark of Assassin, 6th Job Origin Summons",
+              "Rotation Build: Place 6th Job summons on one side of the map while standing stationary near the center casting Spread Throw and Mark projectiles to clear incoming spawn waves.",
+              "1-Hit KO Threshold: High funding is required for Mark of Assassin to 1-hit KO mobs. Reaching 110%+ Sacred Force overcap guarantees clean stationary clears.",
+              "Fatigue Rating: ★☆☆☆☆ (Extremely Low Effort)",
+            ],
+          },
+          {
+            heading: "(2) Mechanic",
+            paragraphs: [],
+            bullets: [
+              "Key Skills: Robot Summon Mastery, Summon Chaser, Robo Launcher RM7",
+              "Rotation Build: Mechanic stands as the undisputed king of installation grinding in MapleStory. Deploying 3 to 4 robot summons across key platforms allows the main character to clear maps 100% stationary without vertical jumps.",
+              "1-Hit KO Threshold: Robots have lower base skill percentages, requiring higher funding and Sacred Force overcaps compared to main attack skills.",
+              "Fatigue Rating: ★☆☆☆☆ (Near Zero Effort)",
+            ],
+          },
+          {
+            heading: "(3) Shadower",
+            paragraphs: [],
+            bullets: [
+              "Key Skills: Meso Explosion, Shadow Partner, Dark Flare",
+              "Rotation Build: Place Dark Flare on secondary platforms while weaving Meso Explosion from a central position to detonate dropped mesos across the entire map.",
+              "1-Hit KO Threshold: Achieving a 1-hit KO with Meso Explosion dictates the success of Shadower's lazy grinding setup.",
+              "Fatigue Rating: ★★☆☆☆ (Low Effort)",
+            ],
+          },
+          {
+            heading: "(4) Viper",
+            paragraphs: [],
+            bullets: [
+              "Key Skills: Serpent Screw, Howling Gale",
+              "Rotation Build: Toggling Serpent Screw ON allows players to clear entire spawn waves simply by walking laterally or performing basic stationary jumps as mobs touch the aura.",
+              "1-Hit KO Threshold: Once Serpent Screw meets 1-hit KO damage thresholds, Viper offers top-tier grinding comfort across all GMS classes.",
+              "Fatigue Rating: ★☆☆☆☆ (Extremely Low Effort)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Essential Spec Thresholds for Stationary 1-Hit Summon Clears",
+        paragraphs: [
+          "To execute stationary lazy grinding successfully, summons must hit strict 1-hit KO damage thresholds.",
+        ],
+        subsections: [
+          {
+            heading: "1. Sacred / Grand Sac Force 110% Overcap",
+            paragraphs: [
+              "Achieving 110% Force grants a +10% final damage bonus, compensating for lower base summon skill percentages.",
+            ],
+          },
+          {
+            heading:
+              "2. Balancing Drop/Meso Gear with Summon 1-Hit KOs",
+            paragraphs: [
+              "If equipping Meso/Drop gear causes summons to take 2 hits to kill mobs, spawn clear rates drop drastically. Players should balance Meso/Drop gear switching while strictly maintaining 1-hit summon KOs.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Net WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished a lazy grinding session on your Night Lord, Mechanic, Shadower, or Viper? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/class-lazy-grinding-part1) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% Auction House transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags, Nodestones, and consumables post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled profit summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Calculate your class's net grinding profits now!",
+              "Calculate Your Class Net WAP Earnings on GG-PASS: https://gg-pass.com",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
