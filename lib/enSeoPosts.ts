@@ -1803,6 +1803,114 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "calculator-guide-part1",
+    title:
+      "MapleStory Excel Grinding Trackers vs. GG-PASS 10-Sec Meso Calculator",
+    description:
+      "Complete GMS guide analyzing the pitfalls of Excel spreadsheet trackers for WAP audits. How GG-PASS offers a 10-second manual audit system with automatic 1% tax deductions, one-click tally buttons, and downloadable Discord summary cards. MapleStory grinding excel sheet, WAP meso tracker, MapleStory meso calculator, GMS WAP profit audit, Discord meso summary card, GG-PASS calculator.",
+    koSlug: "calculator-guide-part1",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS WAP Audit Guide Part 1: Spreadsheet Pitfalls vs. GG-PASS 10-Second Manual Audit System",
+        paragraphs: [
+          "For dedicated MapleStory Global (GMS) players, auditing earnings following a 2-hour WAP (Wealth Acquisition Potion) session is an essential post-grind routine. Historically, grinders relied on custom Excel spreadsheets or basic mobile notes to manually track raw meso gains, Sol Erda Fragments, and Nodestone drops.",
+          "However, after finishing an intensive 2-hour grinding session, opening a spreadsheet, navigating complex cell formulas, and manually calculating Auction House transaction taxes creates unnecessary friction. Mobile usability issues and broken spreadsheet formulas often cause players to abandon tracking altogether. This guide analyzes the core flaws of traditional spreadsheet trackers and introduces the streamlined GG-PASS 10-Second Audit System designed for effortless post-grind reporting.",
+        ],
+      },
+      {
+        heading:
+          "1. The 3 Core Flaws of Traditional Excel Grinding Trackers",
+        paragraphs: [
+          "Standard spreadsheet templates introduce several pain points during post-WAP session audits:",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Friction-Heavy Manual Entry & Poor Mobile Usability",
+            paragraphs: [],
+            bullets: [
+              "Clunky Mobile Interfaces: Attempting to log earnings on a smartphone post-grind via spreadsheet apps involves tiny cell targets and tedious virtual keyboard typing.",
+              "Broken Formulas & Market Disconnects: Fluctuating Sol Erda Fragment prices require constant formula adjustments, while corrupted files risk wiping months of historical grinding logs.",
+            ],
+          },
+          {
+            heading:
+              "(2) Omission of 1% Auction House Taxes & Fixed Potion Expenses",
+            paragraphs: [],
+            bullets: [
+              "Illusion of Profit: Simple [Ending Mesos - Starting Mesos] formulas fail to account for the mandatory 1% Auction House transaction tax on Interactive servers, as well as fixed WAP and Extreme Gold Potion costs—resulting in significant discrepancies between logged profits and actual meso balances.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Key Innovations Offered by the GG-PASS 10-Second Audit System",
+        paragraphs: [
+          "The GG-PASS Meso Calculator (https://gg-pass.com/en/guide/calculator-guide-part1) addresses every shortcoming of traditional spreadsheets, allowing fatigued grinders to execute a complete financial audit in under 10 seconds.",
+        ],
+        subsections: [
+          {
+            heading: "(1) One-Click [+1], [+5] Tally Buttons",
+            paragraphs: [],
+            bullets: [
+              "Zero Keyboard Friction: Log dropped Sol Erda Fragments, Nodestones, and consumables using large, touch-friendly [+1] and [+5] increment buttons—eliminating the need to type numbers manually.",
+            ],
+          },
+          {
+            heading: "(2) Automated 1% Tax & Potion Expense Deductions",
+            paragraphs: [],
+            bullets: [
+              "True Net Profit Audits: Enter starting and ending meso counts, and GG-PASS automatically subtracts 1% Auction House fees alongside preset WAP potion expenses to display your true net wage.",
+            ],
+          },
+          {
+            heading: "(3) Downloadable Discord Summary Cards",
+            paragraphs: [],
+            bullets: [
+              "One-Click Graphic Export: Instead of taking messy spreadsheet screenshots, generate styled, high-resolution profit summary graphics with a single click to share immediately across Discord servers and guild channels.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Spreadsheet Tracker vs. GG-PASS Feature Comparison Table",
+        paragraphs: [
+          "A direct feature comparison highlighting usability differences:",
+        ],
+        bullets: [
+          "Data Entry: Excel (Manual typing & cell selection) vs GG-PASS (One-click [+1], [+5] touch buttons)",
+          "Tax Deductions: Excel (Requires manual formula coding) vs GG-PASS (Automated 1% tax & potion subtraction)",
+          "Mobile UX: Excel (Small target cells prone to typos) vs GG-PASS (Mobile-first responsive UI)",
+          "Sharing: Excel (Manual screenshot editing) vs GG-PASS (Instant downloadable Discord summary cards)",
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Ditch the Spreadsheet: Audit Your WAP Gains in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Stop wrestling with complex spreadsheet formulas after exhausting grinding sessions. The GG-PASS Meso Calculator (https://gg-pass.com/en/guide/calculator-guide-part1) audits your true net WAP profit and hourly wage in just 10 seconds.",
+        ],
+        bullets: [
+          "Enter starting and ending mesos.",
+          "Tap [+1] and [+5] buttons to tally dropped Fragments and items.",
+          "Download a styled income summary card with subtracted taxes and potion costs to share with your guild!",
+        ],
+        subsections: [
+          {
+            heading: "Audit Now",
+            paragraphs: [
+              "Audit your grinding profits in 10 seconds now!",
+              "Calculate Your Net WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/calculator-guide-part1",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
