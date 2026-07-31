@@ -1911,6 +1911,113 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "calculator-guide-part2",
+    title:
+      "MapleStory Discord WAP Summary Cards & Guild Sharing Masterclass",
+    description:
+      "Complete GMS guide on generating downloadable WAP profit summary cards for Discord and guild channels. Automatic 1% Auction House tax subtractions, item tallying, and GG-PASS Discord integration. MapleStory Discord WAP summary card, GMS guild grinding proof, downloadable meso summary graphic, WAP wage audit card, GG-PASS calculator.",
+    koSlug: "calculator-guide-part2",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS WAP Audit Guide Part 2: Discord Profit Summary Cards & Guild Sharing Masterclass",
+        paragraphs: [
+          "Grinding in MapleStory Global (GMS) alongside guildmates or hanging out in Discord voice channels during 2-hour WAP (Wealth Acquisition Potion) sessions is a core social experience. Once a session ends, sharing raw meso gains and Sol Erda Fragment drops with friends is standard practice. However, typing plain text numbers or pasting messy Excel screenshots into Discord channels often leads to unverified reporting and poor readability.",
+          "Text posts frequently omit the mandatory 1% Auction House transaction tax and fixed WAP consumable expenses, misrepresenting true net earnings. This guide details how to generate downloadable, high-resolution WAP profit summary cards in just 10 seconds using GG-PASS to share transparent post-grind metrics across Discord and guild communities.",
+        ],
+      },
+      {
+        heading:
+          "1. The Social & Motivational Benefits of Visual WAP Reporting",
+        paragraphs: [
+          "Consistently sharing visual WAP summary cards fosters long-term grinding routine discipline and community engagement.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Advantages of Visual Reporting",
+            paragraphs: [],
+            bullets: [
+              "Sustained Grinding Motivation: Exchanging polished income summary cards with guildmates encourages regular grinding habits and friendly wage competition.",
+              "Transparent Net Financial Audits: Sharing net wage figures with subtracted 1% transaction taxes and potion costs establishes realistic expectations for map yields.",
+              "Archival Tracking in Discord: Creating a dedicated #wap-logs Discord channel provides a long-term visual archive of your account's progression history.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Generating Your GG-PASS WAP Summary Card in 3 Simple Steps",
+        paragraphs: [
+          "The GG-PASS Meso Calculator (https://gg-pass.com/en/guide/calculator-guide-part2) converts post-grind data into styled visual summary cards in seconds:",
+        ],
+        subsections: [
+          {
+            heading: "Step 1: Input Pre/Post-Grind Mesos & Item Drops",
+            paragraphs: [],
+            bullets: [
+              "Enter starting and ending meso counts.",
+              "Tap touch-friendly [+1] and [+5] buttons to tally dropped Sol Erda Fragments, Nodestones, and consumables.",
+            ],
+          },
+          {
+            heading: "Step 2: Automated Tax & Consumable Deductions",
+            paragraphs: [
+              "The system automatically subtracts the 1% Auction House transaction fee and preset potion costs to compute your true net wage.",
+            ],
+          },
+          {
+            heading: "Step 3: One-Click Card Export",
+            paragraphs: [
+              "Click [Save Summary Card] to instantly download a sleek navy/gold summary graphic optimized for PC and mobile displays.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Best Practices for Discord & Community Integration",
+        paragraphs: [
+          "Maximizing the impact of your exported summary cards:",
+        ],
+        subsections: [
+          {
+            heading: "1. Dedicated Guild Discord Channels",
+            paragraphs: [
+              "Post your exported summary card in your guild's Discord channel with a brief note (e.g., \"Arteria WAP complete—24 Frags dropped!\").",
+            ],
+          },
+          {
+            heading: "2. Community Guide Backing",
+            paragraphs: [
+              "Attaching verified GG-PASS summary graphics to Reddit posts or community guides adds immediate authenticity to your map yield claims.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Export Your Discord WAP Summary Card in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished your grinding session? Skip plain text logs and create a styled WAP summary card with the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/calculator-guide-part2).",
+        ],
+        bullets: [
+          "Verify true net profit with automatically subtracted taxes and potion costs.",
+          "Export high-resolution summary graphics in one click.",
+          "Showcase your true hourly wage to guildmates on Discord!",
+        ],
+        subsections: [
+          {
+            heading: "Export Now",
+            paragraphs: [
+              "Export your summary card now!",
+              "Generate Your WAP Summary Card on GG-PASS: https://gg-pass.com/en/guide/calculator-guide-part2",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
