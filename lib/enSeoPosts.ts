@@ -2018,6 +2018,131 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "arteria-viper-nightlord-part1",
+    title:
+      "MapleStory Arteria Grinding Guide: Viper vs Night Lord Rotations & WAP Profits",
+    description:
+      "Complete GMS Arteria Top Ledge grinding guide for Lv. 280+. Viper Serpent Screw lazy rotations, Night Lord summon placements, 1% AH tax deductions, and WAP meso/fragment net wage audits. Arteria grinding guide MapleStory, GMS Arteria Viper rotation, Arteria Night Lord lazy build, Arteria top ledge WAP rates, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "arteria-viper-nightlord-part1",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Arteria Grinding Analysis Part 1: Viper vs. Night Lord Optimal Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), reaching Level 280 unlocks Arteria, the premier farming continent where high-level players grind for liquid mesos and essential Sol Erda Fragments. Among its maps, the 'Top Ledge' zones stand out as prime endgame farming spots due to high mob density and compact platform layouts. However, execution comfort and hourly net yields vary wildly depending on whether you pilot a Viper or a Night Lord.",
+          "Both classes represent top-tier farmers in GMS Arteria, yet rely on fundamentally opposite mechanics. This guide provides an in-depth analysis of optimal low-effort rotations, gearing thresholds, and post-grind net wage audits—subtracting the mandatory 1% Auction House tax and fixed WAP consumable overhead—for both classes in Arteria.",
+        ],
+      },
+      {
+        heading:
+          "1. Arteria Top Ledge Terrain Characteristics & Sacred Force Requirements",
+        paragraphs: [
+          "Essential baseline specifications required to maintain 1-hit KO mob clears in Arteria.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Map Environment Overview",
+            paragraphs: [],
+            bullets: [
+              "Sacred Force Requirement: Base 160 Sacred Force (160% overcap recommended for the +10% final damage bonus).",
+              "Platform Layout: A compact 3-tier structure allowing wide-area attack skills and summons to cover spawn waves seamlessly.",
+              "Mob Density: Dense spawn clusters per wave require zero-gap rotation paths to prevent missed mob spawns.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Viper vs. Night Lord: Optimal Rotations & Gear Thresholds",
+        paragraphs: [
+          "Comparing rotation mechanics, movement effort, and gearing requirements for both classes.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Viper - Serpent Screw Low-Effort Lateral Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Keep Serpent Screw active while executing simple double-jumps across central platforms.",
+              "Optimal Path: Toggle Serpent Screw ON at the middle platform, moving left and right. The vertical hitbox of Serpent Screw combined with Howling Gale automatically clears upper 3rd-tier mobs.",
+              "Gear Threshold: Requires 1-hit KO threshold on Serpent Screw alongside a 160% Sacred Force overcap.",
+              "Fatigue Rating: ★☆☆☆☆ (Extremely Low Effort)",
+            ],
+          },
+          {
+            heading:
+              "(2) Night Lord - Stationary Summon & Guided Mark Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Deploy 6th Job summons on side platforms while casting guided projectiles from the map center.",
+              "Optimal Path: Place 6th Job summons on left platforms while standing stationary in the center casting Spread Throw and Mark of Assassin guided projectiles—achieving 100% stationary spawn clears.",
+              "Gear Threshold: High funding required for Mark of Assassin to 1-hit KO Arteria mobs.",
+              "Fatigue Rating: ★☆☆☆☆ (Stationary Clearing)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Arteria 2-Hour WAP Net Wage Audit & Sol Erda Fragment Valuation",
+        paragraphs: [
+          "Financial audit for a 2-hour Arteria session assuming 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Average 2-Hour WAP Yields",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~160M to 180M Raw Mesos.",
+              "Sol Erda Fragments: ~20 to 24 Fragments (Valued at ~120M to 144M mesos at a 6M market price).",
+              "Gross Revenue Value: ~280M to 324M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment liquidation (-1.3M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Extreme Gold Potions (-1.5M mesos).",
+              "Final Net Wage: ~270M to 310M Net Mesos (~135M to 155M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Arteria WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished an Arteria WAP session on your Viper or Night Lord? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/arteria-viper-nightlord-part1) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags and items post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Arteria grinding profits now!",
+              "Calculate Your Net Arteria WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/arteria-viper-nightlord-part1",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
