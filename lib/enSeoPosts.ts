@@ -2143,6 +2143,129 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "carcion-shadower-hoyoung-part2",
+    title:
+      "MapleStory Carcion Grinding Guide: Shadower vs Ho Young Rotations & WAP Profits",
+    description:
+      "Complete GMS Carcion Rough Waves grinding guide for Lv. 285+. Shadower Meso Explosion miner rotations, Ho Young talisman placements, 1% AH tax deductions, and WAP meso/fragment net wage audits. Carcion grinding guide MapleStory, GMS Carcion Shadower rotation, Carcion Ho Young lazy build, Carcion rough waves WAP rates, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "carcion-shadower-hoyoung-part2",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Carcion Grinding Analysis Part 2: Shadower vs. Ho Young Optimal Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), reaching Level 285 unlocks Carcion, the endgame farming region where top-tier players grind for high-density mesos and Sol Erda Fragments. Among its maps, the 'Rough Waves' zone serves as a prime grinding hub due to high mob density and structured platforms. However, strict Sacred Force requirements and high mob HP make optimized class rotations essential.",
+          "Both Shadower and Ho Young stand as elite farmers in GMS Carcion, yet leverage completely distinct grinding mechanics. This guide provides an in-depth analysis of optimal rotations, gearing thresholds, and post-grind net wage audits—subtracting the mandatory 1% Auction House tax and fixed WAP consumable overhead—for both classes in Carcion.",
+        ],
+      },
+      {
+        heading:
+          "1. Carcion Rough Waves Terrain Characteristics & Sacred Force Requirements",
+        paragraphs: [
+          "Baseline specifications required to maintain 1-hit KO mob clears in Carcion.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Map Environment Overview",
+            paragraphs: [],
+            bullets: [
+              "Sacred Force Requirement: Base 230 Sacred Force (230% overcap recommended for the +10% final damage bonus).",
+              "Platform Layout: Multi-tiered platform layout requiring wide-area attack skills and mobility to maintain 100% spawn wave clears.",
+              "High Fragment Yield: Carcion's high level bracket yields excellent Sol Erda Fragment drop rates, making fragment market prices a key factor in net wage audits.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Shadower vs. Ho Young: Optimal Rotations & Gear Thresholds",
+        paragraphs: [
+          "Comparing rotation mechanics, movement effort, and gearing requirements for both classes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Shadower - Meso Explosion Miner Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Weaving Assassinate and Meso Explosion while placing Dark Flare on secondary platforms.",
+              "Optimal Path: Deploy Dark Flare on the upper right platform, while using mobility skills across the central lane to detonate dropped mesos with Meso Explosion for clean wave clears.",
+              "Gear Threshold: Achieving 1-hit KO on Meso Explosion against Carcion mobs while maintaining 100% Meso / 200% Drop gear parameters.",
+              "Fatigue Rating: ★★☆☆☆ (Moderate Movement Required)",
+            ],
+          },
+          {
+            heading: "(2) Ho Young - Talisman & Summon Stationary Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Deploying Vortex, Tigris, and scroll summons across key platforms while cycling wide-area attacks.",
+              "Optimal Path: Deploy persistent scroll summons on outer ledges while standing stationary in the map center, cycling wide-area attacks to clear incoming waves.",
+              "Gear Threshold: High funding required for scroll summons to 1-hit KO Carcion mobs.",
+              "Fatigue Rating: ★☆☆☆☆ (Stationary Clearing)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Carcion 2-Hour WAP Net Wage Audit & Sol Erda Fragment Valuation",
+        paragraphs: [
+          "Financial audit for a 2-hour Carcion session assuming 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Average 2-Hour WAP Yields",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~170M to 190M Raw Mesos.",
+              "Sol Erda Fragments: ~22 to 26 Fragments (Valued at ~132M to 156M mesos at a 6M market price).",
+              "Gross Revenue Value: ~300M to 346M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment liquidation (-1.4M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Extreme Gold Potions (-1.5M mesos).",
+              "Final Net Wage: ~290M to 335M Net Mesos (~145M to 167M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Carcion WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished a Carcion WAP session on your Shadower or Ho Young? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/carcion-shadower-hoyoung-part2) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags and items post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Carcion grinding profits now!",
+              "Calculate Your Net Carcion WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/carcion-shadower-hoyoung-part2",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
