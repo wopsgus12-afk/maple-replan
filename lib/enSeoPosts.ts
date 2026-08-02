@@ -2266,6 +2266,131 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "dowonkyung-mechanic-ab-part3",
+    title:
+      "MapleStory Dowonkyung Grinding Guide: Mechanic vs Angelic Buster Rotations & WAP Profits",
+    description:
+      "Complete GMS Dowonkyung Spring/Summer grinding guide for Lv. 275+. Mechanic stationary robot installations, Angelic Buster remaster wide-area attack rotations, 1% AH tax deductions, and WAP meso/fragment net wage audits. Dowonkyung grinding guide MapleStory, GMS Dowonkyung Mechanic rotation, Dowonkyung Angelic Buster lazy build, Dowonkyung WAP rates, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "dowonkyung-mechanic-ab-part3",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Dowonkyung Grinding Analysis Part 3: Mechanic vs. Angelic Buster Optimal Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), reaching Level 275 grants access to Dowonkyung, the entry gateway for high-level endgame grinding following the 6th Job advancement. Among its sub-zones, the 'Spring and Summer' maps feature clean horizontal platforms and solid mob density, making them popular farming spots for players seeking liquid mesos and Sol Erda Fragments.",
+          "Both Mechanic and post-remaster Angelic Buster excel in Dowonkyung, leveraging stationary summons and massive wide-area attacks respectively. This guide provides an in-depth analysis of low-effort rotations, gearing thresholds, and post-grind net wage audits—subtracting the mandatory 1% Auction House tax and fixed WAP consumable overhead—for both classes in Dowonkyung.",
+        ],
+      },
+      {
+        heading:
+          "1. Dowonkyung Terrain Characteristics & Sacred Force Requirements",
+        paragraphs: [
+          "Baseline specifications required to maintain 1-hit KO mob clears in Dowonkyung.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Map Environment Overview",
+            paragraphs: [],
+            bullets: [
+              "Sacred Force Requirement: Base 100 Sacred Force (100% overcap recommended for the +10% final damage bonus).",
+              "Platform Layout: Elongated horizontal platform structures where wide skill hitboxes and fast movement dictate wave clear efficiency.",
+              "Mob Spawn Rhythm: Mob waves spawn in predictable horizontal clusters, allowing summons and stationary skills to maintain 100% spawn wave clears.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Mechanic vs. Angelic Buster: Optimal Rotations & Gear Thresholds",
+        paragraphs: [
+          "Comparing rotation mechanics, movement effort, and gearing requirements for both classes.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Mechanic - Stationary 4-Robot Installation Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Deploying Robot Summon Mastery, Summon Chaser, and Robo Launcher RM7 across primary platforms.",
+              "Optimal Path: Deploy 3 to 4 robot summons on outer ledges and upper platforms while standing stationary in the center, casting primary attacks to auto-clear incoming waves.",
+              "Gear Threshold: Requires 1-hit KO threshold on robot summons against Dowonkyung mobs alongside a 100% Sacred Force overcap.",
+              "Fatigue Rating: ★☆☆☆☆ (100% Stationary Clearing)",
+            ],
+          },
+          {
+            heading:
+              "(2) Angelic Buster - Remastered FMA Cooldown Loop",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Trapping major map lanes with Supernova and Spotlight while clearing residual mobs with guided Trinity projectiles.",
+              "Optimal Path: Deploy Supernova in the map center while performing minimal lateral jumps, cycling wide-area attack skills on cooldown for effortless wave clears.",
+              "Gear Threshold: Expanded skill ranges post-remaster provide top-tier comfort once main attack skills achieve 1-hit KOs.",
+              "Fatigue Rating: ★☆☆☆☆ (Extremely Low Effort)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Dowonkyung 2-Hour WAP Net Wage Audit & Sol Erda Fragment Valuation",
+        paragraphs: [
+          "Financial audit for a 2-hour Dowonkyung session assuming 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Average 2-Hour WAP Yields",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~150M to 170M Raw Mesos.",
+              "Sol Erda Fragments: ~18 to 22 Fragments (Valued at ~108M to 132M mesos at a 6M market price).",
+              "Gross Revenue Value: ~258M to 302M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment liquidation (-1.2M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Extreme Gold Potions (-1.5M mesos).",
+              "Final Net Wage: ~248M to 292M Net Mesos (~124M to 146M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Dowonkyung WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished a Dowonkyung WAP session on your Mechanic or Angelic Buster? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/dowonkyung-mechanic-ab-part3) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags and items post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Dowonkyung grinding profits now!",
+              "Calculate Your Net Dowonkyung WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/dowonkyung-mechanic-ab-part3",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
