@@ -2391,6 +2391,131 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "talahart-ark-cadena-part4",
+    title:
+      "MapleStory Talahart Grinding Guide: Ark vs Cadena Rotations & WAP Profits",
+    description:
+      "Complete GMS Talahart Ancient Colossus Gate grinding guide for Lv. 290+. Ark Spectre FMA rotations, Cadena non-chain mastery loops, 1% AH tax deductions, and WAP meso/fragment net wage audits. Talahart grinding guide MapleStory, GMS Talahart Ark rotation, Talahart Cadena lazy build, Talahart WAP rates, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "talahart-ark-cadena-part4",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Talahart Grinding Analysis Part 4: Ark vs. Cadena Optimal Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), reaching Level 290 unlocks Talahart, the highest level endgame continent where premier players farm massive liquid mesos and Sol Erda Fragments. Among its maps, the 'Ancient Colossus Gate' zone represents the pinnacle of endgame grinding, boasting immense mob experience and high spawn counts. However, strict Grand Sacred Force thresholds and immense mob HP make structured skill rotation loops mandatory.",
+          "Both Ark and Cadena represent top-tier farmers in GMS Talahart, leveraging massive wide-area attacks and 6th Job skill masteries. This guide provides an in-depth analysis of low-effort rotations, gearing thresholds, and post-grind net wage audits—subtracting the mandatory 1% Auction House tax and fixed WAP consumable overhead—for both classes in Talahart.",
+        ],
+      },
+      {
+        heading:
+          "1. Talahart Ancient Colossus Gate Characteristics & Grand Sacred Force Requirements",
+        paragraphs: [
+          "Baseline specifications required to maintain 1-hit KO mob clears in Talahart.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Map Environment Overview",
+            paragraphs: [],
+            bullets: [
+              "Grand Sacred Force Requirement: Base 30 Grand Sacred Force (Overcap recommended for the +10% final damage bonus).",
+              "Platform Layout: An expansive multi-tiered gate structure requiring massive skill hitboxes and fast movement to clear spawn waves cleanly.",
+              "Top-Tier Fragment Yields: Talahart yields the highest Sol Erda Fragment drop rates in GMS, making fragment market liquidation the core driver of net WAP hourly wages.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Ark vs. Cadena: Optimal Rotations & Gear Thresholds",
+        paragraphs: [
+          "Comparing rotation mechanics, movement effort, and gearing requirements for both classes.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Ark - Spectre Form Stationary Wide-Area Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Leveraging Memory of Root and Spectre Form's massive skill hitboxes for stationary direction-swapping clears.",
+              "Optimal Path: Stand stationary on the 2nd-tier middle platform in Spectre Form, swapping direction left and right while cycling wide-area attacks for 100% stationary spawn clears.",
+              "Gear Threshold: Requires 1-hit KO damage thresholds on both Flora and Spectre skills against Talahart mobs.",
+              "Fatigue Rating: ★☆☆☆☆ (100% Stationary Clearing)",
+            ],
+          },
+          {
+            heading:
+              "(2) Cadena - Non-Chain Mastery Skill Cooldown Loop",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Replacing animation-canceling combos with sequential non-chain wide-area skills powered by 6th Job Mastery Cores.",
+              "Optimal Path: Position centrally while cycling Chain Arts: Crush and non-chain weapon skills in a fixed cooldown loop with minimal lateral movement.",
+              "Gear Threshold: Securing 1-hit KO thresholds on non-chain weapon skills while maintaining 100% Meso / 200% Drop gear parameters.",
+              "Fatigue Rating: ★★☆☆☆ (Low Movement Required)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Talahart 2-Hour WAP Net Wage Audit & Sol Erda Fragment Valuation",
+        paragraphs: [
+          "Financial audit for a 2-hour Talahart session assuming 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Average 2-Hour WAP Yields",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~180M to 200M Raw Mesos.",
+              "Sol Erda Fragments: ~24 to 28 Fragments (Valued at ~144M to 168M mesos at a 6M market price).",
+              "Gross Revenue Value: ~324M to 368M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment liquidation (-1.5M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Extreme Gold Potions (-1.5M mesos).",
+              "Final Net Wage: ~314M to 358M Net Mesos (~157M to 179M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Talahart WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished a Talahart WAP session on your Ark or Cadena? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/talahart-ark-cadena-part4) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags and items post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Talahart grinding profits now!",
+              "Calculate Your Net Talahart WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/talahart-ark-cadena-part4",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
