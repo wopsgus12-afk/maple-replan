@@ -2638,6 +2638,129 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "odium-khali-db-part6",
+    title:
+      "MapleStory Odium Grinding Guide: Khali vs Dual Blade Rotations & WAP Profits",
+    description:
+      "Complete GMS Odium Locked Tower grinding guide for Lv. 270+. Khali Chakram high-mobility rotations, Dual Blade Sudden Raid/Blade Tempest lazy setups, 1% AH tax deductions, and WAP meso/fragment net wage audits. Odium grinding guide MapleStory, GMS Odium Khali rotation, Odium Dual Blade lazy build, Odium Locked Tower WAP rates, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "odium-khali-db-part6",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Odium Grinding Analysis Part 6: Khali vs. Dual Blade Optimal Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), reaching Level 270 unlocks Odium, the high-tier Authentic Force continent following Hotel Arcus, where players begin farming high-yield Sol Erda Fragments and liquid mesos. Among its sub-zones, the 'Locked Tower' maps stand out as premier farming locations due to high mob density and multi-tiered layouts. However, maintaining 100% spawn wave clears across 2-hour WAP (Wealth Acquisition Potion) sessions requires structured class-specific rotation paths.",
+          "Both Khali and Dual Blade represent top-tier farmers in GMS Odium, leveraging unmatched Chakram mobility and short-cooldown wide-area attack loops respectively. This guide provides an in-depth analysis of low-effort rotations, gearing thresholds, and post-grind net wage audits—subtracting the mandatory 1% Auction House tax and fixed WAP consumable overhead—for both classes in Odium.",
+        ],
+      },
+      {
+        heading:
+          "1. Odium Locked Tower Terrain Characteristics & Authentic Force Requirements",
+        paragraphs: [
+          "Baseline specifications required to maintain 1-hit KO mob clears in Odium.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Map Environment Overview",
+            paragraphs: [],
+            bullets: [
+              "Authentic Force Requirement: Base 70 Authentic Force (100+ recommended for the +10% final damage bonus).",
+              "Platform Layout: A wide 3-tiered horizontal platform layout where movement speed and short-cooldown skill availability dictate wave clear efficiency.",
+              "Fragment Yield Valuation: Fragment drop rates stabilize significantly at Level 270+, making Sol Erda Fragment sales a major component of net WAP hourly wages.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "2. Khali vs. Dual Blade: Optimal Rotations & Gear Thresholds",
+        paragraphs: [
+          "Comparing rotation mechanics, movement effort, and gearing requirements for both classes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Khali - High-Mobility Chakram Cancel Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Chaining Void Rush and Void Blitz for rapid diagonal dashes paired with Arts: Crescent Cleave.",
+              "Optimal Path: Position centrally on the 2nd tier and execute diagonal mobility resets to sweep upper left and right platforms instantly as spawn waves appear.",
+              "Gear Threshold: Requires 1-hit KO damage thresholds on Void skills against Odium mobs alongside a 100% Authentic Force overcap.",
+              "Fatigue Rating: ★★☆☆☆ (Input Required but Unmatched Movement Speed)",
+            ],
+          },
+          {
+            heading:
+              "(2) Dual Blade - Sudden Raid & Blade Tempest Low-Effort Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Cycling short-cooldown wide-area skills: Sudden Raid, Karma Fury, and Blade Tornado.",
+              "Optimal Path: Stand stationary on the center ledge and cycle short-cooldown wide-area skills sequentially, clearing waves with minimal double-jump adjustments.",
+              "Gear Threshold: Achieving 1-hit KO thresholds on Karma Fury and Blade Tornado while maintaining 100% Meso / 200% Drop gear parameters.",
+              "Fatigue Rating: ★☆☆☆☆ (Low Movement Required)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Odium 2-Hour WAP Net Wage Audit & Sol Erda Fragment Valuation",
+        paragraphs: [
+          "Financial audit for a 2-hour Odium session assuming 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Average 2-Hour WAP Yields",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~140M to 160M Raw Mesos.",
+              "Sol Erda Fragments: ~16 to 20 Fragments (Valued at ~96M to 120M mesos at a 6M market price).",
+              "Gross Revenue Value: ~236M to 280M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment liquidation (-1.1M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Extreme Gold Potions (-1.5M mesos).",
+              "Final Net Wage: ~226M to 270M Net Mesos (~113M to 135M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Odium WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished an Odium WAP session on your Khali or Dual Blade? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags and items post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Odium grinding profits now!",
+              "Calculate Your Net Odium WAP Earnings on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
