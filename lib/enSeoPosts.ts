@@ -2516,6 +2516,128 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "arcus-bowmaster-adele-part5",
+    title:
+      "MapleStory Arcus Grinding Guide: Bowmaster vs Adele Rotations & WAP Profits",
+    description:
+      "Complete GMS Hotel Arcus Theater Wall grinding guide for Lv. 265+. Bowmaster Arrow Platter stationary lazy rotations, Adele Order auto-homing setups, 1% AH tax deductions, and WAP meso/fragment net wage audits. Hotel Arcus grinding guide MapleStory, GMS Arcus Bowmaster rotation, Arcus Adele lazy build, Arcus Theater Wall WAP rates, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "arcus-bowmaster-adele-part5",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Hotel Arcus Grinding Analysis Part 5: Bowmaster vs. Adele Optimal Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), reaching Level 265 grants access to Hotel Arcus, the second Authentic Force continent where mid-to-high level players prepare for endgame progression. Among its maps, the 'Theater Wall' zone represents a prime farming hub due to its fast mob respawn rates and clean platform layout. However, maintaining 100% spawn wave clears across 2-hour WAP (Wealth Acquisition Potion) sessions requires structured class-specific rotation paths.",
+          "Both Bowmaster and Adele stand out as top-tier farmers in Hotel Arcus, utilizing stationary installations and auto-homing swords respectively. This guide provides an in-depth analysis of low-effort rotations, gearing thresholds, and post-grind net wage audits—subtracting the mandatory 1% Auction House tax and fixed WAP consumable overhead—for both classes in Arcus.",
+        ],
+      },
+      {
+        heading:
+          "1. Hotel Arcus Theater Wall Terrain Characteristics & Authentic Force Requirements",
+        paragraphs: [
+          "Baseline specifications required to maintain 1-hit KO mob clears in Hotel Arcus.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Map Environment Overview",
+            paragraphs: [],
+            bullets: [
+              "Authentic Force Requirement: Base 50 Authentic Force (70+ recommended for the +10% final damage bonus).",
+              "Platform Layout: Multi-tiered horizontal layout ideal for stationary summons and auto-homing projectiles.",
+              "Broad Player Base: High player density at Level 265+ drives strong long-tail keyword search intent for Arcus farming efficiency.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "2. Bowmaster vs. Adele: Optimal Rotations & Gear Thresholds",
+        paragraphs: [
+          "Comparing rotation mechanics, movement effort, and gearing requirements for both classes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Bowmaster - Arrow Platter 100% Stationary Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Deploying 2 Arrow Platter turret installations while firing Hurricane from a central position.",
+              "Optimal Path: Place Arrow Platters on the upper left and middle right platforms, while standing stationary on the center ledge swapping fire direction left and right for 100% hands-free wave clears.",
+              "Gear Threshold: Requires 1-hit KO damage thresholds on Arrow Platter turrets against Arcus mobs.",
+              "Fatigue Rating: ★☆☆☆☆ (Near Zero Movement)",
+            ],
+          },
+          {
+            heading: "(2) Adele - 6-Sword Order Auto-Homing Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Maintaining 6 Order swords while cycling Creation and Tread to clear spawn waves automatically.",
+              "Optimal Path: Position centrally on the 2nd tier while keeping 6 Order swords active. Execute minimal lateral double-jumps while auto-homing swords seek out residual mobs across outer ledges.",
+              "Gear Threshold: Achieving 1-hit KO thresholds on Order swords while maintaining 100% Meso / 200% Drop gear parameters.",
+              "Fatigue Rating: ★★☆☆☆ (Low Movement Required)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Hotel Arcus 2-Hour WAP Net Wage Audit & Sol Erda Fragment Valuation",
+        paragraphs: [
+          "Financial audit for a 2-hour Hotel Arcus session assuming 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Average 2-Hour WAP Yields",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~130M to 150M Raw Mesos.",
+              "Sol Erda Fragments: ~14 to 18 Fragments (Valued at ~84M to 108M mesos at a 6M market price).",
+              "Gross Revenue Value: ~214M to 258M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment liquidation (-1.0M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Extreme Gold Potions (-1.5M mesos).",
+              "Final Net Wage: ~205M to 248M Net Mesos (~102M to 124M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Arcus WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished an Arcus WAP session on your Bowmaster or Adele? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/arcus-bowmaster-adele-part5) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags and items post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Arcus grinding profits now!",
+              "Calculate Your Net Arcus WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/arcus-bowmaster-adele-part5",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
