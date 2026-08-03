@@ -527,7 +527,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       {
         heading: "4. [CTA] Calculate Your Exact WAP Income with GG-PASS",
         paragraphs: [
-          "Stop manually calculating post-grind earnings in spreadsheets! The GG-PASS Meso Calculator (https://gg-pass.com/en/guide/tallahart) allows you to calculate your net Tallahart WAP profit in under 10 seconds.",
+          "Stop manually calculating post-grind earnings in spreadsheets! The GG-PASS Meso Calculator (https://gg-pass.com/en/) allows you to calculate your net Tallahart WAP profit in under 10 seconds.",
         ],
         subsections: [
           {
@@ -710,7 +710,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Calculate Your Net WAP Income in 10 Seconds on GG-PASS",
         paragraphs: [
-          "Avoid manual spreadsheet calculations after exhausting WAP sessions. Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/tallahart-deep) to audit your exact earnings.",
+          "Avoid manual spreadsheet calculations after exhausting WAP sessions. Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact earnings.",
         ],
         subsections: [
           {
@@ -860,7 +860,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Flat Map WAP Income in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Curious about your true net wage from lazy grinding sessions? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/lazy-grinding-part1) to audit your gains effortlessly.",
+          "Curious about your true net wage from lazy grinding sessions? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your gains effortlessly.",
         ],
         subsections: [
           {
@@ -994,7 +994,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Endgame WAP Income in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Curious about your true net earnings from Lv. 280+ lazy grinding? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/lazy-grinding-part2) to audit your gains in seconds.",
+          "Curious about your true net earnings from Lv. 280+ lazy grinding? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your gains in seconds.",
         ],
         subsections: [
           {
@@ -1114,7 +1114,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Level Disadvantage WAP Loss in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Curious about how much money level penalties are costing you in your current grinding spot? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/meso-penalty-part1) to audit your exact net wage.",
+          "Curious about how much money level penalties are costing you in your current grinding spot? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -1247,7 +1247,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Map Progression Breakeven in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Unsure whether staying in your current map or advancing to a higher zone yields more profit? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/meso-penalty-part2) to audit your exact net wage.",
+          "Unsure whether staying in your current map or advancing to a higher zone yields more profit? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -1370,7 +1370,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Net WAP Earnings in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Want to know your exact net hourly wage after subtracting WAP potion costs and transaction taxes? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/wap-margin-part1) to audit your post-grind earnings.",
+          "Want to know your exact net hourly wage after subtracting WAP potion costs and transaction taxes? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your post-grind earnings.",
         ],
         subsections: [
           {
@@ -1499,7 +1499,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Server's Net WAP Profit in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Want to audit your true net WAP earnings based on your specific server and real-time Sol Erda Frag prices? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/wap-margin-part2) to audit your gains in seconds.",
+          "Want to audit your true net WAP earnings based on your specific server and real-time Sol Erda Frag prices? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your gains in seconds.",
         ],
         subsections: [
           {
@@ -1637,7 +1637,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Class's Net WAP Earnings in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Finished a lazy grinding session on your Night Lord, Mechanic, Shadower, or Viper? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/class-lazy-grinding-part1) to audit your exact net wage.",
+          "Finished a lazy grinding session on your Night Lord, Mechanic, Shadower, or Viper? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -1774,7 +1774,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Class's Net WAP Earnings in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Finished a lazy grinding session on your Ho Young, Ark, Cadena, or Angelic Buster? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/class-lazy-grinding-part2) to audit your exact net wage.",
+          "Finished a lazy grinding session on your Ho Young, Ark, Cadena, or Angelic Buster? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -1849,7 +1849,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "2. Key Innovations Offered by the GG-PASS 10-Second Audit System",
         paragraphs: [
-          "The GG-PASS Meso Calculator (https://gg-pass.com/en/guide/calculator-guide-part1) addresses every shortcoming of traditional spreadsheets, allowing fatigued grinders to execute a complete financial audit in under 10 seconds.",
+          "The GG-PASS Meso Calculator (https://gg-pass.com/en/) addresses every shortcoming of traditional spreadsheets, allowing fatigued grinders to execute a complete financial audit in under 10 seconds.",
         ],
         subsections: [
           {
@@ -1892,7 +1892,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Ditch the Spreadsheet: Audit Your WAP Gains in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Stop wrestling with complex spreadsheet formulas after exhausting grinding sessions. The GG-PASS Meso Calculator (https://gg-pass.com/en/guide/calculator-guide-part1) audits your true net WAP profit and hourly wage in just 10 seconds.",
+          "Stop wrestling with complex spreadsheet formulas after exhausting grinding sessions. The GG-PASS Meso Calculator (https://gg-pass.com/en/) audits your true net WAP profit and hourly wage in just 10 seconds.",
         ],
         bullets: [
           "Enter starting and ending mesos.",
@@ -1904,7 +1904,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
             heading: "Audit Now",
             paragraphs: [
               "Audit your grinding profits in 10 seconds now!",
-              "Calculate Your Net WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/calculator-guide-part1",
+              "Calculate Your Net WAP Earnings on GG-PASS: https://gg-pass.com/en/",
             ],
           },
         ],
@@ -1949,7 +1949,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "2. Generating Your GG-PASS WAP Summary Card in 3 Simple Steps",
         paragraphs: [
-          "The GG-PASS Meso Calculator (https://gg-pass.com/en/guide/calculator-guide-part2) converts post-grind data into styled visual summary cards in seconds:",
+          "The GG-PASS Meso Calculator (https://gg-pass.com/en/) converts post-grind data into styled visual summary cards in seconds:",
         ],
         subsections: [
           {
@@ -1999,7 +1999,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Export Your Discord WAP Summary Card in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Finished your grinding session? Skip plain text logs and create a styled WAP summary card with the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/calculator-guide-part2).",
+          "Finished your grinding session? Skip plain text logs and create a styled WAP summary card with the GG-PASS Meso Calculator (https://gg-pass.com/en/).",
         ],
         bullets: [
           "Verify true net profit with automatically subtracted taxes and potion costs.",
@@ -2011,7 +2011,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
             heading: "Export Now",
             paragraphs: [
               "Export your summary card now!",
-              "Generate Your WAP Summary Card on GG-PASS: https://gg-pass.com/en/guide/calculator-guide-part2",
+              "Generate Your WAP Summary Card on GG-PASS: https://gg-pass.com/en/",
             ],
           },
         ],
@@ -2114,7 +2114,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Class's Arteria WAP Earnings in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Finished an Arteria WAP session on your Viper or Night Lord? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/arteria-viper-nightlord-part1) to audit your exact net wage.",
+          "Finished an Arteria WAP session on your Viper or Night Lord? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -2136,7 +2136,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
             ],
             paragraphsAfterBullets: [
               "Audit your Arteria grinding profits now!",
-              "Calculate Your Net Arteria WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/arteria-viper-nightlord-part1",
+              "Calculate Your Net Arteria WAP Earnings on GG-PASS: https://gg-pass.com/en/",
             ],
           },
         ],
@@ -2237,7 +2237,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Class's Carcion WAP Earnings in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Finished a Carcion WAP session on your Shadower or Ho Young? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/carcion-shadower-hoyoung-part2) to audit your exact net wage.",
+          "Finished a Carcion WAP session on your Shadower or Ho Young? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -2259,7 +2259,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
             ],
             paragraphsAfterBullets: [
               "Audit your Carcion grinding profits now!",
-              "Calculate Your Net Carcion WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/carcion-shadower-hoyoung-part2",
+              "Calculate Your Net Carcion WAP Earnings on GG-PASS: https://gg-pass.com/en/",
             ],
           },
         ],
@@ -2362,7 +2362,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Class's Dowonkyung WAP Earnings in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Finished a Dowonkyung WAP session on your Mechanic or Angelic Buster? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/dowonkyung-mechanic-ab-part3) to audit your exact net wage.",
+          "Finished a Dowonkyung WAP session on your Mechanic or Angelic Buster? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -2384,7 +2384,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
             ],
             paragraphsAfterBullets: [
               "Audit your Dowonkyung grinding profits now!",
-              "Calculate Your Net Dowonkyung WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/dowonkyung-mechanic-ab-part3",
+              "Calculate Your Net Dowonkyung WAP Earnings on GG-PASS: https://gg-pass.com/en/",
             ],
           },
         ],
@@ -2487,7 +2487,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Class's Talahart WAP Earnings in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Finished a Talahart WAP session on your Ark or Cadena? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/talahart-ark-cadena-part4) to audit your exact net wage.",
+          "Finished a Talahart WAP session on your Ark or Cadena? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -2509,7 +2509,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
             ],
             paragraphsAfterBullets: [
               "Audit your Talahart grinding profits now!",
-              "Calculate Your Net Talahart WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/talahart-ark-cadena-part4",
+              "Calculate Your Net Talahart WAP Earnings on GG-PASS: https://gg-pass.com/en/",
             ],
           },
         ],
@@ -2609,7 +2609,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
         heading:
           "4. [CTA] Audit Your Class's Arcus WAP Earnings in 10 Seconds with GG-PASS",
         paragraphs: [
-          "Finished an Arcus WAP session on your Bowmaster or Adele? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/guide/arcus-bowmaster-adele-part5) to audit your exact net wage.",
+          "Finished an Arcus WAP session on your Bowmaster or Adele? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
         ],
         subsections: [
           {
@@ -2631,7 +2631,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
             ],
             paragraphsAfterBullets: [
               "Audit your Arcus grinding profits now!",
-              "Calculate Your Net Arcus WAP Earnings on GG-PASS: https://gg-pass.com/en/guide/arcus-bowmaster-adele-part5",
+              "Calculate Your Net Arcus WAP Earnings on GG-PASS: https://gg-pass.com/en/",
             ],
           },
         ],

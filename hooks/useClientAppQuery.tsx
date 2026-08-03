@@ -18,6 +18,7 @@ import {
   type AppUrlParams,
   type MainTab,
 } from "@/lib/appTab";
+import { guidePath } from "@/lib/site";
 
 function readWindowSearch(): URLSearchParams {
   if (typeof window === "undefined") return new URLSearchParams();
@@ -63,7 +64,7 @@ function AppQueryProviderInner({ children }: { children: ReactNode }) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  /** pathname이 안 바뀌는 ?tab= / &article= 변경을 즉시 반영 (GitHub Pages static) */
+  /** Sync from browser search (boards may still use ?post= on /community|/tips). */
   const [queryParams, setQueryParams] = useState<URLSearchParams>(() => new URLSearchParams());
 
   const syncFromBrowser = useCallback(() => {
@@ -86,15 +87,21 @@ function AppQueryProviderInner({ children }: { children: ReactNode }) {
 
   const navigate = useCallback(
     (opts: AppUrlParams, mode: "push" | "replace", immediate = true) => {
+      const href = buildAppHref(opts);
       const next = new URLSearchParams();
-      const tab = opts.tab ?? "calculator";
-      if (tab !== "calculator") next.set("tab", tab);
-      if (opts.article) next.set("article", opts.article);
-      if (opts.post != null && opts.post !== "") next.set("post", String(opts.post));
+      // Only keep board ?post= when staying on query-style calculator paths
+      if (opts.post != null && opts.post !== "" && !opts.article && opts.tab !== "guides") {
+        if (opts.tab === "brag" || opts.tab === "tips") {
+          next.set("post", String(opts.post));
+        } else if ((opts.tab ?? "calculator") !== "calculator") {
+          next.set("tab", opts.tab!);
+          next.set("post", String(opts.post));
+        }
+      }
 
       if (immediate) setQueryParams(next);
 
-      const href = applyUrl(opts, mode);
+      applyUrl(opts, mode);
       if (mode === "push") {
         router.push(href, { scroll: false });
       } else {
@@ -110,15 +117,34 @@ function AppQueryProviderInner({ children }: { children: ReactNode }) {
   const postId = queryParams.get("post");
 
   const setMainTab = useCallback(
-    (tab: MainTab) => navigate({ tab }, "replace"),
-    [navigate]
+    (tab: MainTab) => {
+      if (tab === "guides") {
+        router.push("/guide/");
+        return;
+      }
+      if (tab === "brag") {
+        router.push("/community/");
+        return;
+      }
+      if (tab === "tips") {
+        router.push("/tips/");
+        return;
+      }
+      if (tab === "feedback") {
+        router.push("/feedback/");
+        return;
+      }
+      navigate({ tab }, "replace");
+    },
+    [navigate, router]
   );
 
+  /** Prefer static /guide/[slug]/ — never emit legacy query article URLs */
   const openArticle = useCallback(
     (slug: string) => {
-      navigate({ tab: "guides", article: slug }, "push");
+      router.push(guidePath(slug));
     },
-    [navigate]
+    [router]
   );
 
   const closeArticle = useCallback(() => {
@@ -127,8 +153,8 @@ function AppQueryProviderInner({ children }: { children: ReactNode }) {
       queueMicrotask(syncFromBrowser);
       return;
     }
-    navigate({ tab: "guides" }, "replace");
-  }, [articleSlug, navigate, syncFromBrowser]);
+    router.push("/guide/");
+  }, [articleSlug, router, syncFromBrowser]);
 
   const openPost = useCallback(
     (tab: MainTab, id: number) => {
