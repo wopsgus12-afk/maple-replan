@@ -2885,6 +2885,128 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "boss-crystal-revenue-guide-part1",
+    title:
+      "MapleStory Boss Revenue Guide: Lv. 260-285 Intense Power Crystal & Hourly Wage",
+    description:
+      "Complete GMS Lv. 260-285 Weekly Boss Crystal revenue guide. Hard Lucid/Will, Chaos Dusk, Hard Dunkel, Verus Hilla, and Seren solo vs party yield audits, 1% AH tax deductions, and net meso calculations. MapleStory boss crystal price, GMS weekly boss meso rates, Hard Lucid solo stats, Verus Hilla solo guide, Seren boss crystal, MapleStory boss hourly rate, GMS meso calculator.",
+    koSlug: "boss-crystal-revenue-guide-part1",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Boss Revenue Audit Part 1: Lv. 260-285 Weekly Boss Crystals & Net Hourly Rates",
+        paragraphs: [
+          "In MapleStory Global (GMS), completing 6th Job Advancement at Level 260 unlocks access to high-tier Weekly Bosses, which serve alongside grinding as the primary economic engine for character progression. Beyond raw Intense Power Crystals, modern boss farming revenue is driven by a complex mix of Sol Erda Energy, Sol Erda Fragments, Pitch Boss Accessories, and tradeable Arcane/Darkness materials.",
+          "Choosing between Solo clears and Party clears creates a massive disparity in income distribution. This guide provides an in-depth financial audit of weekly bosses for Level 260 to 285 players—analyzing crystal values, byproduct drops, and net hourly rates after deducting mandatory 1% Auction House taxes and consumable buff costs.",
+        ],
+      },
+      {
+        heading:
+          "1. Level 260-285 Weekly Boss Tiers & Crystal Drop Valuation",
+        paragraphs: [
+          "Breakdown of mesos and drop yields for major weekly bosses (calculated at 1-player solo crystal values).",
+        ],
+        subsections: [
+          {
+            heading: "(1) Major Weekly Boss Lineup",
+            paragraphs: [],
+            bullets: [
+              "Hard Lucid & Hard Will: Hard Lucid Crystal: ~114M Mesos / Hard Will Crystal: ~132M Mesos. Key Drops: Butterfly Wing Droplets, Stone Cobweb Droplets, Arcane Shade Armor/Weapon Boxes, and Soul Shards.",
+              "Chaos Dusk & Hard Dunkel: Chaos Dusk Crystal: ~135M Mesos / Hard Dunkel Crystal: ~170M Mesos. Key Drops: Pitched Boss Accessory Set items (Giant Terror, Commander Force Ring).",
+              "Verus Hilla & Chosen Seren: Verus Hilla Crystal: ~208M Mesos / Normal Seren Crystal: ~268M Mesos / Hard Seren Crystal: ~410M Mesos. Key Drops: Source of Suffering, Mitra's Rage, Sol Erda Energy, and bulk Sol Erda Fragments.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Solo vs. Party Clears: Profitability & Time Efficiency",
+        paragraphs: [
+          "Evaluating weekly boss runs requires factoring in clear speed per minute versus buff consumable costs.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) 6-Player Party Clears: Low Entry Barrier & Safe Clear",
+            paragraphs: [],
+            bullets: [
+              "Pros: Lower Stat/DPM requirements, minimal consumable buff expenses.",
+              "Cons: Crystal meso split 6 ways and heavy bidding competition on Pitch Boss drops, drastically reducing individual net yields.",
+              "Recommended For: Newly 6th-jobbed characters with lower stat thresholds or players learning mechanics.",
+            ],
+          },
+          {
+            heading:
+              "(2) 1-Player Solo Clears: 100% Profit Retention & High Efficiency",
+            paragraphs: [],
+            bullets: [
+              "Pros: Retain 100% Crystal mesos, exclusive ownership of Sol Erda Energy and Fragment drops, jackpot potential on Pitch Boss gear.",
+              "Cons: Demands high gear investment and expensive burst buff consumables (VIP Potions, Extreme Potions).",
+              "Hourly Wage Audit: Completing solo boss runs in under 20 minutes yields an equivalent net hourly rate of 300M to 600M+ Mesos/Hour.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Weekly Boss Net Profit Settlement (GG-PASS Algorithm)",
+        paragraphs: [
+          "Sample 1-week settlement audit for a Level 275 character running Hard Lucid through Verus Hilla solo:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Gross Weekly Yields",
+            paragraphs: [],
+            bullets: [
+              "Raw Power Crystal Mesos: ~850M Mesos (Hard LuWill, C.Dusk, H.Dunkel, V.Hilla).",
+              "Fragment & Drop Valuation: ~250M Meso Equivalent (Sol Erda Energy, Frags, tradeable mats).",
+              "Gross Weekly Revenue: ~1.10 Billion Mesos.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Tax: Deducted on byproduct sales (-2.5M Mesos).",
+              "Fixed Consumables: Boss buff potions and Guild Skills (-15M Mesos).",
+              "Final Net Wage: ~1.08 Billion Net Mesos (~721M Net Mesos/Hour based on 1.5h total run time).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Weekly Boss Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished your weekly boss runs? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net weekly earnings.",
+        ],
+        subsections: [
+          {
+            heading: "Automated Crystal Pricing",
+            paragraphs: [
+              "Select your cleared bosses and instantly calculate 1-player crystal values.",
+            ],
+          },
+          {
+            heading: "Automatic 1% AH Tax & Buff Deductions",
+            paragraphs: [
+              "Automatically subtracts transaction fees and consumable costs to display your true net profit.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your weekly boss profits now!",
+              "Calculate Your Net Weekly Boss Earnings on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
