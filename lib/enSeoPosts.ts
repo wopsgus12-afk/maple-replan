@@ -2761,6 +2761,130 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "cernium-windbreaker-lara-part7",
+    title:
+      "MapleStory Cernium Grinding Guide: Wind Breaker vs Lara Rotations & WAP Profits",
+    description:
+      "Complete GMS Cernium Western Ramparts grinding guide for Lv. 260+. Wind Breaker Emerald Flower stationary rotations, Lara Dragon Vein Eruption lazy setups, 1% AH tax deductions, and WAP meso/fragment net wage audits. Cernium grinding guide MapleStory, GMS Cernium Wind Breaker rotation, Cernium Lara lazy build, Cernium Western Ramparts WAP rates, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "cernium-windbreaker-lara-part7",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Cernium Grinding Analysis Part 7: Wind Breaker vs. Lara Optimal Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), reaching Level 260 unlocks Cernium, the foundational Authentic Force continent where players begin their 6th Job progression and start earning high-density mesos and Sol Erda Fragments. Among its maps, the 'Western Ramparts' zone serves as an essential leveling hub due to its straightforward platform layout and steady spawn waves. Maintaining 100% spawn wave clears across 2-hour WAP (Wealth Acquisition Potion) sessions requires structured class-specific rotation paths.",
+          "Both Wind Breaker and Lara stand out as top-tier low-effort farmers in Cernium, leveraging aggro-pulling turrets and automated elemental eruptions respectively. This guide provides an in-depth analysis of low-effort rotations, gearing thresholds, and post-grind net wage audits—subtracting the mandatory 1% Auction House tax and fixed WAP consumable overhead—for both classes in Cernium.",
+        ],
+      },
+      {
+        heading:
+          "1. Cernium Western Ramparts Characteristics & Authentic Force Requirements",
+        paragraphs: [
+          "Baseline specifications required to maintain 1-hit KO mob clears in Cernium.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Map Environment Overview",
+            paragraphs: [],
+            bullets: [
+              "Authentic Force Requirement: Base 50 Authentic Force (70+ recommended for the +10% final damage bonus).",
+              "Platform Layout: Multi-tiered horizontal layout perfectly suited for stationary turrets and auto-seeking projectiles.",
+              "High Player Search Intent: Level 260+ marks the entry point into 6th Job grinding, driving substantial long-tail search volume for Cernium farming efficiency.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Wind Breaker vs. Lara: Optimal Rotations & Gear Thresholds",
+        paragraphs: [
+          "Comparing rotation mechanics, movement effort, and gearing requirements for both classes.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Wind Breaker - Emerald Flower Stationary Aggro Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Placing Emerald Flower for mob aggro while Trifling Whim and Howling Gale automatically track residual mobs.",
+              "Optimal Path: Deploy Emerald Flower on the 2nd-tier center ledge, while standing stationary in the center swapping fire direction left and right for 100% hands-free wave clears.",
+              "Gear Threshold: Requires 1-hit KO damage thresholds on Trifling Whim projectiles against Cernium mobs.",
+              "Fatigue Rating: ★☆☆☆☆ (Near Zero Movement)",
+            ],
+          },
+          {
+            heading: "(2) Lara - Dragon Vein Eruption Automated Rotation",
+            paragraphs: [],
+            bullets: [
+              "Core Skill: Activating Dragon Vein Eruption installations across key veins while maintaining auto-attacks.",
+              "Optimal Path: Trigger Eruption skills on major platform veins, standing centrally while refreshing vein spawns with minimal key presses for effortless wave clears.",
+              "Gear Threshold: Achieving 1-hit KO thresholds on Dragon Vein Eruption while maintaining 100% Meso / 200% Drop gear parameters.",
+              "Fatigue Rating: ★☆☆☆☆ (Low Movement Required)",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Cernium 2-Hour WAP Net Wage Audit & Sol Erda Fragment Valuation",
+        paragraphs: [
+          "Financial audit for a 2-hour Cernium session assuming 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Average 2-Hour WAP Yields",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~120M to 140M Raw Mesos.",
+              "Sol Erda Fragments: ~12 to 16 Fragments (Valued at ~72M to 96M mesos at a 6M market price).",
+              "Gross Revenue Value: ~192M to 236M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment liquidation (-0.9M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Extreme Gold Potions (-1.5M mesos).",
+              "Final Net Wage: ~183M to 226M Net Mesos (~91.5M to 113M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Your Class's Cernium WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Finished a Cernium WAP session on your Wind Breaker or Lara? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Simply input starting and ending mesos—GG-PASS automatically subtracts 1% transaction fees and WAP potion costs.",
+            ],
+          },
+          {
+            heading: "One-Click [+1], [+5] Item Tally",
+            paragraphs: [
+              "Easily log dropped Sol Erda Frags and items post-grind without keyboard typing strain.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Cernium grinding profits now!",
+              "Calculate Your Net Cernium WAP Earnings on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
