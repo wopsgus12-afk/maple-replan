@@ -3007,6 +3007,123 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "boss-drop-distribution-guide-part2",
+    title:
+      "MapleStory Boss Drop Guide: Pitched Boss Rates & Party Split Audit",
+    description:
+      "Complete GMS Pitched Boss Accessory drop rates and party split audit. Magic Book, Giant Terror, Arcane box probabilities, 1% AH tax deductions, and party payout calculations. Pitched boss drop rate MapleStory, GMS Giant Terror price, Magic Book drop rate, Arcane shade box rate, MapleStory party split calculator, GMS boss auction split, GMS meso calculator.",
+    koSlug: "boss-drop-distribution-guide-part2",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Boss Revenue Audit Part 2: Pitched Boss Accessory Drop Rates & Party Split Calculations",
+        paragraphs: [
+          "Beyond standard Intense Power Crystals, the ultimate jackpot in MapleStory Global (GMS) weekly bossing comes from Pitched Boss Accessories (Magic Book, Giant Terror, Commander Force Ring, Source of Suffering) and Arcane Shade/Daybreak Armor & Weapon Boxes. A single high-tier drop can yield billions of mesos in liquid value.",
+          "However, in party clears, calculating individual payouts requires accounting for 1/N party splits and mandatory 1% Auction House transaction taxes. This guide breaks down drop rate expectations and provides an accurate financial audit for party loot distribution in GMS.",
+        ],
+      },
+      {
+        heading: "1. Pitched Boss & High-Tier Drop Rate Estimations",
+        paragraphs: [
+          "Estimated drop rates based on standard 200%+ Drop Gear parameters during boss clears:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Pitched Boss Accessory Set Lineup",
+            paragraphs: [],
+            bullets: [
+              "Magic Book / Magic Stone: Hard Lucid / Hard Will drops (Estimated base rate ~0.1% - 0.5%).",
+              "Giant Terror / Commander Force Ring: Chaos Dusk / Hard Dunkel drops (Estimated base rate ~0.5% - 1.0%).",
+              "Source of Suffering / Mitra's Rage: Verus Hilla / Chosen Seren drops (Estimated base rate ~0.5% - 1.2%).",
+            ],
+          },
+          {
+            heading: "(2) Arcane Shade Equipment Boxes",
+            paragraphs: [],
+            bullets: [
+              "Arcane Armor/Weapon Boxes: Drops from Hard LuWill and above (Averages 1 box every 10-15 clears with 200%+ Drop gear).",
+              "Drop Gear Swapping: Equipping 200% Drop gear prior to the final phase clear doubles long-term Pitched Boss yields over time.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Party Split Mechanics & 1% AH Tax Deduction Formula",
+        paragraphs: [
+          "Two primary methods for distributing loot in multi-player weekly boss runs:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Auction House Sale & Payout Split",
+            paragraphs: [],
+            bullets: [
+              "Formula: Item sold on Auction House → deduct 1% tax → split remaining balance equally by total party size (N).",
+              "Calculation: (AH Sale Price × 0.99) ÷ Party Size",
+            ],
+          },
+          {
+            heading: "(2) Internal Party Bidding Split",
+            paragraphs: [],
+            bullets: [
+              "Formula: Winning party member buys the item below market price → payout distributed to remaining party members (N-1).",
+              "Calculation: Winning Bid ÷ (Party Size - 1)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Sample 6-Player Party Split Audit (GG-PASS Algorithm)",
+        paragraphs: [
+          "Example audit for a 5 Billion Meso Giant Terror drop sold via Auction House in a 6-player party:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Financial Breakdown",
+            paragraphs: [],
+            bullets: [
+              "Gross AH Sale Price: 5,000,000,000 Mesos.",
+              "1% Auction House Tax: -50,000,000 Mesos (-50M Mesos).",
+              "Net Revenue After Tax: 4,950,000,000 Mesos (4.95B Mesos).",
+              "Final Per-Player Payout (6-Man): 825,000,000 Mesos (825M Mesos).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Party Splits & 1% AH Tax in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Looted a Pitched Boss drop or Arcane box in your weekly boss party? Use the GG-PASS Party Split Calculator (https://gg-pass.com/en/) to calculate transparent payouts.",
+        ],
+        subsections: [
+          {
+            heading: "One-Click Party Size Toggle (2-6 Players)",
+            paragraphs: [
+              "Instantly calculates exact individual payouts for any party size.",
+            ],
+          },
+          {
+            heading: "Automatic 1% AH Tax Deduction",
+            paragraphs: [
+              "Simply input the sale price—GG-PASS automatically subtracts the 1% tax.",
+            ],
+          },
+          {
+            heading: "Exportable Discord Payout Summaries",
+            paragraphs: [
+              "Download clean summary cards to share transparent split proofs with party members on Discord.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your party splits now!",
+              "Calculate Party Boss Payouts on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
