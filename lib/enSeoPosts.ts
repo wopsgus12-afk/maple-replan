@@ -3124,6 +3124,127 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "dusk-shadower-hoyoung-part3",
+    title:
+      "MapleStory Chaos Dusk Guide: Shadower vs Hoyoung WAP & Boss Rates",
+    description:
+      "Complete GMS Chaos Dusk mechanics, Giant Terror drop valuation, Shadower meso passive efficiency, Hoyoung lazy farming rotations, 1% AH tax deductions, and net WAP wage audits. Chaos Dusk guide MapleStory, GMS Shadower meso weave, Hoyoung lazy grinding build, Giant Terror price GMS, Dusk crystal value, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "dusk-shadower-hoyoung-part3",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Boss & Grinding Analysis Part 3: Chaos Dusk x Shadower vs. Hoyoung Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "Reaching Level 270+ in MapleStory Global (GMS) grants access to Chaos Dusk, a crucial weekly boss for obtaining the Giant Terror Pitched Boss Accessory. At this tier, maximizing account progression requires balancing fast boss clears with high-efficiency WAP (Wealth Acquisition Potion) grinding.",
+          "Both Shadower and Hoyoung represent top-tier options at this level. Shadower utilizes its passive +20% Meso rate from Grid alongside Meso Explosion auto-looting, while Hoyoung offers low-effort farming through Talisman: Seeking Ghost Flame and Earthquake: Real summon placements. This guide provides an in-depth analysis of Chaos Dusk mechanics, class rotation efficiency, and net wage audits subtracting mandatory 1% Auction House taxes and consumable overhead.",
+        ],
+      },
+      {
+        heading: "1. Chaos Dusk Boss Mechanics & Drop Table Overview",
+        paragraphs: [
+          "Key requirements to complete Chaos Dusk solo clears under 20 minutes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Boss Environment & Key Mechanics",
+            paragraphs: [],
+            bullets: [
+              "Authentic Force / Stat Threshold: 150+ Authentic Force (Recommended 30M - 50M+ Combat Power for solo runs).",
+              "Core Mechanics: Fear Gauge management, Tentacle Strike positioning, and Laser Barrage survival during fog phases.",
+              "Drop Table: ~135M Intense Power Crystal + Pitched Boss Accessory Giant Terror (Valued at ~4B to 6B Mesos).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "2. Shadower vs. Hoyoung: Rotations & Gearing Thresholds",
+        paragraphs: [
+          "Comparing mechanics and movement effort for Level 270+ Hotel Arcus and Odium maps.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Shadower - Passive Meso Advantage & Auto-Looting",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: +20% Meso Obtainment passive via Grid, combining Meso Explosion with Assassinate to clear mobs and weave mesos automatically.",
+              "Optimal Rotation: Active mobility along Y-axis multi-tier ledges, relying on Meso Explosion to sweep residual mobs across the entire map.",
+              "Gear Threshold: Requires 1-hit KO damage on Meso Explosion.",
+              "Fatigue Rating: ★★☆☆☆ (High Meso Yield Return)",
+            ],
+          },
+          {
+            heading: "(2) Hoyoung - Summon Turrets & Lazy Screen Clears",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Deploying Seeking Ghost Flame and Nirvana turrets while executing Earthquake: Real for multi-level AOE wipes.",
+              "Optimal Rotation: Station summons on lower levels while standing centrally, tapping talisman skills to clear entire spawn waves with minimal movement.",
+              "Gear Threshold: 1-hit KO thresholds on summon skills.",
+              "Fatigue Rating: ★☆☆☆☆ (Near Stationary Farming)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Dusk Clear & 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "Financial audit combining a Chaos Dusk clear with a 2-hour WAP session under 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Gross Yield Breakdown (Shadower Passive Included)",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~150M to 180M Mesos (Up to ~200M on Shadower).",
+              "Sol Erda Fragments: ~14 to 18 Fragments (~84M to 108M meso equivalent).",
+              "Chaos Dusk Crystal: ~135M Mesos.",
+              "Gross Revenue Value: ~369M to 443M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment/Drop liquidation (-1.5M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Boss Buff Potions (-10M mesos).",
+              "Final Net Wage: ~350M to 424M Net Mesos (~175M to 212M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Dusk Revenue & WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Cleared Chaos Dusk or finished a WAP session on your Shadower or Hoyoung? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Combined Boss & WAP Settlements",
+            paragraphs: [
+              "Input boss crystals, raw mesos, and Sol Erda Frags in a single streamlined interface.",
+            ],
+          },
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Automatically subtracts transaction fees and WAP/boss consumable costs.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Dusk earnings and WAP profits now!",
+              "Calculate Your Net Dusk & WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
