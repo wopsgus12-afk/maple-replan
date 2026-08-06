@@ -3245,6 +3245,127 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "dunkel-bowmaster-adele-part4",
+    title:
+      "MapleStory Hard Dunkel Guide: Bowmaster vs Adele WAP & Boss Rates",
+    description:
+      "Complete GMS Hard Dunkel mechanics, Commander Force Ring drop valuation, Bowmaster stationary farming setups, Adele Cleave/Order rotations, 1% AH tax deductions, and net WAP wage audits. Hard Dunkel guide MapleStory, GMS Bowmaster lazy farming, Adele Cleave rotation, Commander Force Ring price GMS, Dunkel crystal value, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "dunkel-bowmaster-adele-part4",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Boss & Grinding Analysis Part 4: Hard Dunkel x Bowmaster vs. Adele Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), clearing Hard Dunkel represents a crucial weekly milestone for obtaining the coveted Commander Force Ring Pitched Boss Accessory. Facing Dunkel's chaotic barrage of Elite Boss summons and falling meteors requires high mechanical execution, making classes that offer both strong boss survivability and low-effort WAP (Wealth Acquisition Potion) farming highly prized.",
+          "Bowmaster stands as a premier stationary farming class utilizing Arrow Platter and Inhuman Speed turrets, while Adele wields massive AOE coverage through Cleave and auto-seeking Aether Forge / Order swords. This guide provides an in-depth financial audit of Hard Dunkel mechanics, class rotation performance, and net wage calculations deducting mandatory 1% Auction House taxes and consumable costs.",
+        ],
+      },
+      {
+        heading: "1. Hard Dunkel Boss Mechanics & Drop Table Overview",
+        paragraphs: [
+          "Key requirements to complete Hard Dunkel solo clears under 20 minutes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Boss Environment & Key Mechanics",
+            paragraphs: [],
+            bullets: [
+              "Authentic Force / Stat Threshold: 160+ Authentic Force (Recommended 40M - 60M+ Combat Power for solo runs).",
+              "Core Mechanics: Managing 5 Elite Boss phantoms, dodging Dunkel's sword waves, and maintaining status resistance against slow meteors.",
+              "Drop Table: ~170M Intense Power Crystal + Pitched Boss Accessory Commander Force Ring (Valued at ~3.5B to 5B Mesos).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "2. Bowmaster vs. Adele: Rotations & Gearing Thresholds",
+        paragraphs: [
+          "Comparing mechanics and movement effort for Level 270+ Hotel Arcus and Odium maps.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Bowmaster - Stationary Turret Farming",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Setting Arrow Platter summons alongside Inhuman Speed to hold down Hurricane from a central platform.",
+              "Optimal Rotation: Station turrets on outer ledges while standing centrally, tapping hurricane to clear entire waves with minimal movement.",
+              "Gear Threshold: Requires 1-hit KO damage on Arrow Platter summons.",
+              "Fatigue Rating: ★☆☆☆☆ (True Stationary Farming)",
+            ],
+          },
+          {
+            heading: "(2) Adele - Cleave Range & Auto-Seeking Order",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Sweeping main platforms with wide Y-axis Cleave hitboxes while maintaining 6 active Order swords for auto-hunting.",
+              "Optimal Rotation: Active double-jump sweeping along main levels while Order swords clear upper/lower residual mobs automatically.",
+              "Gear Threshold: 1-hit KO thresholds on Cleave and 2-hit on Order.",
+              "Fatigue Rating: ★★☆☆☆ (Wide Hitbox Coverage)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Dunkel Clear & 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "Financial audit combining a Hard Dunkel clear with a 2-hour WAP session under 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Gross Yield Breakdown",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~150M to 180M Mesos.",
+              "Sol Erda Fragments: ~14 to 18 Fragments (~84M to 108M meso equivalent).",
+              "Hard Dunkel Crystal: ~170M Mesos.",
+              "Gross Revenue Value: ~404M to 458M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment/Drop liquidation (-1.6M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Boss Buff Potions (-10M mesos).",
+              "Final Net Wage: ~385M to 439M Net Mesos (~192M to 219M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Dunkel Revenue & WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Cleared Hard Dunkel or finished a WAP session on your Bowmaster or Adele? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Combined Boss & WAP Settlements",
+            paragraphs: [
+              "Input boss crystals, raw mesos, and Sol Erda Frags in a single streamlined interface.",
+            ],
+          },
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Automatically subtracts transaction fees and WAP/boss consumable costs.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Dunkel earnings and WAP profits now!",
+              "Calculate Your Net Dunkel & WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
