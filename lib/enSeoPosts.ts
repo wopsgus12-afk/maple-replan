@@ -3366,6 +3366,129 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "vhilla-nightlord-viper-part5",
+    title:
+      "MapleStory Verus Hilla Guide: Night Lord vs Viper WAP & Boss Rates",
+    description:
+      "Complete GMS Verus Hilla mechanics, Source of Suffering drop valuation, Night Lord Mark of Night Lord farming, Viper Serpent Screw lazy rotations, 1% AH tax deductions, and net WAP wage audits. Verus Hilla guide MapleStory, GMS Night Lord burst setup, Viper Serpent Screw lazy grinding, Source of Suffering price GMS, Verus Hilla crystal value, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "vhilla-nightlord-viper-part5",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Boss & Grinding Analysis Part 5: Verus Hilla x Night Lord vs. Viper Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), defeating Verus Hilla marks the entry into end-game weekly bossing, yielding the coveted Source of Suffering Pitched Boss pendant. Navigating Verus Hilla's red string curse, scythe sweeps, and candle skull mechanics demands immense burst DPS and mechanical control, making top-tier burst and low-effort WAP (Wealth Acquisition Potion) farming classes highly sought after.",
+          "Night Lord remains the ultimate burst icon using Spread Throw alongside Mark of Night Lord star shuriken auto-clears, while Viper delivers unmatched lazy farming mechanics with Serpent Screw, allowing players to clear spawn waves simply by walking through the map. This guide provides a detailed financial audit of Verus Hilla mechanics, class rotation efficiency, and net wage calculations subtracting mandatory 1% Auction House taxes and consumable costs.",
+        ],
+      },
+      {
+        heading: "1. Verus Hilla Boss Mechanics & Drop Table Overview",
+        paragraphs: [
+          "Key requirements to complete Verus Hilla solo clears under 20 minutes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Boss Environment & Key Mechanics",
+            paragraphs: [],
+            bullets: [
+              "Authentic Force / Stat Threshold: 190+ Authentic Force (Recommended 60M - 90M+ Combat Power for solo runs).",
+              "Core Mechanics: Managing red string soul harvesting, timing green scythe sweeps, and cleansing skulls via candle altar interactions.",
+              "Drop Table: ~208M Intense Power Crystal + Pitched Boss Accessory Source of Suffering (Valued at ~4B to 6B Mesos).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Night Lord vs. Viper: Rotations & Gearing Thresholds",
+        paragraphs: [
+          "Comparing mechanics and movement effort for Level 275+ Shangri-La and Carcion maps.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Night Lord - Burst Damage & Mark Shuriken Auto-Clears",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Firing Showdown Challenge while Mark of Night Lord star projectiles automatically target and wipe residual mobs across upper and lower ledges.",
+              "Optimal Rotation: Double-jump firing along mid-level platforms while flying mark projectiles clear residual spawns across 3 tiers.",
+              "Gear Threshold: High gear investment required to 1-hit KO with Mark of Night Lord.",
+              "Fatigue Rating: ★★☆☆☆ (High Damage Output, Active Rotation)",
+            ],
+          },
+          {
+            heading: "(2) Viper - Serpent Screw Passive Body-Slam Farming",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Toggling Serpent Screw aura and using movement dashes (Super Cannon / Sea Serpent) to obliterate mobs on contact.",
+              "Optimal Rotation: Simple back-and-forth horizontal sprint loops; Serpent Screw continuously auto-clears every mob wave in range.",
+              "Gear Threshold: 1-hit KO on Serpent Screw ticks.",
+              "Fatigue Rating: ★☆☆☆☆ (Lowest Effort in Game)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Verus Hilla Clear & 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "Financial audit combining a Verus Hilla clear with a 2-hour WAP session under 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Gross Yield Breakdown",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~160M to 190M Mesos.",
+              "Sol Erda Fragments: ~15 to 20 Fragments (~90M to 120M meso equivalent).",
+              "Verus Hilla Crystal: ~208M Mesos.",
+              "Gross Revenue Value: ~458M to 518M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment/Drop liquidation (-1.8M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Boss Buff Potions (-12M mesos).",
+              "Final Net Wage: ~438M to 498M Net Mesos (~219M to 249M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Verus Hilla Revenue & WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Cleared Verus Hilla or finished a WAP session on your Night Lord or Viper? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Combined Boss & WAP Settlements",
+            paragraphs: [
+              "Input boss crystals, raw mesos, and Sol Erda Frags in a single streamlined interface.",
+            ],
+          },
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Automatically subtracts transaction fees and WAP/boss consumable costs.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Verus Hilla earnings and WAP profits now!",
+              "Calculate Your Net Verus Hilla & WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
