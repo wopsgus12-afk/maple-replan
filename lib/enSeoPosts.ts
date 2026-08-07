@@ -3612,6 +3612,131 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "kalos-mechanic-pathfinder-part7",
+    title:
+      "MapleStory Kalos the Guardian Guide: Mechanic vs Pathfinder WAP Rates",
+    description:
+      "Complete GMS Kalos the Guardian mechanics, Guardian's Ring drop valuation, Mechanic stationary robot farming, Pathfinder Cardinal Discharge rotations, 1% AH tax deductions, and net WAP wage audits. Kalos the Guardian guide MapleStory, GMS Mechanic lazy robot farming, Pathfinder Cardinal rotation, Guardian Ring price GMS, Kalos crystal value, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "kalos-mechanic-pathfinder-part7",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Boss & Grinding Analysis Part 7: Kalos the Guardian x Mechanic vs. Pathfinder Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), defeating Kalos the Guardian represents one of the highest endgame weekly achievements, yielding high-tier rewards such as the Guardian's Ring. Managing Kalos's sector interference meters, spatial lasers, and T-Boy ultimate summons demands extreme mechanical execution, placing tremendous value on classes with strong utility and effortless WAP (Wealth Acquisition Potion) farming performance.",
+          "Mechanic stands as the undisputed king of 100% stationary farming by deploying robot turrets (RM7, Robo Factory) across spawn points, while Pathfinder wipes entire maps with homing arrows using macro rotations of Cardinal Discharge and Cardinal Blast. This guide provides a comprehensive financial audit of Kalos the Guardian mechanics, class rotation performance, and net wage calculations deducting mandatory 1% Auction House taxes and consumable costs.",
+        ],
+      },
+      {
+        heading:
+          "1. Kalos the Guardian Boss Mechanics & Drop Table Overview",
+        paragraphs: [
+          "Key requirements to complete Kalos the Guardian clears under 20 minutes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Boss Environment & Key Mechanics",
+            paragraphs: [],
+            bullets: [
+              "Authentic Force / Stat Threshold: 230+ Authentic Force (Recommended 150M+ Combat Power for Chaos, 300M+ for Extreme).",
+              "Core Mechanics: Clearing sector interference meters across 4 quadrants, dodging ocular laser strikes, and managing bomb hazards.",
+              "Drop Table: ~300M (Chaos) / ~600M (Extreme) Intense Power Crystal + High-Tier Drops (Guardian's Ring valued at ~6B to 10B Mesos).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Mechanic vs. Pathfinder: Rotations & Gearing Thresholds",
+        paragraphs: [
+          "Comparing mechanics and movement effort for Level 285+ Carcion and Tallahart maps.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Mechanic - 100% True Stationary Robot Turret Farming",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Stationing RM7, RM1, and Robo Factory RM13 turrets at key spawn nodes across the map.",
+              "Optimal Rotation: Player sits centrally, refreshing robot summons periodically while turrets auto-clear spawn waves continuously.",
+              "Gear Threshold: Requires 1-hit KO damage on robot turret hits.",
+              "Fatigue Rating: ★☆☆☆☆ (Only 100% True Stationary Class in Game)",
+            ],
+          },
+          {
+            heading:
+              "(2) Pathfinder - Cardinal Discharge & Blast Homing Sweeps",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Weaving macro inputs of Cardinal Discharge and Cardinal Blast to send auto-homing arrows across platforms.",
+              "Optimal Rotation: Standing mid-platform, firing macro combinations while homing projectiles auto-target and wipe residual mobs across all tiers.",
+              "Gear Threshold: 1-hit KO thresholds on Cardinal Discharge and Ancient Archer summons.",
+              "Fatigue Rating: ★★☆☆☆ (Homing Projectile Efficiency)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Kalos Clear & 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "Financial audit combining a Chaos Kalos clear with a 2-hour WAP session under 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Gross Yield Breakdown",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~180M to 210M Mesos.",
+              "Sol Erda Fragments: ~18 to 24 Fragments (~108M to 144M meso equivalent).",
+              "Kalos the Guardian Crystal: ~300M Mesos (Chaos).",
+              "Gross Revenue Value: ~588M to 654M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment/Drop liquidation (-2.2M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Boss Buff Potions (-18M mesos).",
+              "Final Net Wage: ~560M to 626M Net Mesos (~280M to 313M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Kalos Revenue & WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Cleared Kalos the Guardian or finished a WAP session on your Mechanic or Pathfinder? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Combined Boss & WAP Settlements",
+            paragraphs: [
+              "Input boss crystals, raw mesos, and Sol Erda Frags in a single streamlined interface.",
+            ],
+          },
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Automatically subtracts transaction fees and WAP/boss consumable costs.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Kalos earnings and WAP profits now!",
+              "Calculate Your Net Kalos & WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
