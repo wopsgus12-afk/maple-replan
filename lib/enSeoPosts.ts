@@ -3489,6 +3489,129 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "seren-soulmaster-hero-part6",
+    title:
+      "MapleStory Chosen Seren Guide: Soul Master vs Hero WAP & Boss Rates",
+    description:
+      "Complete GMS Chosen Seren mechanics, Mitra's Rage drop valuation, Soul Master lazy farming setups, Hero Raging Blow rotations, 1% AH tax deductions, and net WAP wage audits. Chosen Seren guide MapleStory, GMS Soul Master lazy farming, Hero Raging Blow rotation, Mitra's Rage price GMS, Seren crystal value, Sol Erda Fragment hourly wage, GMS meso calculator.",
+    koSlug: "seren-soulmaster-hero-part6",
+    sections: [
+      {
+        heading:
+          "MapleStory GMS Boss & Grinding Analysis Part 6: Chosen Seren x Soul Master vs. Hero Rotations & Net Hourly Wage Audit",
+        paragraphs: [
+          "In MapleStory Global (GMS), defeating Chosen Seren represents a pinnacle weekly achievement, offering the chance to acquire Mitra's Rage, the ultimate Pitched Boss emblem alternative. Managing Seren's phase shifts (Sunset, Noon, Midnight, Dawn), sun gauge meters, and sword blast mechanics requires precise mechanical skill, placing high value on warrior classes with strong survivability and effortless WAP (Wealth Acquisition Potion) farming.",
+          "Soul Master (Dawn Warrior) delivers unmatched low-effort farming through Cosmic Shower turrets and Solar Pierce sweeps, while Hero commands intense burst damage during boss burst windows using Raging Blow and Incising. This guide provides a comprehensive financial audit of Chosen Seren mechanics, warrior class rotation performance, and net wage calculations deducting mandatory 1% Auction House taxes and consumable costs.",
+        ],
+      },
+      {
+        heading: "1. Chosen Seren Boss Mechanics & Drop Table Overview",
+        paragraphs: [
+          "Key requirements to complete Chosen Seren clears under 20 minutes.",
+        ],
+        subsections: [
+          {
+            heading: "(1) Boss Environment & Key Mechanics",
+            paragraphs: [],
+            bullets: [
+              "Authentic Force / Stat Threshold: 200+ Authentic Force (Recommended 80M+ Combat Power for Normal, 150M+ for Hard).",
+              "Core Mechanics: Managing Sun Gauge accumulation, parrying boss shields during Midnight/Dawn phases, and dodging flame meteors.",
+              "Drop Table: ~268M (Normal) / ~410M (Hard) Intense Power Crystal + Pitched Boss Item Mitra's Rage (Valued at ~5B to 8B Mesos).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Soul Master vs. Hero: Rotations & Gearing Thresholds",
+        paragraphs: [
+          "Comparing mechanics and movement effort for Level 280+ Arteria and Carcion maps.",
+        ],
+        subsections: [
+          {
+            heading:
+              "(1) Soul Master (Dawn Warrior) - Cosmic Shower Turret Farming",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Stationing Cosmic Shower on lower ledges while sweeping wide horizontal arcs with Solar Pierce / Lunar Divide.",
+              "Optimal Rotation: Station Cosmic Shower centrally; player stands mid-platform, executing minimal skill taps to clear the entire map.",
+              "Gear Threshold: Requires 1-hit KO damage on Cosmic Shower.",
+              "Fatigue Rating: ★☆☆☆☆ (Top-Tier Lazy Farming)",
+            ],
+          },
+          {
+            heading: "(2) Hero - Raging Blow & Incising Sweeps",
+            paragraphs: [],
+            bullets: [
+              "Core Mechanism: Sweeping platforms with enhanced Raging Blow hitboxes alongside Incising mob group wipes.",
+              "Optimal Rotation: Active double-jump mobility along main platform tiers, tapping Raging Blow at every spawn wave.",
+              "Gear Threshold: 1-hit KO thresholds on Incising and un-enraged Raging Blow.",
+              "Fatigue Rating: ★★☆☆☆ (Classic Warrior Movement)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Seren Clear & 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "Financial audit combining a Normal Seren clear with a 2-hour WAP session under 100% Meso / 200% Drop gear parameters:",
+        ],
+        subsections: [
+          {
+            heading: "(1) Gross Yield Breakdown",
+            paragraphs: [],
+            bullets: [
+              "Raw Mesos: ~170M to 200M Mesos.",
+              "Sol Erda Fragments: ~16 to 22 Fragments (~96M to 132M meso equivalent).",
+              "Chosen Seren Crystal: ~268M Mesos (Normal).",
+              "Gross Revenue Value: ~534M to 600M Meso Equivalent.",
+            ],
+          },
+          {
+            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Deducted on Fragment/Drop liquidation (-2.0M mesos).",
+              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Boss Buff Potions (-15M mesos).",
+              "Final Net Wage: ~510M to 576M Net Mesos (~255M to 288M Net Mesos/Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. [CTA] Audit Seren Revenue & WAP Earnings in 10 Seconds with GG-PASS",
+        paragraphs: [
+          "Cleared Chosen Seren or finished a WAP session on your Soul Master or Hero? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
+        ],
+        subsections: [
+          {
+            heading: "Combined Boss & WAP Settlements",
+            paragraphs: [
+              "Input boss crystals, raw mesos, and Sol Erda Frags in a single streamlined interface.",
+            ],
+          },
+          {
+            heading: "Automatic 1% Tax & Consumable Deductions",
+            paragraphs: [
+              "Automatically subtracts transaction fees and WAP/boss consumable costs.",
+            ],
+          },
+          {
+            heading: "Downloadable Discord Summary Cards",
+            paragraphs: [
+              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
+            ],
+            paragraphsAfterBullets: [
+              "Audit your Seren earnings and WAP profits now!",
+              "Calculate Your Net Seren & WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
