@@ -91,7 +91,7 @@ export const MAP_GUIDE_BY_GROUND: Record<string, MapGuideEntry> = {
     regionLabelKo: "도원경",
     regionLabelEn: "Shangri-La",
     koSlug: "dowonkyung-hunting-ground-guide",
-    enSlug: "lazy-grinding-part1",
+    enSlug: "dowonkyung-hunting-ground-guide",
   },
   "arteria-lower-teleport": {
     regionLabelKo: "아르테리아",

@@ -310,6 +310,148 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
     ],
   },
   {
+    slug: "dowonkyung-hunting-ground-guide",
+    title:
+      "MapleStory Shangri-La Grinding Guide: Seasonal Spots & WAP Net Rates",
+    description:
+      "Hands-on analysis for Shangri-La (Lv. 275+) seasonal maps. Authentic Force scaling, 2-hour WAP meso yields, and 1% AH tax breakdown.",
+    koSlug: "dowonkyung-hunting-ground-guide",
+    sections: [
+      {
+        heading:
+          "MapleStory Shangri-La Grinding Audit: Seasonal Spots & Net WAP Revenue Analysis",
+        paragraphs: [
+          "Reaching Level 275 and entering Shangri-La, a common mistake players make is choosing higher-level seasonal maps without accounting for vertical terrain layout, causing meso looting paths to break down.",
+          "Shangri-La requires 200 to 260 Authentic Force. Due to multi-tiered platform designs, meso yields vary by up to 30M mesos per WAP session depending on class summon coverage. In this guide, I provide a hands-on analysis of the top seasonal grinding spots in Shangri-La, auditing net wages after deducting mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. Seasonal Spot Breakdown & Rotation Strategies",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) [Spring] Where Life Begins 1 (200 AF)",
+            paragraphs: [],
+            bullets: [
+              "Terrain: Compact 3-tier structure ideal for classes with straightforward horizontal mobility.",
+              "Rotation Tip: Standing on the 2nd tier while sweeping main attacks allows pets to loot tier 1 automatically while summons clear tier 3.",
+            ],
+          },
+          {
+            heading: "(2) [Summer] Where Four Seasons Live 3 (230 AF)",
+            paragraphs: [],
+            bullets: [
+              "Terrain: Wide vertical reach centered around a main platform, offering high efficiency for turret classes.",
+              "Rotation Tip: Classes with summons (Shadower, Mechanic, Dawn Warrior) achieve 99%+ clear rates with minimal mechanical inputs.",
+            ],
+          },
+          {
+            heading: "(3) [Winter] Snow-Covered Afterimage 2 (260 AF)",
+            paragraphs: [],
+            bullets: [
+              "Terrain: Top-tier Shangri-La map offering highest EXP and meso rates, but with steep gearing thresholds.",
+              "Rotation Tip: Reaching 1.5x force (390 AF) is recommended to prevent residual mobs from ruining looting paths.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Shangri-La Seasonal Spot Performance Comparison (2-Hour WAP Test)",
+        paragraphs: [
+          "Tested under 100% Meso and 200% Drop gear parameters over a 2-hour session:",
+        ],
+        table: {
+          headers: [
+            "Map Name",
+            "Required Force",
+            "2-Hour Raw Mesos",
+            "Sol Erda Fragments",
+            "Fatigue Level",
+          ],
+          rows: [
+            [
+              "Where Life Begins 1 (Spring)",
+              "200 AF",
+              "~162M Mesos",
+              "14 to 18 Frags",
+              "★★☆☆☆ (Moderate)",
+            ],
+            [
+              "Where Four Seasons Live 3 (Summer)",
+              "230 AF",
+              "~168M Mesos",
+              "15 to 19 Frags",
+              "★☆☆☆☆ (Lowest)",
+            ],
+            [
+              "Snow-Covered Afterimage 2 (Winter)",
+              "260 AF",
+              "~176M Mesos",
+              "16 to 21 Frags",
+              "★★★☆☆ (Active)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "3. Shangri-La WAP Net Revenue Audit (GG-PASS Algorithm)",
+        paragraphs: [
+          "Financial breakdown for a 2-hour WAP session in Snow-Covered Afterimage 2 after subtracting 1% Auction House taxes and potion costs:",
+        ],
+        subsections: [
+          {
+            heading: "Raw Revenue Baseline",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 176M Mesos",
+              "Sol Erda Fragments (19 Frags @ 6M ea): 114M Mesos",
+              "Gross Revenue: 290M Mesos",
+            ],
+          },
+          {
+            heading: "Mandatory Deductions",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.14M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Buff Potions (-5M Mesos)",
+              "Final Net Profit: ~276M Mesos",
+              "Net Hourly Wage: ~138M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Why are my meso yields lower in Shangri-La compared to Hotel Arcus?",
+            paragraphs: [
+              "Shangri-La's vertical height often leads to meso despawns. Executing a dedicated sweep with a vacuum pet every 90 seconds prevents meso loss.",
+            ],
+          },
+          {
+            heading:
+              "Q. Is 1.5x Authentic Force over-force mandatory for Shangri-La?",
+            paragraphs: [
+              "Reaching 1.5x force grants a 120% damage multiplier, significantly lowering 1-hit KO thresholds for summons and boosting clear rates by 10%+.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "5. [GG-PASS] Audit Your Shangri-La WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed a Level 275 WAP session in Shangri-La? Input your raw mesos and Sol Erda Fragment counts into the GG-PASS Meso Calculator (https://gg-pass.com/en/) to calculate your exact net wage after 1% AH taxes and potion fees!",
+          "Calculate Your Net Shangri-La WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
+  {
     slug: "arteria-hunting-ground-guide",
     title:
       "MapleStory Arteria Hunting Grounds TOP 3 & WAP Net Rates (Lv. 280+)",
