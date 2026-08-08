@@ -3491,123 +3491,133 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
   },
   {
     slug: "seren-soulmaster-hero-part6",
-    title:
-      "MapleStory Chosen Seren Guide: Soul Master vs Hero WAP & Boss Rates",
+    title: "Chosen Seren Guide: Soul Master vs Hero Arteria WAP Rates",
     description:
-      "Complete GMS Chosen Seren mechanics, Mitra's Rage drop valuation, Soul Master lazy farming setups, Hero Raging Blow rotations, 1% AH tax deductions, and net WAP wage audits. Chosen Seren guide MapleStory, GMS Soul Master lazy farming, Hero Raging Blow rotation, Mitra's Rage price GMS, Seren crystal value, Sol Erda Fragment hourly wage, GMS meso calculator.",
+      "Overcoming Phase 2 Sun Gauge challenges in Chosen Seren. Comparing Soul Master Cosmic Shower placements with Hero Incising sweeps in Arteria. 1% AH tax breakdown.",
     koSlug: "seren-soulmaster-hero-part6",
     sections: [
       {
         heading:
-          "MapleStory GMS Boss & Grinding Analysis Part 6: Chosen Seren x Soul Master vs. Hero Rotations & Net Hourly Wage Audit",
+          "Chosen Seren Phase 2 Strategy & Soul Master vs. Hero Arteria WAP Revenue Audit",
         paragraphs: [
-          "In MapleStory Global (GMS), defeating Chosen Seren represents a pinnacle weekly achievement, offering the chance to acquire Mitra's Rage, the ultimate Pitched Boss emblem alternative. Managing Seren's phase shifts (Sunset, Noon, Midnight, Dawn), sun gauge meters, and sword blast mechanics requires precise mechanical skill, placing high value on warrior classes with strong survivability and effortless WAP (Wealth Acquisition Potion) farming.",
-          "Soul Master (Dawn Warrior) delivers unmatched low-effort farming through Cosmic Shower turrets and Solar Pierce sweeps, while Hero commands intense burst damage during boss burst windows using Raging Blow and Incising. This guide provides a comprehensive financial audit of Chosen Seren mechanics, warrior class rotation performance, and net wage calculations deducting mandatory 1% Auction House taxes and consumable costs.",
+          "Entering Chosen Seren for the first time at Level 280, the most frustrating hurdle I faced was managing the Sun Gauge meter in Phase 2 during Sunset and Midnight phases. Getting struck by Seren's sword blasts filled the gauge rapidly, triggering Sunset stuns and Midnight boss shields that completely wasted our party's burst window.",
+          "Overcoming this requires strategic burst alignment, but equally important is minimizing physical fatigue during daily grinding in Arteria prior to entering the raid. In this guide, I share my hands-on experience testing Soul Master (Dawn Warrior) and Hero in Arteria maps, comparing their WAP yields and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
         ],
       },
       {
-        heading: "1. Chosen Seren Boss Mechanics & Drop Table Overview",
-        paragraphs: [
-          "Key requirements to complete Chosen Seren clears under 20 minutes.",
-        ],
+        heading: "1. Phase 2 Mechanics & Warrior Class Playstyle",
+        paragraphs: [],
         subsections: [
           {
-            heading: "(1) Boss Environment & Key Mechanics",
+            heading: "(1) Sun Gauge Management & Burst Alignment",
+            paragraphs: [
+              "In Phase 2, cleansing the gauge during Noon/Dawn phases is critical before initiating burst sequences in Sunset. Warrior classes should leverage Status Resistance skills and Super Knockback immunity to prevent burst cancellations caused by Sunset knockback attacks.",
+            ],
+          },
+          {
+            heading: "(2) Arteria Grinding Effort",
             paragraphs: [],
             bullets: [
-              "Authentic Force / Stat Threshold: 200+ Authentic Force (Recommended 80M+ Combat Power for Normal, 150M+ for Hard).",
-              "Core Mechanics: Managing Sun Gauge accumulation, parrying boss shields during Midnight/Dawn phases, and dodging flame meteors.",
-              "Drop Table: ~268M (Normal) / ~410M (Hard) Intense Power Crystal + Pitched Boss Item Mitra's Rage (Valued at ~5B to 8B Mesos).",
+              "Soul Master: Stationing Cosmic Shower on the 1st floor allows you to stand on the 2nd floor, clearing the rest of the map using single-direction sweeps with Solar Pierce.",
+              "Hero: Requires weaving Incising with empowered Raging Blow across horizontal jump paths to maintain mob clear continuity.",
             ],
           },
         ],
       },
       {
         heading:
-          "2. Soul Master vs. Hero: Rotations & Gearing Thresholds",
+          "2. Soul Master vs. Hero: Arteria WAP Performance Comparison (2-Hour Test)",
         paragraphs: [
-          "Comparing mechanics and movement effort for Level 280+ Arteria and Carcion maps.",
+          "Tested under 100% Meso and 200% Drop gear parameters in Arteria's Frontline Battleship 1 and Arteria Tower.",
         ],
+        table: {
+          headers: ["Metrics", "Soul Master", "Hero"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Cosmic Shower Turret + Solar Pierce Sweeps",
+              "Incising Cleave + Raging Blow",
+            ],
+            [
+              "Fatigue Level",
+              "★☆☆☆☆ (Near Stationary Farming)",
+              "★★☆☆☆ (Standard Jump Rotation)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.1% (Requires 1-hit KO on Cosmic Shower)",
+              "98.3% (Vertical Incising Coverage)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~178M Mesos",
+              "~172M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "16 to 21 Frags",
+              "15 to 20 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Ensure 1-hit KO on Cosmic Shower",
+              "Check Raging Blow range un-enraged",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "3. Normal Seren Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Normal Seren clear rewards with a 2-hour Arteria WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Normal Seren Crystal: 268M Mesos",
+              "Sol Erda Fragments (18 Frags @ 6M ea): 108M Mesos",
+              "Raw Mobs Meso Drops: 175M Mesos",
+              "Gross Revenue: 551M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment/Drop sales (-1.08M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-15M Mesos)",
+              "Total Net Profit: ~527M Mesos",
+              "Net Hourly Wage: ~263M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
         subsections: [
           {
             heading:
-              "(1) Soul Master (Dawn Warrior) - Cosmic Shower Turret Farming",
-            paragraphs: [],
-            bullets: [
-              "Core Mechanism: Stationing Cosmic Shower on lower ledges while sweeping wide horizontal arcs with Solar Pierce / Lunar Divide.",
-              "Optimal Rotation: Station Cosmic Shower centrally; player stands mid-platform, executing minimal skill taps to clear the entire map.",
-              "Gear Threshold: Requires 1-hit KO damage on Cosmic Shower.",
-              "Fatigue Rating: ★☆☆☆☆ (Top-Tier Lazy Farming)",
+              "Q. Is Soul Master efficient if Cosmic Shower can't 1-hit KO in Arteria?",
+            paragraphs: [
+              "No. Cosmic Shower 1-hit KO is essential to clear lower platforms automatically. If your damage falls short, upgrade your 6th Job Cores or farm in Shangri-La.",
             ],
           },
           {
-            heading: "(2) Hero - Raging Blow & Incising Sweeps",
-            paragraphs: [],
-            bullets: [
-              "Core Mechanism: Sweeping platforms with enhanced Raging Blow hitboxes alongside Incising mob group wipes.",
-              "Optimal Rotation: Active double-jump mobility along main platform tiers, tapping Raging Blow at every spawn wave.",
-              "Gear Threshold: 1-hit KO thresholds on Incising and un-enraged Raging Blow.",
-              "Fatigue Rating: ★★☆☆☆ (Classic Warrior Movement)",
+            heading: "Q. How do we split party loot for Mitra's Rage?",
+            paragraphs: [
+              "When Mitra's Rage drops, sell it on the Auction House (~5B to 8B Mesos), subtract the 1% transaction fee, and split the net revenue equally among party members.",
             ],
           },
         ],
       },
       {
-        heading: "3. Seren Clear & 2-Hour WAP Net Revenue Audit",
+        heading: "5. [GG-PASS] Audit Your Seren Earnings in 10 Seconds",
         paragraphs: [
-          "Financial audit combining a Normal Seren clear with a 2-hour WAP session under 100% Meso / 200% Drop gear parameters:",
-        ],
-        subsections: [
-          {
-            heading: "(1) Gross Yield Breakdown",
-            paragraphs: [],
-            bullets: [
-              "Raw Mesos: ~170M to 200M Mesos.",
-              "Sol Erda Fragments: ~16 to 22 Fragments (~96M to 132M meso equivalent).",
-              "Chosen Seren Crystal: ~268M Mesos (Normal).",
-              "Gross Revenue Value: ~534M to 600M Meso Equivalent.",
-            ],
-          },
-          {
-            heading: "(2) Mandatory Overhead Deductions (GG-PASS Algorithm)",
-            paragraphs: [],
-            bullets: [
-              "1% Auction House Fee: Deducted on Fragment/Drop liquidation (-2.0M mesos).",
-              "Fixed Consumables: 1 WAP Potion (-7M mesos) + Boss Buff Potions (-15M mesos).",
-              "Final Net Wage: ~510M to 576M Net Mesos (~255M to 288M Net Mesos/Hour).",
-            ],
-          },
-        ],
-      },
-      {
-        heading:
-          "4. [CTA] Audit Seren Revenue & WAP Earnings in 10 Seconds with GG-PASS",
-        paragraphs: [
-          "Cleared Chosen Seren or finished a WAP session on your Soul Master or Hero? Use the GG-PASS Meso Calculator (https://gg-pass.com/en/) to audit your exact net wage.",
-        ],
-        subsections: [
-          {
-            heading: "Combined Boss & WAP Settlements",
-            paragraphs: [
-              "Input boss crystals, raw mesos, and Sol Erda Frags in a single streamlined interface.",
-            ],
-          },
-          {
-            heading: "Automatic 1% Tax & Consumable Deductions",
-            paragraphs: [
-              "Automatically subtracts transaction fees and WAP/boss consumable costs.",
-            ],
-          },
-          {
-            heading: "Downloadable Discord Summary Cards",
-            paragraphs: [
-              "Export styled summary cards with a single click to share with guildmates or Discord communities.",
-            ],
-            paragraphsAfterBullets: [
-              "Audit your Seren earnings and WAP profits now!",
-              "Calculate Your Net Seren & WAP Revenue on GG-PASS: https://gg-pass.com/en/",
-            ],
-          },
+          "Just completed Chosen Seren or finished an Arteria WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Seren & WAP Wage on GG-PASS: https://gg-pass.com/en/",
         ],
       },
     ],
