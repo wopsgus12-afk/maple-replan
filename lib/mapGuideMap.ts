@@ -77,7 +77,7 @@ export const MAP_GUIDE_BY_GROUND: Record<string, MapGuideEntry> = {
   "arcus-train-1": {
     regionLabelKo: "호텔 아르쿠스",
     regionLabelEn: "Hotel Arcus",
-    koSlug: "hotel-arcs-endless-train-meso-efficiency-summon-job-guide",
+    koSlug: "arcus-hunting-ground-guide",
     enSlug: "lazy-grinding-part1",
   },
   "odium-gate-1": {
