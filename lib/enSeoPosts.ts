@@ -310,6 +310,153 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
     ],
   },
   {
+    slug: "arcus-hunting-ground-guide",
+    title:
+      "MapleStory Hotel Arcus Grinding Guide: Lv. 265+ Spots & WAP Rates",
+    description:
+      "Solutions for meso loss in Hotel Arcus (Lv. 265+). Q&A style guide comparing Wasteland and Theater WAP rates with 1% AH tax deductions.",
+    koSlug: "arcus-hunting-ground-guide",
+    sections: [
+      {
+        heading:
+          "MapleStory Hotel Arcus Grinding Audit: Lv. 265+ Spots & Net WAP Revenue Analysis",
+        paragraphs: [
+          "Reaching Level 265 and stepping into Hotel Arcus, players frequently ask: \"Why are my 2-hour WAP meso rates not significantly higher than Cernium despite higher mob HP?\"",
+          "Hotel Arcus requires 50 to 100 Authentic Force. Because maps feature wide horizontal bounds, optimizing pet horizontal looting routes and turret placements is critical. In this Q&A style guide, I address common grinding pitfalls in Hotel Arcus while auditing net WAP wages after deducting mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. Top 4 Hotel Arcus Grinding Questions (Q&A)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q1. What is the primary cause of lower-than-expected meso gains in Arcus?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Arcus maps have wide horizontal spans. If your looting route fails to sweep the edges every 80 seconds, mesos despawn after 2 minutes. Deploying Erda Janus or turrets on outer platforms resolves this issue.",
+            ],
+          },
+          {
+            heading:
+              "Q2. Which map is best for newly arrived Level 265 players?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Outlaw-Infested Wasteland 1. Requiring only 50 AF, its linear layout allows players to earn ~152M raw mesos per 2-hour WAP session effortlessly.",
+            ],
+          },
+          {
+            heading: "Q3. What is the best map for lazy stationary farming?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Romantic Theater 2 or Arcus Theater 3. Stationing summons on central ledges allows players to maintain 98%+ mob clear rates with minimal movement.",
+            ],
+          },
+          {
+            heading:
+              "Q4. How much does 1.5x Authentic Force (Over-force) increase efficiency?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Hitting 1.5x force (75-150 AF) grants a 120% damage multiplier. This lowers 1-hit KO thresholds for secondary projectiles, yielding an extra ~15M mesos per 2-hour session.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Hotel Arcus Grinding Spot Performance Comparison (2-Hour WAP Test)",
+        paragraphs: [
+          "Tested under 100% Meso and 200% Drop gear parameters over a 2-hour session:",
+        ],
+        table: {
+          headers: [
+            "Map Name",
+            "Required Force",
+            "2-Hour Raw Mesos",
+            "Sol Erda Fragments",
+            "Fatigue Level",
+          ],
+          rows: [
+            [
+              "Wasteland 1",
+              "50 AF",
+              "~152M Mesos",
+              "11 to 15 Frags",
+              "★★☆☆☆ (Standard)",
+            ],
+            [
+              "Sunset Bar 2",
+              "70 AF",
+              "~156M Mesos",
+              "12 to 16 Frags",
+              "★★★☆☆ (Active)",
+            ],
+            [
+              "Romantic Theater 2",
+              "100 AF",
+              "~161M Mesos",
+              "13 to 18 Frags",
+              "★☆☆☆☆ (Lowest)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "3. Hotel Arcus WAP Net Revenue Audit (GG-PASS Algorithm)",
+        paragraphs: [
+          "Financial breakdown for a 2-hour WAP session in Romantic Theater 2 after subtracting 1% Auction House taxes and potion costs:",
+        ],
+        subsections: [
+          {
+            heading: "Raw Revenue Baseline",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 161M Mesos",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Gross Revenue: 251M Mesos",
+            ],
+          },
+          {
+            heading: "Mandatory Deductions",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-0.90M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Buff Potions (-4M Mesos)",
+              "Final Net Profit: ~239M Mesos",
+              "Net Hourly Wage: ~119M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. Is Cernium or Hotel Arcus better for meso farming?",
+            paragraphs: [
+              "Hotel Arcus yields higher raw mesos if you hit the 1.5x Over-force multiplier. However, if you cannot 1-hit KO in Arcus, Cernium offers better hourly earnings due to faster clear times.",
+            ],
+          },
+          {
+            heading:
+              "Q. Why do Sol Erda Fragments drop less frequently in Arcus?",
+            paragraphs: [
+              "Level 260+ areas (Cernium/Arcus) have slightly lower base Fragment drop rate multipliers compared to Level 270+ areas. Maintaining a 200% Drop Rate setup is crucial.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Arcus WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed a Level 265 WAP session in Hotel Arcus? Input your raw mesos and Sol Erda Fragment counts into the GG-PASS Meso Calculator (https://gg-pass.com/en/) to calculate your exact net wage after 1% AH taxes and potion fees!",
+          "Calculate Your Net Arcus WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
+  {
     slug: "odium-hunting-ground-guide",
     title:
       "MapleStory Odium Grinding Guide: Lv. 270+ Spots & WAP Net Rates",
