@@ -459,50 +459,105 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
   {
     slug: "carcion-hunting-ground-guide",
     title:
-      "[MapleStory] Level 285 Carcion Best Training Maps & WAP Rates Guide",
+      "MapleStory Carcion Grinding Guide: Q&A, Map Comparison & WAP Rates",
     description:
-      "Carcion training guide for Level 285 MapleStory: Sacred Force requirements, top 3 training spots, WAP meso rate, Sol Erda fragments, EXP gains, and mobbing rotation tips.",
+      "Solutions for meso loss in Carcion (Lv. 285+). Q&A style guide comparing Calm Beach and Hidden Cave WAP rates with 1% AH tax deductions.",
     koSlug: "carcion-hunting-ground-guide",
     sections: [
       {
-        heading: "Welcome to Carcion",
+        heading:
+          "MapleStory Carcion Grinding Efficiency & Map-by-Map WAP Revenue Audit",
         paragraphs: [
-          "Grats on hitting Level 285 and unlocking Carcion! As one of the endgame regions in Grandis, Carcion offers insane base EXP and meso drops per mob. However, due to its wide map layouts and multi-platform structures, finding the right mobbing rotation and meeting the Sacred Power requirements are key to maxing out your WAP (Wealth Acquisition Potion) gains.",
-          "Here's a breakdown of the top 3 training spots in Carcion, complete with Sac Force requirements, mobbing vibes, and expected rates per 2-hour WAP session.",
+          "Upon reaching Level 285 and entering Carcion, a common complaint among players is: \"Why aren't my 2-hour WAP meso rates significantly higher than Arteria, despite higher mob HP?\"",
+          "Through testing across Carcion maps, I identified the culprit: meso and Sol Erda Fragment despawns caused by unoptimized Y-axis looting routes. In this guide, structured in a Q&A format, I address the top 4 grinding questions for Carcion while auditing net WAP wages after deducting mandatory 1% Auction House transaction taxes.",
         ],
       },
       {
-        heading: "1. Carcion Requirements & Sacred Force (Sac)",
+        heading: "1. Top 4 Carcion Grinding Questions (Q&A)",
         paragraphs: [],
-        bullets: [
-          "Min Sacred Force Needed: 100 (100% damage output)",
-          "Recommended Force for 125% Damage & 100% Drops: 150",
-          "Pro Tip: Maps here are wide. If your class lacks high-coverage summons or full-map attacks (FMAs), prioritize smaller/compact maps for lazy grinding instead of chasing raw mob counts.",
+        subsections: [
+          {
+            heading: "Q1. Why are my meso gains lower than expected in Carcion?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Carcion's maps feature high vertical terrain. Even if you clear mob waves instantly, mesos despawn after 2 minutes if your pet route misses lower/upper ledges. Incorporating a dedicated sweeping movement every 90 seconds resolves this leakage.",
+            ],
+          },
+          {
+            heading:
+              "Q2. Which Carcion map is best for newly arrived Level 285 players?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Calm Beach 1. Its linear 3-tier structure favors classes with strong horizontal mobility, allowing effortless grinding while securing ~188M raw mesos per 2-hour WAP session.",
+            ],
+          },
+          {
+            heading: "Q3. What is the best map for lazy, stationary farming?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Hidden Cave or Calm Beach 4. These maps allow players to place turrets and Erda Janus summons in a triangular grid, drastically reducing active mechanical inputs.",
+            ],
+          },
+          {
+            heading:
+              "Q4. How much does hitting 420 Authentic Force (1.5x Over-force) increase efficiency?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Reaching 420 AF grants a 120% damage multiplier. This allows secondary summons to 1-hit KO mobs reliably, increasing 2-hour WAP returns by roughly 15M to 20M mesos.",
+            ],
+          },
         ],
       },
       {
-        heading: "2. Top 3 Carcion Training Spots",
-        paragraphs: [],
-        bullets: [
-          "Sunken Gloomy Wetland 1 (Best for Lazy Grinding): Flat, easy platforms. Great for brainless grinding with zero fatigue. (Sac 100)",
-          "Tranquil Coast 1 (Max Mob Density & Meso Rate): High spawn density. Best rates for classes with solid mobbing setups and summons. (Sac 110)",
-          "Deep Dry Stem 2 (Solid Alternative): Perfect for vertical mobility classes with high Y-axis skill coverage. (Sac 110)",
-        ],
-      },
-      {
-        heading: "3. Expected Earnings per 2-Hour WAP (Session)",
-        paragraphs: [],
-        bullets: [
-          "Pure Mesos: ~120M - 145M+ Mesos (Varies by server & Meso Gear)",
-          "Sol Erda Fragments (Frags): ~10 - 15 Fragments",
-          "EXP Gains: ~3.5% - 5.0% at Level 285",
-        ],
-      },
-      {
-        heading: "4. Calculate Your Carcion Rates in 10 Seconds",
+        heading:
+          "2. Carcion Grinding Spot Performance Comparison (2-Hour WAP Test)",
         paragraphs: [
-          "Don't waste time with spreadsheets! Track your exact hourly rates and Frag profits instantly with our clean calculator.",
-          "Try the 10-Second Meso & EXP Calculator: https://gg-pass.com",
+          "Data recorded under 100% Meso and 200% Drop gear parameters over a 2-hour session:",
+        ],
+        subsections: [
+          {
+            heading: "📌 Yield Summary by Map",
+            paragraphs: [],
+            bullets: [
+              "Calm Beach 1: ~188M Mesos / 18-23 Frags / Fatigue: ★★☆☆☆",
+              "Hidden Cave (Stationary): ~181M Mesos / 17-21 Frags / Fatigue: ★☆☆☆☆",
+              "Washing Shore 2: ~194M Mesos / 20-25 Frags / Fatigue: ★★★☆☆",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Carcion WAP Net Revenue Audit (GG-PASS Algorithm)",
+        paragraphs: [
+          "Financial audit for a 2-hour WAP session in Washing Shore 2 after subtracting 1% Auction House taxes and consumable fees:",
+        ],
+        subsections: [
+          {
+            heading: "Raw Revenue Baseline",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 194M Mesos",
+              "Sol Erda Fragments (22 Frags @ 6M ea): 132M Mesos",
+              "Gross Revenue: 326M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.32M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + EXP/Buff Potions (-5M Mesos)",
+              "Final Net Profit: ~312M Mesos",
+              "Net Hourly Wage: ~156M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. [GG-PASS] Audit Your Carcion WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed a 2-hour WAP session in Carcion? Input your raw mesos and Sol Erda Fragment counts into the GG-PASS Meso Calculator (https://gg-pass.com/en/) to calculate your exact net wage after 1% AH taxes and potion fees!",
+          "Calculate Your Net Carcion WAP Revenue on GG-PASS: https://gg-pass.com/en/",
         ],
       },
     ],
