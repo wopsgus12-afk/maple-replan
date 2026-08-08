@@ -90,7 +90,7 @@ export const MAP_GUIDE_BY_GROUND: Record<string, MapGuideEntry> = {
   "dowongyeong-four-seasons": {
     regionLabelKo: "도원경",
     regionLabelEn: "Shangri-La",
-    koSlug: "dowongyeong-detail-maps-1replan-revenue-fatigue-fact-check-guide",
+    koSlug: "dowonkyung-hunting-ground-guide",
     enSlug: "lazy-grinding-part1",
   },
   "arteria-lower-teleport": {
