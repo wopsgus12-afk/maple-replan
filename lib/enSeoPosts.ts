@@ -565,144 +565,135 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
   {
     slug: "tallahart",
     title:
-      "MapleStory Tallahart Grinding Guide: Grand Sac Force, Mob Densities & WAP Meso Rates (Lv. 290+)",
+      "MapleStory Tallahart Grinding Guide: Lv. 290+ Spots & WAP Net Rates",
     description:
-      "Complete GMS Tallahart (Lv. 290) grinding guide. Analysis of Grand Sac Force gates, best maps for lazy grinding, Sol Erda Frags drop rates, and Heroic vs. Interactive meso yield per WAP. Tallahart grinding guide, Tallahart mesos per hour, Tallahart Grand Sac Force requirements, Best Tallahart map lazy grinding, Sol Erda Frag drop rate Tallahart, Heroic vs Interactive Tallahart WAP.",
+      "Diagnosing meso loss causes in Tallahart (Lv. 290+). Authentic Force requirements, Erda Janus deployment, 2-hour WAP yields, and 1% AH tax breakdown.",
     koSlug: "tallahart",
     sections: [
       {
         heading:
-          "MapleStory GMS Tallahart (Lv. 290) Grinding & Meso Efficiency Guide: Grand Sac Force, Mob Densities, WAP Rates & Sol Erda Frags",
+          "MapleStory Tallahart Grinding Audit: Lv. 290+ Spots & Net WAP Revenue Analysis",
         paragraphs: [
-          "Reaching Level 290 in MapleStory Global (GMS) grants access to Tallahart, the pinnacle endgame grinding area. Designed for elite endgame players, Tallahart demands exceptional gear specs, precise understanding of Grand Sac Force (Sacred Power) gates, and optimized mobbing rotations. To maximize your gains during a 2-hour WAP (Wealth Acquisition Potion) session, players must calculate mob densities, level disadvantage penalties, and net meso output across both Heroic (Reboot) and Interactive (Regular) servers.",
-          "This comprehensive guide breaks down Tallahart's entry thresholds, top grinding maps for low-effort lazy rotations, Sol Erda Frag yields, and how to instantly audit your post-grind net profit using the GG-PASS Calculator.",
+          "Reaching Level 290 and stepping into Tallahart, players frequently encounter a frustrating reality: 2-hour WAP meso yields often fall 20% short of expectations due to steep Authentic Force penalties and massive mob HP scaling.",
+          "Tallahart demands immense gearing thresholds. To achieve optimal meso gains and EXP progression in this endgame area, auditing your Authentic Force damage multipliers and optimizing 6th Job Erda Janus summon grids is critical. In this guide, I provide a direct financial analysis of the top 3 Tallahart grinding spots, auditing net wages after deducting mandatory 1% Auction House transaction taxes.",
         ],
       },
       {
-        heading:
-          "1. Tallahart (Lv. 290) Entry Thresholds & Grand Sac Force Mechanics",
-        paragraphs: [
-          "Unlocking Tallahart requires character Level 290 and completion of the prerequisite storyline quests. Grinding in this zone introduces advanced Grand Sac Force requirements, making stat gates a primary factor in map selection.",
-        ],
+        heading: "1. 3 Primary Causes of Meso Loss in Tallahart",
+        paragraphs: [],
         subsections: [
           {
-            heading: "(1) Grand Sac Force Damage Multipliers",
-            paragraphs: [],
-            bullets: [
-              "100% Sac Force Matched: Deals 100% base damage. Essential baseline for 1-hit KO (one-gen cut) setups.",
-              "110%–120% Overcapped Sac Force: Grants 110% to 120% bonus damage output. Overcapping allows players to sacrifice offensive gear nodes for extra Drop Rate or Item Meso % gear while maintaining effortless 1-hit clears.",
-              "Under-capped Sac Force: Suffering from Sac Force deficit imposes a severe damage reduction penalty ranging from 10% up to 80%. If your Sac Force is under-leveled, focus on lower-tier entry maps in Tallahart with reduced mob HP pools.",
+            heading: "1. Authentic Force Damage Reduction (Failed 1-Hit KOs)",
+            paragraphs: [
+              "Failing to reach 100% damage scaling increases hit requirements for secondary projectiles. Missing mob spawns leads to direct losses of over 20M mesos per 2-hour session.",
             ],
           },
           {
-            heading: "(2) Level Disadvantage Penalties at Lv. 290+",
+            heading: "2. Suboptimal Erda Janus Summon Grid",
             paragraphs: [
-              "GMS game mechanics penalize meso drop rates and EXP yields when mob level differences exceed specific margins:",
+              "Tallahart maps feature massive horizontal and vertical boundaries. Without Erda Janus Lv. 10+ deploying dual summons, residual meso drops despawn outside your main looting path.",
             ],
-            bullets: [
-              "±1 Level Difference: 100% Meso Drop Rate / 100% EXP Scaling.",
-              "-2 to -4 Levels Difference: Meso drops drop slightly to 96%–92%.",
-              "-5 Levels or Greater: Meso drop rate drops drastically below 80%, severely diminishing your hourly WAP yield.",
-            ],
-            paragraphsAfterBullets: [
-              "Fresh Level 290 players should prioritize entry-level maps, whereas Lv. 293+ endgame grinders must move deeper into high-level Tallahart sectors to avoid meso degradation penalties.",
+          },
+          {
+            heading: "3. Accumulated Consumable Fees & Auction House Taxes",
+            paragraphs: [
+              "High-tier WAP sessions incur heavy consumable costs. Additionally, selling Sol Erda Fragments incurs a 1% Auction House tax, which significantly impacts net profit figures if uncalculated.",
             ],
           },
         ],
       },
       {
         heading:
-          "2. Best Tallahart Maps: Mob Densities, Rotations & Lazy Grinding Tier List",
+          "2. Tallahart Grinding Spot Performance Comparison (2-Hour WAP Test)",
         paragraphs: [
-          "Map layouts in Tallahart feature expansive verticality. Choosing a map purely based on mob count without considering rotation fatigue often leads to rapid player burnout during 2-hour WAP sessions.",
+          "Tested under 100% Meso and 200% Drop gear parameters over a 2-hour session:",
+        ],
+        table: {
+          headers: [
+            "Map Name",
+            "Required Force",
+            "2-Hour Raw Mesos",
+            "Sol Erda Fragments",
+            "Clear Difficulty",
+          ],
+          rows: [
+            [
+              "Starlight Wind Hill 1",
+              "330 AF",
+              "~205M Mesos",
+              "20 to 25 Frags",
+              "★★☆☆☆ (Standard)",
+            ],
+            [
+              "Dusk Hollow 3",
+              "330 AF",
+              "~198M Mesos",
+              "19 to 24 Frags",
+              "★☆☆☆☆ (Stationary)",
+            ],
+            [
+              "Ancient Temple Heart 2",
+              "330 AF",
+              "~212M Mesos",
+              "22 to 28 Frags",
+              "★★★☆☆ (High Stat)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "3. Tallahart WAP Net Revenue Audit (GG-PASS Algorithm)",
+        paragraphs: [
+          "Financial breakdown for a 2-hour WAP session in Ancient Temple Heart 2 after subtracting 1% Auction House taxes and potion costs:",
         ],
         subsections: [
           {
-            heading:
-              "(1) Twilight Ancient Ruins: Deep Sector (Recommended: Lv. 290 ~ 292)",
+            heading: "Raw Revenue Baseline",
             paragraphs: [],
             bullets: [
-              "Mob Density: ~36 to 38 mobs per spawn wave (~1,300 to 1,350 mobs per 2-hour WAP with full clear).",
-              "Map Layout: Compact, 2-tier flat platform structure ideal for summons and full-screen attacks (FMAs).",
-              "Lazy Grinding Rating: ★☆☆☆☆ (Extremely Low Effort)",
-              'Verdict: The premier spot for low-effort, stationary grinding ("Lazy Grinding"). Classes with strong summons or wide FMAs (e.g., Night Lord, Shadower, Viper, Mechanic) can execute near-zero movement rotations while securing high meso rates.',
+              "Raw Mobs Meso Drops: 212M Mesos",
+              "Sol Erda Fragments (25 Frags @ 6M ea): 150M Mesos",
+              "Gross Revenue: 362M Mesos",
+            ],
+          },
+          {
+            heading: "Mandatory Deductions",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.50M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Buff Potions (-8M Mesos)",
+              "Final Net Profit: ~345M Mesos",
+              "Net Hourly Wage: ~172M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Is 1.5x Authentic Force (495 AF) mandatory for Tallahart grinding?",
+            paragraphs: [
+              "Yes. Reaching 1.5x force grants a 120% damage multiplier, which is crucial for secondary summons to 1-hit KO mobs. If your force is insufficient, farming in upper Carcion is far more lucrative.",
             ],
           },
           {
             heading:
-              "(2) Collapse Sector of Starfall Temple (Recommended: Lv. 292 ~ 295)",
-            paragraphs: [],
-            bullets: [
-              "Mob Density: ~39 to 42 mobs per spawn wave (~1,450 to 1,500 mobs per 2-hour WAP).",
-              "Map Layout: Complex 3-tier vertical platforms requiring rapid vertical movement.",
-              "Lazy Grinding Rating: ★★★★☆ (High Effort)",
-              "Verdict: Yields the absolute highest mob count per hour in Tallahart. However, unless playing high-mobility classes (e.g., Hoyoung, Cadena, Ark), maintaining 1-hit clear rotations requires constant input, making it exhausting for extended WAP sessions.",
+              "Q. How does Sol Erda Fragment price fluctuation affect net wages?",
+            paragraphs: [
+              "Regardless of market price shifts, the 1% Auction House transaction fee percentage remains constant. Inputting your server's current market prices yields the most accurate net wage audit.",
             ],
           },
         ],
       },
       {
         heading:
-          "3. Heroic vs. Interactive Server WAP Rates & Sol Erda Frag Yields",
+          "5. [GG-PASS] Audit Your Tallahart WAP Earnings in 10 Seconds",
         paragraphs: [
-          "Meso generation and item valuation differ fundamentally between GMS server environments.",
-        ],
-        subsections: [
-          {
-            heading: "(1) Heroic (Reboot) Server WAP Projections",
-            paragraphs: [
-              "On Heroic servers, meso drop rates feature a native 5x multiplier (adjusted per GMS patch metrics).",
-            ],
-            bullets: [
-              "Raw Mesos per 2-Hour WAP (300% Drop/Meso): ~800M to 1.1B Raw Mesos.",
-              "Sol Erda Frags Rate: 22 to 30 Fragments per WAP session.",
-              "Sol Erda Energy: ~1.5 to 2.0 full energy charges.",
-            ],
-          },
-          {
-            heading:
-              "(2) Interactive (Regular) Server WAP Projections & Net Profit",
-            paragraphs: [
-              "Interactive servers feature standard meso rates but allow trading via the Auction House and Meso Market.",
-            ],
-            bullets: [
-              "Raw Mesos per 2-Hour WAP: ~180M to 220M Raw Mesos.",
-              "Sol Erda Frags Value: 25 Frags sold on Auction House yields significant additional meso income.",
-              "1% Auction House Fee & Consumable Deductions: Subtract 1% tax on Frag sales and Meso Market exchanges.",
-              "Subtract fixed consumable costs (WAP, Extreme Gold Potions, Guild Blessings).",
-              "Net Yield: Reaches approximately 330M–350M Net Mesos equivalent per 2-hour WAP session.",
-            ],
-          },
-        ],
-      },
-      {
-        heading: "4. [CTA] Calculate Your Exact WAP Income with GG-PASS",
-        paragraphs: [
-          "Stop manually calculating post-grind earnings in spreadsheets! The GG-PASS Meso Calculator (https://gg-pass.com/en/) allows you to calculate your net Tallahart WAP profit in under 10 seconds.",
-        ],
-        subsections: [
-          {
-            heading: "One-Click [+1], [+5] Adjustment Buttons",
-            paragraphs: [
-              "Instantly tally dropped Sol Erda Frags, Nodes, and consumable counts without tedious keyboard typing.",
-            ],
-          },
-          {
-            heading: "Automatic Net Meso Tax Deduction",
-            paragraphs: [
-              "Input your starting and ending meso counts; GG-PASS automatically deducts 1% transaction fees and potion costs to display your true net hourly wage.",
-            ],
-          },
-          {
-            heading: "Shareable Summary Cards",
-            paragraphs: [
-              "Generate clean, downloadable income summary graphics with a single click to brag on Discord or with guildmates.",
-            ],
-            paragraphsAfterBullets: [
-              "Audit your Tallahart grinding gains now!",
-              "Calculate Your Tallahart WAP Earnings on GG-PASS: https://gg-pass.com",
-            ],
-          },
+          "Completed a Level 290 WAP session in Tallahart? Input your raw mesos and Sol Erda Fragment counts into the GG-PASS Meso Calculator (https://gg-pass.com/en/) to calculate your exact net wage after 1% AH taxes and potion fees!",
+          "Calculate Your Net Tallahart WAP Revenue on GG-PASS: https://gg-pass.com/en/",
         ],
       },
     ],
