@@ -310,6 +310,141 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
     ],
   },
   {
+    slug: "odium-hunting-ground-guide",
+    title:
+      "MapleStory Odium Grinding Guide: Lv. 270+ Spots & WAP Net Rates",
+    description:
+      "Hands-on analysis for Odium (Lv. 270+) maps. Authentic Force requirements, 3-step summoning rules, 2-hour WAP meso yields, and 1% AH tax breakdown.",
+    koSlug: "odium-hunting-ground-guide",
+    sections: [
+      {
+        heading:
+          "MapleStory Odium Grinding Audit: Lv. 270+ Spots & Net WAP Revenue Analysis",
+        paragraphs: [
+          "Reaching Level 270 and entering Odium, players often make a costly mistake: ignoring vertical platform height in Castle Gates and Locked Area maps, leading to severe meso despawns that waste over 20M mesos per WAP session.",
+          "Odium requires 130 to 190 Authentic Force. Because platform layouts feature dense vertical tiers, optimizing pet looting routes and summon placements through a 3-step rule framework is essential to maximize earnings. In this guide, I share my hands-on analysis of Odium grinding spots, auditing net wages after deducting mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. 3 Rules to Eliminate Meso Losses in Odium",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Rule 1: Secure 1.5x Authentic Force Over-force First",
+            paragraphs: [
+              "Reaching 285 AF for top-tier Odium maps (190 AF base) grants a 120% damage multiplier. Failing to 1-hit KO mobs with secondary summons reduces 2-hour meso yields by over 15%.",
+            ],
+          },
+          {
+            heading: "Rule 2: Execute Y-Axis Portal Looting Routines",
+            paragraphs: [
+              "Because Odium platforms are tall, pets cannot loot higher tiers automatically. Executing a dedicated sweeping loop using Y-axis portals every 90 seconds prevents meso drops from despawning.",
+            ],
+          },
+          {
+            heading: "Rule 3: Triangular Grid Summon Placement",
+            paragraphs: [
+              "Deploying Erda Janus: Dawn or class turrets in a triangular configuration centered on 2nd-tier platforms completely eliminates blind spots on tiers 1 and 3.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Odium Grinding Spot Performance Comparison (2-Hour WAP Test)",
+        paragraphs: [
+          "Tested under 100% Meso and 200% Drop gear parameters over a 2-hour session:",
+        ],
+        table: {
+          headers: [
+            "Map Name",
+            "Required Force",
+            "2-Hour Raw Mesos",
+            "Sol Erda Fragments",
+            "Fatigue Level",
+          ],
+          rows: [
+            [
+              "Castle Gate Building 1",
+              "130 AF",
+              "~152M Mesos",
+              "12 to 16 Frags",
+              "★★☆☆☆ (Standard)",
+            ],
+            [
+              "Locked Area 2",
+              "160 AF",
+              "~158M Mesos",
+              "13 to 17 Frags",
+              "★☆☆☆☆ (Stationary)",
+            ],
+            [
+              "Occupied Alley 1",
+              "190 AF",
+              "~165M Mesos",
+              "15 to 19 Frags",
+              "★★★☆☆ (High Stat)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "3. Odium WAP Net Revenue Audit (GG-PASS Algorithm)",
+        paragraphs: [
+          "Financial breakdown for a 2-hour WAP session in Occupied Alley 1 after subtracting 1% Auction House taxes and potion costs:",
+        ],
+        subsections: [
+          {
+            heading: "Raw Revenue Baseline",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 165M Mesos",
+              "Sol Erda Fragments (17 Frags @ 6M ea): 102M Mesos",
+              "Gross Revenue: 267M Mesos",
+            ],
+          },
+          {
+            heading: "Mandatory Deductions",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.02M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Buff Potions (-5M Mesos)",
+              "Final Net Profit: ~254M Mesos",
+              "Net Hourly Wage: ~127M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Why do my meso yields in Odium seem lower than in Shangri-La?",
+            paragraphs: [
+              "Odium's platform height often causes meso drops to expire. Incorporating portal loops into your rotation or adjusting turret positions will prevent meso loss.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which map is best immediately after hitting Level 270?",
+            paragraphs: [
+              "Start at Castle Gate Building 1 (130 AF) to take advantage of early over-force damage multipliers before moving deeper into Locked Area maps.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Odium WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed a Level 270 WAP session in Odium? Input your raw mesos and Sol Erda Fragment counts into the GG-PASS Meso Calculator (https://gg-pass.com/en/) to calculate your exact net wage after 1% AH taxes and potion fees!",
+          "Calculate Your Net Odium WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
+  {
     slug: "dowonkyung-hunting-ground-guide",
     title:
       "MapleStory Shangri-La Grinding Guide: Seasonal Spots & WAP Net Rates",
