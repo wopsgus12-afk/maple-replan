@@ -4321,6 +4321,151 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "jinhilla-nightlord-viper-part8",
+    title: "Verus Hilla Guide: Night Lord vs Viper WAP Net Hourly Wage",
+    description:
+      "Hands-on experience clearing Verus Hilla thread mechanics. Comparing Night Lord Mark of Night Lord oneshots with Viper Serpent Screw farming. 1% AH tax breakdown.",
+    koSlug: "jinhilla-nightlord-viper-part8",
+    sections: [
+      {
+        heading:
+          "Verus Hilla Strategy & Night Lord vs. Viper WAP Revenue Audit",
+        paragraphs: [
+          "Entering Verus Hilla (Jin Hilla) for the first time, the most disorienting mechanic I experienced was tracking the 2-minute 30-second hourglass timer and blue thread placements. Desyncing altar cleansing routines stripped away death counts rapidly, causing failed run attempts.",
+          "Clearing Verus Hilla requires mechanical precision, but minimizing physical fatigue during daily grinding sessions beforehand is equally crucial. In this guide, I share my hands-on testing comparing Night Lord and Viper (Buccaneer), auditing their WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. Verus Hilla Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Altar Cleansing & Thread Management",
+            paragraphs: [
+              "Surviving the green skull timer requires taking intentional hits from blue threads to collect red souls before cleansing at the altar. Night Lord relies heavily on Dark Sight for thread avoidance, while Viper utilizes superior mobility and Super Knockback resistance to adjust positioning seamlessly.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Hotel Arcus maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Night Lord", "Viper (Buccaneer)"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Mark of Night Lord Projectile Sweeps",
+              "Serpent Screw Passive Aura Clearing",
+            ],
+            [
+              "Fatigue Level",
+              "★★☆☆☆ (High Stat Needed)",
+              "★☆☆☆☆ (Lazy Passive Farming)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.3% (Requires Mark 1-hit KO)",
+              "98.8% (Continuous Serpent Aura)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~162M Mesos",
+              "~158M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "13 to 17 Frags",
+              "12 to 16 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Prioritize Mark core enhancement",
+              "Maintain Energy Charge uptime",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Night Lord Mark Oneshots & Viper Energy Maintenance",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Night Lord: Achieving Mark 1-Hit KO",
+            paragraphs: [
+              "Night Lord excels at map clearing when Mark of Night Lord 1-hits mob spawns. However, if projectiles require 2 hits, clear rates drop significantly, making 6th Job core investments essential for higher-tier maps like Carcion.",
+            ],
+          },
+          {
+            heading: "(2) Viper: Infinite Serpent Screw Uptime",
+            paragraphs: [
+              "Viper offers unmatched grinding comfort—simply jumping through platforms with Serpent Screw active clears entire waves. Managing Transform cooldowns ensures your Energy Charge never depletes during 2-hour sessions.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Hard Verus Hilla Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Hard Verus Hilla clear rewards with a 2-hour WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Hard Verus Hilla Crystal (6-Player Party Share): ~35M Mesos (213M Solo)",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Raw Mobs Meso Drops: 160M Mesos",
+              "Gross Revenue: 285M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-0.90M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-12M Mesos)",
+              "Total Net Profit: ~265M Mesos",
+              "Net Hourly Wage: ~132M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. What stats are recommended for soloing Verus Hilla?",
+            paragraphs: [
+              "Reaching Dojo Floor 60+ or 80M+ Combat Power is recommended. Mastering thread cleansing timings is far more important than raw DPS.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which class is better for lazy grinding, Night Lord or Viper?",
+            paragraphs: [
+              "Viper is significantly easier. As long as Serpent Screw 1-hits mobs, you can farm effortlessly with basic jump inputs.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "5. [GG-PASS] Audit Your Verus Hilla Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Verus Hilla or completed a 2-hour WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Verus Hilla & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
