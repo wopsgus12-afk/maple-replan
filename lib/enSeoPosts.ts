@@ -4466,6 +4466,152 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "dunkel-bowmaster-adele-part9",
+    title: "Hard Dunkel Guide: Bowmaster vs Adele WAP Net Hourly Wage",
+    description:
+      "Hands-on experience overcoming Hard Dunkel elite boss overlap mechanics. Comparing Bowmaster Arrow Platter lazy grinding with Adele Order sword oneshots. 1% AH tax breakdown.",
+    koSlug: "dunkel-bowmaster-adele-part9",
+    sections: [
+      {
+        heading:
+          "Hard Dunkel Strategy & Bowmaster vs. Adele WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Hard Dunkel, the most infuriating mechanic players face is the simultaneous overlap of Dunkel's sword beams, Elite Boss strikes, and falling meteor stuns. Getting stunned unexpectedly depletes death counts instantly, destroying coordinated party burst phases.",
+          "Clearing Hard Dunkel requires precise positioning, but entering the raid without wrist fatigue from daily grinding is equally critical. In this guide, I share my hands-on testing comparing Bowmaster and Adele, auditing their WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Hard Dunkel Overlap Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Elite Boss Positioning & Survival Utility",
+            paragraphs: [
+              "Kiting Dunkel to map corners keeps Elite Boss attacks focused in one direction. Bowmaster utilizes Arrow Platter and vampiric arrow passives for passive sustain, while Adele leverages Dike's iframe and Super Knockback immunity to absorb lethal overlaps.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Arteria maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Bowmaster", "Adele"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Arrow Platter + Uncountable Arrow Lazy Farming",
+              "Divide Cleave + Order Sword Homing",
+            ],
+            [
+              "Fatigue Level",
+              "★☆☆☆☆ (Near Zero Effort)",
+              "★★☆☆☆ (High Order Stat Needed)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.1% (Requires Platter 1-hit KO)",
+              "98.6% (Order 1-hit KO Threshold)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~174M Mesos",
+              "~168M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "15 to 19 Frags",
+              "14 to 18 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Refresh Platter turrets periodically",
+              "Prioritize 6th Job Order core upgrades",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Bowmaster Lazy Setup & Adele Order Thresholds",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Bowmaster: Effortless Stationary Grinding",
+            paragraphs: [
+              "Stationing Arrow Platter centrally while holding Uncountable Arrow sweeps entire map layers effortlessly. As long as your turret 1-hits mobs, wrist strain is virtually non-existent during 2-hour WAP sessions.",
+            ],
+          },
+          {
+            heading: "(2) Adele: Order Homing Thresholds",
+            paragraphs: [
+              "While Divide provides wide horizontal coverage, Order swords must 1-hit KO mobs to clear top-tier ledges cleanly. If swords require 2 hits, mob rotation breaks down, making 6th Job Core investments mandatory.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Hard Dunkel Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Hard Dunkel clear rewards with a 2-hour Arteria WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Hard Dunkel Crystal (6-Player Party Share): ~30M Mesos (183M Solo)",
+              "Sol Erda Fragments (17 Frags @ 6M ea): 102M Mesos",
+              "Raw Mobs Meso Drops: 171M Mesos",
+              "Gross Revenue: 303M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.02M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-11M Mesos)",
+              "Total Net Profit: ~284M Mesos",
+              "Net Hourly Wage: ~142M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What stats are recommended for soloing Hard Dunkel?",
+            paragraphs: [
+              "Dojo Floor 58+ or 60M+ Combat Power is recommended. Having sufficient Authentic Force over-force helps mitigate meteor damage penalties.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which class is better for Arteria grinding, Bowmaster or Adele?",
+            paragraphs: [
+              "Bowmaster offers vastly superior comfort. However, once Adele achieves 1-hit KO thresholds on Order swords, both classes yield comparable clear rates.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Dunkel Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Hard Dunkel or completed an Arteria WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Dunkel & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
