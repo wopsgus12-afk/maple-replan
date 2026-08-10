@@ -4612,6 +4612,144 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "dusk-shadower-hoyoung-part10",
+    title: "Chaos Dusk Guide: Shadower vs Hoyoung WAP Net Hourly Wage",
+    description:
+      "Hands-on experience clearing Chaos Dusk fear phase blindness. Comparing Shadower Meso Explosion oneshots with Hoyoung Clone/Talisman rotation. 1% AH tax breakdown.",
+    koSlug: "dusk-shadower-hoyoung-part10",
+    sections: [
+      {
+        heading:
+          "Chaos Dusk Strategy & Shadower vs. Hoyoung WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Chaos Dusk (Gloom), the most disorienting mechanic players encounter is the transition into the 'Fear Phase' when the eye closes and the screen turns dark. Getting struck by shadow hallucinations and meteor stuns while blinded often wastes crucial burst windows once the eye reopens.",
+          "Overcoming Dusk requires managing fear gauge meters, but minimizing physical fatigue during daily grinding sessions beforehand is equally essential. In this Q&A style guide, I share my hands-on testing comparing Shadower and Hoyoung, auditing their WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Chaos Dusk Fear Mechanics Q&A & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q1. Why do I keep losing death counts during Dusk's Fear Phase?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Staying in the middle of the arena during fear phases leaves you vulnerable to overlapping hallucination stuns and laser strikes. Shadower utilizes 'Shadow Meld' iframes and 'Dark Sight' to bypass lasers, while Hoyoung uses mid-air iframe delays to navigate away safely.",
+            ],
+          },
+          {
+            heading:
+              "Q2. Which Thief class offers lower fatigue and higher meso yields?",
+            paragraphs: [],
+            bullets: [
+              "Answer: Shadower. Once Meso Explosion achieves 1-hit KO damage thresholds, Shadower can farm lazily with a vacuum pet from a central platform while maintaining top-tier clear rates.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "2. Shadower vs. Hoyoung: Shangri-La WAP Performance Comparison (2-Hour Test)",
+        paragraphs: [
+          "Tested under 100% Meso and 200% Drop gear parameters over a 2-hour session.",
+        ],
+        table: {
+          headers: ["Metrics", "Shadower", "Hoyoung"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Assassinate + Meso Explosion Weaving",
+              "Clones + Talisman Skill Rotation",
+            ],
+            [
+              "Fatigue Level",
+              "★☆☆☆☆ (Lazy Meso Explosion)",
+              "★★☆☆☆ (Scroll Gauge Management)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.4% (Requires Meso Explosion 1-hit KO)",
+              "98.9% (Continuous Talisman Summons)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~168M Mesos",
+              "~163M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "14 to 18 Frags",
+              "13 to 17 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Prioritize 6th Job Meso Explosion cores",
+              "Maintain Talisman/Scroll skill cycles",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "3. Chaos Dusk Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Chaos Dusk clear rewards with a 2-hour Shangri-La WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Chaos Dusk Crystal (6-Player Party Share): ~22M Mesos (135M Solo)",
+              "Sol Erda Fragments (16 Frags @ 6M ea): 96M Mesos",
+              "Raw Mobs Meso Drops: 165M Mesos",
+              "Gross Revenue: 283M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-0.96M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-10M Mesos)",
+              "Total Net Profit: ~265M Mesos",
+              "Net Hourly Wage: ~132M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Is Shadower worth playing if Meso Explosion can't 1-hit KO mobs?",
+            paragraphs: [
+              "No. If Meso Explosion requires 2 hits, mob clear efficiency drops by over 10%. It is better to farm in Hotel Arcus until your Authentic Force increases.",
+            ],
+          },
+          {
+            heading:
+              "Q. How do I achieve lazy stationary farming on Hoyoung?",
+            paragraphs: [
+              "Stationing Tiger of Songyu and Erda Janus centrally while holding down your main skill from a mid-platform allows you to farm with minimal physical effort.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Dusk Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Chaos Dusk or completed a Shangri-La WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Dusk & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
