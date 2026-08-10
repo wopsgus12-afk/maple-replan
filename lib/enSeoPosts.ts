@@ -4750,6 +4750,152 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "lucid-phantom-dualblade-part11",
+    title: "Hard Lucid Guide: Phantom vs Dual Blade WAP Net Hourly Wage",
+    description:
+      "Hands-on experience clearing Hard Lucid Phase 1 dragon and Phase 2 laser mechanics. Comparing Phantom stolen skill utility with Dual Blade Blade Tornado farming. 1% AH tax breakdown.",
+    koSlug: "lucid-phantom-dualblade-part11",
+    sections: [
+      {
+        heading:
+          "Hard Lucid Strategy & Phantom vs. Dual Blade WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Hard Lucid, the most punishing mechanics players face are Phase 1 dragon fire attacks overlapping with butterfly explosions, or Phase 2 platform destructions paired with blade wind stuns. Failing to clear butterflies with the horn before dragon spawns often leads to instant party wipes.",
+          "Clearing Hard Lucid requires strict 45-second Phase 3 burst DPS, but entering the raid without heavy fatigue from daily grinding is equally essential. In this guide, I share my hands-on testing comparing Phantom and Dual Blade, auditing their WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Hard Lucid Phase Mechanics & Class Performance Breakdown",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Phase Survival Utility",
+            paragraphs: [
+              "Clearing butterflies via horn inputs before dragon spawns is mandatory. Phantom leverages Final Cut and Joker iframe windows for emergency survival, while Dual Blade uses Chains of Hell and Asura Super Knockback immunity to tank Phase 2 blade wind hazards seamlessly.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Hotel Arcus maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Phantom", "Dual Blade"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Stolen Skill (Showdown/Cannon Bazooka)",
+              "Blade Tornado + Karma Fury Sweeps",
+            ],
+            [
+              "Fatigue Level",
+              "★★☆☆☆ (Flexible Stolen Setup)",
+              "★☆☆☆☆ (Short CD AOE Spams)",
+            ],
+            [
+              "Mob Clear Rate",
+              "98.7% (Requires Mark/Blackjack oneshot)",
+              "99.2% (Short CD Spells)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~155M Mesos",
+              "~160M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "12 to 16 Frags",
+              "13 to 17 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Optimize stolen skill buff cycles",
+              "Chain Blade Tornado on cooldown",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Phantom Stolen Skill Selection & Dual Blade Rotations",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Phantom: Customizing Stolen Grinding Skills",
+            paragraphs: [
+              "Phantom offers unique flexibility by stealing 4th job skills like Showdown Chance or Cannon Bazooka depending on terrain layouts. Achieving 1-hit KO thresholds on Blackjack projectiles enables near-stationary grinding.",
+            ],
+          },
+          {
+            heading: "(2) Dual Blade: Blade Tornado & Karma Fury Cycles",
+            paragraphs: [
+              "Dual Blade rotates short-cooldown AOE spells (Blade Tornado and Karma Fury) to wipe multi-tiered ledges cleanly. Enhancing 6th Job Cores extends Blade Tornado reach, simplifying meso looting paths.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Hard Lucid Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Hard Lucid clear rewards with a 2-hour Hotel Arcus WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Hard Lucid Crystal (6-Player Party Share): ~18M Mesos (110M Solo)",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Raw Mobs Meso Drops: 158M Mesos",
+              "Gross Revenue: 266M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-0.90M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-9M Mesos)",
+              "Total Net Profit: ~249M Mesos",
+              "Net Hourly Wage: ~124M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What Combat Power is required for Phase 3 Hard Lucid solo DPS checks?",
+            paragraphs: [
+              "Dojo Floor 54+ or 40M+ Combat Power is recommended, alongside full burst buff alignment to burst down Phase 3 within 45 seconds.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which class yields higher WAP returns, Phantom or Dual Blade?",
+            paragraphs: [
+              "Dual Blade yields slightly higher raw mesos due to frequent short-cooldown AOEs. However, Phantom can steal Drop Rate passives, offering advantages in Sol Erda Fragment acquisition.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Lucid Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Hard Lucid or completed a 2-hour WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Lucid & WAP Revenue on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
