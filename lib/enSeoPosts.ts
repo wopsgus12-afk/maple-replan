@@ -4896,6 +4896,154 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "gaenslime-marksman-pathfinder-part12",
+    title:
+      "Chaos Guardian Angel Slime Guide: Marksman vs Pathfinder WAP Rates",
+    description:
+      "Hands-on experience clearing Chaos Guardian Angel Slime wave mechanics. Comparing Marksman Piercing Snipe rotations with Pathfinder Cardinal macro farming. 1% AH tax breakdown.",
+    koSlug: "gaenslime-marksman-pathfinder-part12",
+    sections: [
+      {
+        heading:
+          "Chaos Guardian Angel Slime Strategy & Marksman vs. Pathfinder WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Chaos Guardian Angel Slime (Gaenslime), the most disorienting mechanic players face is managing laser sweeps overlapping with Slime Wave door block phases. Misplacing Mascot Slime doors during wave phases leads to failed groggy stun windows, rapidly draining death counts.",
+          "Clearing Chaos Gaenslime requires maximizing burst DPS during 10-second groggy windows, but entering the raid without heavy wrist fatigue from daily grinding is equally essential. In this guide, I share my hands-on testing comparing Marksman and Pathfinder, auditing their WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Chaos Gaenslime Wave Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Guardian Wave Door Block & Spacing Strategy",
+            paragraphs: [
+              "Blocking pink wave doors with Mascot Slime triggers a 10-second groggy phase. Marksman leverages range advantages and True Snipe iframe windows to burst safely from afar, while Pathfinder utilizes Cardinal Torrent mobility to adjust door blocking positions seamlessly.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Hotel Arcus maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Marksman", "Pathfinder"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Piercing Arrow Line Sweeps + Split Arrow",
+              "Cardinal Macro (Discharge + Blast) Homing",
+            ],
+            [
+              "Fatigue Level",
+              "★☆☆☆☆ (100% Horizontal Farming)",
+              "★★☆☆☆ (Slight Wrist Strain)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.0% (Requires Split Arrow uptime)",
+              "99.3% (Auto-homing arrows)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~158M Mesos",
+              "~162M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "12 to 16 Frags",
+              "13 to 17 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Cover Split Arrow downtime gaps",
+              "Recast Ancient Archer on cooldown",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Marksman Line Sweeps & Pathfinder Homing Rotations",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Marksman: Straight Line Penetration",
+            paragraphs: [
+              "Marksman excels at horizontal clearing with Piercing Arrow. Enhancing 6th Job Split Arrow expands vertical explosion radiuses, transforming rotations into near-stationary horizontal sweeps.",
+            ],
+          },
+          {
+            heading: "(2) Pathfinder: Cardinal Macro & Ancient Archer",
+            paragraphs: [
+              "Holding down the Cardinal Discharge + Blast macro from mid platforms targets spawns automatically. Weaving Ancient Archer on cooldown prevents mobs from clumping on top platforms.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Chaos Gaenslime Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Chaos Gaenslime clear rewards with a 2-hour Hotel Arcus WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Chaos Gaenslime Crystal (6-Player Party Share): ~16M Mesos (97M Solo)",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Raw Mobs Meso Drops: 160M Mesos",
+              "Gross Revenue: 266M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-0.90M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-8M Mesos)",
+              "Total Net Profit: ~250M Mesos",
+              "Net Hourly Wage: ~125M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What Combat Power is recommended for soloing Chaos Gaenslime?",
+            paragraphs: [
+              "Dojo Floor 52+ or 35M+ Combat Power is recommended. Mastering wave blocking timings to align 10-second burst windows is key to clearing.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which class offers lower physical fatigue during 2-hour grinding sessions?",
+            paragraphs: [
+              "Marksman is significantly easier. While Pathfinder offers auto-homing arrows, holding down macro keys causes wrist strain over time, whereas Marksman offers effortless horizontal clearing.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "5. [GG-PASS] Audit Your Gaenslime Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Chaos Gaenslime or completed a 2-hour WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Gaenslime & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
