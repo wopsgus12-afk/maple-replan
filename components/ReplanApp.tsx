@@ -11,7 +11,6 @@ import { HuntingForm } from "./HuntingForm";
 import { SessionLists } from "./SessionLists";
 import { Dashboard } from "./Dashboard";
 import { GlobalFooter } from "./Footer";
-import CoupangBanner from "./CoupangBanner";
 import { ToastProvider, useToast } from "./Toast";
 import { LegacyTabRedirect } from "./LegacyTabRedirect";
 import { PresetSettingsModal } from "./PresetSettingsModal";
@@ -474,8 +473,6 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
                   {t.calcMoreGuides}
                 </Link>
               </p>
-
-              {locale === "ko" && <CoupangBanner variant="horizontal" />}
             </div>
           </main>
         )}

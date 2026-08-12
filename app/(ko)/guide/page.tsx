@@ -38,7 +38,7 @@ export default function GuideIndexPage() {
           제목을 누르면 본문으로 이동합니다. 페이지당 10개씩 표시됩니다.
         </p>
         <GuideListPaginated locale="ko" />
-        <CoupangBanner variant="horizontal" />
+        <CoupangBanner variant="card" />
         <p className="mt-8 text-center text-xs text-maple-muted">
           <Link href="/" className="hover:text-maple-gold hover:underline">
             ← 재획 정산기로 돌아가기

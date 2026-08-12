@@ -51,7 +51,7 @@ export function GuideArticle({
           </section>
         ))}
       </div>
-      {locale === "ko" && <CoupangBanner variant="horizontal" />}
+      {locale === "ko" && <CoupangBanner variant="card" />}
       <div className="mt-10 space-y-4 border-t border-maple-border/50 pt-6">
         <GuideRecommendButton slug={post.slug} locale={locale} />
         <div className="text-center">

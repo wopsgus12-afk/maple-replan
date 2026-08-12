@@ -14,6 +14,7 @@ import { formatPriceShort } from "@/lib/userPreset";
 import { usesFragmentDrop } from "@/lib/huntingGrounds";
 import { ui } from "@/lib/uiCopy";
 import { SettlementGuideCards } from "./SettlementGuideCards";
+import CoupangBanner from "./CoupangBanner";
 
 type Props = {
   sessions: SessionRecord[];
@@ -115,6 +116,7 @@ export function Dashboard({
           )}
         </div>
       </section>
+      {locale === "ko" && <CoupangBanner variant="card" />}
       <SettlementGuideCards groundId={groundId} locale={locale} />
       <ExportDashboardImage targetRef={sectionRef} variant="block" locale={locale} />
     </div>
