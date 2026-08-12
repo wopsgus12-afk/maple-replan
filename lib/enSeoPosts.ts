@@ -5189,6 +5189,151 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "lucid-viper-shadower-part14",
+    title: "Hard Lucid Strategy: Viper vs Shadower WAP Net Hourly Wage",
+    description:
+      "Hands-on experience clearing Hard Lucid Phase 2 lasers and Phase 3 45-second DPS checks. Comparing Viper Lazy Serpent rotations with Shadower Meso Explosion farming. 1% AH tax breakdown.",
+    koSlug: "lucid-viper-shadower-part14",
+    sections: [
+      {
+        heading:
+          "Hard Lucid Phase 3 DPS Check Strategy & Viper vs. Shadower WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Hard Lucid, the most punishing wall players encounter is surviving Phase 2 dragon/laser overlaps while reserving burst cooldowns for the 45-second Phase 3 DPS time attack. Failing to burst down Lucid's barrier within the strict time limit results in instant wipeouts despite having plenty of death counts remaining.",
+          "Clearing Hard Lucid requires flawless burst alignment, but entering the raid without severe wrist strain from daily grinding is equally essential. In this guide, I share my hands-on testing comparing Viper and Shadower, auditing their WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Hard Lucid Phase 3 Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Phase 3 45-Second DPS Barrier Strategy",
+            paragraphs: [
+              "Phase 3 requires unloading pure stationary burst damage within 45 seconds. Viper excels with Lightning Form and Howling Fist for massive short-window burst density, while Shadower relies on Soul Seeker and Assassinate + Meso Explosion weave cancels for high sustained DPM.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters (Shadower includes passive +15% Meso rate) in Shangri-La maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Viper", "Shadower"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Serpent Screw Aura + Lazy Jumping",
+              "Assassinate + Meso Explosion Weave",
+            ],
+            [
+              "Fatigue Level",
+              "★☆☆☆☆ (100% Lazy Jump Farming)",
+              "★★★☆☆ (High Wrist Strain)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.2% (1-hit KO Serpent Screw)",
+              "99.5% (1-hit KO Meso Explosion)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~162M Mesos",
+              "~186M Mesos (+15% Passive Bonus)",
+            ],
+            [
+              "Sol Erda Fragments",
+              "13 to 17 Frags",
+              "14 to 18 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Maintain Energy gauge if Serpent fails 1-hit",
+              "Requires high funding for ME 1-hit KO",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Viper Lazy Serpent & Shadower Meso Explosion Weaving",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Viper: Effortless Serpent Screw Rotations",
+            paragraphs: [
+              "Viper maintains Serpent Screw while jumping across platforms to disintegrate mobs instantly. Cycling 6th Job Origin skills and Transform allows for near-stationary grinding with zero wrist strain.",
+            ],
+          },
+          {
+            heading: "(2) Shadower: Passive Meso Bonuses & Explosive Clearing",
+            paragraphs: [
+              "Shadower benefits from the innate passive skill Greed, boosting meso rates by 15% above other classes. Achieving 1-hit KO thresholds on Meso Explosion yields over 20M additional mesos per 2-hour WAP session.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Hard Lucid Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Hard Lucid clear rewards with a 2-hour Shangri-La WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Hard Lucid Crystal (6-Player Party Share): ~23M Mesos (138M Solo)",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Raw Mobs Meso Drops: 174M Mesos (Average)",
+              "Gross Revenue: 287M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-0.90M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-8M Mesos)",
+              "Total Net Profit: ~271M Mesos",
+              "Net Hourly Wage: ~135M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What Combat Power is recommended for soloing Hard Lucid Phase 3?",
+            paragraphs: [
+              "Dojo Floor 55+ or 50M+ Combat Power is recommended. Aligning all guild buffs, potion stacks, and 6th Job Origin skills into the 45-second window is the most critical factor.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which class wins in terms of overall grinding efficiency?",
+            paragraphs: [
+              "If purely maximizing mesos, Shadower wins due to its passive +15% Meso rate. However, for long-term physical comfort during 2-hour sessions, Viper's effortless lazy farming is superior.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Lucid Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Hard Lucid or completed a Shangri-La WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Lucid & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
