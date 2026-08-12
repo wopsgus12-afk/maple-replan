@@ -3,6 +3,7 @@ import type { GuidePost } from "@/lib/seoPosts";
 import type { Locale } from "@/lib/locale";
 import { guideIndexPath } from "@/lib/locale";
 import { ui } from "@/lib/uiCopy";
+import CoupangBanner from "./CoupangBanner";
 import { GuideSectionContent } from "./GuideSectionContent";
 import { GuideRecommendButton } from "./GuideRecommendButton";
 
@@ -39,6 +40,7 @@ export function GuideArticle({
         </h1>
         <p className="mt-3 text-base leading-relaxed text-maple-muted">{post.description}</p>
       </header>
+      {locale === "ko" && <CoupangBanner variant="card" />}
       <div className="space-y-8">
         {post.sections.map((section) => (
           <section key={section.heading}>
@@ -49,6 +51,7 @@ export function GuideArticle({
           </section>
         ))}
       </div>
+      {locale === "ko" && <CoupangBanner variant="horizontal" />}
       <div className="mt-10 space-y-4 border-t border-maple-border/50 pt-6">
         <GuideRecommendButton slug={post.slug} locale={locale} />
         <div className="text-center">
