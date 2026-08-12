@@ -10,7 +10,7 @@ import { TimerBar } from "./TimerBar";
 import { HuntingForm } from "./HuntingForm";
 import { SessionLists } from "./SessionLists";
 import { Dashboard } from "./Dashboard";
-import { GlobalFooter, SettlementFooter } from "./Footer";
+import { GlobalFooter } from "./Footer";
 import CoupangBanner from "./CoupangBanner";
 import { ToastProvider, useToast } from "./Toast";
 import { LegacyTabRedirect } from "./LegacyTabRedirect";
@@ -475,12 +475,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
                 </Link>
               </p>
 
-              {locale === "ko" && (
-                <>
-                  <CoupangBanner variant="horizontal" />
-                  <SettlementFooter />
-                </>
-              )}
+              {locale === "ko" && <CoupangBanner variant="horizontal" />}
             </div>
           </main>
         )}

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { DonationAccountBox } from "./DonationAccountBox";
 import { FOOTER_LEGAL_SNIPPET, LEGAL_LAST_UPDATED } from "@/lib/legalContent";
 import type { Locale } from "@/lib/locale";
 import { homePath, localizedPath } from "@/lib/locale";
@@ -59,14 +58,5 @@ export function GlobalFooter({ locale = "ko" }: FooterProps) {
         )}
       </p>
     </footer>
-  );
-}
-
-/** Calculator page — donation only (legal links live in GlobalFooter). */
-export function SettlementFooter() {
-  return (
-    <div className="mt-6">
-      <DonationAccountBox />
-    </div>
   );
 }

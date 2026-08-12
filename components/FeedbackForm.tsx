@@ -15,7 +15,6 @@ import {
 } from "@/lib/guestbookValidation";
 import { DEVELOPER_GUIDE_INTRO } from "@/lib/infoContent";
 import { isSupabaseConfigured } from "@/lib/supabase/client";
-import { DonationAccountBox } from "./DonationAccountBox";
 import { InfoProseBlock } from "./InfoProseBlock";
 import { useToast } from "./Toast";
 
@@ -196,8 +195,6 @@ export function FeedbackForm() {
             {submitting ? "등록 중…" : "등록"}
           </button>
         </div>
-
-        <DonationAccountBox className="mt-4 border-t border-violet-500/20 pt-4" />
       </div>
 
       {loadError && (
