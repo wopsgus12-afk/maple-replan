@@ -1,4 +1,5 @@
 import type { GuideSection } from "@/lib/seoPosts";
+import CoupangBanner from "./CoupangBanner";
 
 type Props = {
   section: GuideSection;
@@ -81,6 +82,7 @@ export function GuideSectionContent({ section }: Props) {
           ))}
         </ul>
       )}
+      {section.showCoupangBanner && <CoupangBanner variant="card" />}
     </>
   );
 }
