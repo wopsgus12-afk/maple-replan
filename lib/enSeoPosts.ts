@@ -5044,6 +5044,151 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "lotus-mechanic-marksman-part13",
+    title: "Normal Lotus Guide: Mechanic vs Marksman WAP Net Hourly Wage",
+    description:
+      "Hands-on experience clearing reworked Normal Lotus laser and platform mechanics. Comparing Mechanic robot placement with Marksman Piercing line sweeps. 1% AH tax breakdown.",
+    koSlug: "lotus-mechanic-marksman-part13",
+    sections: [
+      {
+        heading:
+          "Reworked Normal Lotus Strategy & Mechanic vs. Marksman WAP Revenue Audit",
+        paragraphs: [
+          "Attempting the reworked Normal Lotus raid, the most punishing mechanic players face is the Phase 3 electric floor field overlapping with debris stuns and wind knockback blasts. Missing platform timings causes players to drop onto electric fields, draining death counts rapidly during burst windows.",
+          "Clearing Normal Lotus requires mechanical adaptation, but entering the raid without wrist fatigue from daily grinding is equally essential. In this guide, I share my hands-on testing comparing Mechanic and Marksman, auditing their WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. Normal Lotus Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Electric Floor Field & Platform Survival",
+            paragraphs: [
+              "Surviving Phase 3 requires tracking electric field spawn indicators and using Super Knockback immunity or mid-air delays to stay above ground. Mechanic uses Open Gate portals to teleport across platforms instantly, while Marksman utilizes True Snipe iframe duration to linger safely in mid-air.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Cernium maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Mechanic", "Marksman"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Full Turret Deployment (RM7, RM1)",
+              "Piercing Arrow Line Sweeps + Split Arrow",
+            ],
+            [
+              "Fatigue Level",
+              "★☆☆☆☆ (100% Stationary)",
+              "★☆☆☆☆ (Simple Horizontal Sweeps)",
+            ],
+            [
+              "Mob Clear Rate",
+              "98.6% (Requires 1-hit KO on turrets)",
+              "99.1% (Split Arrow Uptime)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~148M Mesos",
+              "~152M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "11 to 15 Frags",
+              "12 to 16 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Ensure turret 1-hit KO damage thresholds",
+              "Cover Split Arrow downtime gaps",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Mechanic Turret Setup & Marksman Line Sweeps",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Mechanic: 3-Point Triangular Turret Grid",
+            paragraphs: [
+              "Stationing RM7 on central ledges, RM1 on top-left platforms, and Robo Factory RM13 on the bottom right covers the map completely. If turrets require 2 hits to kill mobs, clear rates drop by over 15%, making Authentic Force upgrades critical.",
+            ],
+          },
+          {
+            heading: "(2) Marksman: Straight Line Penetration",
+            paragraphs: [
+              "Marksman clears horizontal layers effortlessly with Piercing Arrow. Enhancing 6th Job Split Arrow adds vertical explosion radiuses, transforming rotations into lazy horizontal jump sweeps.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Normal Lotus Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Normal Lotus clear rewards with a 2-hour Cernium WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Normal Lotus Crystal (6-Player Party Share): ~12M Mesos (71M Solo)",
+              "Sol Erda Fragments (13 Frags @ 6M ea): 78M Mesos",
+              "Raw Mobs Meso Drops: 150M Mesos",
+              "Gross Revenue: 240M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-0.78M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-6M Mesos)",
+              "Total Net Profit: ~226M Mesos",
+              "Net Hourly Wage: ~113M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What Combat Power is recommended for soloing reworked Normal Lotus?",
+            paragraphs: [
+              "Dojo Floor 48+ or 15M+ Combat Power is recommended. Learning electric field jump timings is the most crucial factor for survival.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which class offers better grinding comfort, Mechanic or Marksman?",
+            paragraphs: [
+              "If your turrets achieve 1-hit KOs, Mechanic offers unmatched 100% stationary farming. If gear is slightly lacking, Marksman yields higher mob clear rates.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Lotus Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Normal Lotus or completed a Cernium WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Lotus & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
