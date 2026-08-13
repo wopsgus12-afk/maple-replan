@@ -5334,6 +5334,149 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "will-nightlord-adele-part15",
+    title: "Hard Will Strategy: Night Lord vs Adele WAP Net Hourly Wage",
+    description:
+      "Hands-on experience clearing Hard Will Phase 2 web locking and Phase 3 white web mechanics. Comparing Night Lord Mark of Night Lord 1-hit KO limits with Adele Divide farming in Odium. 1% AH tax breakdown.",
+    koSlug: "will-nightlord-adele-part15",
+    sections: [
+      {
+        heading:
+          "Hard Will Phase 2/3 Web Mechanics & Night Lord vs. Adele WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Hard Will, the most frustrating obstacles players face are managing Moonlight Gauges during Phase 2 health recovery windows and clearing white webs before losing room to maneuver in Phase 3. Failing to time iframe skills during poison debuffs leads to rapid party wipes and lost death counts.",
+          "Clearing Hard Will demands strict mechanical coordination, but entering the raid without high physical fatigue from daily grinding is equally essential. In this guide, I share my hands-on testing comparing Night Lord and Adele, auditing their WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. Hard Will Web Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Phase-Specific Web Management & Iframe Usage",
+            paragraphs: [
+              "Hard Will Phase 2 requires collecting Moonlight Gauges to remove webs every 2 minutes for health regen checks. Night Lord's Spread Throw provides devastating short-window burst during Phase 3, while Adele's Dike offers damage reduction and iframe windows to counter Phase 3 knockbacks easily.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Odium maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Night Lord", "Adele"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Mark of Night Lord Procs + Showdown",
+              "Divide AoE Sweeps + Order Swords",
+            ],
+            [
+              "Fatigue Level",
+              "★★☆☆☆ (Lazy if Mark 1-hits)",
+              "★★☆☆☆ (Stationary Divide Sweeps)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.4% (Requires Mark 1-hit KO threshold)",
+              "99.1% (Divide + Tread rotation)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~168M Mesos",
+              "~164M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "14 to 18 Frags",
+              "13 to 17 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Clear rates drop 30%+ if Mark fails 1-hit",
+              "Manage Ether Gauge & Order uptime",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Night Lord Mark Funding & Adele Divide Rotations",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Night Lord: High Funding Mark Procs",
+            paragraphs: [
+              "Night Lord shines once Mark of Night Lord star projectiles achieve 1-hit KO status. Enhancing 6th Job Blessing Mark triggers map-wide chain explosions with simple jump-showdown loops.",
+            ],
+          },
+          {
+            heading: "(2) Adele: Broad Divide Hitboxes & Ether Control",
+            paragraphs: [
+              "Adele offers effortless near-stationary clearing using Divide from mid platforms. Weaving Ruin and Squall on spawn cooldowns clears top-corner spawns to maintain 99%+ mob clear rates.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Hard Will Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Hard Will clear rewards with a 2-hour Odium WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Hard Will Crystal (6-Player Party Share): ~30M Mesos (180M Solo)",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Raw Mobs Meso Drops: 166M Mesos (Average)",
+              "Gross Revenue: 286M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-0.90M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-8M Mesos)",
+              "Total Net Profit: ~270M Mesos",
+              "Net Hourly Wage: ~135M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. What Combat Power is recommended for soloing Hard Will?",
+            paragraphs: [
+              "Dojo Floor 56+ or 65M+ Combat Power is recommended. Precision timing on Phase 2 health regen windows and surviving Phase 3 poison phases are mandatory.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which class is more budget-friendly for grinding efficiency?",
+            paragraphs: [
+              "Adele is vastly more cost-effective. Night Lord requires substantial gear investment to reach 1-hit KO thresholds on Mark projectiles, whereas Adele clears comfortably at lower funding levels.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Will Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Hard Will or completed an Odium WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Will & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
