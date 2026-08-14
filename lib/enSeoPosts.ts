@@ -5477,6 +5477,149 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "dunkel-hero-soulmaster-part17",
+    title: "Hard Dunkel Strategy: Hero vs Soul Master WAP Net Hourly Wage",
+    description:
+      "Hands-on experience surviving Hard Dunkel falling debris status effects and Elite Boss overlap attacks. Comparing Hero Worldreaver iframe burst with Soul Master Cosmic Shower stationary farming in Carcion. 1% AH tax breakdown.",
+    koSlug: "dunkel-hero-soulmaster-part17",
+    sections: [
+      {
+        heading:
+          "Hard Dunkel Elite Boss Strategy & Hero vs. Soul Master WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Hard Dunkel, the most punishing wall players encounter is dodging falling status-inflicting debris (stun, blind, seal) while 3 Elite Bosses spawn simultaneously to unleash overlapping cleave attacks. A single mistimed upward jump or misaligned iframe cooldown can wipe out 5 death counts in seconds, ending the raid run abruptly.",
+          "Clearing Hard Dunkel requires disciplined debris awareness and short burst execution, but maintaining low physical wrist strain during daily grinding is equally crucial. In this guide, I share my hands-on testing comparing Hero and Soul Master (Dawn Warrior), auditing their Carcion WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Hard Dunkel Elite Boss Overlaps & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Debris Management & Iframe Rotation Strategy",
+            paragraphs: [
+              "Hard Dunkel requires predicting sword wave trajectories even when floor visual indicators overlap with debris. Hero leverages Worldreaver (a 20-second low-cooldown iframe) and Combo Instinct to safely ignore deadly Elite Boss overlaps during full burst windows. Meanwhile, Soul Master utilizes Elysion, Cosmos, and Cosmic Burst for wide cleave hitboxes and invulnerability frames.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour Carcion WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Level 285 Carcion maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Hero", "Soul Master (Dawn Warrior)"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Raging Blow + Valhalla + Aura Blade",
+              "Solar Slash + Cosmic Shower Turret",
+            ],
+            [
+              "Fatigue Level",
+              "★★☆☆☆ (Wide Raging Blow Jump Clears)",
+              "★☆☆☆☆ (Stationary Cosmic Shower Farming)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.1% (Aura Blade projectile support)",
+              "99.6% (60-sec Cosmic Shower turret uptime)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~171M Mesos",
+              "~174M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "15 to 19 Frags",
+              "15 to 19 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Throw Aura Blade on cooldown for upper tiers",
+              "Track Cosmic Orb stacks for shower refresh",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Hero Jump Clears & Soul Master Stationary Turrets",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Hero: Enhanced Raging Blow & Aura Blade Sweeps",
+            paragraphs: [
+              "Hero benefits heavily from 6th Job Mastery enhancements, dramatically expanding the hitbox of Raging Blow. cycling Aura Blade and Incising allows effortless jump-clearing across Carcion platform layouts.",
+            ],
+          },
+          {
+            heading: "(2) Soul Master: Cosmic Shower Placement & Solar Slash Spam",
+            paragraphs: [
+              "Soul Master deploys Cosmic Shower on mid-tier platforms to continuously barrage newly spawned mobs for 60 seconds. The player remains stationary on the bottom floor casting Solar Slash, achieving zero-fatigue 2-hour grinding sessions.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Hard Dunkel Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Hard Dunkel clear rewards with a 2-hour Carcion WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Hard Dunkel Crystal (6-Player Party Share): ~35M Mesos (210M Solo)",
+              "Sol Erda Fragments (17 Frags @ 6M ea): 102M Mesos",
+              "Raw Mobs Meso Drops: 172M Mesos (Average)",
+              "Gross Revenue: 309M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.02M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-8M Mesos)",
+              "Total Net Profit: ~292M Mesos",
+              "Net Hourly Wage: ~146M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. What Combat Power is recommended for soloing Hard Dunkel?",
+            paragraphs: [
+              "Dojo Floor 57+ or 75M+ Combat Power is recommended. Conserving status-cleansing skills for stun debris and keeping Dunkel away from corners to prevent camera traps are essential skills.",
+            ],
+          },
+          {
+            heading: "Q. Which class wins in survivability vs. grinding comfort?",
+            paragraphs: [
+              "For boss survivability, Hero wins with its 20-second cooldown iframe Worldreaver. For grinding comfort, Soul Master is vastly superior due to its 60-second stationary turret Cosmic Shower.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Dunkel Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Hard Dunkel or completed a Carcion WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Dunkel & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
