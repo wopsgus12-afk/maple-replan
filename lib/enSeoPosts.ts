@@ -5620,6 +5620,153 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "vhilla-da-phantom-part18",
+    title:
+      "Hard Verus Hilla Strategy: Demon Avenger vs Phantom WAP Net Hourly Wage",
+    description:
+      "Hands-on experience surviving Hard Verus Hilla red string entanglement and hourglass scythe clears. Comparing Demon Avenger Shield Chasing homing farming with Phantom stolen skill mobility in Carcion. 1% AH tax breakdown.",
+    koSlug: "vhilla-da-phantom-part18",
+    sections: [
+      {
+        heading:
+          "Hard Verus Hilla Red String Strategy & Demon Avenger vs. Phantom WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Hard Verus Hilla (V.Hilla), the most brutal failure point players face is getting caught in red thread webs, causing death skulls to turn green. Failing to cleanse altars in time before the hourglass scythe slash results in instant, unpreventable death count losses. With potion healing permanently blocked, lacking innate lifesteal or precise iframe rotations leads to immediate party wipes.",
+          "Clearing Verus Hilla requires strict thread avoidance and coordinated altar cleanses, but entering the raid without high physical wrist fatigue from daily grinding is equally essential. In this guide, I share my hands-on testing comparing Demon Avenger and Phantom, auditing their Carcion WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Hard Verus Hilla Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Red Thread Avoidance & Potion Block Survival",
+            paragraphs: [
+              "Verus Hilla blocks standard consumable potions, making innate sustain and invulnerability skills paramount. Demon Avenger bypasses healing restrictions using Bloody Feast HP recovery, Demonic Frenzy management, and Revenant fury immortality. Meanwhile, Phantom utilizes stolen Explorer skills like Final Cut and Sacrosanctity iframes alongside Shroud blinks to maneuver around red strings effortlessly.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour Carcion WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Level 285 Carcion maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Demon Avenger", "Phantom"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Shield Chasing Procs + Execution",
+              "Stolen Explorer AoE + Blackjack Homing",
+            ],
+            [
+              "Fatigue Level",
+              "★☆☆☆☆ (Homing Shield Lazy Clear)",
+              "★★☆☆☆ (Active Mobility Clearing)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.5% (Shield Chasing 2-hit KO threshold)",
+              "99.2% (AoE + Blackjack rotation)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~173M Mesos",
+              "~170M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "15 to 19 Frags",
+              "14 to 18 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Cooldown reduction hat maximizes Shield uptime",
+              "Maintain stolen skill buff rotations",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Demon Avenger Shield Spams & Phantom Stolen Skill Clears",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Demon Avenger: Low Cooldown Shield Chasing Laziness",
+            paragraphs: [
+              "With cooldown reduction gear, Demon Avenger casts Shield Chasing into the air to automatically hunt down mobs across all platforms. Upgrading 6th Job Mastery cores creates a zero-movement stationary farming routine on the bottom floor.",
+            ],
+          },
+          {
+            heading: "(2) Phantom: Stolen Explorer Cleaves & Blackjack Projectiles",
+            paragraphs: [
+              "Phantom steals skills like Showdown Challenge for broad horizontal hitboxes while bouncing Blackjack cards on cooldown to clean up distant spawns. High mobility allows fluid navigation across Carcion's tiered layout.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "3. Hard Verus Hilla Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Hard Verus Hilla clear rewards with a 2-hour Carcion WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Hard Verus Hilla Crystal (6-Player Party Share): ~42M Mesos (252M Solo)",
+              "Sol Erda Fragments (17 Frags @ 6M ea): 102M Mesos",
+              "Raw Mobs Meso Drops: 171M Mesos (Average)",
+              "Gross Revenue: 315M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.02M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-8M Mesos)",
+              "Total Net Profit: ~299M Mesos",
+              "Net Hourly Wage: ~150M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What Combat Power is recommended for soloing Hard Verus Hilla?",
+            paragraphs: [
+              "Dojo Floor 58+ or 85M+ Combat Power is recommended. Knowing when to burst between scythe timers and coordinating altar triggers before reaching 3 green skulls are mandatory mechanics.",
+            ],
+          },
+          {
+            heading:
+              "Q. Which class provides lower physical fatigue during grinding?",
+            paragraphs: [
+              "Demon Avenger is vastly superior in comfort. Its auto-homing Shield Chasing projectiles eliminate the need to actively traverse platforms, whereas Phantom requires continuous keystroke inputs.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your V.Hilla Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Hard Verus Hilla or completed a Carcion WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net V.Hilla & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
