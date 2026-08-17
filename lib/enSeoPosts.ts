@@ -5767,6 +5767,149 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "seren-db-windbreaker-part19",
+    title:
+      "Chosen Seren Strategy: Dual Blade vs Wind Breaker WAP Net Hourly Wage",
+    description:
+      "Hands-on experience managing Chosen Seren Phase 2 Noon gauges and laser mechanics. Comparing Dual Blade iframe burst rotations with Wind Breaker Emerald Dust decoy farming in Carcion. 1% AH tax breakdown.",
+    sections: [
+      {
+        heading:
+          "Chosen Seren Noon Gauge Strategy & Dual Blade vs. Wind Breaker WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Chosen Seren, the most punishing mechanic raid parties encounter is managing the Phase 2 Noon gauge. When laser strikes and pillar explosions hit players continuously, gauges surge to trigger blinding daylight debuffs and instant wipes. Missing bind coordination or iframe timing during Midnight burst windows allows Seren's protective barrier to regenerate, causing inevitable timeout defeats.",
+          "Clearing Chosen Seren requires precise gauge discipline and burst execution, but maintaining low physical wrist fatigue during daily grinding is equally essential. In this guide, I share my hands-on testing comparing Dual Blade and Wind Breaker (Wind Archer), auditing their Carcion WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Chosen Seren Gauge Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Phase 2 Noon Evasion & Midnight Burst Strategy",
+            paragraphs: [
+              "Seren Phase 2 requires minimizing hits during Noon to prevent gauge overflows, saving all major buffs for Midnight windows. Dual Blade utilizes Final Cut and Chains of Hell low-cooldown iframes to safely ignore laser sweeps while unloading Blade Storm. Meanwhile, Wind Breaker deploys Emerald Flower (Dust) decoys to misdirect Seren's charges, opening safe zones for the entire party.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour Carcion WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters in Level 285 Carcion maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Dual Blade", "Wind Breaker (Wind Archer)"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Blade Tornado + Karma Fury",
+              "Vortex Sphere + Howling Gale + Trifling Wind",
+            ],
+            [
+              "Fatigue Level",
+              "★★☆☆☆ (AoE Cooldown Jump Clears)",
+              "★☆☆☆☆ (Automated Homing Projectile Farming)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.3% (Tornado/Fury 1-hit KO threshold)",
+              "99.6% (Stationary homing clears)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~171M Mesos",
+              "~174M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "15 to 19 Frags",
+              "15 to 19 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Weave Blade Ascension during cooldown gaps",
+              "Requires Trifling Wind 1-hit KO funding",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Dual Blade AoE Cycling & Wind Breaker Homing Systems",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Dual Blade: Blade Tornado & Karma Fury Rotations",
+            paragraphs: [
+              "Dual Blade alternates between short-cooldown AoEs Blade Tornado and Karma Fury across mid platforms. Upgraded 6th Job Mastery cores significantly expand upper hitboxes for smooth tiered platform clearing.",
+            ],
+          },
+          {
+            heading: "(2) Wind Breaker: Vortex Sphere & Howling Gale Turrets",
+            paragraphs: [
+              "Wind Breaker fires Vortex Sphere forward while releasing Howling Gale gusts on cooldown to disintegrate distant monster clusters. Holding Song of Heaven on the bottom floor continuously generates Trifling Wind projectiles for zero-effort grinding.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Chosen Seren Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Chosen Seren clear rewards with a 2-hour Carcion WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Chosen Seren Crystal (Normal 6-Player Party Share): ~48M Mesos (290M Hard Solo)",
+              "Sol Erda Fragments (17 Frags @ 6M ea): 102M Mesos",
+              "Raw Mobs Meso Drops: 172M Mesos (Average)",
+              "Gross Revenue: 322M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.02M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-8M Mesos)",
+              "Total Net Profit: ~306M Mesos",
+              "Net Hourly Wage: ~153M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. What Combat Power is recommended for soloing Normal Seren?",
+            paragraphs: [
+              "Dojo Floor 60+ or 100M+ Combat Power is recommended. Flawless gauge management during Noon and clean 6th Job Origin burst execution during Midnight are mandatory.",
+            ],
+          },
+          {
+            heading: "Q. Which class offers superior grinding comfort?",
+            paragraphs: [
+              "While both classes excel in survivability, Wind Breaker wins decisively in grinding comfort thanks to its automated projectile tracking.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Seren Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Chosen Seren or completed a Carcion WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Seren & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
