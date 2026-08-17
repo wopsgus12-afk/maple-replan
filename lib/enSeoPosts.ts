@@ -5773,6 +5773,7 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       "Chosen Seren Strategy: Dual Blade vs Wind Breaker WAP Net Hourly Wage",
     description:
       "Hands-on experience managing Chosen Seren Phase 2 Noon gauges and laser mechanics. Comparing Dual Blade iframe burst rotations with Wind Breaker Emerald Dust decoy farming in Carcion. 1% AH tax breakdown.",
+    koSlug: "seren-db-windbreaker-part19",
     sections: [
       {
         heading:
