@@ -1,11 +1,19 @@
 import type { Locale } from "@/lib/locale";
-import { guidePath as localeGuidePath, localizedPath } from "@/lib/locale";
+import {
+  guidePath as localeGuidePath,
+  localizedPath,
+  withoutTrailingSlash,
+} from "@/lib/locale";
 
-/** Production site origin (GitHub Pages + CNAME) */
+/** Production site origin (GitHub Pages + CNAME) — no trailing slash */
 export const SITE_URL = "https://gg-pass.com";
 
+/** Absolute canonical URL. Root is `https://gg-pass.com` (no trailing slash). */
 export function absoluteUrl(path: string): string {
-  const normalized = path.startsWith("/") ? path : `/${path}`;
+  const normalized = withoutTrailingSlash(
+    path.startsWith("/") ? path : `/${path}`
+  );
+  if (normalized === "/") return SITE_URL;
   return `${SITE_URL}${normalized}`;
 }
 

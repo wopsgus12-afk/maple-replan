@@ -7,6 +7,7 @@ import {
   LEGAL_LAST_UPDATED,
   TERMS_SECTIONS,
 } from "@/lib/legalContent";
+import { sectionLanguageAlternates } from "@/lib/hreflang";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   title: "이용약관 | 메이플 재획 정산",
   description:
     "메이플 재획 정산 계산기 이용약관. 참고용 도구, 계산 면책, 넥슨 비공식 면책, 광고·준거법 조항을 안내합니다.",
+  alternates: sectionLanguageAlternates("ko", "/terms"),
 };
 
 export default function TermsPage() {
@@ -29,7 +31,7 @@ export default function TermsPage() {
           <span className="text-maple-border" aria-hidden>
             |
           </span>
-          <Link href="/privacy/" className="text-xs text-maple-muted hover:text-maple-gold">
+          <Link href="/privacy" className="text-xs text-maple-muted hover:text-maple-gold">
             개인정보처리방침
           </Link>
         </nav>

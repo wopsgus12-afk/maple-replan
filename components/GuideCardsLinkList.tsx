@@ -2,7 +2,7 @@ import Link from "next/link";
 import { GUIDE_POSTS } from "@/lib/seoPosts";
 import { guidePath } from "@/lib/site";
 
-/** Server-friendly guide list linking to static /guide/[slug]/ pages. */
+/** Server-friendly guide list linking to static /guide/[slug] pages. */
 export function GuideCardsLinkList() {
   return (
     <section aria-label="재획 가이드 목록" className="mt-6">

@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 /** gg-pass.com 루트(/) = 메이플 재획 정산기 */
 const nextConfig: NextConfig = {
   output: "export",
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
     unoptimized: true,
   },

@@ -22,13 +22,15 @@ function mapUrlToFile(outDir, urlPath) {
   if (pathname === "/" || pathname === "") {
     return path.join(outDir, "index.html");
   }
-  if (pathname === "/overlay" || pathname === "/overlay/") {
-    return path.join(outDir, "overlay", "index.html");
-  }
 
-  const candidate = path.join(outDir, pathname.replace(/^\//, ""));
+  const relative = pathname.replace(/^\//, "").replace(/\/+$/, "");
+  const candidate = path.join(outDir, relative);
   if (fs.existsSync(candidate) && fs.statSync(candidate).isFile()) {
     return candidate;
+  }
+  const prettyHtml = `${candidate}.html`;
+  if (fs.existsSync(prettyHtml) && fs.statSync(prettyHtml).isFile()) {
+    return prettyHtml;
   }
   const indexHtml = path.join(candidate, "index.html");
   if (fs.existsSync(indexHtml)) {

@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   title: "Hunting & Meso Guides",
   description:
     "English MapleStory hunting, meso farming, and settlement guides for GMS and overseas players.",
-  alternates: sectionLanguageAlternates("en", "/guide/"),
+  alternates: sectionLanguageAlternates("en", "/guide"),
   openGraph: {
     title: "Hunting & Meso Guides | Maple Meso Calculator",
     description:
       "English MapleStory hunting and meso farming guides.",
-    url: `${SITE_URL}/en/guide/`,
+    url: `${SITE_URL}/en/guide`,
     siteName: "Maple Meso Calculator",
     locale: "en_US",
     type: "website",
@@ -40,7 +40,7 @@ export default function EnGuideIndexPage() {
         <p className="mb-2 text-sm text-maple-muted">{t.guideIndexBlurb}</p>
         <GuideListPaginated locale="en" posts={EN_GUIDE_POSTS} />
         <p className="mt-8 text-center text-xs text-maple-muted">
-          <Link href="/en/" className="hover:text-maple-gold hover:underline">
+          <Link href="/en" className="hover:text-maple-gold hover:underline">
             {t.guideBackHome}
           </Link>
         </p>

@@ -28,21 +28,21 @@ export type AppUrlParams = {
 export function buildAppHref({ tab = "calculator", article, post }: AppUrlParams = {}): string {
   // Legacy article query → static guide route
   if (article) {
-    return `/guide/${article}/`;
+    return `/guide/${article}`;
   }
   if (tab === "guides") {
-    return "/guide/";
+    return "/guide";
   }
   if (tab === "brag") {
     const qs = post != null && post !== "" ? `?post=${encodeURIComponent(String(post))}` : "";
-    return `/community/${qs}`;
+    return `/community${qs}`;
   }
   if (tab === "tips") {
     const qs = post != null && post !== "" ? `?post=${encodeURIComponent(String(post))}` : "";
-    return `/tips/${qs}`;
+    return `/tips${qs}`;
   }
   if (tab === "feedback") {
-    return "/feedback/";
+    return "/feedback";
   }
   const params = new URLSearchParams();
   if (tab !== "calculator") {

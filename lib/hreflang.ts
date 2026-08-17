@@ -7,6 +7,7 @@ import { guidePath, homePath, localizedPath } from "@/lib/locale";
 /**
  * Build alternates.languages only when both locales exist for the same content.
  * Never invent EN/KO pairs for unpaired guides.
+ * Canonical URLs never include a trailing slash.
  */
 export function guideLanguageAlternates(
   locale: Locale,
@@ -45,13 +46,15 @@ export function guideLanguageAlternates(
   };
 }
 
+type SharedSection = "/" | "/guide" | "/privacy" | "/terms";
+
 /** Home / section pages that always exist in both locales. */
 export function sectionLanguageAlternates(
   locale: Locale,
-  path: "/" | "/guide/"
+  path: SharedSection
 ): NonNullable<Metadata["alternates"]> {
-  const koUrl = absoluteUrl(path === "/" ? "/" : "/guide/");
-  const enUrl = absoluteUrl(path === "/" ? "/en/" : "/en/guide/");
+  const koUrl = absoluteUrl(path);
+  const enUrl = absoluteUrl(path === "/" ? "/en" : `/en${path}`);
   const selfUrl = locale === "en" ? enUrl : koUrl;
   return {
     canonical: selfUrl,

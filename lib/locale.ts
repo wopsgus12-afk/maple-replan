@@ -1,4 +1,4 @@
-/** Site locale helpers (KO default URLs, EN under /en/). */
+/** Site locale helpers (KO default URLs, EN under /en). No trailing slashes. */
 
 export type Locale = "ko" | "en";
 
@@ -13,15 +13,18 @@ export function localePrefix(locale: Locale): string {
   return locale === "en" ? "/en" : "";
 }
 
+/** Strip trailing slashes except for the site root `/`. */
+export function withoutTrailingSlash(path: string): string {
+  if (path === "/" || path === "") return "/";
+  return path.replace(/\/+$/, "") || "/";
+}
+
 export function localizedPath(locale: Locale, path: string): string {
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  if (locale === "ko") return normalized.endsWith("/") || normalized === "/"
-    ? normalized
-    : `${normalized}/`;
-  const body = normalized === "/" ? "/" : normalized;
-  if (body === "/") return "/en/";
-  const withSlash = body.endsWith("/") ? body : `${body}/`;
-  return `/en${withSlash}`;
+  const raw = path.startsWith("/") ? path : `/${path}`;
+  const normalized = withoutTrailingSlash(raw);
+  if (locale === "ko") return normalized;
+  if (normalized === "/") return "/en";
+  return `/en${normalized}`;
 }
 
 export function guidePath(locale: Locale, slug: string): string {
@@ -33,5 +36,5 @@ export function guideIndexPath(locale: Locale): string {
 }
 
 export function homePath(locale: Locale): string {
-  return locale === "en" ? "/en/" : "/";
+  return locale === "en" ? "/en" : "/";
 }

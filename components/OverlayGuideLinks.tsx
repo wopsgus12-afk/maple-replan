@@ -4,11 +4,11 @@ import { SITE_URL } from "@/lib/site";
 
 const LINKS = [
   {
-    href: `${SITE_URL}/guide/`,
+    href: `${SITE_URL}/guide`,
     label: "최신 사냥터 시급 정산표 보러가기",
   },
   {
-    href: `${SITE_URL}/guide/`,
+    href: `${SITE_URL}/guide`,
     label: "공식 가이드 보기",
   },
 ] as const;

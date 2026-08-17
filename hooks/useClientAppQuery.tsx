@@ -119,19 +119,19 @@ function AppQueryProviderInner({ children }: { children: ReactNode }) {
   const setMainTab = useCallback(
     (tab: MainTab) => {
       if (tab === "guides") {
-        router.push("/guide/");
+        router.push("/guide");
         return;
       }
       if (tab === "brag") {
-        router.push("/community/");
+        router.push("/community");
         return;
       }
       if (tab === "tips") {
-        router.push("/tips/");
+        router.push("/tips");
         return;
       }
       if (tab === "feedback") {
-        router.push("/feedback/");
+        router.push("/feedback");
         return;
       }
       navigate({ tab }, "replace");
@@ -139,7 +139,7 @@ function AppQueryProviderInner({ children }: { children: ReactNode }) {
     [navigate, router]
   );
 
-  /** Prefer static /guide/[slug]/ — never emit legacy query article URLs */
+  /** Prefer static /guide/[slug] — never emit legacy query article URLs */
   const openArticle = useCallback(
     (slug: string) => {
       router.push(guidePath(slug));
@@ -153,7 +153,7 @@ function AppQueryProviderInner({ children }: { children: ReactNode }) {
       queueMicrotask(syncFromBrowser);
       return;
     }
-    router.push("/guide/");
+    router.push("/guide");
   }, [articleSlug, router, syncFromBrowser]);
 
   const openPost = useCallback(
@@ -236,12 +236,17 @@ export function useClientAppQuery() {
   return useAppQuery();
 }
 
-/** trailingSlash 정적 호스팅: …/index.html → 슬래시 경로로 정리 */
+/** 정적 호스팅: …/index.html 또는 …/page.html → trailing-slash 없는 경로로 정리 */
 export function useStaticHostingPathFix() {
   useEffect(() => {
     const { pathname, search, hash } = window.location;
-    if (!pathname.endsWith("/index.html")) return;
-    const clean = pathname.replace(/\/index\.html$/, "/") || "/";
+    let clean: string | null = null;
+    if (pathname.endsWith("/index.html")) {
+      clean = pathname.replace(/\/index\.html$/, "") || "/";
+    } else if (pathname.endsWith(".html")) {
+      clean = pathname.replace(/\.html$/, "") || "/";
+    }
+    if (!clean || clean === pathname) return;
     window.location.replace(`${clean}${search}${hash}`);
   }, []);
 }

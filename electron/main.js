@@ -19,8 +19,8 @@ function resolveAppUrl(route = "/") {
   if (normalized === "/") {
     return `${activeOrigin}${BASE_PATH}/`;
   }
-  const withSlash = normalized.endsWith("/") ? normalized : `${normalized}/`;
-  return `${activeOrigin}${BASE_PATH}${withSlash}`;
+  const noSlash = normalized.replace(/\/+$/, "");
+  return `${activeOrigin}${BASE_PATH}${noSlash}`;
 }
 
 function getOutDir() {

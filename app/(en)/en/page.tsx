@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Maple Meso Calculator",
     description:
       "Unofficial MapleStory meso calculator and hunting settlement tool.",
-    url: `${SITE_URL}/en/`,
+    url: `${SITE_URL}/en`,
     siteName: "Maple Meso Calculator",
     locale: "en_US",
     type: "website",

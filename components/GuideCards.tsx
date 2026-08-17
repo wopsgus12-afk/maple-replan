@@ -8,7 +8,7 @@ type Props = {
   compact?: boolean;
 };
 
-/** Guide list linking to static /guide/[slug]/ pages. */
+/** Guide list linking to static /guide/[slug] pages. */
 export function GuideCards({ compact }: Props) {
   return (
     <section aria-label="재획 가이드 목록">

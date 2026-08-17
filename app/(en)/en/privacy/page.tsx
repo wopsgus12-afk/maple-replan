@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { GlobalFooter } from "@/components/Footer";
 import { SITE_URL } from "@/lib/site";
+import { sectionLanguageAlternates } from "@/lib/hreflang";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -10,9 +11,10 @@ export const revalidate = false;
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for Maple Meso Calculator (English summary page).",
+  alternates: sectionLanguageAlternates("en", "/privacy"),
   openGraph: {
     title: "Privacy Policy",
-    url: `${SITE_URL}/en/privacy/`,
+    url: `${SITE_URL}/en/privacy`,
     locale: "en_US",
     type: "website",
   },
@@ -30,7 +32,7 @@ export default function EnPrivacyPage() {
         </p>
         <p>
           <Link
-            href="/privacy/"
+            href="/privacy"
             hrefLang="ko"
             className="text-maple-gold underline-offset-2 hover:underline"
           >

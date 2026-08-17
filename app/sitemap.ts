@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllGuideSlugs } from "@/lib/seoPosts";
 import { getAllEnGuideSlugs } from "@/lib/enSeoPosts";
-import { SITE_URL, guideAbsoluteUrl } from "@/lib/site";
+import { SITE_URL, absoluteUrl, guideAbsoluteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -9,63 +9,63 @@ export const revalidate = false;
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    { url: SITE_URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
     {
-      url: `${SITE_URL}/guide/`,
+      url: absoluteUrl("/guide"),
       lastModified: now,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/community/`,
+      url: absoluteUrl("/community"),
       lastModified: now,
       changeFrequency: "daily",
       priority: 0.7,
     },
     {
-      url: `${SITE_URL}/tips/`,
+      url: absoluteUrl("/tips"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.6,
     },
     {
-      url: `${SITE_URL}/feedback/`,
+      url: absoluteUrl("/feedback"),
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.4,
     },
     {
-      url: `${SITE_URL}/privacy/`,
+      url: absoluteUrl("/privacy"),
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${SITE_URL}/terms/`,
+      url: absoluteUrl("/terms"),
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${SITE_URL}/en/`,
+      url: absoluteUrl("/en"),
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
-      url: `${SITE_URL}/en/guide/`,
+      url: absoluteUrl("/en/guide"),
       lastModified: now,
       changeFrequency: "daily",
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/en/privacy/`,
+      url: absoluteUrl("/en/privacy"),
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
-      url: `${SITE_URL}/en/terms/`,
+      url: absoluteUrl("/en/terms"),
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,

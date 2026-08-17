@@ -7,6 +7,7 @@ import {
   LEGAL_LAST_UPDATED,
   PRIVACY_SECTIONS,
 } from "@/lib/legalContent";
+import { sectionLanguageAlternates } from "@/lib/hreflang";
 
 export const dynamic = "force-static";
 export const revalidate = false;
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   title: "개인정보처리방침 | 메이플 재획 정산",
   description:
     "메이플 재획 정산 도구의 개인정보처리방침. localStorage, 커뮤니티 게시글, 광고 쿠키, 이용자 권리 및 문의처를 안내합니다.",
+  alternates: sectionLanguageAlternates("ko", "/privacy"),
 };
 
 export default function PrivacyPage() {
@@ -29,7 +31,7 @@ export default function PrivacyPage() {
           <span className="text-maple-border" aria-hidden>
             |
           </span>
-          <Link href="/terms/" className="text-xs text-maple-muted hover:text-maple-gold">
+          <Link href="/terms" className="text-xs text-maple-muted hover:text-maple-gold">
             이용약관
           </Link>
         </nav>

@@ -40,7 +40,7 @@ const MAX_AUTHOR = 32;
 
 type Props = {
   kind: BoardKind;
-  /** Standalone route e.g. "/community/" — uses ?post= on this path */
+  /** Standalone route e.g. "/community" — uses ?post= on this path */
   basePath?: string;
 };
 

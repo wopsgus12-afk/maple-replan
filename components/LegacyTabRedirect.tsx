@@ -19,19 +19,19 @@ export function LegacyTabRedirect() {
     const post = params.get("post");
 
     if (tab === "guides") {
-      router.replace(article ? guidePath(article) : "/guide/");
+      router.replace(article ? guidePath(article) : "/guide");
       return;
     }
     if (tab === "brag") {
-      router.replace(post ? `/community/?post=${encodeURIComponent(post)}` : "/community/");
+      router.replace(post ? `/community?post=${encodeURIComponent(post)}` : "/community");
       return;
     }
     if (tab === "tips") {
-      router.replace(post ? `/tips/?post=${encodeURIComponent(post)}` : "/tips/");
+      router.replace(post ? `/tips?post=${encodeURIComponent(post)}` : "/tips");
       return;
     }
     if (tab === "feedback") {
-      router.replace("/feedback/");
+      router.replace("/feedback");
     }
   }, [router]);
 

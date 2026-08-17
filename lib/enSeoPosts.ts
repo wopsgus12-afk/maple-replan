@@ -6,7 +6,7 @@
  * 2. Use a unique English slug (do not reuse Korean slugs).
  * 3. If this is a true translation pair of a Korean guide, set `koSlug`
  *    to that Korean slug so hreflang can link them.
- * 4. Deploy — `/en/guide/{slug}/` is SSG from this list.
+ * 4. Deploy — `/en/guide/{slug}` is SSG from this list.
  */
 import type { GuidePost } from "@/lib/seoPosts";
 

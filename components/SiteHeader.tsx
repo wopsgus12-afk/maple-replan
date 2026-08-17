@@ -41,7 +41,7 @@ export function SiteHeader({ locale = "ko" }: Props) {
     locale === "ko"
       ? [
           {
-            href: "/community/",
+            href: "/community",
             label: t.navShowcase,
             match: (p: string) => p === "/community" || p.startsWith("/community/"),
           },
@@ -51,8 +51,8 @@ export function SiteHeader({ locale = "ko" }: Props) {
   const secondary =
     locale === "ko"
       ? [
-          { href: "/tips/", label: t.navTips },
-          { href: "/feedback/", label: t.navFeedback },
+          { href: "/tips", label: t.navTips },
+          { href: "/feedback", label: t.navFeedback },
         ]
       : [];
 

@@ -10,7 +10,7 @@ export const revalidate = false;
 export const metadata: Metadata = {
   alternates: localeHomeAlternates("ko"),
   openGraph: {
-    url: `${SITE_URL}/`,
+    url: SITE_URL,
     locale: "ko_KR",
     type: "website",
   },

@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   title: "재획 가이드 목록 | 메이플 재획 정산",
   description:
     "메이플스토리 재획·사냥터·메소 효율 고품질 가이드 전체 목록. 그란디스·오디움·도원경·아르테리아·카르시온 실전 정산 정보.",
-  alternates: sectionLanguageAlternates("ko", "/guide/"),
+  alternates: sectionLanguageAlternates("ko", "/guide"),
   openGraph: {
     title: "재획 가이드 목록 | 메이플 재획 정산",
     description:
       "메이플스토리 재획·사냥터·메소 효율 고품질 가이드 전체 목록.",
-    url: `${SITE_URL}/guide/`,
+    url: `${SITE_URL}/guide`,
     siteName: "메이플 재획 정산",
     locale: "ko_KR",
     type: "website",

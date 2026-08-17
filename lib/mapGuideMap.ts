@@ -10,9 +10,9 @@ import { getGuideBySlug } from "@/lib/seoPosts";
 export type MapGuideEntry = {
   regionLabelKo: string;
   regionLabelEn: string;
-  /** Korean guide slug under /guide/[slug]/ */
+  /** Korean guide slug under /guide/[slug] */
   koSlug: string;
-  /** English guide slug under /en/guide/[slug]/ */
+  /** English guide slug under /en/guide/[slug] */
   enSlug: string;
 };
 
