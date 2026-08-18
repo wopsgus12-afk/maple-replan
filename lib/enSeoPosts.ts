@@ -6054,6 +6054,154 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "cernium-top3-hunting-meso-guide-part1",
+    title:
+      "MapleStory Level 260 Cernium Grinding Guide: Top 3 Maps & 2-Hour WAP Wage",
+    description:
+      "Hands-on experience surviving Sacred Force 30 damage penalties in Cernium. Top 3 farming maps: Royal Library Section 1, East Castle Walls 2, and West Battlements 2 Sol Janus Level 1 lazy setups. 1% AH tax breakdown.",
+    koSlug: "cernium-top3-hunting-meso-guide-part1",
+    sections: [
+      {
+        heading:
+          "[Level 260] Cernium Grinding Guide: Top 3 Maps & Sol Janus 2-Hour WAP Net Revenue",
+        paragraphs: [
+          "Entering Cernium right after hitting Level 260 and completing the 6th Job Advancement, I made the grave mistake of stepping into 'Burning Cernium: Western Battlements 2' with only a Level 1 Sacred Symbol (30 Sacred Force). Suffering from a massive 50% damage reduction penalty, my mob clear rate was halved into a 2-hit KO nightmare. Over that 2-hour WAP session, I lost over 35 million raw mesos and looted 4 fewer Sol Erda Fragments compared to a standard run.",
+          "Grinding in Grandis features a drastic monster HP increase compared to the Arcane River. Choosing the right hunting zone based on your current Sacred Force threshold and Level 1 Sol Janus deployment is critical for maximizing hourly revenue without mob leaks. In this guide, I break down the top 3 Cernium farming spots based on 100% Meso and 200% Drop gear, auditing real-time mob kill counts and net profits after mandatory 1% Auction House transaction fees.",
+        ],
+      },
+      {
+        heading:
+          "1. Level 260 Cernium Top 3 Hunting Maps Comparison (2-Hour WAP)",
+        paragraphs: [
+          "Below is an audited comparison of the 3 most efficient and popular training maps across Cernium and Burning Cernium.",
+        ],
+        table: {
+          headers: [
+            "Training Map",
+            "Sacred Force Req",
+            "Map Layout & Grinding Setup",
+            "Raw Meso (2-Hr WAP)",
+            "Sol Erda Frags",
+            "Fatigue Index",
+          ],
+          rows: [
+            [
+              "Royal Library Section 1",
+              "50",
+              "Compact 3-tier layout; Sol Janus Dawn center turret",
+              "~138M Mesos",
+              "13 to 16 Frags",
+              "★☆☆☆☆ (Lazy Stationary)",
+            ],
+            [
+              "East Castle Walls 2",
+              "50",
+              "Wide horizontal 2-platform flat line; sweeping clear",
+              "~142M Mesos",
+              "14 to 17 Frags",
+              "★★☆☆☆ (Simple Patrol)",
+            ],
+            [
+              "Burning: West Battlements 2",
+              "70",
+              "Large 3-tier layout; multi-skill territory division",
+              "~148M Mesos",
+              "15 to 18 Frags",
+              "★★★☆☆ (Active Clearing)",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Map-Specific Sol Janus Level 1 Deployment & Lazy Farming Routes",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Royal Library Section 1: Zero-Fatigue Stationary Spot",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: Fresh Level 260 players reaching 50 Sacred Force looking for a relaxed session.",
+              "Strategy: Place Sol Janus: Dawn on the center 2nd-floor platform. Your main character stays on the bottom floor casting primary AoEs. This covers the entire map with zero vertical platform hopping, preventing wrist fatigue completely.",
+            ],
+          },
+          {
+            heading:
+              "(2) East Castle Walls 2: Maximum Kill Count for High Mobility Classes",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: Classes with wide horizontal hitboxes (Dawn Warrior, Night Lord, Shadower).",
+              "Strategy: A long flat 2-tier layout. Deploy summons on one edge and double flash-jump across the main lane. Easily yields over 14,000 mob kills per hour with zero spawn delays.",
+            ],
+          },
+          {
+            heading:
+              "(3) Burning: West Battlements 2: Peak Revenue (Requires 70 Force)",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: Funded characters guaranteeing clean 1-hit KO thresholds with 70+ Sacred Force.",
+              "Warning: If you lack the Sacred Force to 1-hit KO these mobs, your hourly revenue drops by over 20M mesos due to spawn lag. Stay in the Royal Library until you hit the damage threshold.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Cernium 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "A precise financial breakdown subtracting required consumables and Auction House fees from gross earnings:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 142M Mesos (Top 3 Average)",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Gross Revenue: 232M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 90M Fragment sales (-900K Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Monster Park Gold Potion (-3M Mesos)",
+              "Total Net Profit: ~221M Mesos",
+              "Net Hourly Wage: ~110.5M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Should I grind in Burning Cernium if I require 2 hits to kill mobs?",
+            paragraphs: [
+              "No. Grinding with a 2-hit KO penalty causes mob leaks that reduce your 2-hour income by 30M to 40M mesos and lowers Fragment drop rates. It is strictly more profitable to farm in Royal Library with a 1.5x Sacred Force damage bonus.",
+            ],
+          },
+          {
+            heading:
+              "Q. Is Sol Janus 'Dawn' (Summon) or 'Dusk' (Homing) better at Level 1?",
+            paragraphs: [
+              "For compact Cernium maps like the Library and Castle Walls, Sol Janus: Dawn (stationary summon) provides vastly superior coverage.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Cernium WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed your Cernium 2-hour grinding session? Calculate your exact net profit after 1% AH taxes and consumable costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Cernium Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
