@@ -2,14 +2,21 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { guidePath } from "@/lib/site";
+import { getEnGuideBySlug } from "@/lib/enSeoPosts";
+import type { Locale } from "@/lib/locale";
+import { guideIndexPath, guidePath } from "@/lib/locale";
 import { parseMainTab } from "@/lib/appTab";
+import { getGuideBySlug } from "@/lib/seoPosts";
+
+type Props = {
+  locale?: Locale;
+};
 
 /**
  * Legacy SPA query (?tab=guides&article=slug) → real static routes.
- * No meta-refresh; client navigation only after mount.
+ * Unknown slugs go to the locale guide index instead of a 404.
  */
-export function LegacyTabRedirect() {
+export function LegacyTabRedirect({ locale = "ko" }: Props) {
   const router = useRouter();
 
   useEffect(() => {
@@ -19,11 +26,21 @@ export function LegacyTabRedirect() {
     const post = params.get("post");
 
     if (tab === "guides") {
-      router.replace(article ? guidePath(article) : "/guide");
+      if (!article) {
+        router.replace(guideIndexPath(locale));
+        return;
+      }
+      const exists =
+        locale === "en" ? getEnGuideBySlug(article) : getGuideBySlug(article);
+      router.replace(
+        exists ? guidePath(locale, article) : guideIndexPath(locale)
+      );
       return;
     }
     if (tab === "brag") {
-      router.replace(post ? `/community?post=${encodeURIComponent(post)}` : "/community");
+      router.replace(
+        post ? `/community?post=${encodeURIComponent(post)}` : "/community"
+      );
       return;
     }
     if (tab === "tips") {
@@ -33,7 +50,7 @@ export function LegacyTabRedirect() {
     if (tab === "feedback") {
       router.replace("/feedback");
     }
-  }, [router]);
+  }, [locale, router]);
 
   return null;
 }

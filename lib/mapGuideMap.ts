@@ -65,14 +65,14 @@ export const MAP_GUIDE_BY_GROUND: Record<string, MapGuideEntry> = {
   "serenium-library-1": {
     regionLabelKo: "세르니움",
     regionLabelEn: "Cernium",
-    koSlug: "cernium-east-wall-2-meso-efficiency-job-synergy-fact-check-guide",
-    enSlug: "lazy-grinding-part1",
+    koSlug: "cernium-top3-hunting-meso-guide-part1",
+    enSlug: "cernium-top3-hunting-meso-guide-part1",
   },
   "burning-serenium-west-wall": {
     regionLabelKo: "불타는 세르니움",
     regionLabelEn: "Burning Cernium",
-    koSlug: "burning-cernium-west-wall-meso-efficiency-aoe-job-guide",
-    enSlug: "lazy-grinding-part1",
+    koSlug: "cernium-top3-hunting-meso-guide-part1",
+    enSlug: "cernium-top3-hunting-meso-guide-part1",
   },
   "arcus-train-1": {
     regionLabelKo: "호텔 아르쿠스",

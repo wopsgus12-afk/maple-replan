@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { getEnSlugForKo, getKoSlugForEn } from "@/lib/enSeoPosts";
+import {
+  getEnGuideBySlug,
+  getEnSlugForKo,
+  getKoSlugForEn,
+} from "@/lib/enSeoPosts";
+import { getGuideBySlug } from "@/lib/seoPosts";
 import { absoluteUrl, guideAbsoluteUrl } from "@/lib/site";
 import type { Locale } from "@/lib/locale";
 import { guidePath, homePath, localizedPath } from "@/lib/locale";
@@ -18,7 +23,7 @@ export function guideLanguageAlternates(
 
   if (locale === "ko") {
     const enSlug = getEnSlugForKo(slug);
-    if (!enSlug) {
+    if (!enSlug || !getEnGuideBySlug(enSlug)) {
       return { canonical: selfUrl };
     }
     return {
@@ -32,7 +37,7 @@ export function guideLanguageAlternates(
   }
 
   const koSlug = getKoSlugForEn(slug);
-  if (!koSlug) {
+  if (!koSlug || !getGuideBySlug(koSlug)) {
     return { canonical: selfUrl };
   }
   const koUrl = guideAbsoluteUrl("ko", koSlug);

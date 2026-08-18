@@ -346,7 +346,7 @@ function ReplanAppInner({ compact, locale = "ko" }: Props) {
 
   return (
     <div className={shellClass}>
-      {!compact && <LegacyTabRedirect />}
+      {!compact && <LegacyTabRedirect locale={locale} />}
       <div className={containerClass}>
         {!compact && (
           <header className="mb-3 flex items-start justify-between gap-3">
