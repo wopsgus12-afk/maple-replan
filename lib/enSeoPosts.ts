@@ -5911,6 +5911,149 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "kalos-shadower-bishop-part20",
+    title: "Watcher Kalos Strategy: Shadower vs Bishop WAP Net Hourly Wage",
+    description:
+      "Hands-on experience managing Watcher Kalos Phase 2 interference gauges and bomb hazards. Comparing Shadower Meso Explosion 1-hit KO farming with Bishop stationary Big Bang clearing in Carcion. 1% AH tax breakdown.",
+    koSlug: "kalos-shadower-bishop-part20",
+    sections: [
+      {
+        heading:
+          "Watcher Kalos Interference Mechanics & Shadower vs. Bishop WAP Revenue Audit",
+        paragraphs: [
+          "Attempting Watcher Kalos, the most devastating failure raid parties encounter is allowing Phase 2 interference gauges (drones, eyes, bombs, and structures) to spiral out of control. Dodging Kalos's sweeping breath attacks and sudden teleport hitboxes while failing to deactivate structural traps triggers map-wide lethal bombardments that wipe death counts instantly.",
+          "Clearing Watcher Kalos requires strict interference management and burst coordination, but minimizing physical wrist strain during daily grinding is equally essential. In this guide, I share my hands-on testing comparing Shadower and Bishop, auditing their Carcion WAP earnings and net hourly wages while factoring in mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. Watcher Kalos Mechanics & Class Performance Comparison",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Phase 2 Interference Control & Iframe Cycles",
+            paragraphs: [
+              "Kalos Phase 2 demands that party members periodically deactivate four interference zones before unloading burst damage during test windows. Shadower utilizes Smokescreen damage reduction and Dark Sight mechanics to safely ignore falling bomb hazards, while Bishop leverages Holy Magic Shell and Divine Punishment alongside Benediction final damage buffs to crack Kalos's strict DPS checks.",
+            ],
+          },
+          {
+            heading: "(2) 2-Hour Carcion WAP Performance Breakdown",
+            paragraphs: [
+              "Tested under 100% Meso and 200% Drop gear parameters (Shadower includes passive +15% Meso rate) in Level 285 Carcion maps.",
+            ],
+          },
+        ],
+        table: {
+          headers: ["Metrics", "Shadower", "Bishop"],
+          rows: [
+            [
+              "Core Mechanic",
+              "Assassinate + Meso Explosion Weave",
+              "Big Bang AoE + Holy Fountain + Peacemaker",
+            ],
+            [
+              "Fatigue Level",
+              "★★☆☆☆ (High Keypress Fatigue)",
+              "★☆☆☆☆ (100% Stationary Big Bang Spam)",
+            ],
+            [
+              "Mob Clear Rate",
+              "99.6% (1-hit KO Meso Explosion)",
+              "99.3% (Stationary AoE radius)",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~188M Mesos (+15% Passive Bonus)",
+              "~169M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "15 to 19 Frags",
+              "14 to 18 Frags",
+            ],
+            [
+              "Key Operational Tip",
+              "Requires high funding for ME 1-hit KO",
+              "Check vertical Y-axis Big Bang hitboxes",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Practical Tips: Shadower Meso Explosion Farming & Bishop Stationary Big Bang",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Shadower: Passive Meso Bonus & Map-Wide Coin Detonation",
+            paragraphs: [
+              "Shadower benefits from Greed, yielding 15% additional raw mesos compared to standard classes. Reaching 1-hit KO thresholds on Meso Explosion lets players detonate coins across multiple tiers without moving.",
+            ],
+          },
+          {
+            heading: "(2) Bishop: Holy Fountain Placement & Effortless Grinding",
+            paragraphs: [
+              "Bishop deploys Holy Fountain on mid platforms and casts Peacemaker on cooldown while holding Big Bang stationary on the ground floor. The simple keybind setup eliminates physical hand fatigue during 2-hour grinding sessions.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Watcher Kalos Clear & 2-Hour WAP Net Revenue Breakdown",
+        paragraphs: [
+          "Settlement audit combining Watcher Kalos clear rewards with a 2-hour Carcion WAP session:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Watcher Kalos Crystal (Easy/Normal 6-Player Party Share): ~55M Mesos (380M Chaos Solo)",
+              "Sol Erda Fragments (17 Frags @ 6M ea): 102M Mesos",
+              "Raw Mobs Meso Drops: 178M Mesos (Average)",
+              "Gross Revenue: 335M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on Fragment sales (-1.02M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Boss Buffs (-8M Mesos)",
+              "Total Net Profit: ~319M Mesos",
+              "Net Hourly Wage: ~159M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What Combat Power is recommended for soloing Easy/Normal Kalos?",
+            paragraphs: [
+              "Dojo Floor 62+ or 120M+ Combat Power is recommended. Soloing requires mastering boss teleport manipulation while juggling four drone deactivation timers simultaneously.",
+            ],
+          },
+          {
+            heading: "Q. Which class wins in revenue vs. grinding comfort?",
+            paragraphs: [
+              "Shadower wins purely on raw meso income due to its +15% passive bonus. However, Bishop is vastly superior for physical comfort thanks to its effortless stationary farming.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Kalos Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished Watcher Kalos or completed a Carcion WAP session? Calculate your exact net earnings after 1% AH taxes and potion costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Kalos & WAP Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
