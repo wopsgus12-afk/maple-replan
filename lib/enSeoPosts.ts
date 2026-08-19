@@ -6202,6 +6202,153 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "arcus-top3-hunting-meso-guide-part2",
+    title:
+      "MapleStory Level 270 Hotel Arcus Grinding Guide: Top 3 Maps & 2-Hour WAP Wage",
+    description:
+      "Hands-on experience surviving Sacred Force 130 penalties and multistory platform mob leaks in Hotel Arcus. Top 3 farming maps: Theater Backstreet 2, Desolate Desert Outlaw 1, and Romantic Theater 4 Sol Janus setups. 1% AH tax breakdown.",
+    koSlug: "arcus-top3-hunting-meso-guide-part2",
+    sections: [
+      {
+        heading:
+          "[Level 270] Hotel Arcus Grinding Guide: Top 3 Maps & Multistory 2-Hour WAP Net Revenue",
+        paragraphs: [
+          "Hitting Level 270 and entering Hotel Arcus for the first time, I rushed into 'Theater Backstreet' without reaching the 130 Sacred Force requirement. Failing to 1-hit KO mobs on tiered platforms caused massive mob leaks. Trying to jump frantically between upper and lower ledges exhausted my wrists, and over that 2-hour WAP session, I earned 42 million fewer raw mesos and looted 5 fewer Sol Erda Fragments compared to my smooth Cernium runs.",
+          "Hotel Arcus features significantly taller multistory platform layouts than Cernium. Your class's vertical Y-axis hitboxes and Sol Janus turret placement dictate your hourly earnings. In this guide, I audit the top 3 Hotel Arcus grinding spots under 100% Meso and 200% Drop gear, calculating real-time mob kill rates and net profits after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Level 270 Hotel Arcus Top 3 Grinding Maps Comparison (2-Hour WAP)",
+        paragraphs: [
+          "Below is an audited comparison of the 3 most efficient and low-fatigue training zones in Hotel Arcus.",
+        ],
+        table: {
+          headers: [
+            "Training Map",
+            "Sacred Force Req",
+            "Map Layout & Grinding Setup",
+            "Raw Meso (2-Hr WAP)",
+            "Sol Erda Frags",
+            "Fatigue Index",
+          ],
+          rows: [
+            [
+              "Theater Backstreet 2",
+              "130",
+              "Compact 2~3 tier layout; center 2nd-floor Janus turret",
+              "~154M Mesos",
+              "14 to 17 Frags",
+              "★☆☆☆☆ (Stationary Lazy)",
+            ],
+            [
+              "Outlaws of the Wasted Desert 1",
+              "130",
+              "Wide flat multistory lane; projectile mobility sweep",
+              "~159M Mesos",
+              "15 to 18 Frags",
+              "★★☆☆☆ (Simple Patrol)",
+            ],
+            [
+              "Romantic Theater 4",
+              "160",
+              "Large 3-tier theater; dual Janus split coverage",
+              "~163M Mesos",
+              "16 to 19 Frags",
+              "★★★☆☆ (Active Clearing)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. Multistory Layout Strategies & Sol Janus Deployment Positions",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "(1) Theater Backstreet 2: The Ultimate Low-Fatigue Grinding Spot",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: Players wanting zero wrist fatigue during long grinding sessions while watching secondary monitors.",
+              "Strategy: Deploy Sol Janus: Dawn on the exact center of the 2nd-floor platform. Stand in the middle of the 1st floor and rotate basic AoEs. The turret and main attacks clear all 3 vertical tiers simultaneously with minimal movement.",
+            ],
+          },
+          {
+            heading:
+              "(2) Outlaws of the Wasted Desert 1: High Kill Counts for Ranged Classes",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: Night Lord, Wind Archer (Wind Breaker), Bowmaster, Pathfinder.",
+              "Strategy: Place a stationary summon on the far right ledge and double jump toward the left lane firing homing skills. Consistently yields over 14,500 mob kills per hour with zero spawn delays.",
+            ],
+          },
+          {
+            heading:
+              "(3) Romantic Theater 4: Peak Revenue Zone (Requires 160 Force)",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: High-funded characters meeting full 1-hit KO thresholds with 160+ Sacred Force.",
+              "Warning: If you lack the Sacred Force bonus and take 2 hits to kill mobs, your total kill count drops severely below Backstreet 2. Verify your damage thresholds before committing.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Hotel Arcus 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "A precise financial breakdown subtracting required consumables and Auction House fees from gross earnings:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 158M Mesos (Top 3 Average)",
+              "Sol Erda Fragments (16 Frags @ 6M ea): 96M Mesos",
+              "Gross Revenue: 254M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 96M Fragment sales (-960K Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Monster Park Gold Potion (-3M Mesos)",
+              "Total Net Profit: ~243M Mesos",
+              "Net Hourly Wage: ~121.5M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Is 1.5x Force bonus in Cernium better than 1.0x baseline in Arcus?",
+            paragraphs: [
+              "If you can guarantee 100% 1-hit KOs in Arcus, Arcus is strictly better due to higher base meso/EXP. However, if mobs leak or require 2 hits, farming Cernium with a 1.5x force bonus earns roughly 30M more mesos per 2-hour session.",
+            ],
+          },
+          {
+            heading: "Q. Where should Sol Janus be deployed in multistory maps?",
+            paragraphs: [
+              "In Theater Backstreet, placing Janus on the 2nd-floor center platform ensures hits reach both the top 3rd floor and ground 1st floor simultaneously.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Arcus WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed your Hotel Arcus 2-hour grinding session? Calculate your exact net earnings after 1% AH taxes and consumable costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Arcus Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
