@@ -6349,6 +6349,154 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "odium-top3-hunting-meso-guide-part3",
+    title:
+      "MapleStory Level 275 Odium Grinding Guide: Top 3 Maps & 2-Hour WAP Wage",
+    description:
+      "Hands-on experience surviving Sacred Force 200/230 damage penalties and monster HP spikes in Odium. Top 3 farming maps: Road to the Castle Gate 2, Occupied Alley 1, and Laboratory 1 Sol Janus setups. 1% AH tax breakdown.",
+    koSlug: "odium-top3-hunting-meso-guide-part3",
+    sections: [
+      {
+        heading:
+          "[Level 275] Odium Grinding Guide: Top 3 Maps & Sol Janus 2-Hour WAP Net Revenue",
+        paragraphs: [
+          "Hitting Level 275 and entering Odium for the first time, I rushed into 'Road to the Castle Gate' relying solely on my Arcus symbol levels, without reaching the 200 Sacred Force requirement. Odium monsters possess nearly double the HP of Arcus mobs, turning my grinding into a chaotic 2-hit KO struggle under a 50% damage penalty. Failing to kill mobs on spawn caused severe mob leaks. Over that 2-hour WAP session, I lost 50 million raw mesos and looted 4 fewer Sol Erda Fragments compared to my smooth Arcus runs.",
+          "Odium marks a steep increase in monster defense and HP. Meeting the 200/230 Sacred Force thresholds and utilizing Sol Janus summons for multistory coverage dictate your hourly wage and wrist fatigue. In this guide, I audit the top 3 Odium grinding zones under 100% Meso and 200% Drop gear, calculating real-time mob kill rates and net profits after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Level 275 Odium Top 3 Grinding Maps Comparison (2-Hour WAP)",
+        paragraphs: [
+          "Below is an audited comparison of the 3 most efficient and low-fatigue training zones in Odium.",
+        ],
+        table: {
+          headers: [
+            "Training Map",
+            "Sacred Force Req",
+            "Map Layout & Grinding Setup",
+            "Raw Meso (2-Hr WAP)",
+            "Sol Erda Frags",
+            "Fatigue Index",
+          ],
+          rows: [
+            [
+              "Road to the Castle Gate 2",
+              "200",
+              "Compact 2~3 tier layout; center Janus 1 turret",
+              "~168M Mesos",
+              "15 to 18 Frags",
+              "★☆☆☆☆ (Lazy Stationary)",
+            ],
+            [
+              "Occupied Alley 1",
+              "230",
+              "Symmetrical tiered platforms; projectile sweep",
+              "~174M Mesos",
+              "16 to 19 Frags",
+              "★★☆☆☆ (Simple Patrol)",
+            ],
+            [
+              "Laboratory Section 1",
+              "230",
+              "Wide 3-tier layout; dual Janus split coverage",
+              "~179M Mesos",
+              "16 to 20 Frags",
+              "★★★☆☆ (Active Clearing)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. Multistory Layout Strategies & Sol Janus Deployment Positions",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "(1) Road to the Castle Gate 2: The Ultimate Low-Fatigue Grinding Spot",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: Fresh Level 275 players meeting 200 Sacred Force wanting a relaxed session while watching videos.",
+              "Strategy: Deploy Sol Janus: Dawn on the exact center of the 2nd-floor platform. Your character stays on the 1st floor rotating basic AoEs. The turret and main attacks clear all 3 vertical tiers simultaneously with zero vertical hopping.",
+            ],
+          },
+          {
+            heading:
+              "(2) Occupied Alley 1: High Kill Counts for Ranged Mobility Classes",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: Night Lord, Shadower, Wind Archer (Wind Breaker), Captain.",
+              "Strategy: A symmetrical tiered map. Deploy summons on the far left and double flash-jump toward the right while casting homing skills. Easily yields over 15,000 mob kills per hour with zero spawn delays.",
+            ],
+          },
+          {
+            heading:
+              "(3) Laboratory Section 1: Peak Revenue Zone (Requires 230 Force)",
+            paragraphs: [],
+            bullets: [
+              "Target Audience: High-funded characters guaranteeing clean 1-hit KO thresholds with 230+ Sacred Force.",
+              "Warning: Because the map is expansive, taking 2 hits to kill mobs causes massive mob leaks. Verify your 1-hit KO damage before committing.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Odium 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "A precise financial breakdown subtracting required consumables and Auction House fees from gross earnings:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 173M Mesos (Top 3 Average)",
+              "Sol Erda Fragments (17 Frags @ 6M ea): 102M Mesos",
+              "Gross Revenue: 275M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 102M Fragment sales (-1.02M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Monster Park Gold Potion (-3M Mesos)",
+              "Total Net Profit: ~264M Mesos",
+              "Net Hourly Wage: ~132M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Is 1.5x Force bonus in Arcus better than 1.0x baseline in Odium?",
+            paragraphs: [
+              "If you guarantee 100% 1-hit KOs in Odium, Odium is strictly better due to higher base meso/EXP and fragment drop tables. However, if mobs leak or require 2 hits, farming Theater Backstreet 2 in Arcus with a 1.5x force bonus earns roughly 40M more mesos per 2-hour session.",
+            ],
+          },
+          {
+            heading:
+              "Q. Can I farm stationary in Odium with only Level 1 Sol Janus?",
+            paragraphs: [
+              "Yes. 'Road to the Castle Gate 2' is compact enough that a single Level 1 Sol Janus turret on the 2nd floor covers the upper lane while you clear the ground floor effortlessly.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Odium WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed your Odium 2-hour grinding session? Calculate your exact net profit after 1% AH taxes and consumable costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "Calculate Your Net Odium Wage on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
