@@ -83,7 +83,7 @@ export const MAP_GUIDE_BY_GROUND: Record<string, MapGuideEntry> = {
   "odium-gate-1": {
     regionLabelKo: "오디움",
     regionLabelEn: "Odium",
-    koSlug: "odium-hunting-ground-guide",
+    koSlug: "odium-top3-hunting-meso-guide-part3",
     enSlug: "odium-hunting-ground-guide",
   },
   "dowongyeong-four-seasons": {
