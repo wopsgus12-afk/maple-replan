@@ -3,11 +3,18 @@ import type { LegalSection } from "@/lib/legalContent";
 type Props = {
   title: string;
   sections: LegalSection[];
-  effectiveDate: string;
-  lastUpdated: string;
+  effectiveDate?: string;
+  lastUpdated?: string;
+  dateLabels?: { effective: string; updated: string };
 };
 
-export function LegalDocument({ title, sections, effectiveDate, lastUpdated }: Props) {
+export function LegalDocument({
+  title,
+  sections,
+  effectiveDate,
+  lastUpdated,
+  dateLabels = { effective: "시행일", updated: "최종 개정일" },
+}: Props) {
   return (
     <article className="legal-document">
       <h1 className="mb-6 text-2xl font-bold text-maple-gold">{title}</h1>
@@ -33,10 +40,21 @@ export function LegalDocument({ title, sections, effectiveDate, lastUpdated }: P
           </section>
         ))}
       </div>
-      <footer className="mt-10 space-y-1 border-t border-maple-border/50 pt-6 text-xs text-maple-muted">
-        <p>시행일: {effectiveDate}</p>
-        <p>최종 개정일: {lastUpdated}</p>
-      </footer>
+      {effectiveDate || lastUpdated ? (
+        <footer className="mt-10 space-y-1 border-t border-maple-border/50 pt-6 text-xs text-maple-muted">
+          {effectiveDate ? (
+            <p>
+              {dateLabels.effective}: {effectiveDate}
+            </p>
+          ) : null}
+          {lastUpdated ? (
+            <p>
+              {dateLabels.updated}: {lastUpdated}
+            </p>
+          ) : null}
+        </footer>
+      ) : null}
     </article>
   );
 }
+

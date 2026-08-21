@@ -51,7 +51,7 @@ export function guideLanguageAlternates(
   };
 }
 
-type SharedSection = "/" | "/guide" | "/privacy" | "/terms";
+type SharedSection = "/" | "/guide" | "/privacy" | "/terms" | "/about" | "/contact";
 
 /** Home / section pages that always exist in both locales. */
 export function sectionLanguageAlternates(

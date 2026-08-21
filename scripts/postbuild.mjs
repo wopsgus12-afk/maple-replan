@@ -98,8 +98,12 @@ function sitemapChangefreq(pathname) {
   if (
     pathname === "/privacy" ||
     pathname === "/terms" ||
+    pathname === "/about" ||
+    pathname === "/contact" ||
     pathname === "/en/privacy" ||
-    pathname === "/en/terms"
+    pathname === "/en/terms" ||
+    pathname === "/en/about" ||
+    pathname === "/en/contact"
   ) {
     return "yearly";
   }

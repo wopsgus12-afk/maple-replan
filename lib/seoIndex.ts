@@ -12,10 +12,14 @@ export const INDEXABLE_STATIC_PATHS = [
   "/feedback",
   "/privacy",
   "/terms",
+  "/about",
+  "/contact",
   "/en",
   "/en/guide",
   "/en/privacy",
   "/en/terms",
+  "/en/about",
+  "/en/contact",
 ] as const;
 
 /** Utility / redirect / download surfaces — never sitemap, never canonical targets. */
@@ -58,8 +62,12 @@ export function sitemapChangeFrequency(
   if (
     normalized === "/privacy" ||
     normalized === "/terms" ||
+    normalized === "/about" ||
+    normalized === "/contact" ||
     normalized === "/en/privacy" ||
-    normalized === "/en/terms"
+    normalized === "/en/terms" ||
+    normalized === "/en/about" ||
+    normalized === "/en/contact"
   ) {
     return "yearly";
   }

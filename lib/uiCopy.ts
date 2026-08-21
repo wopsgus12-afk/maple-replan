@@ -13,8 +13,10 @@ export const UI = {
     langSwitchLabel: "English",
     langSwitchAria: "Switch to English",
     footerLegalAria: "법적 고지",
-    footerPrivacy: "개인정보처리방침",
-    footerTerms: "이용약관",
+    footerPrivacy: "개인정보처리방침 (Privacy Policy)",
+    footerTerms: "이용약관 (Terms of Service)",
+    footerAbout: "사이트 소개 (About GG-PASS)",
+    footerContact: "문의하기 (Contact Us)",
     footerCopyright: (year: number, updated: string) =>
       `© ${year} wopsgame · 비공식 팬 도구 · 법적 문서 최종 개정: ${updated}`,
     guideIndexTitle: "재획 가이드",
@@ -116,7 +118,9 @@ export const UI = {
     langSwitchAria: "한국어로 전환",
     footerLegalAria: "Legal",
     footerPrivacy: "Privacy Policy",
-    footerTerms: "Terms of Use",
+    footerTerms: "Terms of Service",
+    footerAbout: "About GG-PASS",
+    footerContact: "Contact Us",
     footerCopyright: (year: number, updated: string) =>
       `© ${year} wopsgame · Unofficial fan tool · Legal docs last updated: ${updated}`,
     guideIndexTitle: "Hunting & Meso Guides",

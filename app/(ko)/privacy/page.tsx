@@ -1,47 +1,39 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { LegalDocument } from "@/components/LegalDocument";
-import { SiteHeader } from "@/components/SiteHeader";
+import { LegalPageShell } from "@/components/LegalPageShell";
 import {
   LEGAL_EFFECTIVE_DATE,
   LEGAL_LAST_UPDATED,
   PRIVACY_SECTIONS,
 } from "@/lib/legalContent";
 import { sectionLanguageAlternates } from "@/lib/hreflang";
+import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 export const revalidate = false;
 
 export const metadata: Metadata = {
-  title: "개인정보처리방침 | 메이플 재획 정산",
+  title: "개인정보처리방침 | GG-PASS",
   description:
-    "메이플 재획 정산 도구의 개인정보처리방침. localStorage, 커뮤니티 게시글, 광고 쿠키, 이용자 권리 및 문의처를 안내합니다.",
+    "GG-PASS 개인정보처리방침. Google AdSense·DART 쿠키, 맞춤 광고 거부 방법, Google Analytics, 쿠팡 파트너스 고지를 포함합니다.",
   alternates: sectionLanguageAlternates("ko", "/privacy"),
+  openGraph: {
+    title: "개인정보처리방침 | GG-PASS",
+    url: `${SITE_URL}/privacy`,
+    locale: "ko_KR",
+    type: "website",
+  },
 };
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-maple-bg pb-8">
-      <SiteHeader />
-      <main className="mx-auto max-w-2xl px-4 py-8">
-        <nav className="mb-6 flex flex-wrap items-center gap-3">
-          <Link href="/" className="text-xs text-maple-muted hover:text-maple-gold">
-            ← 메인으로
-          </Link>
-          <span className="text-maple-border" aria-hidden>
-            |
-          </span>
-          <Link href="/terms" className="text-xs text-maple-muted hover:text-maple-gold">
-            이용약관
-          </Link>
-        </nav>
-        <LegalDocument
-          title="개인정보처리방침"
-          sections={PRIVACY_SECTIONS}
-          effectiveDate={LEGAL_EFFECTIVE_DATE}
-          lastUpdated={LEGAL_LAST_UPDATED}
-        />
-      </main>
-    </div>
+    <LegalPageShell locale="ko">
+      <LegalDocument
+        title="개인정보처리방침"
+        sections={PRIVACY_SECTIONS}
+        effectiveDate={LEGAL_EFFECTIVE_DATE}
+        lastUpdated={LEGAL_LAST_UPDATED}
+      />
+    </LegalPageShell>
   );
 }
