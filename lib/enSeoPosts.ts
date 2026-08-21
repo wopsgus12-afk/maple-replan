@@ -6644,6 +6644,147 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "arteria-vs-dowonkyung-force-guide-part5",
+    title:
+      "[Fact Check] Arteria Sacred Force Penalty vs Shangri-La 1.5x Bonus: WAP Wage Reversal",
+    description:
+      "Hands-on experience surviving Sacred Force 300 penalties and 2-hit KO mob leaks in Arteria vs 1.5x Force bonus 1-hit clears in Shangri-La. Auditing 2-hour mesos, Sol Erda Fragments, and net profits after 1% AH tax.",
+    koSlug: "arteria-vs-dowonkyung-force-guide-part5",
+    sections: [
+      {
+        heading:
+          "[Fact Check] Arteria Sacred Force Penalty vs Shangri-La 1.5x Bonus: 2-Hour WAP Net Revenue Reversal Audit",
+        paragraphs: [
+          "Reaching Level 280 and entering Arteria for the first time, I foolishly assumed that higher-tier hunting zones automatically yielded higher mesos and EXP. With only 260 Sacred Force, I stepped into the 300 Sacred Force required 'Lowest Floor Passage' zone. Suffering from a severe 20% damage reduction penalty, my skills were degraded to a 2-hit KO struggle. Mobs failed to die on spawn, creating severe spawn leaks. Over that 2-hour WAP session, I earned 48 million fewer raw mesos and looted 5 fewer Sol Erda Fragments compared to staying in Shangri-La (Dowonkyung).",
+          "In MapleStory Grandis, higher-level maps do not guarantee higher earnings. Grinding in a lower-tier zone with a 1.5x Sacred Force damage bonus (guaranteeing 100% 1-hit KOs) yields substantially higher net profits than forcing your way into higher zones with damage penalties. In this guide, I compare audited 2-hour WAP data between 'Arteria Force Penalty' and 'Shangri-La 1.5x Bonus' setups under 100% Meso and 200% Drop gear, breaking down net revenues after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Arteria Force Penalty vs Shangri-La 1.5x Bonus Comparison (2-Hour WAP)",
+        paragraphs: [
+          "Audited performance data of the same character grinding with 260 Sacred Force across both regions:",
+        ],
+        table: {
+          headers: [
+            "Grinding Environment",
+            "Arteria (Lowest Floor Passage)",
+            "Shangri-La (Faded Autumn 2)",
+            "Real-World Loss Analysis",
+          ],
+          rows: [
+            [
+              "Required Sacred Force",
+              "300 (Actual: 260 / Deficient)",
+              "260 (Actual: 390 / 1.5x Bonus)",
+              "Arteria damage penalty active",
+            ],
+            [
+              "Actual Skill Threshold",
+              "2-Hit KO (Mob Overflow)",
+              "1-Hit KO (Flawless Full Clear)",
+              "Arteria mob leak rate ~24%",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~134M Mesos",
+              "~182M Mesos",
+              "Shangri-La earns +48M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "12 to 15 Frags",
+              "17 to 21 Frags",
+              "Shangri-La loots +4~5 Frags",
+            ],
+            [
+              "Fatigue & Wrist Strain",
+              "★★★★☆ (Intense chasing)",
+              "★☆☆☆☆ (Stationary Lazy)",
+              "Arteria causes severe fatigue",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. Why Forcing Higher-Tier Maps Causes Massive Financial Loss",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Spawn Leaks Destroying Drop Rates",
+            paragraphs: [
+              "MapleStory monsters spawn roughly every 7.5 seconds. If you fail to kill mobs in 1 hit, you spend twice as much time per pack, causing mobs to survive past the next spawn cycle. This \"spawn leak\" erases thousands of potential mob kills per hour, directly crushing your meso and Fragment yields.",
+            ],
+          },
+          {
+            heading: "(2) Extreme Physical Fatigue",
+            paragraphs: [
+              "Reaching 1-hit KO thresholds enables stationary, lazy grinding where you cycle basic skills with zero effort. In contrast, 2-hit KO struggles force you to jump frantically across multistory ledges to hunt down stray mobs, destroying wrist health and breaking 2-hour session consistency.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. 2-Hour WAP Net Revenue Audit & Wage Reversal Breakdown",
+        paragraphs: [
+          "Financial balance sheets subtracting required consumables and 1% Auction House taxes:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Shangri-La 1.5x Force Bonus (Optimal Clearing)",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 182M Mesos",
+              "Sol Erda Fragments (19 Frags @ 6M ea): 114M Mesos",
+              "Gross Revenue: 296M Mesos",
+              "Deductions: 1% AH Fee (-1.14M) + 1 WAP Potion (-7M) + Potions (-3M)",
+              "Shangri-La Net Profit: ~285M Mesos (~142.5M Mesos / Hour)",
+            ],
+          },
+          {
+            heading: "⚠️ Arteria Force Penalty (Suboptimal 2-Hit KO Grinding)",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 134M Mesos",
+              "Sol Erda Fragments (14 Frags @ 6M ea): 84M Mesos",
+              "Gross Revenue: 218M Mesos",
+              "Deductions: 1% AH Fee (-840K) + 1 WAP Potion (-7M) + Potions (-3M)",
+              "Arteria Net Profit: ~207M Mesos (~103.5M Mesos / Hour)",
+            ],
+            paragraphsAfterBullets: [
+              "Verdict: Rushing into Arteria with deficient Sacred Force causes an astronomical loss of ~78M Mesos per 2-hour session (~39M Mesos / Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. When should I transition into Arteria?",
+            paragraphs: [
+              "Only transition when you meet the full 300 Sacred Force requirement (eliminating damage penalties) and your primary skills/Sol Janus summons reliably 1-hit KO all mobs with standard hunting buffs.",
+            ],
+          },
+          {
+            heading: "Q. Isn't higher base EXP in Arteria worth the penalty?",
+            paragraphs: [
+              "No. When mob leaks occur due to 2-hit KOs, total EXP gained is actually lower than clearing 100% of spawns in Shangri-La with a 1.5x damage bonus.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Compare Your Map Wages in 10 Seconds",
+        paragraphs: [
+          "Unsure whether staying in a lower-tier map is more profitable than pushing higher? Input your meso and Fragment drops into the GG-PASS Meso Calculator (https://gg-pass.com/en/) to compare real-time net hourly wages!",
+          "Compare Map Profits on GG-PASS in 10 Seconds: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
