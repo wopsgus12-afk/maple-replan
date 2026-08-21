@@ -6785,6 +6785,147 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "carcion-vs-arteria-onekill-guide-part6",
+    title:
+      "[Fact Check] Carcion 2-Hit Mob Leak vs Arteria Lazy 1-Hit Clear: 2-Hour WAP Wage Audit",
+    description:
+      "Hands-on experience surviving Sacred Force 330 penalties and 2-hit KO mob leaks in Carcion vs 1.5x Force bonus 1-hit clears in Arteria. Auditing 2-hour raw mesos, Sol Erda Fragments, and net profits after 1% AH tax.",
+    koSlug: "carcion-vs-arteria-onekill-guide-part6",
+    sections: [
+      {
+        heading:
+          "[Fact Check] Carcion 2-Hit Mob Leak vs Arteria Lazy 1-Hit Clear: 2-Hour WAP Net Revenue Reversal Audit",
+        paragraphs: [
+          "Reaching Level 285 and stepping into Carcion (Cradle of Life) for the first time, I foolishly expected that higher base meso drops and fragment rates would automatically maximize my income. With only 300 Sacred Force, I pushed into the 330 Sacred Force 'Sunken Ruins' zone. Suffering from severe damage reduction penalties, my primary skills, homing projectiles, and Sol Janus summons all required 2 to 3 hits to kill mobs. Mobs leaked relentlessly across branch platforms, resulting in a staggering loss of 52 million raw mesos and 6 fewer Sol Erda Fragments over a 2-hour WAP session compared to staying in Arteria.",
+          "Carcion features massive monster HP and sprawling maps. Without guaranteed 1-hit KO thresholds and multi-turret Sol Janus coverage, your spawn leak rate easily exceeds 25~30%. Conversely, grinding in Arteria with a 1.5x Sacred Force damage bonus ensures 0% mob leaks and relaxed, stationary farming. In this guide, I compare audited 2-hour WAP data between 'Carcion Under-Force 2-Hit Struggle' and 'Arteria 1.5x Full Clear' setups under 100% Meso and 200% Drop gear, breaking down net revenues after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Carcion 2-Hit Mob Leak vs Arteria 1.5x Bonus Comparison (2-Hour WAP)",
+        paragraphs: [
+          "Audited performance data of the same character grinding with 300 Sacred Force across both regions:",
+        ],
+        table: {
+          headers: [
+            "Grinding Environment",
+            "Carcion (Sunken Ruins 1)",
+            "Arteria (Lowest Floor Passage)",
+            "Real-World Loss Analysis",
+          ],
+          rows: [
+            [
+              "Required Sacred Force",
+              "330 (Actual: 300 / Deficient)",
+              "300 (Actual: 450 / 1.5x Bonus)",
+              "Carcion damage penalty active",
+            ],
+            [
+              "Actual Skill Threshold",
+              "2-Hit KO (Severe Mob Leaks)",
+              "1-Hit KO (Flawless Full Clear)",
+              "Carcion mob leak rate ~28%",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~141M Mesos",
+              "~193M Mesos",
+              "Arteria earns +52M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "13 to 16 Frags",
+              "19 to 23 Frags",
+              "Arteria loots +6 Frags",
+            ],
+            [
+              "Fatigue & Wrist Strain",
+              "★★★★★ (Intense jumping & chasing)",
+              "★☆☆☆☆ (Stationary Lazy)",
+              "Carcion causes severe fatigue",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. The True Financial Costs of 2-Hit Mob Leaks in Carcion",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Collapse of Passive Summons & Projectile Clearing",
+            paragraphs: [
+              "Passive projectiles (Night Lord Marks, Bowmaster Quivers, Wind Archer Whims) and Sol Janus turrets have lower damage multipliers than your main skills. When your main skill takes 2 hits, summons require 3 to 4 hits. This destroys your passive map control, directly causing massive spawn leaks.",
+            ],
+          },
+          {
+            heading: "(2) Broken Meso Looting Rotations",
+            paragraphs: [
+              "Chasing down stray mobs on vertical branches disrupts your strict 2-minute meso collection rhythm. Mesos despawning on the ground easily cost an extra 20M+ mesos per session.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. 2-Hour WAP Net Revenue Audit & Wage Reversal Breakdown",
+        paragraphs: [
+          "Financial balance sheets subtracting required consumables and 1% Auction House taxes:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Arteria 1.5x Force Bonus (Optimal Clearing)",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 193M Mesos",
+              "Sol Erda Fragments (21 Frags @ 6M ea): 126M Mesos",
+              "Gross Revenue: 319M Mesos",
+              "Deductions: 1% AH Fee (-1.26M) + 1 WAP Potion (-7M) + Potions (-3M)",
+              "Arteria Net Profit: ~307M Mesos (~153.5M Mesos / Hour)",
+            ],
+          },
+          {
+            heading: "⚠️ Carcion 2-Hit Mob Leak (Suboptimal Penalty Grinding)",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 141M Mesos",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Gross Revenue: 231M Mesos",
+              "Deductions: 1% AH Fee (-900K) + 1 WAP Potion (-7M) + Potions (-3M)",
+              "Carcion Net Profit: ~220M Mesos (~110.0M Mesos / Hour)",
+            ],
+            paragraphsAfterBullets: [
+              "Verdict: Pushing prematurely into Carcion without 1-hit KO capabilities causes a devastating loss of ~87M Mesos per 2-hour session (~43.5M Mesos / Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. When should I make the transition to Carcion?",
+            paragraphs: [
+              "Only transition once you exceed 330 Sacred Force (eliminating the damage reduction) and your Sol Janus summons can reliably 1~2 shot mobs across wide platforms.",
+            ],
+          },
+          {
+            heading: "Q. Doesn't Carcion provide faster leveling regardless?",
+            paragraphs: [
+              "No. With a 28% spawn leak rate, your total hourly kill count drops so heavily that total EXP gained is actually lower than flawless 1-hit clears in Arteria.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Compare Your Map Wages in 10 Seconds",
+        paragraphs: [
+          "Unsure whether staying in Arteria is more profitable than struggling in Carcion? Input your meso and Fragment drops into the GG-PASS Meso Calculator (https://gg-pass.com/en/) to compare real-time net hourly wages!",
+          "Compare Map Profits on GG-PASS in 10 Seconds: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
