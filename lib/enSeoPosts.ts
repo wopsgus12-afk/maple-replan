@@ -6926,6 +6926,148 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "tallahart-vs-carcion-fragment-guide-part7",
+    title:
+      "[Fact Check] Tallahart Entry vs Carcion Retention: Sol Erda Fragment Farming & 2-Hour WAP Wage Audit",
+    description:
+      "Hands-on experience surviving Sacred Force 630 bare-minimum penalties and 40-mob spawn leaks in Tallahart vs 1.5x Force bonus 1-hit clears in Carcion. Auditing 2-hour mesos, Sol Erda Fragments, and net profits after 1% AH tax.",
+    koSlug: "tallahart-vs-carcion-fragment-guide-part7",
+    sections: [
+      {
+        heading:
+          "[Fact Check] Tallahart Entry vs Carcion Retention: Sol Erda Fragment Farming & 2-Hour WAP Net Revenue Reversal Audit",
+        paragraphs: [
+          "Reaching Level 290 and unlocking Tallahart (Tomb of the Gods), I excitedly rushed into the new area assuming that the endgame hunting ground would naturally yield far more Sol Erda Fragments and mesos. With only 630 Sacred Force and a low-level Sol Janus, I entered 'Land of Ash and Silence'. Tallahart spawns a massive cap of 40 mobs per wave. Failing to 1-hit KO mobs within the strict 7.5-second spawn cycle caused severe mob backlog. Over that 2-hour WAP session, I lost 43 million raw mesos and looted 6 fewer Sol Erda Fragments compared to staying in Carcion.",
+          "Sol Erda Fragment drop rates fundamentally scale with your total kill count per 2 hours. Struggling with a 25~30% spawn leak rate in Tallahart is drastically inferior to grinding in Carcion with a 1.5x Sacred Force damage bonus, where you effortlessly clear 16,000 mobs per hour. In this guide, I compare audited 2-hour WAP data between 'Tallahart Bare-Minimum Under-Clear' and 'Carcion 1.5x Full Clear' setups under 100% Meso and 200% Drop gear, breaking down net revenues after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Tallahart Mob Leak vs Carcion 1.5x Bonus Comparison (2-Hour WAP)",
+        paragraphs: [
+          "Audited performance data of the same character grinding with 630 Sacred Force across both regions:",
+        ],
+        table: {
+          headers: [
+            "Grinding Environment",
+            "Tallahart (Silent Ashlands 2)",
+            "Carcion (Sunken Ruins 1)",
+            "Real-World Loss Analysis",
+          ],
+          rows: [
+            [
+              "Required Sacred Force",
+              "630 (Actual: 630 / Bare Minimum)",
+              "330 (Actual: 495 / 1.5x Bonus)",
+              "No bonus in Tallahart, 1.5x Force in Carcion",
+            ],
+            [
+              "Actual Skill Threshold",
+              "1~2 Hits (40-Mob Backlog)",
+              "1-Hit KO (Flawless Full Clear)",
+              "Tallahart mob leak rate ~26%",
+            ],
+            [
+              "Raw Mesos (2 Hours)",
+              "~152M Mesos",
+              "~195M Mesos",
+              "Carcion earns +43M Mesos",
+            ],
+            [
+              "Sol Erda Fragments",
+              "14 to 17 Frags",
+              "20 to 24 Frags",
+              "Carcion loots +6~7 Frags",
+            ],
+            [
+              "Fatigue & Wrist Strain",
+              "★★★★☆ (Forced chasing for 40 mobs)",
+              "★☆☆☆☆ (Stationary Lazy)",
+              "Tallahart causes severe fatigue",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. Why Rushing Tallahart Lowers Total Fragment Drops",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Total Mob Kill Deficit",
+            paragraphs: [
+              "Tallahart features massive 40-mob spawns across large terrain with double the monster HP. Without Level 10+ Sol Janus (2 Dawn turrets), you only clear half the map while the rest overflows and despawns. Your kill count drops from 16,000/hr in Carcion down to 12,000/hr in Tallahart, severely reducing total fragment loot rolls.",
+            ],
+          },
+          {
+            heading: "(2) Ground Meso Despawning",
+            paragraphs: [
+              "Trying to manually chase down 40 scattered mobs destroys your 2-minute meso collection cycle. Over 20M mesos despawn on the ground each 2-hour session.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. 2-Hour WAP Net Revenue Audit & Wage Reversal Breakdown",
+        paragraphs: [
+          "Financial balance sheets subtracting required consumables and 1% Auction House taxes:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Carcion 1.5x Force Bonus (Optimal Clearing)",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 195M Mesos",
+              "Sol Erda Fragments (22 Frags @ 6M ea): 132M Mesos",
+              "Gross Revenue: 327M Mesos",
+              "Deductions: 1% AH Fee (-1.32M) + 1 WAP Potion (-7M) + Potions (-3M)",
+              "Carcion Net Profit: ~315M Mesos (~157.5M Mesos / Hour)",
+            ],
+          },
+          {
+            heading: "⚠️ Tallahart Spawn Leak (Premature Entry)",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 152M Mesos",
+              "Sol Erda Fragments (15 Frags @ 6M ea): 90M Mesos",
+              "Gross Revenue: 242M Mesos",
+              "Deductions: 1% AH Fee (-900K) + 1 WAP Potion (-7M) + Potions (-3M)",
+              "Tallahart Net Profit: ~231M Mesos (~115.5M Mesos / Hour)",
+            ],
+            paragraphsAfterBullets: [
+              "Verdict: Rushing prematurely into Tallahart causes a massive loss of ~84M Mesos per 2-hour session (~42M Mesos / Hour).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. When should I fully transition into Tallahart?",
+            paragraphs: [
+              "Only transition when you secure 660+ Sacred Force and Level 10+ Sol Janus (2 Dawn turrets) so that all 40 mobs die instantly on spawn.",
+            ],
+          },
+          {
+            heading:
+              "Q. If Sol Erda Fragment farming is my top priority, what map should I pick?",
+            paragraphs: [
+              "The best map is always the one where you can achieve flawless 1-hit KOs and maintain 15,000~16,000 mob kills per hour with zero effort.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Compare Your Map Wages in 10 Seconds",
+        paragraphs: [
+          "Unsure whether staying in Carcion is better than pushing into Tallahart? Input your meso and Fragment drops into the GG-PASS Meso Calculator (https://gg-pass.com/en/) to compare real-time net hourly wages!",
+          "👉 Compare Map Profits on GG-PASS in 10 Seconds: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
