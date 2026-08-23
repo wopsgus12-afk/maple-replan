@@ -7224,6 +7224,156 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "sol-janus-job-type-rotation-guide-part9",
+    title:
+      "MapleStory Class Sol Janus Placement Guide: 2-Minute Meso Looting Rotation & WAP Wage",
+    description:
+      "Master Sol Janus: Dawn turret placements for Projectile, Mage Teleport, and Warrior classes. Prevent 2-minute ground meso despawning and eliminate spawn leaks. Auditing net profits after 1% AH tax.",
+    koSlug: "sol-janus-job-type-rotation-guide-part9",
+    sections: [
+      {
+        heading:
+          "[Class Archetypes] Sol Janus Multi-Turret Placement & 2-Minute Meso Looting Rotation Guide",
+        paragraphs: [
+          "Following the release of the 6th Job common skill 'Sol Janus', blindly copying popular turret placements without understanding your class mobility often leads to severe inefficiencies. When turret attacks overlap with your character's natural attack path, opposite ledges are left untouched, causing massive spawn leaks. Furthermore, getting distracted by combat and missing the 2-minute (120-second) ground meso despawn window once cost me over 30 million raw mesos in a single 2-hour WAP session.",
+          "Sol Janus must be deployed strategically across your class's blind spots based on your core movement archetype (Homing Projectiles, Mage Teleport, or Melee Rush) to achieve true stationary 1-hit full clears. Establishing a strict 2-minute meso collection rhythm ensures you harvest 100% of dropped mesos without missing a single spawn wave. In this guide, I break down archetype-specific Sol Janus placements, the 2-minute meso despawn prevention blueprint, and net revenues after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Class Archetype Sol Janus Placements & Looting Cycles Comparison",
+        paragraphs: [
+          "Audited performance breakdown comparing the 3 primary class mobility archetypes:",
+        ],
+        table: {
+          headers: [
+            "Class Archetype",
+            "Representative Classes",
+            "Sol Janus Turret Placement Rule",
+            "2-Min Meso Looting Pattern",
+            "Clear Efficiency & Ease",
+          ],
+          rows: [
+            [
+              "Projectile / Homing",
+              "Night Lord, Shadower, Wind Archer, Captain",
+              "Upper opposite corner ➔ Character sweeps center",
+              "1st-floor horizontal sprint (10 sec)",
+              "★★★★★ (Elite / Simplest)",
+            ],
+            [
+              "Teleport / AoE Mage",
+              "I/L Mage, F/P Mage, Bishop, Blaze Wizard",
+              "Multi-tier blind spot split ➔ Main on ground floor",
+              "Up-teleport vertical loop (12 sec)",
+              "★★★★☆ (High / Lazy)",
+            ],
+            [
+              "Rush / Melee Warrior",
+              "Hero, Dark Knight, Paladin, Bowmaster, Kaiser",
+              "Center 2nd-floor anchor ➔ Main sweeps ground lane",
+              "Rope Lift perimeter sweep (14 sec)",
+              "★★★☆☆ (Solid / Moderate)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. Sol Janus Deployment Rules by Skill Level",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "(1) Sol Janus Level 1 to 9 (1 Dawn Turret)",
+            paragraphs: [],
+            bullets: [
+              "Placement Rule: Deploy on the highest, hardest-to-reach top ledge or opposite far corner.",
+              "Strategy: Your character controls the accessible ground floor while the single turret handles vertical stragglers, reducing vertical jumping fatigue to zero.",
+            ],
+          },
+          {
+            heading: "(2) Sol Janus Level 10 to 19 (2 Dawn Turrets)",
+            paragraphs: [],
+            bullets: [
+              "Placement Rule: Divide the map into 3 vertical sectors; place 1 turret on the Left 2nd-tier and 1 on the Right 2nd-tier.",
+              "Strategy: Anchor your character in the exact center of the ground floor. Simply rotate main skills on cooldown to clear the entire map automatically.",
+            ],
+          },
+          {
+            heading: "(3) Sol Janus Level 20+ (3 Dawn Turrets)",
+            paragraphs: [],
+            bullets: [
+              "Placement Rule: Form an equilateral triangle covering Left-Top, Center-Top, and Right-Top zones across massive maps (Arteria, Carcion, Tallahart).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Zero Despawn Loss: The 2-Minute Meso Looting Blueprint",
+        paragraphs: [
+          "Mesos and items dropped by monsters permanently despawn after exactly 2 minutes (120 seconds). Follow these steps to collect 100% of ground drops without disrupting spawn timing:",
+        ],
+        bullets: [
+          "Sync with 2-Minute Cooldown Skills: Use 120-second buff refreshes (or Erda Fountain timers) as your physical alarm to start looting.",
+          "Loot Immediately After Spawn (7.5s Cycle): The moment a monster wave spawns, wipe the map with a large AoE. Use the 5-second window before the next spawn to execute your predetermined 'U-shaped' or 'S-shaped' looting path.",
+          "Vac Pet (Vac-Pet / Petite Luna) Pathing: Utilize magnetic pet vertical suction to vacuum both 1st and 2nd floor drops simply by flash-jumping along the ground floor.",
+        ],
+      },
+      {
+        heading: "4. Optimized Class 2-Hour WAP Net Revenue Audit",
+        paragraphs: [
+          "Financial balance sheet for an optimized Sol Janus rotation with zero meso despawn loss (Arcus/Odium Average):",
+        ],
+        subsections: [
+          {
+            heading: "💡 Financial Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "Raw Mobs Meso Drops: 176M Mesos (0% Despawn Loss)",
+              "Sol Erda Fragments (18 Frags @ 6M ea): 108M Mesos",
+              "Gross Revenue: 284M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Net Hourly Wage (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 108M Fragment sales (-1.08M Mesos)",
+              "Fixed Consumables: 1 WAP Potion (-7M Mesos) + Monster Park Gold Potion (-3M Mesos)",
+              "Total Net Profit: ~273M Mesos",
+              "Net Hourly Wage: ~136M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Should I use 'Sol Janus: Dawn' (Summon) or 'Sol Janus: Dusk' (Proc)?",
+            paragraphs: [
+              "For stationary lazy grinding and minimal fatigue, 'Dawn' (Summon) is overwhelmingly superior. 'Dusk' is only viable on extremely small maps for a few specific projectile classes.",
+            ],
+          },
+          {
+            heading: "Q. How much meso is lost if I neglect the 2-minute timer?",
+            paragraphs: [
+              "Neglecting the looting cycle allows dropped mesos to despawn, resulting in a loss of 20M to 40M raw mesos per 2-hour session.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "6. [GG-PASS] Audit Your Optimized WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed your optimized Sol Janus grinding session? Calculate your exact net profit after 1% AH taxes and consumable costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Optimized WAP Earnings on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
