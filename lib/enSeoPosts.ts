@@ -7374,6 +7374,179 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "grandis-260-290-master-roadmap-guide-part10",
+    title:
+      "[Master Roadmap] MapleStory Level 260~290 Grandis Grinding Guide: Complete 2-Hour WAP Wage & Fragment Audit",
+    description:
+      "The ultimate 7-region Grandis training guide from Level 260 Cernium to Level 290 Tallahart. Auditing 2-hour raw mesos, Sol Erda Fragments, optimal area transition timing, and net profits after 1% AH tax.",
+    koSlug: "grandis-260-290-master-roadmap-guide-part10",
+    sections: [
+      {
+        heading:
+          "[Master Roadmap] MapleStory Level 260~290 Grandis Grinding Guide: Complete 2-Hour WAP Net Revenue & Transition Blueprint",
+        paragraphs: [
+          "Progression from Level 260 Cernium to Level 290 Tallahart taught me that the single biggest mistake is blindly rushing into the next zone the moment you level up. Transitioning to higher maps without meeting the 1.5x Sacred Force damage bonus or sufficient Sol Janus levels turns your farming into a chaotic 2-hit KO struggle. Mob overflow cost me 50M to 80M mesos per 2-hour WAP session, totaling hundreds of millions of mesos and dozens of Sol Erda Fragments lost during my journey to 290.",
+          "In MapleStory Grandis, map selection is governed not by character level, but by 1.5x Sacred Force bonus achievement and flawless 100% spawn-clearing capability via Sol Janus. In this master guide, I audit audited 2-hour (1 WAP) earnings and fragment drop rates across all 7 Grandis regions, providing the optimal transition roadmap and net profit balance sheets after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Grandis Level 260~290 7-Region Master Comparison (2-Hour WAP)",
+        paragraphs: [
+          "Audited performance data under 100% Meso and 200% Drop gear across all 7 Grandis flagship training maps:",
+        ],
+        table: {
+          headers: [
+            "Grandis Region (Level)",
+            "Sacred Force Req",
+            "Tier 1 Flagship Map",
+            "Raw Meso (2-Hr WAP)",
+            "Sol Erda Frags",
+            "Net Profit (1% Tax Deducted)",
+          ],
+          rows: [
+            [
+              "Cernium (260~269)",
+              "50 / 70",
+              "Royal Library Section 1",
+              "~148M Mesos",
+              "12 to 15 Frags",
+              "~218M Mesos",
+            ],
+            [
+              "Hotel Arcus (270~274)",
+              "130",
+              "Theater Backstreet 2",
+              "~155M Mesos",
+              "14 to 17 Frags",
+              "~240M Mesos",
+            ],
+            [
+              "Odium (275~279)",
+              "200 / 230",
+              "Road to Castle Gate 2",
+              "~168M Mesos",
+              "15 to 18 Frags",
+              "~264M Mesos",
+            ],
+            [
+              "Shangri-La (280~284)",
+              "260 / 300",
+              "Faded Autumn 2",
+              "~182M Mesos",
+              "17 to 21 Frags",
+              "~285M Mesos",
+            ],
+            [
+              "Arteria (280~284)",
+              "300 / 330",
+              "Lowest Floor Passage",
+              "~193M Mesos",
+              "19 to 23 Frags",
+              "~307M Mesos",
+            ],
+            [
+              "Carcion (285~289)",
+              "330 / 360",
+              "Sunken Ruins 1",
+              "~195M Mesos",
+              "20 to 24 Frags",
+              "~315M Mesos",
+            ],
+            [
+              "Tallahart (290~ )",
+              "630 / 660",
+              "Silent Ashlands 2",
+              "~191M ~ 198M",
+              "18 to 22 Frags",
+              "~294M ~ 318M",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. Optimal Grandis Area Transition Timing Roadmap",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "[Tier 1: 260~269] Cernium to Hotel Arcus Transition",
+            paragraphs: [],
+            bullets: [
+              "Action: Stay in Royal Library 1 or Western Ramparts until your Cernium symbol reaches Level 7+ and you secure 130 Sacred Force. Transition immediately to Theater Backstreet 2.",
+            ],
+          },
+          {
+            heading: "[Tier 2: 270~274] Hotel Arcus to Odium Transition",
+            paragraphs: [],
+            bullets: [
+              "Action: Enjoy 1.5x Force bonus farming (195 Force) in Theater Backstreet 2. Only move to Odium (Road to Castle Gate 2) once you satisfy 200 Sacred Force and guarantee clean 1-hit KOs.",
+            ],
+          },
+          {
+            heading:
+              "[Tier 3: 275~284] Odium to Shangri-La & Arteria Transition",
+            paragraphs: [],
+            bullets: [
+              "Action: If you reach Level 280 but lack the 300 Sacred Force required for Arteria, remain in Shangri-La (Faded Autumn 2) with 1.5x bonus. Move to Arteria once you reach 300 Force and Level 10 Sol Janus.",
+            ],
+          },
+          {
+            heading:
+              "[Tier 4: 285~290+] Arteria to Carcion & Tallahart Endgame Blueprint",
+            paragraphs: [],
+            bullets: [
+              "Action: Farm Carcion once you ensure clean 1-hit kills. Upon reaching Level 290, transition to Tallahart (Silent Ashlands 2 or Night Road 2) only after securing 660+ Sacred Force and Level 10+ Sol Janus (2 Dawn turrets).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. GG-PASS Net Hourly Wage Calculation Algorithm",
+        paragraphs: [
+          "The GG-PASS calculator evaluates real-world net profits by deducting fixed consumable expenses and Auction House commissions:",
+        ],
+        subsections: [
+          {
+            heading: "💡 GG-PASS Net Profit Formula",
+            paragraphs: [
+              "Net Profit = (Raw Meso Drop) + (Fragment Count × Fragment Price × 0.99) - (1 WAP Potion + 3M Buff Potions)",
+            ],
+            bullets: [
+              "1% AH Tax Deduction: Automatically deducted from Fragment sales revenue.",
+              "Net Hourly Wage: Net Profit ÷ 2",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What is the single golden rule of Grandis training map selection?",
+            paragraphs: [
+              "Always select the map where you can achieve 100% 1-hit KOs with zero spawn leaks. 2-hit KO grinding in higher-level maps is always financially negative.",
+            ],
+          },
+          {
+            heading: "Q. What is the most cost-effective level for Sol Janus?",
+            paragraphs: [
+              "Level 10 (2 Dawn turrets) provides the highest quality-of-life and fatigue reduction. For Tallahart full clears, aim for Level 20 (3 Dawn turrets).",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Grandis WAP Earnings in 10 Seconds",
+        paragraphs: [
+          "Completed your Grandis 2-hour grinding session? Calculate your exact net profit after 1% AH taxes and consumable costs using the GG-PASS Meso Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Grandis WAP Earnings on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
