@@ -7716,6 +7716,145 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "cra-10min-boss-mule-gear-guide-part2",
+    title:
+      "MapleStory 4-CRA Boss Mule Guide: 10-Minute Clear Budget Gear & V-Matrix Node Specs",
+    description:
+      "Build a 10-minute 4-CRA (Queen, Pierre, Von Bon, Vellum) boss mule with 600M~800M mesos and 250 Nodestones. Budget 9%/10 Epic gear guide, weekly ~72M meso yields, and 9-week ROI payback audit.",
+    koSlug: "cra-10min-boss-mule-gear-guide-part2",
+    sections: [
+      {
+        heading:
+          "[Budget Guide] MapleStory 4-CRA Boss Mule Guide: 10-Minute Clear Gear & Minimal Node Specs",
+        paragraphs: [
+          "The most expensive mistake when creating bossing mules is believing you must equip 17-Star Unique gear and max out Level 60 V-Matrix nodes on every character. Sinking 2.5B to 3.0B mesos into a mule just to earn ~140M mesos per week means waiting over 24 weeks (6 months) simply to break even on your initial investment.",
+          "The absolute golden ratio for bossing mules is a 10-minute 4-CRA (Chaos Root Abyss: Queen, Pierre, Von Bon, Vellum) + Hard Magnus setup using 9%/10 Epic gear. By investing a modest budget of 600M to 800M mesos and roughly 250 Nodestones, you secure a reliable ~72M weekly meso return, achieving 100% capital payback (ROI) in just 9 to 10 weeks. In this guide, I break down the budget gear blueprint, minimal V-Matrix nodestone allocation, and net weekly yields after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. 4-CRA 10-Minute Budget Gear Breakdown (~700M Meso Budget)",
+        paragraphs: [
+          "Below is the audited gear and stat blueprint required to clear 4-CRA in under 10 minutes (3.5M~5M Combat Power, 88%+ IED):",
+        ],
+        table: {
+          headers: [
+            "Equipment Slot",
+            "Recommended Gear Setup",
+            "Star Force & Potential Target",
+            "Estimated Cost",
+          ],
+          rows: [
+            [
+              "Weapon",
+              "10-Star Fafnir Weapon (70% Spell Trace)",
+              "6% ATT/MATT + 10 ATT Bpot",
+              "~80M Mesos",
+            ],
+            [
+              "Armor 3-Piece (Hat/Top/Bottom)",
+              "10-Star CRA Armor (70+ Flame Stat)",
+              "9% Main Stat + 10 ATT Bpot",
+              "~50M Mesos each",
+            ],
+            [
+              "Secondary & Emblem (WSE)",
+              "Epic Secondary / Epic Emblem",
+              "6% ATT/MATT or 15% IED",
+              "~120M Mesos",
+            ],
+            [
+              "9-Piece Boss Accessory Set",
+              "Condensed Power, Aquatic, Dea Sidus, Silver Blossom",
+              "10-Star / 9% Stat / Basic Bpot",
+              "~180M Mesos total",
+            ],
+            [
+              "V-Matrix Nodestones",
+              "~200 to 250 Nodestones",
+              "Boost main 2~3 bossing skills to Level 40",
+              "~150M ~ 200M Mesos",
+            ],
+            [
+              "Total Investment",
+              "Complete 10-Minute 4-CRA Setup",
+              "4M Combat Power / 88% IED / 11k Stat",
+              "~680M ~ 750M Mesos",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Minimal V-Matrix Blueprint: Double Your Damage with 250 Nodes",
+        paragraphs: [
+          "You do not need to max out 5th Job skill nodes for 4-CRA. Maximize your burst output using this 3-step nodestone rule:",
+        ],
+        bullets: [
+          "Target Level 40 on Boost Nodes (Trio Nodes): Equip only 2 boost nodes and utilize Matrix Slot Enhancements to reach Level 40 (+80%~100% final damage) on your primary bossing skills.",
+          "Leave 5th Job Burst Skills at Level 1: 5th Job active burst skills feature massive baseline multipliers at Level 1. Keep them at Level 1 to save nodestones.",
+          "Equip Decent Skills at Level 1: Slot 'Decent Sharp Eyes' at Level 1 to guarantee 100% Critical Rate.",
+        ],
+      },
+      {
+        heading:
+          "3. Weekly 4-CRA Net Revenue Audit & Payback Period (ROI)",
+        paragraphs: [
+          "Financial balance sheet for clearing 4-CRA and Hard Magnus weekly on a single mule:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Single 4-CRA Mule Weekly Financial Parameters",
+            paragraphs: [],
+            bullets: [
+              "4-CRA Intense Power Crystals (Queen 9.6M + Pierre 9.6M + Von Bon 9.6M + Cvel 12.5M): ~41.3M Mesos",
+              "Sub-Weekly Bosses (HMag 11.5M + CZak 9.7M + HHilla 6.8M): ~28.0M Mesos",
+              "Boss Accessory / Occult Cube Drops: ~5.0M Mesos",
+              "Total Gross Weekly Revenue: ~74.3M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Payback Period (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on accessory sales (-50K Mesos)",
+              "Fixed Consumables: Guild Buffs, Power Elixirs (-2M Mesos)",
+              "Total Net Weekly Yield: ~72.25M Mesos",
+              "ROI Payback Window: 680M Total Capital ÷ 72.25M Net Weekly = ~9.4 Weeks (~2 Months)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. What is the required Ignore Enemy Defense (IED) for 4-CRA?",
+            paragraphs: [
+              "Chaos Vellum has 200% PDR. You need at least 85% visual IED (ideally 88%~90%) via Legion and Link skills to prevent damage reduction penalties.",
+            ],
+          },
+          {
+            heading:
+              "Q. Chaos Vellum wastes too much time burrowing underground.",
+            paragraphs: [
+              "Bind Vellum immediately upon entry and unleash your full 5th Job burst rotation to remove 60%+ of its HP instantly, allowing a clean clear within 90 seconds.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Boss Mule Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished your weekly boss runs? Check off your defeated bosses to calculate your exact net crystal profit after consumable costs using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Weekly Crystal Profits on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
