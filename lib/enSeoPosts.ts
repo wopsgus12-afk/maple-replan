@@ -7547,6 +7547,175 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "weekly-boss-crystal-income-tier-guide-part1",
+    title:
+      "MapleStory Weekly Boss Crystal Price List: Boss Mule Tier List & Net Meso Wage Audit",
+    description:
+      "Complete price breakdown for Weekly Intense Power Crystals under the 68-crystal weekly cap. Auditing Cra, Lomien, Slime, and Lucid mule gear setup costs, investment payback periods (ROI), and net weekly revenues after 1% AH tax.",
+    koSlug: "weekly-boss-crystal-income-tier-guide-part1",
+    sections: [
+      {
+        heading:
+          "[Boss Mules] MapleStory Weekly Boss Crystal Price List: Mule Tiers & Net Meso Revenue Audit",
+        paragraphs: [
+          "Believing that building multiple bossing mules would generate effortless weekly passive income, I rushed to gear 6 different characters up to Cra/Lomien tiers without calculating node costs and star force expenses. After pouring 2 to 3 billion mesos into each character's gear and 6th Job origin skills, each mule only returned ~145M mesos per week. It took over 6 months just to break even on my initial capital, while running 6 boss rosters every Thursday severely damaged my wrist stamina.",
+          "In MapleStory, where accounts are bound by the 68 Intense Power Crystal weekly sales cap, you must strictly evaluate Meso per Minute cleared and Return on Investment (ROI) payback windows. In this guide, I provide the complete Weekly Boss Crystal Price List, compare the 3 primary mule tier breakpoints, and audit net weekly earnings after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Weekly Boss Intense Power Crystal Price List (Solo Clear Baseline)",
+        paragraphs: [
+          "Below is an audited price breakdown for solo weekly boss clears and average clear duration:",
+        ],
+        table: {
+          headers: [
+            "Boss Difficulty",
+            "Solo Crystal Value (Approx.)",
+            "Req Combat Power / IED",
+            "Avg Clear Time",
+            "Meso/Minute Tier",
+          ],
+          rows: [
+            [
+              "3 CRA (Queen / Pierre / Von Bon)",
+              "~9.6M Mesos each",
+              "3M+ CP (85% IED)",
+              "1~2 mins",
+              "★★★★★ (Elite ROI)",
+            ],
+            [
+              "Chaos Vellum (Cvel)",
+              "~12.5M Mesos",
+              "5M+ CP (90% IED)",
+              "1~3 mins",
+              "★★★★★ (Mandatory)",
+            ],
+            [
+              "Hard Magnus / Chaos Papulatus",
+              "~11.5M / 26M Mesos",
+              "6M~10M CP",
+              "2~4 mins",
+              "★★★★☆ (High Mechanics)",
+            ],
+            [
+              "Normal Lotus & Damien (Lomien)",
+              "~34M Mesos each",
+              "12M+ CP (93% IED)",
+              "3~5 mins",
+              "★★★★☆ (Standard Sweet Spot)",
+            ],
+            [
+              "Normal Guardian Angel Slime",
+              "~45M Mesos",
+              "20M+ CP (6th Job)",
+              "4~6 mins",
+              "★★★☆☆ (Transition Point)",
+            ],
+            [
+              "Easy Lucid & Easy Will",
+              "~48M / 52M Mesos",
+              "25M+ CP (Force Req)",
+              "5~8 mins",
+              "★★☆☆☆ (High Investment)",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Top 3 Boss Mule Investment Tiers & Payback Periods (ROI)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "(1) 4 CRA + Hard Magnus Tier (The Best Budget Sweet Spot)",
+            paragraphs: [],
+            bullets: [
+              "Gear Investment: 9%/10 Epic gear + 200 Nodestones (~500M~800M Mesos)",
+              "Weekly Net Yield: ~65M Mesos per character (10-minute clear)",
+              "ROI Payback Window: ~8 to 10 Weeks (2 Months) ➔ The lowest wrist fatigue and fastest break-even point in the game.",
+            ],
+          },
+          {
+            heading:
+              "(2) Normal Lotus & Damien (Lomien) Tier (Mainstream Mule Target)",
+            paragraphs: [],
+            bullets: [
+              "Gear Investment: 17-Star Unique gear + Level 50+ V-Matrix (~2.5B~3.5B Mesos)",
+              "Weekly Net Yield: ~145M Mesos per character (20-minute clear)",
+              "ROI Payback Window: ~20 to 24 Weeks (5~6 Months) ➔ Ideal for event coin farming and long-term roster growth.",
+            ],
+          },
+          {
+            heading:
+              "(3) Normal Slime + Easy Luwill Tier (High-Investment Sub-Main)",
+            paragraphs: [],
+            bullets: [
+              "Gear Investment: 18-Star Legendary gear + 6th Job Mastery Nodes (~8B~12B Mesos)",
+              "Weekly Net Yield: ~260M Mesos per character (35-minute clear)",
+              "ROI Payback Window: ~35 to 45 Weeks (~1 Year) ➔ Poor pure financial ROI unless transitioning into a new main character.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. 6-Mule Weekly Net Revenue Balance Sheet (Lomien Tier)",
+        paragraphs: [
+          "Financial balance sheet for clearing 6 Lomien-tier mules during Thursday weekly resets:",
+        ],
+        subsections: [
+          {
+            heading: "💡 6-Mule Lomien Roster Baseline Parameters",
+            paragraphs: [],
+            bullets: [
+              "6 Mules Gross Crystal Revenue: 870M Mesos (145M ea)",
+              "Guardian Angel Ring / Boss Accessories Drops: ~60M Mesos",
+              "Total Gross Weekly Revenue: 930M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Net Profit (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 60M accessory sales (-600K Mesos)",
+              "Fixed Consumables: Guild Buffs, Monster Park Pots, Power Elixirs (-15M Mesos)",
+              "Total Net Weekly Profit: ~914M Mesos",
+              "Hourly Wage Equivalent: ~457M Mesos / Hour (Across 2 hours total playtime)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. How should I manage the 68-crystal weekly cap?",
+            paragraphs: [
+              "Never sell low-tier daily boss crystals (Normal Zakum, Hilla, Normal Root Abyss) worth under 1M mesos. Reserve all 68 sales slots strictly for your highest-value weekly boss crystals.",
+            ],
+          },
+          {
+            heading:
+              "Q. How many boss mules should a new player start with?",
+            paragraphs: [
+              "Start with 1 Main + 2 CRA Mules (3 characters total). This secures a consistent ~200M weekly meso baseline without causing financial burnout.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "5. [GG-PASS] Audit Your Weekly Boss Mule Wages in 10 Seconds",
+        paragraphs: [
+          "Finished your weekly boss runs? Check off your defeated bosses to calculate your exact net crystal profit after consumable costs using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Weekly Crystal Profits on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
