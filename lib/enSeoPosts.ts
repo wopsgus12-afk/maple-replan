@@ -7855,6 +7855,150 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "lomien-20min-boss-mule-gear-guide-part3",
+    title:
+      "MapleStory Normal Lomien Boss Mule Guide: 20-Min Clear 17-Star Gear & V-Matrix Specs",
+    description:
+      "Build a 20-minute Normal Lotus & Damien (Lomien) boss mule with 2.5B~3.0B mesos and 400 Nodestones. 17-Star Unique/Epic budget gear guide, weekly ~145M meso yields, and 20-week ROI payback audit.",
+    koSlug: "lomien-20min-boss-mule-gear-guide-part3",
+    sections: [
+      {
+        heading:
+          "[Lomien Mule] MapleStory Normal Lomien Boss Mule Guide: 20-Min Clear 17-Star Gear & V-Matrix Setup",
+        paragraphs: [
+          "Upgrading a bossing mule from Chaos Root Abyss to Normal Lotus and Damien (Lomien) often tempts players to over-invest in 18-Star Legendary gear and prime potentials, burning 5 to 6 billion mesos per character. Sinking that much capital into a mule returning ~145M mesos per week stretches your break-even payback window to nearly 40 weeks (10 months), creating a severe financial deficit.",
+          "The true sweet spot for a Lomien mule is a 20-minute clear setup (Lotus 8 min, Damien 12 min) utilizing 17-Star Unique 15% / Epic 9% gear and 6th Job Origin burst mechanics. With a lean budget of 2.5B to 3.0B mesos and 400 Nodestones, you secure a steady ~145M weekly meso income, achieving 100% capital payback (ROI) in just 18 to 20 weeks (4.5 months). In this guide, I audit the 17-Star budget gear blueprint, minimal V-Matrix nodestone allocations, and net weekly yields after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Normal Lomien 20-Minute Budget Gear Breakdown (~2.8B Meso Budget)",
+        paragraphs: [
+          "Below is the audited gear and stat blueprint required to clear Normal Lomien in under 20 minutes (12M~16M Combat Power, 93%+ IED):",
+        ],
+        table: {
+          headers: [
+            "Equipment Slot",
+            "Recommended Gear Setup",
+            "Star Force & Potential Target",
+            "Estimated Cost",
+          ],
+          rows: [
+            [
+              "Weapon (17-Star Absolab/Arcane)",
+              "17-Star Absolab Weapon (15% Spell Trace)",
+              "Unique 15% ATT/MATT (or Epic 9%)",
+              "~450M ~ 600M Mesos",
+            ],
+            [
+              "3-Piece CRA Armor (Hat/Top/Bottom)",
+              "17-Star CRA Armor (80+ Flame Stat)",
+              "Epic 9%~12% Stat + 10 ATT Bpot",
+              "~250M each (~750M total)",
+            ],
+            [
+              "4-Piece Absolab (Shoulder/Glove/Shoe/Cape)",
+              "17-Star Absolab 4-Set",
+              "Epic 9% Stat + 10 ATT Bpot (Crit Dmg Glove)",
+              "~250M each (~1.0B total)",
+            ],
+            [
+              "Secondary & Emblem (WSE)",
+              "Unique Secondary / Epic Emblem",
+              "Secondary: Unique 15% ATT / Emblem: Epic 6% ATT",
+              "~350M Mesos",
+            ],
+            [
+              "9-Piece Boss Accessory Set",
+              "Condensed, Aquatic, Dea Sidus, Mech Pendant, etc.",
+              "10~17 Star / 9% Stat / Basic Bpot",
+              "~300M Mesos total",
+            ],
+            [
+              "V-Matrix & 6th Job Origin",
+              "400 Nodestones + 6th Job Unlock",
+              "Boost nodes Level 50 + 6th Origin Skill Level 1",
+              "~300M Mesos",
+            ],
+            [
+              "Total Investment",
+              "Complete 20-Minute Lomien Setup",
+              "14M Combat Power / 93% IED / 18k Stat",
+              "~2.8B ~ 3.1B Mesos",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. Level 50 Boost Nodes + 6th Job Origin Burst Strategy",
+        paragraphs: [
+          "The key to drastically cutting boss clear times in Lomien is unlocking the 6th Job Origin skill. Maximize your bossing damage using this 3-step blueprint:",
+        ],
+        bullets: [
+          "Reach Level 50 on Boost Nodes: Utilize Matrix Slot enhancements with 4 boost nodes to reach Level 50 (+100%+ final damage) on your primary bossing rotation.",
+          "Unlock 6th Job Origin Skill (Level 1): The Origin skill provides a 10-second hard absolute bind and massive raw burst, instantly stripping Phase 2 Damien and Phase 3 Lotus HP bars.",
+          "Slot Utility & Decent Skills: Equip Decent Combat Orders, Decent Sharp Eyes, and Erda Nova (lower bind cooldown) at Level 1.",
+        ],
+      },
+      {
+        heading:
+          "3. Weekly Normal Lomien Net Revenue Audit & Payback Period (ROI)",
+        paragraphs: [
+          "Financial balance sheet for clearing Normal Lotus, Damien, and sub-weekly bosses on a single mule:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Single Lomien Mule Weekly Financial Parameters",
+            paragraphs: [],
+            bullets: [
+              "Lomien Crystals (Normal Lotus 34M + Normal Damien 34M): ~68M Mesos",
+              "4-CRA & Sub-Weekly Bosses (HMag, CZak, etc.): ~69M Mesos",
+              "Absolab Coins, Boss Accessories, Occult Bonus Cubes: ~12M Mesos",
+              "Total Gross Weekly Revenue: ~149M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Payback Period (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on accessory/drop sales (-120K Mesos)",
+              "Fixed Consumables: Advanced Boss Rush Potions, Guild Buffs, Power Elixirs (-4M Mesos)",
+              "Total Net Weekly Yield: ~145M Mesos",
+              "ROI Payback Window: 2.9B Total Capital ÷ 145M Net Weekly = ~20.0 Weeks (~4.5 Months)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. How do I deal with the Phase 2 Damien Blue Sphere debuff?",
+            paragraphs: [
+              "Lure the sphere to the far edge of the map, dash to the opposite side, and cast your 6th Job Origin absolute bind to execute your full burst without damage reduction penalties.",
+            ],
+          },
+          {
+            heading:
+              "Q. What is the required Ignore Enemy Defense (IED) for Normal Lomien?",
+            paragraphs: [
+              "Lotus and Damien both have 300% PDR. You need at least 93% visual IED (minimum 91%) via Legion and Link skills to prevent severe damage reduction.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Boss Mule Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished your weekly boss runs? Check off your defeated bosses to calculate your exact net crystal profit after consumable costs using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Weekly Crystal Profits on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
