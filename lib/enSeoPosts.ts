@@ -8141,6 +8141,149 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "slime-easyluwill-boss-mule-gear-guide-part5",
+    title:
+      "MapleStory Normal Slime & Easy Luwill Boss Mule Guide: 35-Min Clear 18-Star Gear & Seed Ring Specs",
+    description:
+      "Build a 35-minute Normal Guardian Angel Slime, Easy Lucid, and Easy Will boss mule with 7.5B~8.5B mesos. 18-Star Unique/Legendary gear guide, Level 3 Special Ring (RoR3/WJ3) optimization, weekly ~283M meso yields, and 30-week ROI audit.",
+    koSlug: "slime-easyluwill-boss-mule-gear-guide-part5",
+    sections: [
+      {
+        heading:
+          "[Sub-Main Mule] MapleStory Normal Slime & Easy Luwill Boss Mule Guide: 35-Min 18-Star Gear & Seed Ring Blueprint",
+        paragraphs: [
+          "Pushing a bossing mule beyond Normal Lotus and Damien into Normal Guardian Angel Slime, Easy Lucid, and Easy Will often tempts players to overgear with 22-Star items and Level 4 Special Skill Rings (Ring of Restraint 4), draining 15 to 20 billion mesos on a single character. Even with higher crystal payouts, pouring 15B mesos into a mule returning ~280M mesos per week pushes your break-even payback window past 60 weeks (15 months), stalling overall account progression.",
+          "The absolute sweet spot for a high-tier mule is a 35-minute total clear (Slime 6 min, Easy Lucid 10 min, Easy Will 12 min, Sub-bosses 7 min) utilizing 18-Star Unique/Legendary gear, Level 3 Special Rings (RoR3 or WJ3), and 6th Job Origin burst scaling. With an 7.5B to 8.5B meso budget, you secure a massive ~283M weekly meso income, achieving 100% capital payback (ROI) in approximately 30 to 33 weeks (7 to 8 months). In this guide, I audit the 18-Star gear blueprint, budget seed ring synergy, and net weekly yields after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Normal Slime & Easy Luwill 35-Minute Budget Gear Breakdown (~8.0B Meso Budget)",
+        paragraphs: [
+          "Below is the audited gear and stat blueprint required to clear Normal Slime and Easy Luwill in under 35 minutes (25M~32M Combat Power, 1,000+ Arcane Force, 94%+ IED):",
+        ],
+        table: {
+          headers: [
+            "Equipment Slot",
+            "Recommended Gear Setup",
+            "Star Force & Potential Target",
+            "Estimated Cost",
+          ],
+          rows: [
+            [
+              "Weapon (18-Star Arcane/Absolab)",
+              "18-Star Arcane Weapon (15% Spell Trace)",
+              "Legendary 2-Line ATT/Boss Dmg (6% ATT Bpot)",
+              "~1.8B ~ 2.2B Mesos",
+            ],
+            [
+              "3-Piece CRA Armor (Hat/Top/Bottom)",
+              "18-Star CRA Armor (90+ Flame Stat)",
+              "Unique 15% Stat + 10 ATT Bpot (or 2-Line Stat)",
+              "~550M each (~1.65B total)",
+            ],
+            [
+              "4-Piece Absolab (Shoulder/Glove/Shoe/Cape)",
+              "18-Star Absolab 4-Set",
+              "Unique 15% Stat + 10 ATT Bpot (Crit Dmg Glove)",
+              "~600M each (~2.4B total)",
+            ],
+            [
+              "Secondary & Emblem (WSE)",
+              "Legendary Secondary / Unique Emblem",
+              "Secondary: 2-Line Boss/ATT / Emblem: Unique 15% ATT",
+              "~1.0B ~ 1.2B Mesos",
+            ],
+            [
+              "Special Skill Ring (Seed Ring)",
+              "Ring of Restraint Level 3 or Weapon Jump Level 3",
+              "10-Second 6th Job Origin Burst Optimization",
+              "~500M ~ 700M Mesos",
+            ],
+            [
+              "V-Matrix & 6th Job Mastery",
+              "600 Nodestones + 150 Sol Erda Fragments",
+              "5th Boost Max (60Lv) + 6th Origin/Mastery Level 3",
+              "~600M ~ 800M Mesos",
+            ],
+            [
+              "Total Investment",
+              "Complete 35-Minute Slime/Luwill Setup",
+              "28M Combat Power / 94% IED / 1,000 Arcane Force",
+              "~7.95B ~ 8.95B Mesos",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. Why Level 3 Special Rings (RoR3/WJ3) Are the Smart Financial Choice",
+        paragraphs: [
+          "Burst windows are everything in Slime groggy phases and Lucid/Will phase transitions. Here is why Level 3 rings beat Level 4 for bossing mules:",
+        ],
+        bullets: [
+          "Ring of Restraint Level 3 (RoR3): Grants +75% ATT/MATT for 13 seconds. It costs only 25% of a RoR4 while delivering over 85% of its 10-second 6th Job Origin burst output.",
+          "Weapon Jump Level 3 (WJ3): For high weapon attack classes (Warriors, Thieves, Pirates), WJ3 offers extreme burst multiplication at a fraction of RoR3's price.",
+          "Switching Timing: Swap during Slime's Guardian Wave groggy phase, Lucid Phase 2 laser bind, and right before Will Phase 3 webs fill the screen.",
+        ],
+      },
+      {
+        heading:
+          "3. Weekly Normal Slime & Easy Luwill Net Revenue Audit (ROI)",
+        paragraphs: [
+          "Financial balance sheet for clearing Normal Slime, Easy Lucid, Easy Will, and Lomien on a single high-tier mule:",
+        ],
+        subsections: [
+          {
+            heading: "💡 High-Tier Mule Weekly Financial Parameters",
+            paragraphs: [],
+            bullets: [
+              "Slime & Easy Luwill Crystals (Slime 45M + E-Lucid 48M + E-Will 52M): ~145M Mesos",
+              "Lomien, CRA, & Sub-Weekly Bosses (CPap, HMag, etc.): ~125M Mesos",
+              "Guardian Angel Rings, Twilight Marks, Bonus Cubes: ~20M Mesos",
+              "Total Gross Weekly Revenue: ~290M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Final Payback Period (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on drop/accessory sales (-200K Mesos)",
+              "Fixed Consumables: Advanced Boss Rush Pots, Guild Buffs, Power Elixirs (-6M Mesos)",
+              "Total Net Weekly Yield: ~283.8M Mesos",
+              "ROI Payback Window: 8.4B Total Capital ÷ 283.8M Net Weekly = ~29.6 Weeks (~7 Months)",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. How do I survive Easy Will Phase 2 Mirror pattern solo?",
+            paragraphs: [
+              "Easy Will does not instant-kill on failed mirror tests. Unlock your Moonlight gauge right before the test starts to clear potion locks, and pop an invincibility or damage reduction skill to push through.",
+            ],
+          },
+          {
+            heading: "Q. How do I dodge Slime laser beams during combat?",
+            paragraphs: [
+              "Use Rope Lift or map portals to teleport to the upper ledges, keeping your DPS uptime safe from ground-level beams.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Boss Mule Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished your weekly boss runs? Check off your defeated bosses to calculate your exact net crystal profit after consumable costs using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Weekly Crystal Profits on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
