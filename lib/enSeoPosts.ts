@@ -8284,6 +8284,176 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "boss-mule-tier-list-top5-jobs-guide-part6",
+    title:
+      "MapleStory 2026 Boss Mule Tier List: Top 5 S-Tier Classes for Low Fatigue & Quick Clears",
+    description:
+      "Master the top 5 S-tier bossing mule classes for 2026 (Dawn Warrior, Wind Archer, Dark Knight, Dual Blade, Paladin). Featuring innate binds, 10-second burst compression, low 200-nodestone investment, and net profits after 1% AH tax.",
+    koSlug: "boss-mule-tier-list-top5-jobs-guide-part6",
+    sections: [
+      {
+        heading:
+          "[Class Tier List] MapleStory 2026 Boss Mule Tier List: Top 5 S-Tier Classes for Low Fatigue & Fast Clears",
+        paragraphs: [
+          "Choosing a bossing mule based purely on visual appeal or sustained DPM mechanics often leads to immense frustration. Classes lacking innate binds or reliable invincibility frames (iframes) easily lose death counts to Chaos Papulatus clock rifts or Normal Lotus Phase 3 debris spam. Furthermore, picking classes with bloated V-Matrix boost pools requiring 800+ Nodestones drains billions of mesos, completely destroying the core economic purpose of bossing mules: rapid return on investment (ROI).",
+          "The S-Tier criteria for a bossing mule boil down to 3 factors: 10-second compressed burst damage, foolproof survival utility (innate binds & iframes), and lean V-Matrix node requirements (200~300 Nodestones max). In this guide, I rank the Top 5 S-Tier bossing mule classes in 2026 and audit their net weekly earnings after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. 2026 Top 5 S-Tier Boss Mule Classes Comparison",
+        paragraphs: [
+          "Performance audit across Lomien & Slime tiers (12M~25M Combat Power):",
+        ],
+        table: {
+          headers: [
+            "Rank & Class",
+            "Key Survival Utility & Bind",
+            "Burst Compression Window",
+            "V-Matrix Node Difficulty",
+            "Recommended Tier",
+            "Fatigue Index",
+          ],
+          rows: [
+            [
+              "#1: Dawn Warrior (DW)",
+              "Innate Bind + Low-CD Iframe + High Base Stats",
+              "~10 Sec (Elite)",
+              "★☆☆☆☆ (Ultra-Simple Trio)",
+              "4-CRA to Lomien",
+              "★☆☆☆☆ (1-Button)",
+            ],
+            [
+              "#2: Wind Archer (WA)",
+              "Emerald Taunt (Aggro Dummy) + Wind Wall Shield",
+              "~15 Sec (High)",
+              "★★☆☆☆ (3 Core Skills)",
+              "Lomien to Slime",
+              "★☆☆☆☆ (Stationary)",
+            ],
+            [
+              "#3: Dark Knight (DrK)",
+              "Reincarnation (Prolonged Iframe) + Dark Spear",
+              "~8 Sec (Elite)",
+              "★★☆☆☆ (Simple 3 Trio)",
+              "4-CRA to Lomien",
+              "★★☆☆☆ (Invincible)",
+            ],
+            [
+              "#4: Dual Blade (DB)",
+              "Chains of Hell (Low-CD Iframe) + Final Cut Iframe",
+              "~10 Sec (Elite)",
+              "★★★☆☆ (Moderate Boost Pool)",
+              "Lomien to Easy Luwill",
+              "★★☆☆☆ (Top Utility)",
+            ],
+            [
+              "#5: Paladin (Pally)",
+              "Sacrosanctity (30s God-Mode Iframe) + Grand Cross",
+              "~10 Sec (High)",
+              "★★☆☆☆ (Straightforward)",
+              "CPap to Lomien",
+              "★☆☆☆☆ (Ignore All)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. Top 5 Class Breakdown & Tactical Boss Advantages",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "#1: Dawn Warrior (The Undisputed King of Boss Mules)",
+            paragraphs: [],
+            bullets: [
+              "Strengths: Maxing its primary boost nodes takes under 200 Nodestones. Insane innate Final Damage and IED passives allow it to shred CRA with budget 9%/10 Epic gear. Features an innate bind and a seamless 10-second burst.",
+            ],
+          },
+          {
+            heading: "#2: Wind Archer (The Lotus & Damien Hard-Counter)",
+            paragraphs: [],
+            bullets: [
+              "Strengths: Dropping 'Emerald Flower' draws 100% of Lotus and Damien's aggro, making them strike empty air. 'Wind Wall' provides a massive HP shield that ignores knockback and fatal hits, dropping combat fatigue to absolute zero.",
+            ],
+          },
+          {
+            heading: "#3: Dark Knight (The Immortal Boss Hunter)",
+            paragraphs: [],
+            bullets: [
+              "Strengths: 'Reincarnation' grants an extended duration of true invincibility upon taking fatal damage, allowing you to completely ignore RNG hazard patterns in Chaos Papulatus and Hard Magnus.",
+            ],
+          },
+          {
+            heading: "#4: Dual Blade (The Mechanic Breaker)",
+            paragraphs: [],
+            bullets: [
+              "Strengths: Short-cooldown iframes from 'Chains of Hell' and 'Final Cut' allow you to effortlessly dodge fatal one-shots while maintaining high damage uptime.",
+            ],
+          },
+          {
+            heading: "#5: Paladin (30 Seconds of Pure Immunity)",
+            paragraphs: [],
+            bullets: [
+              "Strengths: Pop 'Sacrosanctity' for 30 seconds of absolute invincibility and hold down 'Grand Cross' without dodging a single boss mechanic.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. 5-Mule S-Tier Weekly Net Revenue Balance Sheet",
+        paragraphs: [
+          "Financial balance sheet for clearing 5 S-tier mules (3 Lomien tier + 2 CRA tier) within 90 minutes:",
+        ],
+        subsections: [
+          {
+            heading: "💡 5-Mule S-Tier Weekly Financial Parameters",
+            paragraphs: [],
+            bullets: [
+              "3 Lomien-Tier Mules Gross Crystal Revenue: ~435M Mesos",
+              "2 CRA-Tier Mules Gross Crystal Revenue: ~145M Mesos",
+              "Boss Accessories, Bonus Cubes, Flames: ~45M Mesos",
+              "Total Gross Weekly Revenue: ~625M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Net Profit (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 45M drop sales (-450K Mesos)",
+              "Fixed Consumables: Guild Buffs, Boss Rush Pots, Power Elixirs (-9M Mesos)",
+              "Total Net Weekly Profit: ~615.5M Mesos",
+              "Hourly Wage Equivalent (1.5-Hour Playtime): ~410M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. Why aren't burst classes like Night Lord in the Top 5?",
+            paragraphs: [
+              "While Night Lord has unmatched burst, its lack of reliable survival iframes makes it prone to dying in Lotus Phase 3. S-tier mules prioritize zero-death consistency and low node costs.",
+            ],
+          },
+          {
+            heading: "Q. Is 6th Job mandatory for these boss mules?",
+            paragraphs: [
+              "For Lomien tier and above, unlocking the 6th Job Origin skill (Level 1) provides a 10-second hard bind and massive burst, cutting boss clear times by 2 to 3 minutes.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Boss Mule Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished your weekly boss runs? Check off your defeated bosses to calculate your exact net crystal profit after consumable costs using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Weekly Crystal Profits on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
