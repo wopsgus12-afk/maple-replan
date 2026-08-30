@@ -8454,6 +8454,135 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "boss-mule-union-link-setup-guide-part7",
+    title:
+      "MapleStory Legion 6000 vs 8000 Guide: Boss Mule Grid & 12 Essential Link Skills Setup",
+    description:
+      "Auditing boss mule clear time improvements across Legion 4000, 6000, and 8000. Save over 1B mesos in gear costs with 40% IED and 20% Crit Damage grid optimization, 12 core link skills, and net profits after 1% AH tax.",
+    koSlug: "boss-mule-union-link-setup-guide-part7",
+    sections: [
+      {
+        heading:
+          "[Legion & Links] MapleStory Legion 6000 vs 8000 Guide: Boss Mule Grid & 12 Essential Link Skills Setup",
+        paragraphs: [
+          "Pouring billions of mesos into gear without a solid Legion grid and Link skill foundation frequently results in dealing half-damage against Chaos Vellum (200% PDR) and Normal Lotus (300% PDR). When your Legion level is low and link slots are empty, even a 17-Star Unique setup struggles due to lack of Ignore Enemy Defense (IED) and Critical Damage. Conversely, pairing Legion 8000 with 12 optimized link skills amplifies budget 9%/10 Epic gear damage by over 50% for 0 additional mesos.",
+          "The foundation of boss mule optimization is securing free 40% IED and 20% Crit Damage through Legion grid placement and establishing one-click Link Skill presets. In this guide, I audit boss clear time differences across Legion 4000, 6000, and 8000 thresholds, outline the 12 essential link skills, and calculate net weekly earnings after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. Legion Level Clear Time Comparison (4000 vs 6000 vs 8000)",
+        paragraphs: [
+          "Audited performance of identical 9%/10 Epic gear mules (4M Combat Power) clearing 4-CRA and Hard Magnus:",
+        ],
+        table: {
+          headers: [
+            "Comparative Metric",
+            "Legion 4000 (Inner Grid Only)",
+            "Legion 6000 (Outer Grid Unlocked)",
+            "Legion 8000 (Outer Grid Maxed)",
+          ],
+          rows: [
+            [
+              "Key Grid Allocation",
+              "Basic Main Stat Grid",
+              "30% IED + 25% Boss Dmg",
+              "40% IED + 35% Boss Dmg + 20% Crit Dmg",
+            ],
+            [
+              "In-Game Visual IED",
+              "78% (Severe Damage Loss)",
+              "88% (Adequate Baseline)",
+              "93% (Optimal Bossing Spec)",
+            ],
+            [
+              "4-CRA + HMag Clear Time",
+              "~18 to 22 Minutes",
+              "~11 to 13 Minutes",
+              "~6 to 8 Minutes (Blazing Fast)",
+            ],
+            [
+              "Gear Cost Savings per Mule",
+              "0 Mesos (Requires Heavy Gear)",
+              "Saves ~500M Mesos in Gear",
+              "Saves 1.2B+ Mesos per Character",
+            ],
+            [
+              "Fatigue & Mechanical Burden",
+              "★★★★☆ (Prolonged Hazard Dodging)",
+              "★★☆☆☆ (Smooth Clear)",
+              "★☆☆☆☆ (1-Burst Rotation)",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. 12 Essential Boss Mule Link Skills Blueprint",
+        paragraphs: [
+          "Optimal 12-slot link skill loadout for boss mules (Recommended for Link Preset 1):",
+        ],
+        bullets: [
+          "Damage & Boss Damage (4 Skills): Demon Avenger (10% Dmg), Demon Slayer (15% Boss Dmg), Ark (Up to 11% Dmg), Illium (12% Conditional Dmg)",
+          "Ignore Enemy Defense & Stats (3 Skills): Luminous (15% IED), Zero (10% IED), Hoyoung (10% IED + First-hit Bonus)",
+          "Critical Rate & Crit Damage (2 Skills): Phantom (15% Crit Rate), Kinesis (4% Crit Damage)",
+          "Burst & Debuff Damage (3 Skills): Cadena (12% Dmg vs debuffed/lower level), Explorer Mage Trio (IED & Damage), Explorer Thief Trio (Debuff Damage)",
+        ],
+      },
+      {
+        heading: "3. Legion 8000 6-Mule Weekly Net Revenue Balance Sheet",
+        paragraphs: [
+          "Financial balance sheet for clearing 6 mules (3 Lomien + 3 CRA) in 80 minutes under Legion 8000:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Legion 8000 6-Mule Weekly Financial Parameters",
+            paragraphs: [],
+            bullets: [
+              "6 Mules Gross Crystal Revenue: 725M Mesos",
+              "Boss Accessories, Bonus Cubes, Flames: ~50M Mesos",
+              "Total Gross Weekly Revenue: ~775M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Net Profit (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 50M drop sales (-500K Mesos)",
+              "Fixed Consumables: Guild Buffs, Boss Rush Pots, Power Elixirs (-8M Mesos)",
+              "Total Net Weekly Profit: ~766.5M Mesos",
+              "Hourly Wage Equivalent (1 Hour 20 Min Playtime): ~574M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Is pushing from Legion 6000 to 8000 noticeable for boss mules?",
+            paragraphs: [
+              "Reaching Legion 8000 allows you to simultaneously max out Boss Damage, IED, and Critical Damage grids, boosting raw mule DPS by over 20% and reducing weekly clear times by nearly 40%.",
+            ],
+          },
+          {
+            heading: "Q. How should I manage link skill transfer limits?",
+            paragraphs: [
+              "Link skills offer 4 free transfers daily per skill. Utilize Link Skill Presets to swap your full 12-skill setup across mules with a single click.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Boss Mule Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished your weekly boss runs? Check off your defeated bosses to calculate your exact net crystal profit after consumable costs using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Weekly Crystal Profits on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
