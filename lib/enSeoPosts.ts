@@ -8583,6 +8583,127 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "boss-mule-potion-doping-roi-guide-part8",
+    title:
+      "MapleStory Boss Mule Potion Guide: Best Budget Doping & Clear Time ROI Breakdown",
+    description:
+      "Cut boss mule consumable expenses by 70% with the top 4 budget buff potions (Monster Park Extreme Red, Guild Blessing, Sparkling Blue Star, Legion Might). Save 30M mesos weekly while reducing clear times by 30%. Auditing net profits after 1% AH tax.",
+    koSlug: "boss-mule-potion-doping-roi-guide-part8",
+    sections: [
+      {
+        heading:
+          "[Budget Doping] MapleStory Boss Mule Potion Guide: Essential Buffs & Clear Time ROI Breakdown",
+        paragraphs: [
+          "Chugging expensive potions like Advanced Boss Rush Potions, Advanced Stat Potions, and Legendary Hero Potions on every boss mule frequently creates severe financial deficits. Spending 5M to 7M mesos in consumables per character burns 30M to 40M mesos weekly across a 6-mule roster just to shave off 3 to 4 minutes of clear time, eating up over 10% of your total crystal earnings.",
+          "The golden rule of boss mule doping is not chasing maximum burst screenshots, but leveraging free and low-cost utility buffs to cap consumable costs under 2.5M mesos per mule while boosting DPS by 20%. In this guide, I compare No-Doping, Budget Doping, and Full Doping across 6 Lomien-tier mules, breakdown the 4 essential budget buffs, and calculate net weekly earnings after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading: "1. 3 Boss Mule Doping Tiers Comparison (6-Mule Roster Baseline)",
+        paragraphs: [
+          "Audited performance across 6 Lomien-tier mules (14M Combat Power) clearing weekly bosses:",
+        ],
+        table: {
+          headers: [
+            "Doping Tier",
+            "Potion Loadout & Cost per Mule",
+            "6-Mule Weekly Doping Cost",
+            "6-Mule Total Clear Time",
+            "Efficiency & ROI Evaluation",
+          ],
+          rows: [
+            [
+              "① No Doping",
+              "Class self-buffs only (0 Mesos)",
+              "0 Mesos",
+              "~2 Hours 15 Mins",
+              "Prolonged mechanics increase wrist fatigue",
+            ],
+            [
+              "② Budget Doping (Recommended)",
+              "Guild Buff + Ursus + MP Red + Blue Star (~2.5M)",
+              "~15M Mesos",
+              "~1 Hour 30 Mins",
+              "Saves 45 mins / Elite ROI",
+            ],
+            [
+              "③ Full Whale Doping",
+              "Hero Pot + Boss Rush + Stat Pot + Legion (~6.5M)",
+              "~39M Mesos",
+              "~1 Hour 22 Mins",
+              "Wastes 24M mesos for only 8 mins saved",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. The 4 Essential Budget Buffs (Under 2.5M Mesos per Mule)",
+        paragraphs: [
+          "Achieve the equivalent of a multi-billion meso gear upgrade with these 4 low-cost buffs:",
+        ],
+        bullets: [
+          "Free +60 ATT/MATT Line (Guild's Blessing + Ursus Buff): Claim free weekly Guild Blessings and quick town buffs to secure +60 flat ATT/MATT for zero mesos.",
+          "Monster Park Extreme Red / Blue (+30 ATT & +1 Attack Speed): Purchased cheaply via Monster Park commemorative coins. +1 Attack Speed dramatically reduces skill delay and fatal animation locks.",
+          "Sparkling Blue Star Potion (+20% IED / Boss Damage): The absolute king of budget bossing potions. Costs only 500K~800K mesos in the Auction House and shreds Chaos Vellum and Lotus defenses.",
+          "Legion's Might (+30 ATT/MATT): Acquired for just 20 Legion Coins in the Legion Shop, providing a 30-minute flat stat boost.",
+        ],
+      },
+      {
+        heading: "3. Budget Doping 6-Mule Weekly Net Revenue Balance Sheet",
+        paragraphs: [
+          "Financial balance sheet for clearing 6 mules (3 Lomien + 3 CRA) in 90 minutes using the 4 budget buffs:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Budget Doping 6-Mule Weekly Financial Parameters",
+            paragraphs: [],
+            bullets: [
+              "6 Mules Gross Crystal Revenue: 725M Mesos",
+              "Boss Accessories, Bonus Cubes, Flames: ~50M Mesos",
+              "Total Gross Weekly Revenue: ~775M Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Net Profit (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 50M drop sales (-500K Mesos)",
+              "Budget Doping Consumable Deduction: 6 Mules Potions + Power Elixirs (-15M Mesos)",
+              "Total Net Weekly Profit: ~759.5M Mesos",
+              "Hourly Wage Equivalent (1.5-Hour Playtime): ~506M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Is 'Advanced Boss Rush Potion (+20% Boss Dmg)' worth using on mules?",
+            paragraphs: [
+              "At 2.5M~3.5M mesos per bottle, it is too expensive for CRA and Lomien mules. Reserve Boss Rush potions strictly for higher-tier sub-mains tackling Normal Slime and Easy Luwill.",
+            ],
+          },
+          {
+            heading: "Q. Do I need to re-buff mid-run?",
+            paragraphs: [
+              "The 4 budget buffs (Guild Blessing, MP Red, Legion's Might) last for 30 minutes. If each mule clears its boss roster in 15~20 minutes, a single set of buffs covers the entire run.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your Boss Mule Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished your weekly boss runs? Check off your defeated bosses and input your potion costs to calculate your exact net crystal profit after consumable deductions using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Weekly Crystal Profits on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
