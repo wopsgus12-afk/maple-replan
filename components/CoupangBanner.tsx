@@ -15,6 +15,20 @@ const KEYBOARD_IMG =
 const PAD_IMG =
   "https://images.unsplash.com/photo-1616440342855-081e85a538e1?w=300&auto=format&fit=crop&q=80";
 
+/** 공정위/쿠팡 파트너스 필수 대가성 고지 문구 (축약 금지) */
+const COUPANG_DISCLOSURE =
+  "이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.";
+
+function CoupangDisclosure({ className = "" }: { className?: string }) {
+  return (
+    <p
+      className={`text-xs font-medium leading-relaxed break-keep text-amber-300 ${className}`}
+    >
+      {COUPANG_DISCLOSURE}
+    </p>
+  );
+}
+
 /** Coupang Partners gaming gear widget — always the 3-card product grid. */
 export default function CoupangBanner({
   variant: _variant = "card",
@@ -27,18 +41,16 @@ export default function CoupangBanner({
       className={`my-4 rounded-2xl border border-amber-500/30 bg-stone-900/90 p-4 text-stone-200 shadow-2xl backdrop-blur-sm sm:my-6 sm:p-5 ${className}`}
       aria-label="쿠팡 파트너스 추천"
     >
+      <CoupangDisclosure className="mb-3 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2" />
       <div className="mb-4 flex flex-col justify-between gap-2 border-b border-stone-800/80 pb-3 sm:flex-row sm:items-center">
         <div className="flex min-w-0 flex-wrap items-center gap-2">
-          <span className="shrink-0 rounded-full border border-amber-500/40 bg-amber-500/20 px-2 py-0.5 text-[11px] font-bold text-amber-400">
+          <span className="shrink-0 rounded-full border border-amber-500/40 bg-amber-500/20 px-2 py-0.5 text-xs font-bold text-amber-400">
             장비 추천
           </span>
           <h3 className="min-w-0 text-xs font-bold break-keep text-stone-100 sm:text-sm">
             🎮 2시간+ 연속 재획 손목/손가락 피로도 제로 세팅
           </h3>
         </div>
-        <span className="shrink-0 text-[10px] text-stone-500">
-          쿠팡 파트너스 수수료 제공
-        </span>
       </div>
 
       <div className="grid grid-cols-1 gap-3.5 md:grid-cols-3">
@@ -156,6 +168,7 @@ export default function CoupangBanner({
           </div>
         </a>
       </div>
+      <CoupangDisclosure className="mt-4 border-t border-amber-500/30 pt-3 text-stone-300" />
     </aside>
   );
 }
