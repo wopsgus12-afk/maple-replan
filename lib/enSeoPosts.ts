@@ -8852,6 +8852,177 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "boss-mule-weekly-routine-master-blueprint-part10",
+    title:
+      "MapleStory Boss Mule Schedule: 90-Min Clear & 4B Monthly Meso Routine Guide",
+    description:
+      "Master the complete 90-minute Thursday boss mule clearing blueprint across 6 characters. Maximize the 68-crystal cap, monetize drops, and secure ~1B weekly / ~4B monthly net mesos after 1% AH tax.",
+    koSlug: "boss-mule-weekly-routine-master-blueprint-part10",
+    sections: [
+      {
+        heading:
+          "[Master Blueprint] MapleStory Boss Mule Schedule: 90-Min Clear & 4B Monthly Meso Routine",
+        paragraphs: [
+          "Operating multiple bossing mules without a strict execution schedule causes players to log in sporadically across the week, remaining trapped in repetitive boss homework. Forgetting to transfer link skills, experiencing expired consumable buffs, and enduring messy character swapping burns over 4 to 5 hours weekly, triggering severe gaming burnout.",
+          "The ultimate endgame for boss mules is a 90-minute one-stop routine on Thursday reset that clears all bosses across 6 characters, maxes out the 68-crystal weekly sales cap, and liquidates all floor loot. By adhering to a structured 4-step timetable, you lock in ~1B mesos weekly (~4B mesos monthly) with zero wasted playtime. In this final guide, I lay out the complete 90-minute blueprint and audit net monthly profits after mandatory 1% Auction House transaction taxes.",
+        ],
+      },
+      {
+        heading:
+          "1. Unorganized Clearing vs 90-Minute Master Routine Comparison",
+        paragraphs: [
+          "Audited weekly performance comparison across 6 mules (3 Lomien + 3 CRA) based on execution strategy:",
+        ],
+        table: {
+          headers: [
+            "Comparative Metric",
+            "Chaotic Unorganized Runs",
+            "90-Minute Master Routine",
+            "Key Efficiency Gains",
+          ],
+          rows: [
+            [
+              "Total Weekly Playtime",
+              "~3 Hours 40 Mins to 4.5 Hours",
+              "~1 Hour 30 Mins (90 Mins Flat)",
+              "Saves 2+ Hours Weekly",
+            ],
+            [
+              "Clearing Schedule",
+              "Scattered across 3~4 days",
+              "Completed in 1 single session",
+              "Zero daily chore fatigue",
+            ],
+            [
+              "Buff Efficiency",
+              "Buffs lost on frequent relogs (40% waste)",
+              "100% uptime with three 30-min buff sets",
+              "Saves ~20M mesos weekly in potions",
+            ],
+            [
+              "Link / Legion Errors",
+              "Frequent link skill transfer omissions",
+              "Locked in Link Skill Preset 1",
+              "Prevents DPS loss in boss rooms",
+            ],
+            [
+              "Net Weekly Profit (1% Tax)",
+              "~820M Mesos (Floor loot ignored)",
+              "~994M Mesos (Crystals + Loot Sold)",
+              "+174M Extra Mesos Weekly",
+            ],
+            [
+              "Monthly Net Revenue",
+              "~3.28B Mesos",
+              "~3.976B Mesos (~4B Mesos)",
+              "+8.5B Meso Gap Annually",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "2. The 90-Minute Thursday 4-Step Timetable",
+        paragraphs: [
+          "The standardized protocol to execute immediately after the Thursday weekly boss reset:",
+        ],
+        subsections: [
+          {
+            heading: "Step 1: Pre-Run Setup & Link Sync (00m ~ 05m / 5 Mins)",
+            paragraphs: [],
+            bullets: [
+              "Log into your main character and purchase 6 sets of Legion's Might from the Legion Shop.",
+              "Log into your 6 mules to verify 'Link Skill Preset 1' synchronization and ensure Monster Park Extreme potions are stocked.",
+            ],
+          },
+          {
+            heading:
+              "Step 2: 3 High-Tier Mules Lomien/Slime Clear (05m ~ 50m / 45 Mins)",
+            paragraphs: [],
+            bullets: [
+              "15 minutes allocated per mule (Uses one 30-minute buff set for every 2 mules).",
+              "Boss Rotation: HMag ➔ CPap ➔ 4-CRA ➔ Normal Lotus ➔ Normal Damien ➔ (Normal Slime).",
+              "Unleash 6th Job Origin skills and Level 3 Special Rings during groggy phase transitions to clear bosses in 1~2 burst cycles.",
+            ],
+          },
+          {
+            heading:
+              "Step 3: 3 Budget CRA Mules Blitz Run (50m ~ 80m / 30 Mins)",
+            paragraphs: [],
+            bullets: [
+              "10 minutes allocated per mule (Guild Blessing + MP Red + Blue Star).",
+              "Boss Rotation: CZak ➔ HHilla ➔ 4-CRA (Queen, Pierre, Von Bon, Vellum) ➔ HMag.",
+              "Leverage compressed 5th Job burst skills to wipe each boss in under 90 seconds.",
+            ],
+          },
+          {
+            heading:
+              "Step 4: 68-Crystal Liquidation & Drop Listing (80m ~ 90m / 10 Mins)",
+            paragraphs: [],
+            bullets: [
+              "Visit the Free Market Collector on each mule to sell highest-value crystals first, hitting the 68-crystal cap.",
+              "Filter and list 80+ flame accessories, Occult Bonus Cubes, and Rebirth Flames on the Auction House.",
+              "Store Soul Shards in your storage character for upcoming 5x Sunday Maple events.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. 4-Week (Monthly) Master Financial Balance Sheet",
+        paragraphs: [
+          "Financial balance sheet for executing the 90-minute routine weekly over a 4-week monthly cycle:",
+        ],
+        subsections: [
+          {
+            heading: "💡 Monthly (4-Week) Financial Summary",
+            paragraphs: [],
+            bullets: [
+              "4 Weeks Intense Power Crystals (68 crystals × 4 weeks): ~3.68B Mesos",
+              "4 Weeks Boss Drops (Accessories, Bonus Cubes, Flames): ~360M Mesos",
+              "Total Gross Monthly Revenue: ~4.04B Mesos",
+            ],
+          },
+          {
+            heading: "Deductions & Net Profit (GG-PASS Algorithm)",
+            paragraphs: [],
+            bullets: [
+              "1% Auction House Fee: Tax on 360M drop sales (-3.6M Mesos)",
+              "4 Weeks Budget Consumables & Power Elixirs: (-60M Mesos)",
+              "Total Net Monthly Profit: ~3.976B Mesos (~4 Billion Mesos Net)",
+              "Total Monthly Time Investment: 6 Hours (90 mins × 4 weeks)",
+              "Real-World Hourly Wage: ~662M Mesos / Hour",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "4. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading: "Q. What if I cannot clear on Thursday?",
+            paragraphs: [
+              "If Thursday is missed, avoid breaking runs into scattered single-boss sessions. Reserve a continuous 90-minute window over the weekend to run all 6 characters consecutively to maximize potion and preset efficiency.",
+            ],
+          },
+          {
+            heading:
+              "Q. Will dynamic crystal price fluctuations ruin this routine?",
+            paragraphs: [
+              "Even if individual crystal values adjust slightly, prioritizing high-tier bosses (Lomien/Slime) and liquidating tradeable drops protects your baseline, maintaining a solid 3.5B~4.0B monthly net profit.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "5. [GG-PASS] Audit Your 6-Mule Weekly Routine in 10 Seconds",
+        paragraphs: [
+          "Finished your Thursday 90-minute boss runs? Check off your defeated bosses and listed drops to calculate your exact net weekly income after 1% AH taxes and consumables using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Total Boss Earnings on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
