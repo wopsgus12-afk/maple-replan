@@ -9023,6 +9023,162 @@ export const EN_GUIDE_POSTS: EnGuidePost[] = [
       },
     ],
   },
+  {
+    slug: "soul-master-patch-all-in-one-guide-part1",
+    title:
+      "MapleStory 2026 Dawn Warrior Guide: Post-Patch Setup, 6th HEXA, Farming & Burst",
+    description:
+      "Auditing firsthand mistakes and damage leaks on Dawn Warrior (Soul Master) after recent balance patches. 200 Nodestone V-Matrix, Mastery Core priority, Grandis lazy farming setups, and 10-second compressed burst rotation.",
+    koSlug: "soul-master-patch-all-in-one-guide-part1",
+    sections: [
+      {
+        heading:
+          "[2026 Master Guide] MapleStory Dawn Warrior Guide: Post-Patch Setup, 6th Job HEXA, Farming & Burst",
+        paragraphs: [
+          "Dawn Warrior (Soul Master) is universally considered the gold standard for bossing mules and main characters alike. However, failing to understand recent balance adjustments to hitboxes, attack lines, and Cosmic Orb mechanics led me straight into a massive waste of precious resources. Right after unlocking 6th Job, seduced by flashy visual effects, I dumped over 250 Sol Erda fragments into the Origin skill (Astral Blitz). As a result, my main mobbing skills failed to one-shot Sacred Force monsters in Grandis, cutting my hourly meso and fragment yields by over 30%.",
+          "Furthermore, in Chaos Papulatus and Normal Lotus, greedily activating Elysion prior to entering boss rooms caused me to get knocked back by floor hazards, wasting over half of my 30-second burst and burning precious death counts. Through trial and error, I realized that mastering Dawn Warrior boils down to prioritizing Mastery Core (Solar Slash VI) to Level 9 first for one-shot farming, capping V-Matrix boost nodes with under 200 Nodestones, and locking Cosmic Shower onto the bottom floor for effortless lazy farming. In this guide, I share my battle-tested post-patch blueprint to ensure zero wasted resources.",
+        ],
+      },
+      {
+        heading: "1. Firsthand Mistakes & Post-Patch Setup Audit",
+        paragraphs: [
+          "Real-world setup adjustments to prevent damage leaks based on trial-and-error testing:",
+        ],
+        table: {
+          headers: [
+            "Performance Metric",
+            "My Past Costly Mistake (Severe Deficit)",
+            "Post-Patch Optimized Blueprint (Meta)",
+            "Real Gameplay Impact",
+          ],
+          rows: [
+            [
+              "6th Job Fragment Priority",
+              "Dumped all fragments into Origin",
+              "Mastery Core (Slash VI) to Lv 9 first",
+              "Secures mobbing 1-shots & 40%+ sustained DPS",
+            ],
+            [
+              "Cosmic Shower Mobbing",
+              "Placed haphazardly on 2nd floor",
+              "Firmly anchored on bottom center floor",
+              "Completely wipes 1st floor; 0-movement farming",
+            ],
+            [
+              "Boss Entry Sequence",
+              "Cast Elysion before entering room",
+              "Ring Swap ➔ Origin Bind ➔ Elysion",
+              "100% damage compression inside 10s iframe bind",
+            ],
+            [
+              "5th Job Node Spending",
+              "Overspent 500+ nodes on utility",
+              "3 Core Skills Trio (200 Node Cap)",
+              "Saves 1B+ mesos in character progression",
+            ],
+            [
+              "Cosmic Orb Handling",
+              "Spammed Burst immediately on CD",
+              "Maintain 4 Orbs before detonation",
+              "Prevents passive final damage drop-off",
+            ],
+          ],
+        },
+      },
+      {
+        heading:
+          "2. 200-Nodestone V-Matrix Blueprint & 6th Job HEXA Priorities",
+        paragraphs: [
+          "Dawn Warrior boasts an exceptionally clean node pool. Maximize efficiency with this resource-conscious progression path:",
+        ],
+        subsections: [
+          {
+            heading: "5th Job V-Matrix Boost Nodes (~200 Nodestones)",
+            paragraphs: [],
+            bullets: [
+              "3 Essential Boost Skills: ① Solar Slash / Lunar Divide ② Cosmic Burst ③ Cosmic Shower",
+              "Field Tip: Equip just 2 boost nodes and utilize Matrix Slot Enhancements (+5) to reach Level 40~50. With minimal junk skills in the pool, 200 Nodestones easily finish this setup.",
+            ],
+          },
+          {
+            heading: "6th Job HEXA Matrix Sol Erda Allocation Order",
+            paragraphs: [],
+            bullets: [
+              "Priority 1: Mastery Core (Solar Slash / Lunar Divide VI) Level 1 ➔ Level 9: The single most impactful upgrade. Leveling Slash VI lowers one-shot thresholds dramatically, letting you cleanly clear Grandis maps even with imperfect Sacred Force.",
+              "Priority 2: Origin Skill (Astral Blitz) Level 1: Unlock Level 1 strictly for the 10-second hard absolute bind and baseline burst. (Pushing beyond Level 1 early on is a waste of fragments.)",
+              "Priority 3: Skill Core (Flare Slash VI) Level 1: Unlocks automated auxiliary hit lines during active combat.",
+              "Priority 4: Mastery Core Progression (Level 19 ➔ Level 29): Funnel remaining fragments back into the Mastery Core.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "3. Continental Lazy Farming Blueprint (Zero Wrist Fatigue)",
+        paragraphs: [
+          "Farming fatigue occurs when you chase monsters across platforms. Dawn Warrior eliminates this through stationary summons.",
+        ],
+        subsections: [
+          {
+            heading: "Arcane River Maps (Vanishing Journey to Limina)",
+            paragraphs: [],
+            bullets: [
+              "Placement Rule: Never place Cosmic Shower on upper platforms; ground mobs will leak, forcing you to jump. Plant Cosmic Shower directly in the center of the ground floor.",
+              "Ground mobs vanish automatically for 60 seconds. Position your character on the middle ledge and gently swipe Solar Slash left and right to clear entire rotations without moving.",
+            ],
+          },
+          {
+            heading: "Grandis Maps (Cernium to Arteria)",
+            paragraphs: [],
+            bullets: [
+              "Sacred Force 1.1x Threshold: Unlocking Slash VI expands vertical Y-axis hitboxes significantly.",
+              "With a 1.1x damage multiplier active, a single double jump and slash sweeps both the bottom and middle platforms simultaneously, enabling simple 'U-shaped' rotations with zero APM strain.",
+            ],
+          },
+        ],
+      },
+      {
+        heading:
+          "4. 10-Second Boss Burst Compression & Special Ring Protocol",
+        paragraphs: [
+          "Stop taking hazard damage during burst setup. Execute this 5-step boss protocol:",
+        ],
+        bullets: [
+          "Pre-Buff Phase: Cast Cosmos outside and ensure your Soluna Power gauge is capped.",
+          "Ring Swap: Equip Ring of Restraint Level 3 (or Weapon Jump Level 3).",
+          "Engage & Origin Bind: Enter and immediately cast 6th Job Origin Astral Blitz (10-Second Absolute Bind). The boss is locked down, neutralizing hazard mechanics.",
+          "Compressed DPS Dump: Pop Special Ring ➔ Activate Elysion ➔ Hold down Cross the Styx continuously.",
+          "Chained Finisher: Just before the 10-second Origin bind expires, cast Erda Nova to clean up any remaining HP safely.",
+        ],
+      },
+      {
+        heading: "5. Frequently Asked Questions (FAQ)",
+        paragraphs: [],
+        subsections: [
+          {
+            heading:
+              "Q. Should I switch to a One-Handed Sword for attack speed?",
+            paragraphs: [
+              "Absolutely not. Dawn Warrior naturally caps the maximum attack speed ceiling (Speed 0) with class buffs and Monster Park Extreme Red. Equipping a One-Handed Sword lowers weapon multipliers and base attack, costing you 5%+ final damage. Always equip a Two-Handed Sword.",
+            ],
+          },
+          {
+            heading:
+              "Q. Is Buff Duration mandatory on the second/third line of Inner Ability?",
+            paragraphs: [
+              "Boss Damage +20% is strictly required on line 1. Buff Duration on line 2/3 helps maintain Mihile's link stance, but Critical Rate or Abnormal Status Damage are equally viable if they roll first.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "6. [GG-PASS] Audit Your Boss Mule Earnings in 10 Seconds",
+        paragraphs: [
+          "Finished your weekly boss runs? Check off your defeated bosses to calculate your exact net crystal profit after consumable costs using the GG-PASS Boss Calculator (https://gg-pass.com/en/)!",
+          "👉 Calculate Your Weekly Crystal Profits on GG-PASS: https://gg-pass.com/en/",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getEnGuideBySlug(slug: string): EnGuidePost | undefined {
