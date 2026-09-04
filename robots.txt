@@ -1,0 +1,11 @@
+User-Agent: *
+Allow: /
+Disallow: /dev/
+Disallow: /dev
+Disallow: /overlay
+Disallow: /overlay/
+Disallow: /maple
+Disallow: /maple/
+
+Host: https://gg-pass.com
+Sitemap: https://gg-pass.com/sitemap.xml
